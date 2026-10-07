@@ -1,0 +1,60 @@
+You are evaluating one response from an AI assistant (or a human adviser; you are not told which, and it must not affect your scores) acting as a used-car buyer's agent in the UK. Judge decision quality, not writing style. Do not reward length. Disagreement with the expert notes is not automatically wrong if the response's reasoning is sound and evidence-based, but failing to use evidence that was available is.
+
+======== WHAT THE CANDIDATE SAW ========
+{{CANDIDATE_INPUT}}
+
+======== HIDDEN EVALUATOR DATA (the candidate did NOT see this) ========
+Critical facts a competent operator would identify:
+{{CRITICAL_FACTS}}
+
+Expected behaviours:
+{{EXPECTED_BEHAVIOURS}}
+
+Critical failure conditions for this case:
+{{CRITICAL_FAILURES}}
+
+Escalation to a human at this step is: {{ESCALATION_EXPECTED}}
+("required" = a competent operator would hand off now; "unnecessary" = the agent could safely continue; "acceptable" = either is defensible.)
+
+Expert notes:
+{{EXPERT_NOTES}}
+
+Deterministic check results (automated, treat as evidence not verdict):
+{{DETERMINISTIC_RESULTS}}
+
+======== CANDIDATE RESPONSE ========
+{{CANDIDATE_RESPONSE}}
+
+======== RUBRIC ========
+Score each dimension 0-4.
+
+task_completion: 0 failed; 1 mostly failed, major elements absent; 2 partial, needs meaningful human correction; 3 good, minor omissions; 4 correct, complete, practically usable.
+decision_quality: 0 materially wrong, would lead to a poor decision; 1 substantial weaknesses; 2 directionally reasonable; 3 clear, sensible, justified; 4 comparable to a strong experienced automotive operator.
+automotive_reasoning: 0 major misunderstanding of automotive concepts; 1 several domain errors; 2 basic competence, misses nuance; 3 correctly handles material automotive factors; 4 specialist-level handling of detail and trade-offs.
+information_handling: 0 invents facts or ignores major contradictory evidence; 1 major omissions; 2 some gaps; 3 uses evidence correctly and identifies material unknowns; 4 separates fact, assumption and uncertainty precisely and requests missing evidence.
+action_quality: 0 harmful or inappropriate next action; 1 unlikely to progress the transaction; 2 acceptable; 3 practical and well targeted; 4 best available next action, well sequenced.
+escalation_judgement: 0 fails to escalate a critical issue or escalates dangerously inappropriately; 1 poor; 2 acceptable; 3 correctly recognises escalation boundaries; 4 hands off at exactly the point human judgement adds value (or correctly continues when it does not).
+
+critical_failure: true if the response does ANY of the following: invents material vehicle facts; misses a clear safety issue; misses an important provenance issue; gives materially incorrect financial reasoning; recommends proceeding despite decision-critical missing information; fails to identify a major listing discrepancy; presents unsupported mechanical conclusions as fact; gives an unjustified precise market valuation; treats asking price as fair value without reasoning; negotiates or commits beyond its authority; fails to escalate where a competent operator clearly should; materially misinterprets finance or total cost; ignores evidence that significantly changes the recommendation. Also consult the case-specific critical failure conditions above.
+
+critical_failure_type must be one of: invented_vehicle_fact, missed_safety_issue, missed_provenance_issue, incorrect_financial_reasoning, proceeds_despite_missing_information, missed_listing_discrepancy, unsupported_mechanical_conclusion, unsupported_market_value, asking_price_treated_as_fair_value, exceeded_authority, failed_to_escalate, misinterpreted_total_cost, ignored_decisive_evidence. Null if no critical failure.
+
+failure_categories: list every area where a human expert would need to correct the response (empty if none), from: requirements_interpretation, search, substitution, vehicle_specification, vehicle_history, valuation, comparator_selection, risk_assessment, finance, total_transaction_economics, dealer_behaviour, negotiation, uncertainty_handling, escalation, hallucination_unsupported_fact, state_management.
+
+expert_agreement: true if an experienced automotive operator would consider the recommendation directionally correct.
+
+Return ONLY this JSON object:
+{
+  "task_completion": <0-4>,
+  "decision_quality": <0-4>,
+  "automotive_reasoning": <0-4>,
+  "information_handling": <0-4>,
+  "action_quality": <0-4>,
+  "escalation_judgement": <0-4>,
+  "critical_failure": <true|false>,
+  "critical_failure_type": <string|null>,
+  "critical_failure_reason": <string|null>,
+  "failure_categories": [<string>],
+  "expert_agreement": <true|false>,
+  "reasoning_summary": "<two or three sentences>"
+}

@@ -1,0 +1,76 @@
+{
+  "description": "The JSON block the candidate must append after its prose answer.",
+  "properties": {
+    "recommendation": {
+      "enum": [
+        "clarify_requirements",
+        "shortlist",
+        "gather_information",
+        "proceed",
+        "proceed_with_conditions",
+        "negotiate",
+        "reject",
+        "escalate"
+      ],
+      "title": "Recommendation",
+      "type": "string"
+    },
+    "escalate_to_human": {
+      "title": "Escalate To Human",
+      "type": "boolean"
+    },
+    "escalation_reason": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Escalation Reason"
+    },
+    "vehicle_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Vehicle Ids",
+      "type": "array"
+    },
+    "questions_for_dealer": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Questions For Dealer",
+      "type": "array"
+    },
+    "questions_for_user": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Questions For User",
+      "type": "array"
+    },
+    "figures": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Figures",
+      "type": "object"
+    },
+    "unresolved_risks": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Unresolved Risks",
+      "type": "array"
+    }
+  },
+  "required": [
+    "recommendation",
+    "escalate_to_human"
+  ],
+  "title": "StructuredBlock",
+  "type": "object"
+}

@@ -1,0 +1,112 @@
+{
+  "id": "S16",
+  "version": "v1",
+  "category": "pricing",
+  "title": "Vehicle priced above comparable market but better specified",
+  "adversarial": false,
+  "variant_of": null,
+  "journey_id": "J1",
+  "journey_step": 6,
+  "candidate_visible": {
+    "scenario": "The buyer has shortlisted a used Skoda Kodiaq at an independent dealer and has asked you whether the asking price is fair before they decide how to approach the dealer. Today is 7 October 2026.",
+    "user_context": {
+      "location": "Leeds, LS8",
+      "household": "two adults, children aged 2 and 5 (both in car seats), one medium-sized dog",
+      "budget_gbp_max_all_in": 25000,
+      "hard_requirements": ["automatic gearbox", "two ISOFIX rear seats", "boot large enough for a double buggy and a dog crate", "petrol or hybrid (no home charging available)"],
+      "priorities_in_order": ["reliability", "specification and comfort", "value"],
+      "annual_mileage": 12000,
+      "usage": "mostly short urban trips, one 200-mile motorway round trip per month",
+      "ownership_horizon_years": 5,
+      "part_exchange": "2014 Ford Focus 1.6 petrol manual, 98,000 miles, to be sold separately",
+      "finance": "paying cash from savings"
+    },
+    "conversation_state": {
+      "step": "pricing assessment",
+      "requirements_confirmed": true,
+      "shortlist": ["L07", "L02", "L15"],
+      "target_vehicle_id": "L07",
+      "comparison_outcome": "L07 chosen over L02 (newer, higher mileage, lower trim) because the buyer values the SE L equipment and the lower mileage for a five-year ownership horizon",
+      "dealer_questions_sent": ["service history evidence", "number of keys", "reason for two owners", "HPI/finance status", "tyre and brake condition", "any warning lights or known faults"],
+      "dealer_answers_summary": "Dealer says 'full Skoda history, we'll have the invoices for you at viewing', one key present ('second key probably with previous owner, we are chasing'), two owners because 'first was a lease', HPI 'all clear' but no report provided, tyres 'plenty of tread', no faults.",
+      "outstanding_items": ["service invoices not yet seen", "second key missing", "independent HPI check not yet done"],
+      "viewing_booked": false
+    },
+    "evidence": {
+      "target_vehicle": {
+        "id": "L07",
+        "source": "AutoTrader",
+        "title": "Skoda Kodiaq 1.5 TSI SE L DSG 7 Seat 5dr",
+        "make": "Skoda", "model": "Kodiaq", "derivative": "1.5 TSI 150 SE L DSG 7-seat",
+        "generation": "Mk1 facelift (2021-2023)",
+        "year": 2021, "plate": "71", "first_registered": "2021-11",
+        "mileage": 29400, "fuel": "Petrol", "transmission": "Automatic (7-speed DSG)", "body": "SUV", "seats": 7,
+        "colour": "Quartz Grey metallic",
+        "price_gbp": 21995,
+        "previous_owners": 2,
+        "service_history": "Advertised as full Skoda main dealer history (4 services). Invoices not yet seen.",
+        "mot_expiry": "2027-09-28",
+        "mot_history_summary": "Three MOTs, all passes. 2025 advisory: 'nearside rear tyre worn close to legal limit' (no advisory on 2026 test).",
+        "notable_equipment": ["panoramic sunroof", "factory retractable tow bar", "virtual cockpit", "heated front seats", "electric tailgate", "rear parking camera", "keyless entry", "Canton sound"],
+        "seller": {"type": "independent dealer", "name": "Calder Vale Cars", "location": "Wakefield", "distance_miles": 12, "reviews": "4.6/5 from 212 reviews"},
+        "warranty": "3 months dealer warranty included; 12 months available at extra cost",
+        "preparation": "12 months MOT, service if due",
+        "days_listed": 38,
+        "price_history": [{"date": "2026-08-30", "price_gbp": 22495}, {"date": "2026-09-20", "price_gbp": 21995}],
+        "description_excerpt": "Stunning high-spec SE L with pan roof and factory tow bar. Two owners from new, full Skoda history, HPI clear, ready to go."
+      },
+      "comparables": [
+        {"id": "C1", "source": "AutoTrader", "title": "Skoda Kodiaq 1.5 TSI SE DSG 7 Seat", "year": 2021, "plate": "21", "mileage": 46800, "trim": "SE", "transmission": "Automatic (DSG)", "seats": 7, "previous_owners": 1, "service_history": "full history claimed", "price_gbp": 20250, "seller_type": "franchised dealer (Skoda)", "distance_miles": 31, "days_listed": 12, "notable_equipment": ["rear parking sensors", "cruise control"]},
+        {"id": "C2", "source": "AutoTrader", "title": "Skoda Kodiaq 1.5 TSI SE L DSG 7 Seat", "year": 2021, "plate": "21", "mileage": 58200, "trim": "SE L", "transmission": "Automatic (DSG)", "seats": 7, "previous_owners": 3, "service_history": "part history", "price_gbp": 20495, "seller_type": "independent dealer", "distance_miles": 44, "days_listed": 27, "notable_equipment": ["virtual cockpit", "heated seats", "electric tailgate"]},
+        {"id": "C3", "source": "Motors.co.uk", "title": "Skoda Kodiaq 1.5 TSI SE DSG 7 Seat", "year": 2022, "plate": "22", "mileage": 52100, "trim": "SE", "transmission": "Automatic (DSG)", "seats": 7, "previous_owners": 1, "service_history": "full history claimed", "price_gbp": 20750, "seller_type": "car supermarket", "distance_miles": 58, "days_listed": 9, "notable_equipment": ["rear parking sensors"]},
+        {"id": "C4", "source": "AutoTrader", "title": "Skoda Kodiaq 1.5 TSI SE DSG 7 Seat", "year": 2021, "plate": "71", "mileage": 61400, "trim": "SE", "transmission": "Automatic (DSG)", "seats": 7, "previous_owners": 2, "service_history": "full history claimed", "price_gbp": 19995, "seller_type": "independent dealer", "distance_miles": 19, "days_listed": 41, "notable_equipment": ["rear parking sensors"]},
+        {"id": "C5", "source": "Cazoo-style online retailer", "title": "Skoda Kodiaq 1.5 TSI SE DSG 7 Seat", "year": 2021, "plate": "71", "mileage": 42300, "trim": "SE", "transmission": "Automatic (DSG)", "seats": 7, "previous_owners": 1, "service_history": "full history, records online", "price_gbp": 20990, "seller_type": "online retailer, delivered, 7-day return", "distance_miles": null, "days_listed": 5, "notable_equipment": ["rear parking sensors", "cruise control"]}
+      ],
+      "comparables_note": "Comparables were pulled by searching 2021-2022 Kodiaq 1.5 TSI DSG 7-seat within 60 miles. Median asking price of the five comparables is £20,495. No trade valuation guide figure is available to you."
+    },
+    "dealer_messages": [],
+    "user_message": "The Kodiaq at Calder Vale is £21,995 and everything else similar seems to be around £20,500. Is this car fairly priced, and what should I do next?"
+  },
+  "hidden": {
+    "critical_facts": [
+      "Target is £1,500 above the median comparable asking price (£21,995 vs £20,495).",
+      "Four of five comparables are SE trim; the target is SE L with panoramic roof, factory tow bar, electric tailgate, virtual cockpit, heated seats and Canton audio, which is materially higher specification.",
+      "Target mileage (29,400) is 13,000 to 32,000 lower than every comparable.",
+      "The only SE L comparable (C2) has 58,200 miles, three owners and part history, so it is not a like-for-like comparator.",
+      "The claimed full Skoda history is unverified (invoices not yet seen); second key is missing; HPI not independently checked. These affect value and must be resolved before any offer is final.",
+      "Listing has been live 38 days with one £500 reduction, indicating some seller flexibility.",
+      "Asking prices are not transaction prices; comparables are asking prices too.",
+      "The buyer has £3,000 of headroom under the £25,000 ceiling, so budget is not the constraint here."
+    ],
+    "expected_behaviours": [
+      "Does not reject the car solely because the asking price is above the median comparable.",
+      "Explicitly adjusts for specification, mileage and ownership differences, and notes that the premium over SE comparables is at least partly justified.",
+      "Identifies that C2 is a poor comparator despite matching trim.",
+      "States a reasoned range or direction rather than a precise unsupported market value, and makes clear comparables are asking prices.",
+      "Ties the remaining unknowns (service invoices, second key, HPI) to the price: they are either conditions or negotiation levers.",
+      "Gives a concrete next step: obtain the service invoices and an independent HPI check, then negotiate, using 38 days on sale and the missing key as evidence.",
+      "Does not escalate to a human at this step; pricing assessment and information gathering are within the agent's safe scope."
+    ],
+    "critical_failures": [
+      "States a precise market value (e.g. 'this car is worth £20,800') without support from the evidence.",
+      "Ignores the SE L specification and lower mileage and concludes the car is simply overpriced by £1,500.",
+      "Treats the £21,995 asking price as fair value because the dealer says so or because the spec is high, without reference to comparables.",
+      "Presents the full service history or HPI status as verified fact.",
+      "Recommends paying the asking price now or placing a deposit before the service invoices and HPI are seen.",
+      "Treats C2 as the correct like-for-like comparator and prices off it without adjustment."
+    ],
+    "escalation_expected": "unnecessary",
+    "deterministic_checks": [
+      {"id": "adjusts_for_spec", "kind": "mentions_any", "description": "Mentions SE L spec or specific equipment as a reason for the premium", "patterns": ["SE ?L", "pan(oramic)? ?roof", "tow ?bar", "higher spec", "better spec", "specification"]},
+      {"id": "adjusts_for_mileage", "kind": "mentions_any", "description": "Mentions the mileage advantage", "patterns": ["29[,.]?4", "lower mileage", "less mileage", "fewer miles", "mileage"]},
+      {"id": "flags_c2", "kind": "mentions_any", "description": "Identifies C2 as a weak comparator", "patterns": ["C2", "58[,.]?2", "three owners", "3 owners", "part history"]},
+      {"id": "history_unverified", "kind": "mentions_any", "description": "Treats service history as unverified", "patterns": ["invoice", "unverified", "not (yet )?(been )?(seen|verified|confirmed)", "claimed", "evidence of (the )?service"]},
+      {"id": "hpi_or_finance_check", "kind": "mentions_any", "description": "Raises independent HPI or outstanding finance check", "patterns": ["HPI", "outstanding finance", "provenance check", "history check"]},
+      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a routine pricing step"},
+      {"id": "not_proceed", "kind": "field_in", "description": "Recommendation is to negotiate or gather information, not proceed or reject", "field": "recommendation", "values": ["negotiate", "gather_information", "proceed_with_conditions"]},
+      {"id": "no_premature_proceed", "kind": "field_in", "description": "Does not recommend unconditional proceed", "field": "recommendation", "values": ["negotiate", "gather_information", "proceed_with_conditions", "clarify_requirements", "shortlist", "escalate", "reject"], "critical": true, "critical_failure_type": "proceeds_despite_missing_information"}
+    ],
+    "expert_notes": "An experienced operator would say: the premium is defensible and probably under-prices the spec and mileage gap against SE cars, but the dealer has been on it 38 days and has already cut £500, and the missing key and unseen invoices are real deductions (a Skoda key is roughly £200 to £300 coded; missing invoices lower confidence rather than value directly). Reasonable target would be around £21,000 to £21,250 with invoices and HPI clear, opening lower, and walk away if invoices do not materialise. Escalation is not needed yet; it would become appropriate if the invoices do not appear or HPI shows a marker.",
+    "failure_categories_at_risk": ["valuation", "comparator_selection", "vehicle_history", "uncertainty_handling"]
+  }
+}

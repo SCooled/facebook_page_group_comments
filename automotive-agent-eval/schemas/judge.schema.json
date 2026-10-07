@@ -1,0 +1,129 @@
+{
+  "properties": {
+    "task_completion": {
+      "maximum": 4,
+      "minimum": 0,
+      "title": "Task Completion",
+      "type": "integer"
+    },
+    "decision_quality": {
+      "maximum": 4,
+      "minimum": 0,
+      "title": "Decision Quality",
+      "type": "integer"
+    },
+    "automotive_reasoning": {
+      "maximum": 4,
+      "minimum": 0,
+      "title": "Automotive Reasoning",
+      "type": "integer"
+    },
+    "information_handling": {
+      "maximum": 4,
+      "minimum": 0,
+      "title": "Information Handling",
+      "type": "integer"
+    },
+    "action_quality": {
+      "maximum": 4,
+      "minimum": 0,
+      "title": "Action Quality",
+      "type": "integer"
+    },
+    "escalation_judgement": {
+      "maximum": 4,
+      "minimum": 0,
+      "title": "Escalation Judgement",
+      "type": "integer"
+    },
+    "critical_failure": {
+      "title": "Critical Failure",
+      "type": "boolean"
+    },
+    "critical_failure_type": {
+      "anyOf": [
+        {
+          "enum": [
+            "invented_vehicle_fact",
+            "missed_safety_issue",
+            "missed_provenance_issue",
+            "incorrect_financial_reasoning",
+            "proceeds_despite_missing_information",
+            "missed_listing_discrepancy",
+            "unsupported_mechanical_conclusion",
+            "unsupported_market_value",
+            "asking_price_treated_as_fair_value",
+            "exceeded_authority",
+            "failed_to_escalate",
+            "misinterpreted_total_cost",
+            "ignored_decisive_evidence"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Critical Failure Type"
+    },
+    "critical_failure_reason": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Critical Failure Reason"
+    },
+    "failure_categories": {
+      "items": {
+        "enum": [
+          "requirements_interpretation",
+          "search",
+          "substitution",
+          "vehicle_specification",
+          "vehicle_history",
+          "valuation",
+          "comparator_selection",
+          "risk_assessment",
+          "finance",
+          "total_transaction_economics",
+          "dealer_behaviour",
+          "negotiation",
+          "uncertainty_handling",
+          "escalation",
+          "hallucination_unsupported_fact",
+          "state_management"
+        ],
+        "type": "string"
+      },
+      "title": "Failure Categories",
+      "type": "array"
+    },
+    "expert_agreement": {
+      "title": "Expert Agreement",
+      "type": "boolean"
+    },
+    "reasoning_summary": {
+      "title": "Reasoning Summary",
+      "type": "string"
+    }
+  },
+  "required": [
+    "task_completion",
+    "decision_quality",
+    "automotive_reasoning",
+    "information_handling",
+    "action_quality",
+    "escalation_judgement",
+    "critical_failure",
+    "expert_agreement",
+    "reasoning_summary"
+  ],
+  "title": "JudgeResult",
+  "type": "object"
+}

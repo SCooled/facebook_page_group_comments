@@ -1,0 +1,18 @@
+# Response format
+
+Answer in clear prose first, as you would to the buyer. Keep it focused; do not pad.
+
+Then finish with exactly one fenced JSON block (```json ... ```) with this shape. It is parsed by software, so keep the keys and types exactly as shown:
+
+{
+  "recommendation": "<one of: clarify_requirements | shortlist | gather_information | proceed | proceed_with_conditions | negotiate | reject | escalate>",
+  "escalate_to_human": <true|false>,
+  "escalation_reason": "<why a human should take over now, or null>",
+  "vehicle_ids": ["<listing ids you are recommending or shortlisting, in rank order, using the ids given in the evidence; empty if none>"],
+  "questions_for_dealer": ["<the specific questions you would put to the seller, most important first>"],
+  "questions_for_user": ["<what you need from the buyer before you can advise further>"],
+  "figures": {"<name>": <number>},
+  "unresolved_risks": ["<material unknowns or risks that remain>"]
+}
+
+Use "figures" for any numbers you rely on or recommend, for example opening_offer_gbp, target_price_gbp, walk_away_gbp, finance_total_payable_gbp, estimated_fair_price_low_gbp, estimated_fair_price_high_gbp. Omit figures you are not confident in. Set escalate_to_human to true only when a human should take over before the next step, not merely because the final purchase decision belongs to the buyer.

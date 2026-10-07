@@ -1,0 +1,362 @@
+{
+  "$defs": {
+    "CandidateVisible": {
+      "description": "Everything the candidate model is allowed to see.",
+      "properties": {
+        "scenario": {
+          "title": "Scenario",
+          "type": "string"
+        },
+        "user_context": {
+          "additionalProperties": true,
+          "title": "User Context",
+          "type": "object"
+        },
+        "conversation_state": {
+          "additionalProperties": true,
+          "title": "Conversation State",
+          "type": "object"
+        },
+        "evidence": {
+          "additionalProperties": true,
+          "title": "Evidence",
+          "type": "object"
+        },
+        "dealer_messages": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Dealer Messages",
+          "type": "array"
+        },
+        "user_message": {
+          "title": "User Message",
+          "type": "string"
+        }
+      },
+      "required": [
+        "scenario",
+        "user_message"
+      ],
+      "title": "CandidateVisible",
+      "type": "object"
+    },
+    "DeterministicCheck": {
+      "description": "A machine-checkable assertion about the candidate response.\n\nkinds:\n  mentions_any      - at least one regex in `patterns` matches the full response text\n  mentions_all      - every regex in `patterns` matches\n  not_mentions      - no regex in `patterns` matches\n  field_equals      - structured block field `field` == `value`\n  field_in          - structured block field `field` is one of `values`\n  vehicles_subset   - every id in structured `vehicle_ids` is within `values`\n  vehicles_include  - structured `vehicle_ids` contains at least one of `values`\n  vehicles_exclude  - structured `vehicle_ids` contains none of `values`\n  figure_close      - structured `figures[field]` within `tolerance` of `value`\n  escalation        - structured `escalate_to_human` consistent with hidden escalation_expected\n  list_nonempty     - structured list field `field` has at least `min_items` entries",
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "mentions_any",
+            "mentions_all",
+            "not_mentions",
+            "field_equals",
+            "field_in",
+            "vehicles_subset",
+            "vehicles_include",
+            "vehicles_exclude",
+            "figure_close",
+            "escalation",
+            "list_nonempty"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "patterns": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Patterns"
+        },
+        "field": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Field"
+        },
+        "value": {
+          "anyOf": [
+            {},
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "values": {
+          "anyOf": [
+            {
+              "items": {},
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Values"
+        },
+        "tolerance": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Tolerance"
+        },
+        "min_items": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Min Items"
+        },
+        "critical": {
+          "default": false,
+          "title": "Critical",
+          "type": "boolean"
+        },
+        "critical_failure_type": {
+          "anyOf": [
+            {
+              "enum": [
+                "invented_vehicle_fact",
+                "missed_safety_issue",
+                "missed_provenance_issue",
+                "incorrect_financial_reasoning",
+                "proceeds_despite_missing_information",
+                "missed_listing_discrepancy",
+                "unsupported_mechanical_conclusion",
+                "unsupported_market_value",
+                "asking_price_treated_as_fair_value",
+                "exceeded_authority",
+                "failed_to_escalate",
+                "misinterpreted_total_cost",
+                "ignored_decisive_evidence"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Critical Failure Type"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "description"
+      ],
+      "title": "DeterministicCheck",
+      "type": "object"
+    },
+    "Hidden": {
+      "description": "Evaluator-only data. Never sent to the candidate.",
+      "properties": {
+        "critical_facts": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Critical Facts",
+          "type": "array"
+        },
+        "expected_behaviours": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Expected Behaviours",
+          "type": "array"
+        },
+        "critical_failures": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Critical Failures",
+          "type": "array"
+        },
+        "escalation_expected": {
+          "enum": [
+            "required",
+            "acceptable",
+            "unnecessary"
+          ],
+          "title": "Escalation Expected",
+          "type": "string"
+        },
+        "deterministic_checks": {
+          "items": {
+            "$ref": "#/$defs/DeterministicCheck"
+          },
+          "title": "Deterministic Checks",
+          "type": "array"
+        },
+        "expert_notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expert Notes"
+        },
+        "failure_categories_at_risk": {
+          "items": {
+            "enum": [
+              "requirements_interpretation",
+              "search",
+              "substitution",
+              "vehicle_specification",
+              "vehicle_history",
+              "valuation",
+              "comparator_selection",
+              "risk_assessment",
+              "finance",
+              "total_transaction_economics",
+              "dealer_behaviour",
+              "negotiation",
+              "uncertainty_handling",
+              "escalation",
+              "hallucination_unsupported_fact",
+              "state_management"
+            ],
+            "type": "string"
+          },
+          "title": "Failure Categories At Risk",
+          "type": "array"
+        }
+      },
+      "required": [
+        "critical_facts",
+        "expected_behaviours",
+        "critical_failures",
+        "escalation_expected"
+      ],
+      "title": "Hidden",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "version": {
+      "default": "v1",
+      "title": "Version",
+      "type": "string"
+    },
+    "category": {
+      "enum": [
+        "intent",
+        "search",
+        "substitution",
+        "evaluation",
+        "pricing",
+        "dealer_interaction",
+        "offer_comparison",
+        "negotiation",
+        "escalation"
+      ],
+      "title": "Category",
+      "type": "string"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "adversarial": {
+      "default": false,
+      "title": "Adversarial",
+      "type": "boolean"
+    },
+    "variant_of": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Variant Of"
+    },
+    "journey_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Journey Id"
+    },
+    "journey_step": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Journey Step"
+    },
+    "candidate_visible": {
+      "$ref": "#/$defs/CandidateVisible"
+    },
+    "hidden": {
+      "$ref": "#/$defs/Hidden"
+    }
+  },
+  "required": [
+    "id",
+    "category",
+    "title",
+    "candidate_visible",
+    "hidden"
+  ],
+  "title": "Case",
+  "type": "object"
+}

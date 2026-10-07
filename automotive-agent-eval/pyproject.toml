@@ -1,0 +1,21 @@
+[project]
+name = "automotive-agent-eval"
+version = "0.1.0"
+description = "Evaluation harness: can a general-purpose agent handle most of an automotive purchase journey?"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2",
+    "pandas>=2",
+    "pyyaml>=6",
+    "openai>=1.50",
+    "google-genai>=1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+packages = ["core", "providers", "evaluators", "runners"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

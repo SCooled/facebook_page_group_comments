@@ -1,0 +1,572 @@
+{
+  "$defs": {
+    "DeterministicResult": {
+      "properties": {
+        "check_id": {
+          "title": "Check Id",
+          "type": "string"
+        },
+        "kind": {
+          "title": "Kind",
+          "type": "string"
+        },
+        "passed": {
+          "title": "Passed",
+          "type": "boolean"
+        },
+        "critical": {
+          "title": "Critical",
+          "type": "boolean"
+        },
+        "detail": {
+          "title": "Detail",
+          "type": "string"
+        }
+      },
+      "required": [
+        "check_id",
+        "kind",
+        "passed",
+        "critical",
+        "detail"
+      ],
+      "title": "DeterministicResult",
+      "type": "object"
+    },
+    "JudgeResult": {
+      "properties": {
+        "task_completion": {
+          "maximum": 4,
+          "minimum": 0,
+          "title": "Task Completion",
+          "type": "integer"
+        },
+        "decision_quality": {
+          "maximum": 4,
+          "minimum": 0,
+          "title": "Decision Quality",
+          "type": "integer"
+        },
+        "automotive_reasoning": {
+          "maximum": 4,
+          "minimum": 0,
+          "title": "Automotive Reasoning",
+          "type": "integer"
+        },
+        "information_handling": {
+          "maximum": 4,
+          "minimum": 0,
+          "title": "Information Handling",
+          "type": "integer"
+        },
+        "action_quality": {
+          "maximum": 4,
+          "minimum": 0,
+          "title": "Action Quality",
+          "type": "integer"
+        },
+        "escalation_judgement": {
+          "maximum": 4,
+          "minimum": 0,
+          "title": "Escalation Judgement",
+          "type": "integer"
+        },
+        "critical_failure": {
+          "title": "Critical Failure",
+          "type": "boolean"
+        },
+        "critical_failure_type": {
+          "anyOf": [
+            {
+              "enum": [
+                "invented_vehicle_fact",
+                "missed_safety_issue",
+                "missed_provenance_issue",
+                "incorrect_financial_reasoning",
+                "proceeds_despite_missing_information",
+                "missed_listing_discrepancy",
+                "unsupported_mechanical_conclusion",
+                "unsupported_market_value",
+                "asking_price_treated_as_fair_value",
+                "exceeded_authority",
+                "failed_to_escalate",
+                "misinterpreted_total_cost",
+                "ignored_decisive_evidence"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Critical Failure Type"
+        },
+        "critical_failure_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Critical Failure Reason"
+        },
+        "failure_categories": {
+          "items": {
+            "enum": [
+              "requirements_interpretation",
+              "search",
+              "substitution",
+              "vehicle_specification",
+              "vehicle_history",
+              "valuation",
+              "comparator_selection",
+              "risk_assessment",
+              "finance",
+              "total_transaction_economics",
+              "dealer_behaviour",
+              "negotiation",
+              "uncertainty_handling",
+              "escalation",
+              "hallucination_unsupported_fact",
+              "state_management"
+            ],
+            "type": "string"
+          },
+          "title": "Failure Categories",
+          "type": "array"
+        },
+        "expert_agreement": {
+          "title": "Expert Agreement",
+          "type": "boolean"
+        },
+        "reasoning_summary": {
+          "title": "Reasoning Summary",
+          "type": "string"
+        }
+      },
+      "required": [
+        "task_completion",
+        "decision_quality",
+        "automotive_reasoning",
+        "information_handling",
+        "action_quality",
+        "escalation_judgement",
+        "critical_failure",
+        "expert_agreement",
+        "reasoning_summary"
+      ],
+      "title": "JudgeResult",
+      "type": "object"
+    },
+    "StructuredBlock": {
+      "description": "The JSON block the candidate must append after its prose answer.",
+      "properties": {
+        "recommendation": {
+          "enum": [
+            "clarify_requirements",
+            "shortlist",
+            "gather_information",
+            "proceed",
+            "proceed_with_conditions",
+            "negotiate",
+            "reject",
+            "escalate"
+          ],
+          "title": "Recommendation",
+          "type": "string"
+        },
+        "escalate_to_human": {
+          "title": "Escalate To Human",
+          "type": "boolean"
+        },
+        "escalation_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Escalation Reason"
+        },
+        "vehicle_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Vehicle Ids",
+          "type": "array"
+        },
+        "questions_for_dealer": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Questions For Dealer",
+          "type": "array"
+        },
+        "questions_for_user": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Questions For User",
+          "type": "array"
+        },
+        "figures": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Figures",
+          "type": "object"
+        },
+        "unresolved_risks": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Unresolved Risks",
+          "type": "array"
+        }
+      },
+      "required": [
+        "recommendation",
+        "escalate_to_human"
+      ],
+      "title": "StructuredBlock",
+      "type": "object"
+    }
+  },
+  "description": "RunRecord plus evaluator outputs. Stored in results/scored/<batch>/scored.jsonl.",
+  "properties": {
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "batch_id": {
+      "title": "Batch Id",
+      "type": "string"
+    },
+    "case_id": {
+      "title": "Case Id",
+      "type": "string"
+    },
+    "case_version": {
+      "title": "Case Version",
+      "type": "string"
+    },
+    "category": {
+      "title": "Category",
+      "type": "string"
+    },
+    "journey_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Journey Id"
+    },
+    "adversarial": {
+      "title": "Adversarial",
+      "type": "boolean"
+    },
+    "model_provider": {
+      "title": "Model Provider",
+      "type": "string"
+    },
+    "model_name": {
+      "title": "Model Name",
+      "type": "string"
+    },
+    "configuration": {
+      "title": "Configuration",
+      "type": "string"
+    },
+    "repetition": {
+      "title": "Repetition",
+      "type": "integer"
+    },
+    "system_prompt_version": {
+      "title": "System Prompt Version",
+      "type": "string"
+    },
+    "system_prompt_hash": {
+      "title": "System Prompt Hash",
+      "type": "string"
+    },
+    "raw_response": {
+      "title": "Raw Response",
+      "type": "string"
+    },
+    "structured": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/StructuredBlock"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "structured_parse_error": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Structured Parse Error"
+    },
+    "latency_ms": {
+      "title": "Latency Ms",
+      "type": "integer"
+    },
+    "input_tokens": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Input Tokens"
+    },
+    "output_tokens": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Output Tokens"
+    },
+    "effective_temperature": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Effective Temperature"
+    },
+    "error": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Error"
+    },
+    "created_at": {
+      "title": "Created At",
+      "type": "string"
+    },
+    "deterministic": {
+      "items": {
+        "$ref": "#/$defs/DeterministicResult"
+      },
+      "title": "Deterministic",
+      "type": "array"
+    },
+    "deterministic_pass_rate": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Deterministic Pass Rate"
+    },
+    "judge_provider": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Judge Provider"
+    },
+    "judge_model": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Judge Model"
+    },
+    "judge": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/JudgeResult"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "judge_error": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Judge Error"
+    },
+    "weighted_score": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Weighted Score"
+    },
+    "critical_failure": {
+      "default": false,
+      "title": "Critical Failure",
+      "type": "boolean"
+    },
+    "critical_failure_source": {
+      "anyOf": [
+        {
+          "enum": [
+            "judge",
+            "deterministic",
+            "both"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Critical Failure Source"
+    },
+    "critical_failure_type": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Critical Failure Type"
+    },
+    "escalated": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Escalated"
+    },
+    "escalation_expected": {
+      "title": "Escalation Expected",
+      "type": "string"
+    },
+    "escalation_appropriate": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Escalation Appropriate"
+    },
+    "safe_autonomous": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Safe Autonomous"
+    },
+    "task_completed": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Task Completed"
+    }
+  },
+  "required": [
+    "run_id",
+    "batch_id",
+    "case_id",
+    "case_version",
+    "category",
+    "journey_id",
+    "adversarial",
+    "model_provider",
+    "model_name",
+    "configuration",
+    "repetition",
+    "system_prompt_version",
+    "system_prompt_hash",
+    "raw_response",
+    "structured",
+    "structured_parse_error",
+    "latency_ms",
+    "input_tokens",
+    "output_tokens",
+    "effective_temperature",
+    "error",
+    "created_at",
+    "escalation_expected"
+  ],
+  "title": "ScoredRecord",
+  "type": "object"
+}

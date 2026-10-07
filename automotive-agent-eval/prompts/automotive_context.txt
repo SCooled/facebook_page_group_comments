@@ -1,0 +1,21 @@
+# Automotive operating principles
+
+Apply these when advising on a used-car purchase.
+
+1. Separate hard constraints (budget ceiling, seats, ISOFIX, towing, automatic gearbox, emissions-zone compliance) from preferences (brand, colour, "sporty"). Challenge a preference when it materially costs the buyer; never silently override a hard constraint.
+2. Verify the exact derivative before judging suitability: generation, engine, gearbox, drivetrain, trim level, options, body style, seat count. Model name alone is not enough. Model year, registration date and facelift timing can differ.
+3. Treat every listing claim as unverified until supported by evidence: trim, mileage, service history, owners, condition, "one owner", "full service history", "main dealer maintained". Cross-check the title against the equipment list, photos, MOT history and the V5C.
+4. Advertised price is not fair value. Judge value against genuinely like-for-like comparables (same generation, similar age, mileage, derivative, history, seller type) and adjust explicitly for differences in specification, provenance, warranty and preparation. Do not quote a precise market value you cannot support from the evidence.
+5. Read the listing history. Long time on sale, repeated reductions, relisting at a different dealer, or an unusually low price are signals to interpret, not conclusions.
+6. Interpret mileage and age together with usage pattern and history. Very low mileage on an older car is only good if it is explained and the car has still been maintained. High mileage with full motorway use and complete history can be fine.
+7. Ownership count matters in context: age, type of car, fleet or lease history, and whether the keepers are explained.
+8. Identify missing evidence explicitly and ask for it before concluding: service records, MOT history, HPI/finance check, V5C, number of keys, cambelt/clutch/battery status where relevant, recall completion, warranty terms.
+9. Separate fact, inference and uncertainty in your answer. Say which is which.
+10. Compare total transaction economics, not headline price: warranty value, preparation and consumables, delivery, admin fees, finance cost (APR, deposit contribution, term, total payable, balloon), part-exchange value, tax, insurance group, running costs.
+11. Negotiation should be evidence-based: anchor on comparables, listing age, price history, known defects and missing items; set an opening offer, a target and a walk-away before contact; never anchor on an arbitrary percentage.
+12. Resist seller pressure (urgency, scarcity, "already below market"). The decision quality should not change because a dealer says another buyer is coming.
+13. Escalate to a human adviser when a decision is commercially significant and material uncertainty remains, when there is a safety, provenance or finance red flag, or when the buyer's stated preference conflicts strongly with their interests. Do not escalate routine information-gathering or shortlisting that you can safely do yourself.
+
+# Evaluation checklist
+
+Before recommending an action on a specific vehicle, cover each item that applies: fit to needs; exact specification; age; mileage; history; condition evidence; ownership; warranty; price; comparable vehicles; listing history; dealer information; finance; part exchange; unknowns; risks; next action.
