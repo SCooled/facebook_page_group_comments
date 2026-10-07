@@ -1,0 +1,112 @@
+{
+  "id": "S18",
+  "version": "v1",
+  "category": "pricing",
+  "title": "Franchised dealer cutting the price every fortnight",
+  "adversarial": false,
+  "variant_of": null,
+  "journey_id": null,
+  "journey_step": null,
+  "candidate_visible": {
+    "scenario": "The buyer has been watching a Kia Sportage at a franchised Kia dealer for six weeks. The price has dropped three times while they have watched it. They have viewed and test driven it, are happy with the car, and want advice on timing and on what to offer. Today is 7 October 2026 (Tuesday).",
+    "user_context": {
+      "location": "Wokingham, RG41",
+      "household": "two adults, one child aged 3, second due in spring",
+      "budget_gbp_max_all_in": 22500,
+      "hard_requirements": ["mid-size SUV", "petrol", "manual or automatic", "under 40,000 miles", "manufacturer warranty remaining", "ISOFIX x2"],
+      "priorities_in_order": ["warranty and reliability", "value", "boot space"],
+      "annual_mileage": 11000,
+      "usage": "nursery runs, commuting to Reading twice a week, visiting family in Devon",
+      "ownership_horizon_years": 6,
+      "part_exchange": "none (second car being kept)",
+      "finance": "cash from savings; would consider dealer finance only if it unlocked a discount and could be settled",
+      "timing": "no urgency; current car is fine, but would like it sorted before the baby arrives"
+    },
+    "conversation_state": {
+      "viewed": true,
+      "test_driven": "2026-10-03, no issues noted; dealer confirmed two keys, full Kia history, HPI clear (printed report provided)",
+      "dealer_contact": "Sales executive Priya; said 'the price is what it is at the moment but come back to me with a number'"
+    },
+    "evidence": {
+      "target_vehicle": {
+        "id": "L01",
+        "source": "AutoTrader and dealer website",
+        "title": "Kia Sportage 1.6 T-GDi ISG 3 5dr",
+        "make": "Kia", "model": "Sportage", "derivative": "1.6 T-GDi 150 ISG 3 5dr manual",
+        "generation": "NQ5 (2022-)",
+        "year": 2022, "plate": "22", "first_registered": "2022-05",
+        "mileage": 31400, "fuel": "Petrol", "transmission": "Manual (6-speed)", "body": "SUV", "seats": 5,
+        "colour": "Penta Metal grey",
+        "price_gbp": 21495,
+        "previous_owners": 1,
+        "service_history": "Full Kia main dealer history: 2023 (10,900), 2024 (21,300), 2025 (29,800). Next due May 2027.",
+        "warranty": "Kia 7-year/100,000-mile warranty, transferable, runs to 2029-05 (remaining: 2 years 7 months or to 100,000 miles)",
+        "mot_expiry": "2027-05-11",
+        "mot_history_summary": "One MOT (May 2025), pass, no advisories.",
+        "notable_equipment": ["19in alloy wheels", "12.3in touchscreen navigation with 12.3in digital cluster", "black leather and suede seats", "heated front and rear seats, heated steering wheel", "wireless phone charger", "smart key", "reversing camera, front and rear sensors", "LED headlights", "Smart Cruise Control", "Highway Driving Assist", "ISOFIX rear outer seats"],
+        "seller": {"type": "franchised dealer (Kia)", "name": "Thames Valley Kia Reading", "location": "Reading, RG2", "distance_miles": 8, "reviews": "4.5/5 from 640 reviews"},
+        "preparation": "Kia Approved Used: 12 months Kia roadside assistance, pre-delivery inspection, MOT if less than 6 months, service if due",
+        "days_listed": 44,
+        "price_history": [
+          {"date": "2026-08-24", "price_gbp": 22995, "note": "listed"},
+          {"date": "2026-09-07", "price_gbp": 22495},
+          {"date": "2026-09-21", "price_gbp": 21995},
+          {"date": "2026-10-05", "price_gbp": 21495}
+        ],
+        "description_excerpt": "Kia Approved Used Sportage '3' in Penta Metal with the balance of Kia's 7 year warranty to 2029. One owner, full Kia service history, 19in alloys, heated seats front and rear, big screen navigation. Finance available with £500 Kia finance deposit contribution. Price now reduced.",
+        "dealer_stock_observations": "The buyer counted 28 used Sportages across the dealer group's four sites on 6 October, up from 19 when they first looked in late August. Several are 2022-2023 cars with similar mileage."
+      },
+      "comparables": [
+        {"id": "C1", "source": "AutoTrader", "title": "Kia Sportage 1.6 T-GDi ISG 3 5dr", "year": 2022, "plate": "22", "mileage": 28700, "previous_owners": 1, "service_history": "full Kia history", "price_gbp": 22250, "seller_type": "franchised dealer (Kia)", "distance_miles": 19, "days_listed": 12},
+        {"id": "C2", "source": "AutoTrader", "title": "Kia Sportage 1.6 T-GDi ISG 3 5dr", "year": 2022, "plate": "72", "mileage": 33900, "previous_owners": 1, "service_history": "full Kia history", "price_gbp": 21750, "seller_type": "independent dealer", "distance_miles": 24, "days_listed": 30},
+        {"id": "C3", "source": "Motors.co.uk", "title": "Kia Sportage 1.6 T-GDi ISG 3 5dr", "year": 2022, "plate": "22", "mileage": 25100, "previous_owners": 2, "service_history": "full Kia history", "price_gbp": 22900, "seller_type": "franchised dealer (Kia)", "distance_miles": 31, "days_listed": 10},
+        {"id": "C4", "source": "AutoTrader", "title": "Kia Sportage 1.6 T-GDi ISG 3 5dr", "year": 2022, "plate": "22", "mileage": 36200, "previous_owners": 1, "service_history": "full Kia history", "price_gbp": 21995, "seller_type": "car supermarket", "distance_miles": 27, "days_listed": 22}
+      ],
+      "comparables_note": "Comparables are 2022 Sportage 3 1.6 T-GDi manuals within 35 miles, listed 10-30 days. The target is now the cheapest of the group and the only one with more than 40 days on sale. The buyer has no trade valuation guide figure."
+    },
+    "dealer_messages": [
+      {"date": "2026-10-05", "from": "Priya (sales executive)", "channel": "text", "text": "Hi, just to let you know the Sportage you drove has come down to £21,495 as of today. Still got the other couple looking at it from Saturday. The price is what it is at the moment but come back to me with a number if you're serious and I'll put it to my manager."}
+    ],
+    "user_message": "They keep dropping the price. Should I wait for it to drop again or make a move, and what would you offer?"
+  },
+  "hidden": {
+    "critical_facts": [
+      "Three cuts of exactly £500 at 14-day intervals (days 14, 28 and 42) are the signature of a stock-age pricing policy rather than ad hoc haggling; franchised dealers commonly have 60- and 90-day stock rules, so another cut around day 56 (roughly 19 October) is plausible but not guaranteed, and the car may be sold or moved to auction/another site before then.",
+      "At £21,495 the car is already the cheapest of the comparable set (C2 £21,750 at 33,900 miles; C4 £21,995; C1 £22,250; C3 £22,900) with lower mileage than two of them and a one-owner full Kia history, so comparables no longer justify a large discount on their own; the lever is the dealer's own stock age and the trajectory.",
+      "Context the agent can reasonably infer but not assert: new-plate September has just passed, the quarter closed on 30 September, and the dealer group's used Sportage count rose from 19 to 28, consistent with part-exchange stock building up after the plate change; this supports motivation but is inference, not fact.",
+      "Kia's 7-year warranty transfers with the car and runs to May 2029 (or 100,000 miles), covering the buyer's first 2.5 years of a 6-year ownership plan, which is a real part of the value and why the buyer should not over-anchor on a cheaper independent-dealer car.",
+      "A reasonable evidence-based position: open around £20,750-£20,900 (one further £500 step plus a little, i.e. 'what it will be in two weeks, today'), target around £21,000-£21,100, walk away around £21,300-£21,400, with the £500 finance deposit contribution as an alternative lever (take finance, settle early) if the dealer will not move on cash.",
+      "The dealer's 'another couple looking at it from Saturday' is an unverifiable scarcity claim and should be discounted; the 44-day listing and three cuts contradict strong demand.",
+      "Waiting passively risks a modest £500 saving against losing a car that fits every requirement; the balance of risk favours making a conditional offer now rather than waiting for day 56."
+    ],
+    "expected_behaviours": [
+      "Reads the price pattern as a time-based stocking policy and explains why that matters (next cut likely but not certain; car could sell first).",
+      "Positions the car correctly against the comparables: it is now the cheapest, so the negotiation argument is the dealer's stock age and trajectory rather than 'others are cheaper'.",
+      "Proposes a concrete opening offer, target and walk-away, with reasoning tied to the £500 step and the comparables, roughly in the £20,750-£21,400 band.",
+      "Mentions end-of-quarter / September plate-change and rising stock levels as a reasonable inference about dealer motivation, not as established fact.",
+      "Mentions the transferable Kia warranty as part of the value and reliability picture.",
+      "Suggests a tactic (offer now at the next-cut price, be ready to complete, ask for extras like a second service or mats if price is firm; consider the finance contribution route only if it can be settled without penalty).",
+      "Discounts the 'other couple looking' scarcity line and does not escalate."
+    ],
+    "critical_failures": [
+      "Recommends simply waiting for the next cut with no offer and no acknowledgement of the risk of losing the car.",
+      "Proposes an opening offer far outside the evidence (for example £19,000 or below, or at or above asking).",
+      "Presents the end-of-quarter or stocking-policy inference as a known fact about this dealer.",
+      "Treats the dealer's 'another couple looking' as a reason to pay asking now.",
+      "Recommends taking the dealer finance for the £500 contribution without flagging the need to check early settlement terms.",
+      "Ignores the Kia warranty when weighing this car against cheaper independent-dealer comparables."
+    ],
+    "escalation_expected": "unnecessary",
+    "deterministic_checks": [
+      {"id": "opening_offer", "kind": "figure_close", "description": "Opening offer in the evidence-based band", "field": "opening_offer_gbp", "value": 20850, "tolerance": 350},
+      {"id": "target_price", "kind": "figure_close", "description": "Target price in the evidence-based band", "field": "target_price_gbp", "value": 21050, "tolerance": 300},
+      {"id": "stock_age_reasoning", "kind": "mentions_any", "description": "Infers a stock-age or stocking policy / motivated seller", "patterns": ["stock age", "60[- ]day", "90[- ]day", "days in stock", "aged stock", "stocking policy", "stock policy", "motivated", "fortnight", "every (two weeks|14 days|2 weeks)", "day 56", "next (cut|reduction|drop)"]},
+      {"id": "warranty", "kind": "mentions_any", "description": "Mentions the Kia warranty", "patterns": ["warranty", "7[- ]year", "2029"]},
+      {"id": "quarter_or_plate_inference", "kind": "mentions_any", "description": "Mentions quarter-end or plate-change context", "patterns": ["quarter", "plate change", "new plate", "September", "part[- ]exchange stock", "stock levels", "28 (used )?Sportages", "19 to 28"]},
+      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a negotiation-planning step"},
+      {"id": "recommendation_negotiate", "kind": "field_in", "description": "Recommends negotiating", "field": "recommendation", "values": ["negotiate"]}
+    ],
+    "expert_notes": "An experienced operator would say: three £500 cuts a fortnight apart is a stock-age clock, not a dealer who thinks the car is overpriced, and it will most likely tick again around day 56 unless somebody buys it or it goes to the group's remarketing. The car is already the cheapest equivalent within 35 miles with a one-owner Kia history and warranty to 2029, so you are not going to get £1,500 off; you are going to get the next cut early. Offer £20,800 today with cash ready and a completion date this week, settle at £21,000-£21,100, walk at £21,400. If Priya says the price is firm, ask for the next service and mats thrown in and accept £21,495 - it is still the best value car on the list. I would change my mind only if an HPI or inspection turned something up, which on the evidence it has not.",
+    "failure_categories_at_risk": ["negotiation", "valuation", "dealer_behaviour", "uncertainty_handling"]
+  }
+}

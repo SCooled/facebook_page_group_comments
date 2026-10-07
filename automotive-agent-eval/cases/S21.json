@@ -1,0 +1,285 @@
+{
+  "id": "S21",
+  "version": "v1",
+  "category": "offer_comparison",
+  "title": "Cheaper headline price versus bundled preparation and warranty",
+  "adversarial": false,
+  "variant_of": null,
+  "journey_id": null,
+  "journey_step": null,
+  "candidate_visible": {
+    "scenario": "The buyer has narrowed their search to two examples of the same car, a Hyundai Tucson Hybrid, at two different dealers. One is noticeably cheaper than the other. They have gathered the full details of both offers and want your help deciding. Today is 7 October 2026.",
+    "user_context": {
+      "location": "Oadby, Leicester, LE2",
+      "household": "two adults, one teenager, elderly parent visits often (needs easy access)",
+      "budget_gbp_max_all_in": 21000,
+      "hard_requirements": [
+        "automatic",
+        "petrol hybrid (no home charging)",
+        "SUV with high seating position",
+        "under 45,000 miles",
+        "reversing camera"
+      ],
+      "priorities_in_order": [
+        "low hassle and predictable costs over 4+ years",
+        "value",
+        "equipment"
+      ],
+      "annual_mileage": 10000,
+      "usage": "local driving, hospital runs with parent, two long trips a year to Scotland",
+      "ownership_horizon_years": 4,
+      "part_exchange": "none (selling 2013 Honda Jazz privately)",
+      "finance": "paying cash; not interested in finance"
+    },
+    "conversation_state": {},
+    "evidence": {
+      "offers": [
+        {
+          "id": "A",
+          "source": "AutoTrader",
+          "title": "Hyundai Tucson 1.6 T-GDi Hybrid Premium 5dr Auto",
+          "make": "Hyundai",
+          "model": "Tucson",
+          "derivative": "1.6 T-GDi 230 Hybrid Premium 5dr 6-speed auto",
+          "generation": "NX4 (2021-)",
+          "year": 2021,
+          "plate": "21",
+          "first_registered": "2021-07",
+          "mileage": 38100,
+          "fuel": "Petrol hybrid (self-charging)",
+          "transmission": "Automatic (6-speed)",
+          "body": "SUV",
+          "seats": 5,
+          "colour": "Shimmering Silver metallic",
+          "price_gbp": 19495,
+          "fees": {
+            "admin_fee_gbp": 149,
+            "note": "'Admin fee applies to all vehicles, covers HPI, preparation and paperwork'"
+          },
+          "previous_owners": 2,
+          "service_history": "Full service history: Hyundai dealer 2022 (9,800) and 2023 (19,400), independent 2024 (28,900) and 2025-08 (36,700). Hyundai interval is 12 months or 10,000 miles; by that schedule the next service was due August 2026 (two months ago) or at 46,700 miles.",
+          "warranty": "Hyundai 5-year unlimited-mileage warranty expired 2026-07. Dealer includes 3 months third-party warranty (£250 per claim limit, engine and gearbox only); 12 months 'Platinum' cover available at £399.",
+          "mot_expiry": "2027-02-09 (4 months remaining); dealer will not renew unless under 3 months at sale",
+          "mot_history_summary": "Two MOTs, both passes, no advisories.",
+          "tyres": "Mixed brands: Hankook front (4mm), Nexen rear (3mm) per the buyer's inspection on 4 October",
+          "preparation": "Valet, PDI, 'serviced if due'. When asked, the salesman said 'it's only just gone over, we'll stamp it if it needs doing'. No commitment in writing yet.",
+          "notable_equipment": [
+            "Premium: 18in alloys",
+            "10.25in navigation",
+            "heated front seats and steering wheel",
+            "wireless charging",
+            "Krell audio",
+            "LED headlights",
+            "reversing camera",
+            "Smart Cruise",
+            "Blind-Spot Collision Avoidance"
+          ],
+          "seller": {
+            "type": "independent dealer",
+            "name": "Fosse Way Autos",
+            "location": "Hinckley",
+            "distance_miles": 40,
+            "reviews": "4.3/5 from 158 reviews"
+          },
+          "returns": "No returns policy stated beyond statutory rights",
+          "days_listed": 21,
+          "price_history": [
+            {
+              "date": "2026-09-16",
+              "price_gbp": 19495
+            }
+          ],
+          "description_excerpt": "Superb Tucson Hybrid Premium, two owners, full service history, 38k miles. Great economy, loads of kit. Finance available, part exchange welcome, admin fee applies."
+        },
+        {
+          "id": "B",
+          "source": "Hyundai Promise approved used (dealer website)",
+          "title": "Hyundai Tucson 1.6 T-GDi Hybrid Premium 5dr Auto - Hyundai Approved",
+          "make": "Hyundai",
+          "model": "Tucson",
+          "derivative": "1.6 T-GDi 230 Hybrid Premium 5dr 6-speed auto",
+          "generation": "NX4 (2021-)",
+          "year": 2021,
+          "plate": "71",
+          "first_registered": "2021-11",
+          "mileage": 36200,
+          "fuel": "Petrol hybrid (self-charging)",
+          "transmission": "Automatic (6-speed)",
+          "body": "SUV",
+          "seats": 5,
+          "colour": "Phantom Black pearl",
+          "price_gbp": 20795,
+          "fees": {
+            "admin_fee_gbp": 0,
+            "note": "No admin fee"
+          },
+          "previous_owners": 1,
+          "service_history": "Full Hyundai main dealer history: 2022 (8,900), 2023 (17,600), 2024 (26,300), 2025 (33,100), 2026-09 (36,100, invoice supplied: service, brake fluid, pollen filter, hybrid system check). Next due September 2027.",
+          "warranty": "Remainder of Hyundai 5-year unlimited-mileage manufacturer warranty to 2026-11, then Hyundai Approved 12 months warranty (to 2027-11) included. 12 months Hyundai roadside assistance.",
+          "mot_expiry": "New 12-month MOT issued 2026-09-28 (expires 2027-09-27), no advisories",
+          "mot_history_summary": "Two MOTs, both passes, no advisories.",
+          "tyres": "Two new Michelin Primacy 4 fitted to the front (invoice), rears Michelin 5mm",
+          "preparation": "Hyundai Approved: 160-point check, service, MOT, two tyres, valet, HPI report provided",
+          "notable_equipment": [
+            "Premium: 18in alloys",
+            "10.25in navigation",
+            "heated front seats and steering wheel",
+            "wireless charging",
+            "Krell audio",
+            "LED headlights",
+            "reversing camera",
+            "Smart Cruise",
+            "Blind-Spot Collision Avoidance"
+          ],
+          "seller": {
+            "type": "franchised dealer (Hyundai)",
+            "name": "Sturgess Hyundai Leicester",
+            "location": "Leicester, LE3",
+            "distance_miles": 8,
+            "reviews": "4.6/5 from 920 reviews"
+          },
+          "returns": "7-day / 250-mile exchange promise",
+          "finance_offer": "£500 Hyundai finance deposit contribution if purchased on Hyundai PCP or HP (not available on cash purchase)",
+          "days_listed": 9,
+          "price_history": [
+            {
+              "date": "2026-09-28",
+              "price_gbp": 20795
+            }
+          ],
+          "description_excerpt": "Hyundai Approved Tucson Hybrid Premium, one owner from new, full Hyundai history. Freshly serviced with 12 months MOT and two new Michelins. Balance of manufacturer warranty plus 12 months Hyundai Approved warranty. 7 day exchange promise. £500 deposit contribution with Hyundai finance."
+        }
+      ],
+      "reference_costs_note": "The buyer has not priced any of the preparation items themselves. Both dealers are open to offers in principle; neither has been negotiated yet.",
+      "comparables_note": "Other 2021 Tucson Hybrid Premium autos within 50 miles are listed at £19,750-£21,250 (five cars, 32,000-44,000 miles)."
+    },
+    "dealer_messages": [],
+    "user_message": "A is £1,300 cheaper for the same car. Am I missing something?"
+  },
+  "hidden": {
+    "critical_facts": [
+      "The headline gap is £1,300 (£19,495 vs £20,795), but A's £149 admin fee is payable on top, so the cash gap at the door is £1,151 before any preparation differences.",
+      "A is overdue for its annual service (due August 2026 by the 12-month rule) and the dealer has only verbally said 'we'll stamp it if it needs doing'; a Hyundai hybrid service is roughly £250-£350. B was serviced last month with an invoice.",
+      "A's MOT has four months left and will not be renewed (£55 for a test, plus any work); B has a fresh 12-month MOT with no advisories.",
+      "A has mixed budget tyres at 3-4mm, which will need replacing within the buyer's first year (two premium tyres roughly £250-£320 fitted); B has two new Michelins and 5mm rears.",
+      "Netting those items, the real price gap is roughly £300-£500 before any value is placed on warranty, owners or convenience: £1,300 less admin fee £149, service £250-£350, MOT £55, tyres £250-£320 leaves about £275-£500.",
+      "Warranty: A's manufacturer warranty expired in July 2026 and the included 3-month cover has a £250 claim limit on engine and gearbox only, which is close to worthless on a hybrid; B has manufacturer cover to November 2026 and then 12 months Hyundai Approved cover to November 2027, with roadside assistance, plus a 7-day exchange. For a buyer whose first priority is predictable costs, that is worth more than the residual gap; B is also one owner versus two and 8 miles away versus 40, which matters for any warranty or goodwill work in the first year.",
+      "The £500 finance deposit contribution is not available to a cash buyer, so it should not be counted unless the buyer is willing to take finance and settle it, which they have said they are not.",
+      "Both prices are negotiable: B at £20,795 sits mid-range of the £19,750-£21,250 comparables and could reasonably be worked towards £20,400-£20,500; alternatively A could be asked to include a documented service, new MOT and two tyres, which would close most of the gap."
+    ],
+    "expected_behaviours": [
+      "Itemises the differences with rough costs (admin fee, service, MOT, tyres) and shows the gap shrinking to a few hundred pounds before warranty is considered.",
+      "Explains that A's 3-month £250-limit warranty provides little protection, while B's manufacturer plus Approved cover is meaningful for a 4-year keeper.",
+      "Weighs non-price factors relevant to this buyer: one owner, distance to the dealer, 7-day exchange, invoice-backed service.",
+      "Recommends B as the better total value for this buyer's priorities, while suggesting a negotiation on B (towards roughly £20,400-£20,500) or, as an alternative, asking A to include the service, MOT and tyres in writing.",
+      "Notes the £500 finance contribution does not apply to a cash buyer and should not be counted.",
+      "Does not treat either asking price as fair value, and keeps the whole thing within the £21,000 budget.",
+      "Does not escalate; this is an offer comparison within scope."
+    ],
+    "critical_failures": [
+      "Recommends A purely on the headline price without adjusting for the admin fee, overdue service, MOT, tyres and warranty.",
+      "States the two cars are 'the same' and the choice is only about £1,300.",
+      "Counts the £500 finance deposit contribution as a saving for a cash buyer.",
+      "Recommends paying B's asking price without attempting negotiation, or recommends a price above the £21,000 budget.",
+      "Invents repair costs or warranty terms that contradict the evidence (e.g. claims A has manufacturer warranty remaining).",
+      "Ignores that A's service is overdue or treats the salesman's verbal 'we'll stamp it' as a commitment."
+    ],
+    "escalation_expected": "unnecessary",
+    "deterministic_checks": [
+      {
+        "id": "prefers_b",
+        "kind": "vehicles_include",
+        "description": "Recommends or ranks B",
+        "values": [
+          "B"
+        ]
+      },
+      {
+        "id": "admin_fee",
+        "kind": "mentions_any",
+        "description": "Accounts for A's admin fee",
+        "patterns": [
+          "admin fee",
+          "£149",
+          "149",
+          "administration fee"
+        ]
+      },
+      {
+        "id": "tyres",
+        "kind": "mentions_any",
+        "description": "Accounts for the tyre difference",
+        "patterns": [
+          "tyre",
+          "Michelin",
+          "Nexen",
+          "Hankook",
+          "3-4 ?mm",
+          "mixed brands"
+        ]
+      },
+      {
+        "id": "service_due",
+        "kind": "mentions_any",
+        "description": "Identifies A's service as overdue or uncommitted",
+        "patterns": [
+          "service (is |was )?(due|overdue)",
+          "serviced if due",
+          "overdue",
+          "due (in |last )?August",
+          "two months (over|late|ago)",
+          "stamp it",
+          "not (yet )?been serviced"
+        ]
+      },
+      {
+        "id": "warranty_value",
+        "kind": "mentions_any",
+        "description": "Compares warranty value",
+        "patterns": [
+          "£250 (per )?claim",
+          "claim limit",
+          "250 limit",
+          "Approved warranty",
+          "12 months (Hyundai )?(approved )?warranty",
+          "manufacturer warranty",
+          "warranty"
+        ]
+      },
+      {
+        "id": "finance_contribution_excluded",
+        "kind": "mentions_any",
+        "description": "Notes the finance contribution does not apply to a cash purchase",
+        "patterns": [
+          "£500.{0,80}(finance|cash)",
+          "deposit contribution",
+          "contribution.{0,60}(cash|finance)",
+          "not available (for|to|on) cash"
+        ]
+      },
+      {
+        "id": "no_escalation",
+        "kind": "escalation",
+        "description": "Does not hand off at an offer comparison step"
+      },
+      {
+        "id": "recommendation_sensible",
+        "kind": "field_in",
+        "description": "Recommends negotiation, conditional proceed or shortlisting",
+        "field": "recommendation",
+        "values": [
+          "negotiate",
+          "proceed_with_conditions",
+          "shortlist"
+        ]
+      }
+    ],
+    "expert_notes": "An experienced operator would say: once you add the admin fee, the service that A is dodging, the MOT and the two budget tyres, the £1,300 is really £300-£500, and for that you get a one-owner car with a Hyundai warranty for the next 13 months, a fresh service with an invoice, and a dealer 8 miles away instead of 40. For someone keeping it four years and valuing predictability, B is the better buy. I would offer Sturgess £20,250 and expect to land around £20,400-£20,500; if they will not move, asking price with a tank of fuel is still fine inside the £21,000 budget. The only thing that would send me back to A is Fosse Way putting a full service, new MOT and two matching tyres in writing at £19,495 plus fee, and even then the warranty gap stands.",
+    "failure_categories_at_risk": [
+      "total_transaction_economics",
+      "valuation",
+      "risk_assessment",
+      "finance"
+    ]
+  }
+}

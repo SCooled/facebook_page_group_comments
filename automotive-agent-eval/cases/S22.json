@@ -1,0 +1,131 @@
+{
+  "id": "S22",
+  "version": "v1",
+  "category": "offer_comparison",
+  "title": "Finance-supported price versus cash and a bank loan",
+  "adversarial": false,
+  "variant_of": null,
+  "journey_id": null,
+  "journey_step": null,
+  "candidate_visible": {
+    "scenario": "The buyer has agreed in principle to buy a Peugeot 2008 from a franchised dealer and is now deciding how to pay. The dealer has quoted a lower 'finance price' that only applies if the buyer takes the dealer's PCP. The buyer has the cash but has also been offered a personal loan by their bank. They have forwarded the dealer's finance illustration and the bank's loan offer and want to know which route costs least. Today is 7 October 2026.",
+    "user_context": {
+      "location": "Norwich, NR4",
+      "household": "single, works as a nurse at the Norfolk and Norwich",
+      "budget_gbp_max_all_in": 19000,
+      "hard_requirements": ["small automatic SUV", "petrol", "under 30,000 miles", "under 3 years old", "reversing camera"],
+      "priorities_in_order": ["lowest total cost of ownership", "keeping a savings buffer", "simplicity"],
+      "annual_mileage": 8000,
+      "usage": "shift commute, weekend trips to the coast",
+      "ownership_horizon_years": 5,
+      "part_exchange": "none",
+      "finance": "Has £24,000 in savings and could pay cash, but would prefer to keep at least £6,000 as an emergency fund. Bank (Nationwide) has pre-approved a personal loan: see evidence. Credit score good. Plans to keep the car to the end of ownership rather than hand it back."
+    },
+    "conversation_state": {
+      "step": "payment method",
+      "vehicle_agreed": "L01",
+      "checks_completed": ["test drive", "HPI clear (dealer report plus buyer's own)", "service history verified (2 Peugeot services)", "V5C and VIN checked"],
+      "price_negotiation": "Cash price negotiated from £18,995 to £18,495; dealer says this is their final cash price."
+    },
+    "evidence": {
+      "target_vehicle": {
+        "id": "L01",
+        "source": "Franchised dealer website",
+        "title": "Peugeot 2008 1.2 PureTech 130 GT EAT8 5dr",
+        "make": "Peugeot", "model": "2008", "derivative": "1.2 PureTech 130 GT EAT8 auto",
+        "generation": "P24 (2020-), facelift",
+        "year": 2023, "plate": "73", "first_registered": "2023-09",
+        "mileage": 21400, "fuel": "Petrol", "transmission": "Automatic (8-speed EAT8)", "body": "SUV", "seats": 5,
+        "colour": "Vertigo Blue metallic",
+        "price_gbp_cash": 18495,
+        "price_gbp_finance": 17495,
+        "price_note": "Advert shows 'Cash price £18,495 / Finance price £17,495*'. Footnote: '*Finance price includes £1,000 Peugeot Finance deposit contribution, available only when purchased on a Peugeot Financial Services PCP agreement. Subject to status.'",
+        "previous_owners": 1,
+        "service_history": "Full Peugeot history: 2024 (8,100) and 2025 (15,900). Next due September 2026 - dealer will carry out the 3rd service before handover (confirmed in writing).",
+        "warranty": "Peugeot 3-year manufacturer warranty expired 2026-09. Dealer includes 12 months Peugeot Approved warranty.",
+        "mot_expiry": "First MOT due 2026-09; new MOT issued 2026-09-30, no advisories",
+        "notable_equipment": ["GT: 3D i-Cockpit", "10in touchscreen navigation", "reversing camera", "adaptive cruise control", "LED headlights", "keyless entry", "Alcantara-effect seats", "wireless charging", "18in alloys"],
+        "seller": {"type": "franchised dealer (Peugeot)", "name": "Busseys Peugeot Norwich", "location": "Norwich, NR6", "distance_miles": 4, "reviews": "4.5/5 from 480 reviews"},
+        "days_listed": 19,
+        "description_excerpt": "Peugeot Approved 2008 GT EAT8, one owner, full Peugeot history, 12 months Peugeot Approved warranty. Cash price £18,495 / Finance price £17,495*. Ask about our PCP offers."
+      },
+      "dealer_pcp_illustration": {
+        "product": "Peugeot Financial Services Passport PCP (Personal Contract Purchase)",
+        "cash_price_gbp": 18495,
+        "customer_deposit_gbp": 2000,
+        "dealer_deposit_contribution_gbp": 1000,
+        "total_deposit_gbp": 3000,
+        "amount_of_credit_gbp": 15495,
+        "duration_months": 48,
+        "monthly_payments": {"count": 48, "amount_gbp": 289.00},
+        "optional_final_payment_gbp": 7950,
+        "optional_final_payment_note": "Includes £10 option to purchase fee",
+        "total_amount_payable_gbp": 24822,
+        "total_amount_payable_note": "Comprises customer deposit £2,000 + dealer deposit contribution £1,000 + 48 x £289.00 (£13,872) + optional final payment £7,950",
+        "total_charge_for_credit_gbp": 6327,
+        "representative_apr": "13.9% APR representative",
+        "annual_mileage_allowance": 8000,
+        "excess_mileage_charge": "9.9p per mile",
+        "early_settlement": "Early settlement permitted at any time; settlement figure on request. Right to withdraw within 14 days of signing under the Consumer Credit Act (credit and accrued interest repayable within 30 days of notice)."
+      },
+      "bank_loan_offer": {
+        "lender": "Nationwide (buyer's current account provider)",
+        "product": "Personal loan, pre-approved",
+        "amount_gbp": 16000,
+        "duration_months": 48,
+        "representative_apr": "6.4% APR representative (fixed)",
+        "monthly_payment_gbp": 377.37,
+        "total_repayable_gbp": 18113.76,
+        "total_interest_gbp": 2113.76,
+        "early_repayment": "Can be repaid early at any time; up to 58 days' interest may be charged on early settlement",
+        "offer_valid_until": "2026-10-28"
+      }
+    },
+    "dealer_messages": [
+      {"date": "2026-10-06", "from": "Tom (business manager)", "channel": "email", "text": "Hi, as discussed the cash price is £18,495 and that's as far as we can go on cash. If you go on our PCP you get the £1,000 Peugeot contribution so the price becomes £17,495 - illustration attached. Monthly is £289 over 48 months with a £7,950 optional final payment, 13.9% APR. Just so you're aware, you'd lose the £1,000 contribution if you settle early, so it's really designed for people who keep the finance running. Let me know which way you'd like to go and I'll get the paperwork started."}
+    ],
+    "user_message": "Is the finance price actually cheaper? What's the smartest way to pay?"
+  },
+  "hidden": {
+    "critical_facts": [
+      "The 'finance price' of £17,495 is a headline, not the cost of that route: over the full PCP term the buyer pays £2,000 + 48 x £289 (£13,872) + £7,950 = £23,822 out of pocket to own the car, which is £5,327 more than paying £18,495 cash. The illustration's total amount payable of £24,822 includes the £1,000 dealer contribution; the total charge for credit is £6,327 on £15,495 of credit at 13.9% APR.",
+      "So the PCP is not cheaper over the term; it is cheaper only in the headline price, and the £1,000 contribution is recovered many times over by the interest if the agreement runs.",
+      "Route 3, take the PCP to secure the £1,000 contribution and then withdraw within 14 days (Consumer Credit Act right of withdrawal) or settle early, repaying the £15,495 credit plus a few days' interest (roughly £80 for 14 days at 13.9%), would give a net price of about £17,495 plus accrued interest, roughly £17,575, if the contribution is retained.",
+      "The business manager's statement that 'you'd lose the £1,000 contribution if you settle early' is a claim, not a term shown in the illustration; in most UK manufacturer finance schemes the contribution is a deposit paid to the dealer and is not clawed back on withdrawal or early settlement, but terms vary and the only reliable answer is the written agreement and a written confirmation from Peugeot Financial Services. A commission or clawback may apply to the dealer, which explains the discouragement.",
+      "Route 4, the Nationwide loan at the cash price: £16,000 at 6.4% APR costs £2,113.76 in interest (48 x £377.37 = £18,113.76 repaid), so the car costs about £20,609 all-in (£2,495 cash plus £18,113.76 repayments) and leaves the buyer's savings buffer intact; this is far cheaper than running the PCP but more expensive than cash.",
+      "The buyer has £24,000 saved and wants to keep £6,000 back; paying £18,495 cash leaves £5,505, slightly under the buffer; paying around £17,575 via the PCP-and-withdraw route leaves about £6,425, meeting the buffer without any interest-bearing borrowing; a small bank loan (for example £4,000-£6,000) is another way to keep the buffer at a cost of a few hundred pounds in interest.",
+      "Ranking by total cost if the contribution is retained: PCP-then-withdraw/settle (~£17,575) < cash (£18,495) < bank loan on cash price (~£20,609) < PCP to term (£23,822). If the contribution would be clawed back, the PCP-then-settle route reverts to roughly £18,575 and cash is the cheapest.",
+      "Practical steps: ask for the PCP agreement and the Peugeot Financial Services terms on withdrawal and early settlement in writing, specifically whether the deposit contribution is repayable or reversed; confirm any settlement charges; keep the cash available to settle within the 14-day window; do not sign on the basis of the verbal statement either way."
+    ],
+    "expected_behaviours": [
+      "Separates the headline finance price from the total cost of the finance route and states the PCP full-term cost correctly (customer pays £23,822; disclosed total payable £24,822; £5,327 more than cash).",
+      "Computes or correctly uses the bank loan cost (about £2,114 interest, £18,114 repaid) and compares it with cash and with the PCP.",
+      "Identifies the PCP-with-early-withdrawal/settlement route as potentially the cheapest, and quantifies it (about £17,495 plus a small amount of accrued interest).",
+      "Treats the dealer's 'you'd lose the £1,000 if you settle early' as an unverified claim and recommends obtaining the agreement wording and written confirmation before relying on either version.",
+      "Takes the buyer's savings buffer into account when recommending between cash, a smaller loan and the PCP-and-settle route.",
+      "Recommends a concrete path: ask for the written terms; if the contribution is retained on withdrawal, take the PCP and withdraw within 14 days using cash; otherwise pay cash (or a small loan to preserve the buffer) and do not run the PCP.",
+      "Does not escalate; this is a payment-method comparison with no unresolved vehicle risk."
+    ],
+    "critical_failures": [
+      "States or implies the PCP is cheaper overall because the finance price is £1,000 lower.",
+      "Gets the arithmetic materially wrong (e.g. PCP total payable, bank loan interest, or the difference between routes off by more than a few hundred pounds).",
+      "Accepts the dealer's clawback statement as fact, or asserts the opposite as fact, without recommending the written terms be checked.",
+      "Recommends running the PCP to term as the smartest way to pay for a buyer with cash and a 6.4% alternative.",
+      "Ignores the 14-day withdrawal / early settlement option entirely.",
+      "Recommends the bank loan on the cash price as the cheapest route without noting it costs about £2,100 more than cash."
+    ],
+    "escalation_expected": "unnecessary",
+    "deterministic_checks": [
+      {"id": "pcp_total_payable", "kind": "figure_close", "description": "States the PCP total amount payable correctly", "field": "finance_total_payable_gbp", "value": 24822, "tolerance": 50},
+      {"id": "early_settlement", "kind": "mentions_any", "description": "Raises early settlement / withdrawal", "patterns": ["settle", "settlement", "14 days", "14-day", "cooling[- ]off", "withdraw", "right to withdraw"]},
+      {"id": "contribution", "kind": "mentions_any", "description": "Discusses the deposit contribution", "patterns": ["contribution", "£1,?000"]},
+      {"id": "total_cost_language", "kind": "mentions_any", "description": "Compares on total cost rather than headline", "patterns": ["total (amount )?payable", "cost of credit", "total cost", "charge for credit", "over the (full )?term", "interest"]},
+      {"id": "loan_interest", "kind": "mentions_any", "description": "Quantifies the bank loan interest", "patterns": ["2[,.]?11\\d", "2[,.]?1\\d\\d", "around £2,?100", "about £2,?100", "18[,.]?11\\d", "377"]},
+      {"id": "verify_terms", "kind": "mentions_any", "description": "Recommends checking the agreement wording", "patterns": ["in writing", "agreement", "terms and conditions", "T&Cs", "written confirmation", "wording", "claw[- ]?back"]},
+      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a payment-method decision"},
+      {"id": "recommendation_sensible", "kind": "field_in", "description": "Recommends negotiation, conditional proceed or information gathering", "field": "recommendation", "values": ["negotiate", "proceed_with_conditions", "gather_information"]}
+    ],
+    "expert_notes": "An experienced operator would say: the finance price is a hook, and if you run that PCP you will pay £23,822 for a car you could have for £18,495 in cash - the £1,000 is bought back off you at 13.9%. The clever route is the usual one: sign the PCP, take the £1,000, and withdraw within 14 days with cash, which lands the car at roughly £17,550-£17,600 if the contribution stands. Tom's 'you'd lose it' line is almost always about his commission rather than your contract, but you do not act on 'almost always' - you get Peugeot Financial Services' withdrawal and contribution terms in writing first. If they confirm clawback, pay cash at £18,495 (or take a small loan for the buffer) and forget the PCP. The bank loan on the full cash price is the worst of the sensible options at £2,100 of interest, unless keeping the £6,000 buffer matters more than the money.",
+    "failure_categories_at_risk": ["finance", "total_transaction_economics", "dealer_behaviour", "uncertainty_handling"]
+  }
+}

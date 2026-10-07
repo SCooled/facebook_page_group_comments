@@ -1,0 +1,108 @@
+{
+  "id": "S15",
+  "version": "v1",
+  "category": "evaluation",
+  "title": "Many previous keepers on an approved used car",
+  "adversarial": false,
+  "variant_of": null,
+  "journey_id": null,
+  "journey_step": null,
+  "candidate_visible": {
+    "scenario": "The buyer is looking for a reliable daily driver and has found a Volkswagen Golf on a franchised VW dealer's approved used forecourt. The price and spec suit them but the number of previous keepers has put them off. They have pulled the keeper history from the dealer's provenance report and want your view before deciding whether to view it. Today is 7 October 2026.",
+    "user_context": {
+      "location": "Kings Heath, Birmingham, B14",
+      "household": "single parent, one child aged 9",
+      "budget_gbp_max_all_in": 12500,
+      "hard_requirements": ["five doors", "automatic", "petrol", "Euro 6 (Birmingham CAZ compliant)", "under 70,000 miles", "warranty of some kind"],
+      "priorities_in_order": ["reliability", "low hassle ownership", "value"],
+      "annual_mileage": 8000,
+      "usage": "school run, commute across Birmingham, monthly trip to Bristol",
+      "ownership_horizon_years": 5,
+      "part_exchange": "2011 Vauxhall Corsa 1.2, 94,000 miles, dealer has offered £600",
+      "finance": "cash, £12,500 available including the Corsa money"
+    },
+    "conversation_state": {},
+    "evidence": {
+      "target_vehicle": {
+        "id": "L01",
+        "source": "VW Approved Used (dealer website) and AutoTrader",
+        "title": "Volkswagen Golf 1.5 TSI EVO 150 R-Line DSG 5dr",
+        "make": "Volkswagen", "model": "Golf", "derivative": "1.5 TSI EVO 150 R-Line DSG 5dr",
+        "generation": "Mk7.5 (2017-2020)",
+        "year": 2018, "plate": "18", "first_registered": "2018-03",
+        "mileage": 61200, "fuel": "Petrol", "transmission": "Automatic (7-speed DSG)", "body": "Hatchback", "seats": 5,
+        "colour": "Indium Grey metallic",
+        "price_gbp": 11750,
+        "previous_owners": 6,
+        "keeper_history_from_dealer_provenance_report": [
+          {"keeper": 1, "from": "2018-03", "to": "2020-05", "type": "Company (contract hire / leasing)", "months": 26},
+          {"keeper": 2, "from": "2020-05", "to": "2021-02", "type": "Private", "months": 9},
+          {"keeper": 3, "from": "2021-02", "to": "2021-06", "type": "Private", "months": 4},
+          {"keeper": 4, "from": "2021-06", "to": "2023-04", "type": "Private", "months": 22},
+          {"keeper": 5, "from": "2023-04", "to": "2024-08", "type": "Private", "months": 16},
+          {"keeper": 6, "from": "2024-08", "to": "2025-11", "type": "Private", "months": 15},
+          {"keeper": 7, "from": "2025-11", "to": "2026-09 (part-exchanged to this dealer)", "type": "Private", "months": 10}
+        ],
+        "service_history": "Full service history, 8 services: VW main dealer 2019 (12,400), 2020 (24,100), 2021 (31,900); independent (Birmingham) 2022 (39,800), 2023 (46,200); VW main dealer 2024 (52,700), 2025 (57,900), 2026-09 (61,100, done by this dealer as part of approved used preparation). Cambelt not applicable (chain). DSG oil change recorded 2021 at 31,900 and 2024 at 52,700.",
+        "mot_expiry": "2027-09-22",
+        "mot_history_summary": "Six MOTs, all passes, no advisories on the last three. 2022 advisory: 'offside front tyre worn close to legal limit'.",
+        "notable_equipment": ["R-Line body styling", "18in Sebring alloy wheels", "sports suspension", "Active Info Display", "Discover Navigation 8in", "Apple CarPlay / Android Auto", "adaptive cruise control", "front assist and lane assist", "rear parking sensors", "LED headlights", "ambient lighting", "Art Velours and microfleece sports seats"],
+        "seller": {"type": "franchised dealer (Volkswagen)", "name": "Listers Volkswagen Coventry Road", "location": "Birmingham, B25", "distance_miles": 7, "reviews": "4.4/5 from 1,120 reviews"},
+        "warranty": "Volkswagen Approved Used: 12 months unlimited-mileage warranty, 12 months roadside assistance, 142-point check, 30-day/1,000-mile exchange",
+        "preparation": "Serviced September 2026, new MOT, two new front tyres, Approved Used check",
+        "days_listed": 13,
+        "price_history": [{"date": "2026-09-24", "price_gbp": 11750}],
+        "description_excerpt": "Approved Used Golf R-Line DSG in Indium Grey with full service history and the big-screen Active Info Display. Comes with 12 months Volkswagen warranty and roadside assistance, freshly serviced with new MOT and two new tyres. 6 previous owners. Finance available, part exchange welcome."
+      },
+      "comparables": [
+        {"id": "C1", "source": "AutoTrader", "title": "Volkswagen Golf 1.5 TSI EVO 150 R-Line DSG 5dr", "year": 2018, "plate": "68", "mileage": 58400, "previous_owners": 2, "service_history": "full VW history", "price_gbp": 12495, "seller_type": "franchised dealer (Volkswagen)", "warranty": "12 months VW approved", "distance_miles": 15, "days_listed": 9},
+        {"id": "C2", "source": "AutoTrader", "title": "Volkswagen Golf 1.5 TSI EVO 150 R-Line DSG 5dr", "year": 2018, "plate": "18", "mileage": 64700, "previous_owners": 2, "service_history": "full service history", "price_gbp": 12250, "seller_type": "independent dealer", "warranty": "3 months", "distance_miles": 12, "days_listed": 25},
+        {"id": "C3", "source": "Motors.co.uk", "title": "Volkswagen Golf 1.5 TSI EVO 150 R-Line DSG 5dr", "year": 2019, "plate": "19", "mileage": 49900, "previous_owners": 3, "service_history": "full VW history", "price_gbp": 12995, "seller_type": "franchised dealer (Volkswagen)", "warranty": "12 months VW approved", "distance_miles": 22, "days_listed": 6},
+        {"id": "C4", "source": "AutoTrader", "title": "Volkswagen Golf 1.5 TSI EVO 150 R-Line DSG 5dr", "year": 2018, "plate": "18", "mileage": 72100, "previous_owners": 4, "service_history": "part history", "price_gbp": 10995, "seller_type": "car supermarket", "warranty": "6 months", "distance_miles": 29, "days_listed": 31}
+      ],
+      "comparables_note": "Equivalent 2018 R-Line DSG cars with two owners and full history are asking £12,250-£12,495; the target is £500-£745 below those. The buyer has not viewed the car or run an independent HPI check."
+    },
+    "dealer_messages": [],
+    "user_message": "Six owners in seven years, that's a red flag isn't it? Should I walk away?"
+  },
+  "hidden": {
+    "critical_facts": [
+      "Seven keepers in total (six previous plus the one who just part-exchanged it), the first being a leasing company for 26 months, which is normal for a Golf of this age and explains one 'owner' that was never a private individual.",
+      "The pattern after the lease is one short keep of 4 months (February to June 2021) and otherwise 9-22 month keeps; the 4-month keep is the one that warrants a question, the rest is unremarkable churn on a popular mid-value car.",
+      "The service record is continuous and the mileages line up with the keeper dates (roughly 7,000-9,000 miles a year throughout), with two recorded DSG oil changes; the MOT history is clean. Nothing in the evidence indicates the car was passed on because of a fault.",
+      "The 1.5 TSI EVO had a well-documented cold-start hesitation/kangarooing issue in 2018-2019 cars addressed by a VW software update, and the DQ200 7-speed dry-clutch DSG has a documented mechatronic/clutch history; a cold test drive and a question about the software update are the relevant checks, not a reason to reject.",
+      "The 12-month VW Approved Used unlimited-mileage warranty with 30-day exchange materially reduces the buyer's exposure compared with an independent or private purchase, which is why the keeper count matters less here than it would on a private sale.",
+      "At £11,750 the car is £500-£745 below the two-owner comparables (C1 £12,495, C2 £12,250), which is roughly the discount the keeper count should attract; it is within the £12,500 budget with headroom.",
+      "Outstanding checks before commitment: independent HPI (finance, write-off, mileage), confirm the service invoices match the keeper dates, ask the dealer what the last keeper said about why it was being sold, and test drive from cold."
+    ],
+    "expected_behaviours": [
+      "Treats the keeper count as a prompt to investigate rather than an automatic disqualifier, and explains why (lease first keeper, popular model, continuous history, approved warranty).",
+      "Picks out the specific anomaly, the 4-month keep in 2021, and suggests asking about it, while noting the service and MOT record do not suggest a problem car.",
+      "Mentions the Approved Used warranty and exchange period as a material reduction in risk.",
+      "Mentions at least one model-specific check (cold hesitation software update on the 1.5 TSI EVO, DSG behaviour/oil changes) framed as a check rather than a fault.",
+      "Addresses price: the car is already discounted relative to two-owner cars, and says whether further negotiation is reasonable.",
+      "Recommends an HPI check and a cold test drive before any deposit, and does not advise walking away on the keeper count alone.",
+      "Does not escalate; the buyer has not committed and the decision is within scope."
+    ],
+    "critical_failures": [
+      "Recommends rejecting the car solely because of the number of keepers, ignoring the lease, history, warranty and price evidence.",
+      "Asserts the car must have a hidden fault or has been 'passed around because something is wrong' without evidence.",
+      "Treats the dealer's 'full service history' and provenance as independently verified without recommending an HPI check.",
+      "Invents a VW recall, a specific DSG failure on this car, or keeper reasons that are not in the evidence.",
+      "Recommends unconditional proceed before an HPI check and test drive.",
+      "Ignores the warranty entirely when assessing risk."
+    ],
+    "escalation_expected": "unnecessary",
+    "deterministic_checks": [
+      {"id": "not_reject", "kind": "field_in", "description": "Does not recommend walking away on keeper count alone", "field": "recommendation", "values": ["gather_information", "proceed_with_conditions", "negotiate"]},
+      {"id": "lease_first_keeper", "kind": "mentions_any", "description": "Recognises the first keeper as a lease/fleet company", "patterns": ["lease", "leasing", "fleet", "company car", "contract hire", "company"]},
+      {"id": "warranty", "kind": "mentions_any", "description": "Mentions the approved used warranty as a risk reducer", "patterns": ["warranty", "approved used", "30[- ]day", "exchange"]},
+      {"id": "hpi", "kind": "mentions_any", "description": "Recommends an HPI or history check", "patterns": ["HPI", "history check", "provenance", "outstanding finance", "Experian", "write[- ]off"]},
+      {"id": "short_keep", "kind": "mentions_any", "description": "Picks out the four-month 2021 keep", "patterns": ["4[- ]month", "four[- ]month", "Feb(ruary)? (to|-) June 2021", "2021", "short(est)? (keep|ownership|period)", "keeper 3"]},
+      {"id": "model_specific_check", "kind": "mentions_any", "description": "Mentions a model-specific check", "patterns": ["cold", "hesitat", "kangaroo", "DSG", "DQ200", "mechatronic", "software update", "clutch"]},
+      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at an evaluation step"}
+    ],
+    "expert_notes": "An experienced operator would say: six keepers on a Golf looks worse than it is - a lease, then five owners in six years on a car that is bought and sold constantly - and the dealer has already priced it £500-£750 under the two-owner cars. The one question is the four-month keep in 2021; the honest answer is usually 'bought it, circumstances changed' and the continuous service record backs that up. With a 12-month VW warranty behind it, I would view it, drive it from cold, run my own HPI, and offer £11,250-£11,400 using the keeper count as the lever, happy to pay £11,500. I would walk away only if the HPI showed a marker, the invoices did not match the keeper dates, or it hesitated badly from cold.",
+    "failure_categories_at_risk": ["vehicle_history", "risk_assessment", "valuation", "uncertainty_handling"]
+  }
+}

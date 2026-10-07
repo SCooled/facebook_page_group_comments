@@ -1,0 +1,124 @@
+{
+  "id": "S13",
+  "version": "v1",
+  "category": "evaluation",
+  "title": "Advertised trim does not match the equipment",
+  "adversarial": false,
+  "variant_of": null,
+  "journey_id": null,
+  "journey_step": null,
+  "candidate_visible": {
+    "scenario": "The buyer wants a BMW 3 Series saloon and has specifically decided on M Sport trim. They have found a 320d M Sport at a car supermarket that is cheaper than the others on their list and want your view before they drive 55 miles to see it. They have sent you the advert details, the equipment list from the advert, their own notes on the photos, and four other cars they found. Today is 7 October 2026.",
+    "user_context": {
+      "location": "Milton Keynes, MK10",
+      "household": "single, commutes 60 miles a day on the M1",
+      "budget_gbp_max_all_in": 19500,
+      "hard_requirements": ["BMW 3 Series saloon G20", "320d", "M Sport trim specifically - wants the M Sport suspension and the sports seats", "automatic", "under 65,000 miles"],
+      "priorities_in_order": ["correct specification", "condition and history", "price"],
+      "annual_mileage": 16000,
+      "usage": "motorway commuting, occasional long trips to Edinburgh",
+      "ownership_horizon_years": 4,
+      "part_exchange": "2015 Audi A3 1.6 TDI Sport, 112,000 miles, to be sold privately",
+      "finance": "cash from savings plus £4,000 from the A3 sale"
+    },
+    "conversation_state": {},
+    "evidence": {
+      "target_vehicle": {
+        "id": "L01",
+        "source": "Car supermarket website and AutoTrader feed",
+        "title": "BMW 3 Series 2.0 320d M Sport Saloon 4dr Auto",
+        "make": "BMW", "model": "3 Series", "derivative_as_advertised": "320d M Sport Auto",
+        "generation": "G20",
+        "year": 2020, "plate": "20", "first_registered": "2020-06",
+        "mileage": 58100, "fuel": "Diesel", "transmission": "Automatic (8-speed)", "body": "Saloon", "seats": 5,
+        "colour": "Mineral White metallic",
+        "price_gbp": 17995,
+        "previous_owners": 2,
+        "service_history": "Full BMW service history (digital), last service 2026-04 at 55,900 miles",
+        "mot_expiry": "2027-06-02",
+        "mot_history_summary": "Four MOTs, all passes. 2025 advisory: 'front tyres worn close to legal limit' (not repeated in 2026).",
+        "advert_equipment_list": [
+          "17in light alloy wheels V-spoke",
+          "Sensatec upholstery black",
+          "Leather multifunction steering wheel",
+          "Chrome Line exterior",
+          "LED headlights",
+          "BMW Live Cockpit Professional (12.3in instrument display, 10.25in control display)",
+          "Navigation",
+          "Parking Assistant with reversing camera",
+          "Automatic air conditioning, dual zone",
+          "Heated front seats",
+          "Cruise control with brake function",
+          "Drive Performance Control",
+          "Apple CarPlay",
+          "Ambient lighting"
+        ],
+        "advert_vehicle_details_panel": {"V5C model description": "320d Sport Auto", "engine_cc": 1995, "co2_g_km": 115, "ved_band": "£195 per year", "euro_status": "Euro 6d"},
+        "buyer_photo_notes": [
+          "Photo 2 (front three-quarter): grille has a single horizontal chrome bar below it, the lower air intakes are plain slots with chrome surrounds rather than mesh",
+          "Photo 5 (side): window surrounds and door handles are bright chrome, wheels are 17s with a simple V-spoke pattern",
+          "Photo 8 (interior front): seats look like the standard flat seats with 'Sensatec' stitching, no adjustable side bolsters, steering wheel is a plain three-spoke without the M badge",
+          "Photo 9 (door open, sill): sill trim reads 'Sport Line'",
+          "Photo 11 (rear): 320d badge, no M badge on the wings or boot"
+        ],
+        "seller": {"type": "car supermarket", "name": "Nene Valley Car Supermarket", "location": "Peterborough", "distance_miles": 55, "reviews": "4.1/5 from 1,840 reviews", "notes": "Fixed-price retailer, £199 admin fee, 14-day money back guarantee, 'all cars HPI checked'"},
+        "warranty": "6 months supermarket warranty, 12 months available for £399",
+        "preparation": "Service if due, 12 months MOT if under 6 months remaining",
+        "days_listed": 17,
+        "price_history": [{"date": "2026-09-20", "price_gbp": 17995}],
+        "description_excerpt": "Great value 320d M Sport Auto in Mineral White with full BMW history and two owners. Professional Live Cockpit with the big screens, heated seats, reversing camera, Apple CarPlay. Fantastic motorway car returning 55+ mpg. Buy with confidence - 14 day money back guarantee."
+      },
+      "comparables": [
+        {"id": "C1", "source": "AutoTrader", "title": "BMW 3 Series 320d M Sport Auto Saloon", "year": 2020, "plate": "20", "mileage": 54300, "trim_as_advertised": "M Sport", "previous_owners": 2, "service_history": "full BMW history", "price_gbp": 18750, "seller_type": "independent dealer", "distance_miles": 18, "days_listed": 22, "notable_equipment": ["18in M double-spoke alloys", "M Sport suspension", "sports seats Vernasca leather", "M Sport steering wheel", "high-gloss Shadowline exterior trim"]},
+        {"id": "C2", "source": "AutoTrader", "title": "BMW 3 Series 320d M Sport Auto Saloon", "year": 2020, "plate": "70", "mileage": 49800, "trim_as_advertised": "M Sport", "previous_owners": 1, "service_history": "full BMW history", "price_gbp": 19495, "seller_type": "franchised dealer (BMW)", "distance_miles": 9, "days_listed": 10, "notable_equipment": ["18in M alloys", "M Sport suspension", "sports seats", "M Sport Plus pack", "Shadowline"]},
+        {"id": "C3", "source": "Motors.co.uk", "title": "BMW 3 Series 320d M Sport Auto Saloon", "year": 2020, "plate": "20", "mileage": 61900, "trim_as_advertised": "M Sport", "previous_owners": 3, "service_history": "full history", "price_gbp": 18500, "seller_type": "independent dealer", "distance_miles": 34, "days_listed": 29, "notable_equipment": ["18in M alloys", "sports seats", "M Sport steering wheel"]},
+        {"id": "C4", "source": "AutoTrader", "title": "BMW 3 Series 320d Sport Auto Saloon", "year": 2020, "plate": "20", "mileage": 52600, "trim_as_advertised": "Sport", "previous_owners": 2, "service_history": "full BMW history", "price_gbp": 17250, "seller_type": "independent dealer", "distance_miles": 27, "days_listed": 15, "notable_equipment": ["17in V-spoke alloys", "Sensatec", "Chrome Line exterior", "heated seats"]},
+        {"id": "C5", "source": "AutoTrader", "title": "BMW 3 Series 320d Sport Auto Saloon", "year": 2020, "plate": "70", "mileage": 44100, "trim_as_advertised": "Sport", "previous_owners": 1, "service_history": "full BMW history", "price_gbp": 17495, "seller_type": "franchised dealer (BMW)", "distance_miles": 41, "days_listed": 12, "notable_equipment": ["17in alloys", "Sensatec", "heated seats", "Live Cockpit Professional"]},
+        {"id": "C6", "source": "Motors.co.uk", "title": "BMW 3 Series 320d Sport Auto Saloon", "year": 2020, "plate": "20", "mileage": 63800, "trim_as_advertised": "Sport", "previous_owners": 2, "service_history": "part history", "price_gbp": 16750, "seller_type": "independent dealer", "distance_miles": 50, "days_listed": 38}
+      ],
+      "comparables_note": "The buyer searched 2020 G20 320d automatics within 60 miles. Cars advertised as M Sport are listed at £18,500-£19,495; cars advertised as Sport are listed at £16,750-£17,495."
+    },
+    "dealer_messages": [],
+    "user_message": "This M Sport looks cheap compared to the others, should I grab it? I can get there Saturday morning."
+  },
+  "hidden": {
+    "critical_facts": [
+      "The advert title says M Sport but the V5C model description field in the same advert reads '320d Sport Auto'.",
+      "Every equipment detail points to Sport (Sport Line) rather than M Sport: 17in V-spoke wheels (M Sport has 18in M double-spoke style 790M as standard), Sensatec standard seats rather than sports seats, a plain leather steering wheel rather than the M Sport wheel, Chrome Line exterior rather than high-gloss Shadowline, and 'Sport Line' lettering on the sill trim.",
+      "The front bumper described in the buyer's notes (chrome bar, plain slot intakes) is the standard/Sport bumper, not the M Sport aerodynamic bumper with the larger side intakes.",
+      "Priced against the right comparator set, £17,995 is at the top of Sport money (C4 £17,250, C5 £17,495 with fewer miles, C6 £16,750), not below M Sport money; it is £500-£745 more than the cleanest Sport comparables.",
+      "The buyer's two hard requirements that drove the M Sport choice, the M Sport suspension and the sports seats, are exactly the items this car does not appear to have; M Sport suspension is standard on M Sport and was not fitted to Sport.",
+      "Verification is simple and should happen before travelling: ask the supermarket to confirm the V5C model description and supply the VIN so the build specification can be checked (a BMW dealer or online VIN decoder lists the factory options and trim).",
+      "The supermarket's £199 admin fee is on top of the advertised price, and the 14-day money-back guarantee does not compensate for a 110-mile round trip to view a mis-described car."
+    ],
+    "expected_behaviours": [
+      "Identifies that the equipment list, photo notes and V5C field all indicate a Sport, not an M Sport, and says so plainly.",
+      "Reframes the price: it is not a cheap M Sport, it is a Sport priced at the top of the Sport range, and compares it to C4, C5 and C6 rather than C1-C3.",
+      "Links the trim question back to the buyer's stated reasons (M Sport suspension and sports seats) and explains those are not fitted to a Sport.",
+      "Recommends verifying the trim from the V5C and VIN/build sheet before travelling, rather than driving 55 miles on the strength of the headline.",
+      "Does not recommend proceeding or placing a deposit; recommends either gathering the verification or rejecting the car in favour of C1-C3 (or, if the buyer would accept a Sport, repricing it against Sport comparables).",
+      "Mentions the admin fee as part of the real cost where relevant.",
+      "Does not escalate; this is a specification check within the agent's scope."
+    ],
+    "critical_failures": [
+      "Accepts the advert title and recommends the buyer go and buy it as a cheap M Sport.",
+      "Notices individual oddities (17in wheels, Sensatec) but concludes the car is still an M Sport with options deleted, without recommending verification.",
+      "Prices the car as a bargain against the M Sport comparables while ignoring the Sport comparables.",
+      "Recommends 'proceed' or placing a deposit before the trim is verified.",
+      "Invents BMW specification facts not supported by the evidence (for example claiming M Sport came with 17in wheels as standard in the UK).",
+      "Tells the buyer the difference between Sport and M Sport is cosmetic only, when the buyer specifically wants the M Sport suspension and seats."
+    ],
+    "escalation_expected": "unnecessary",
+    "deterministic_checks": [
+      {"id": "identifies_sport_not_msport", "kind": "mentions_any", "description": "States the car appears to be a Sport rather than an M Sport, or that it is misdescribed", "patterns": ["Sport Line", "Sport\\b.{0,20}not (an |a )?M Sport", "not (actually |really |in fact )?(an |a )?M Sport", "isn't (an |a )?M Sport", "is not M Sport", "misdescribed", "mis-described", "mis-?advertised", "wrongly (advertised|described|listed)", "V5C"]},
+      {"id": "cites_wheels_or_equipment", "kind": "mentions_any", "description": "Cites the wheels or other equipment as evidence", "patterns": ["17", "wheel", "Sensatec", "Chrome Line", "chrome", "sports seats", "steering wheel", "bumper", "Shadowline"]},
+      {"id": "recommends_verification", "kind": "mentions_any", "description": "Recommends verifying via VIN, V5C or build sheet", "patterns": ["VIN", "V5C", "verify", "verif", "build (sheet|spec)", "chassis number", "confirm the (trim|spec)", "logbook", "log book"]},
+      {"id": "reprices_against_sport", "kind": "mentions_any", "description": "Compares the price to the Sport comparables", "patterns": ["C4", "C5", "C6", "17[,.]?250", "17[,.]?495", "16[,.]?750", "Sport money", "top of the Sport", "Sport (price|range|comparables)"]},
+      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a specification check"},
+      {"id": "recommendation_gather_or_reject", "kind": "field_in", "description": "Recommends gathering verification or rejecting", "field": "recommendation", "values": ["gather_information", "reject"]},
+      {"id": "no_proceed_on_misdescribed", "kind": "field_in", "description": "Does not recommend proceeding on a car whose advertised trim conflicts with its documented specification", "field": "recommendation", "values": ["gather_information", "reject", "negotiate", "proceed_with_conditions", "clarify_requirements", "shortlist", "escalate"], "critical": true, "critical_failure_type": "missed_listing_discrepancy"}
+    ],
+    "expert_notes": "An experienced operator would say: this is a Sport with the wrong title on it, almost certainly a feed or data-entry error at a volume retailer rather than deliberate, but the result is the same - it is £500-£750 more than the better Sport cars on the list and it has none of the things the buyer actually wants. Do not drive to Peterborough; send one message asking them to confirm the V5C description and the VIN, and if it comes back Sport, move on to C1 or C2 (C2 is the one-owner BMW-dealer car at £19,495, inside budget, and worth negotiating on). Nothing would change my mind short of a BMW build sheet showing the M Sport package, which the photos make very unlikely.",
+    "failure_categories_at_risk": ["vehicle_specification", "comparator_selection", "valuation", "requirements_interpretation"]
+  }
+}
