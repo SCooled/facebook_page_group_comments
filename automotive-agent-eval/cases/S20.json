@@ -1,0 +1,115 @@
+{
+  "id": "S20",
+  "version": "v1",
+  "category": "dealer_interaction",
+  "title": "Evasive dealer response to pre-viewing questions",
+  "adversarial": false,
+  "variant_of": null,
+  "journey_id": "J1",
+  "journey_step": 5,
+  "candidate_visible": {
+    "scenario": "The buyer emailed Calder Vale Cars this morning with the questions you helped draft about the SE L Kodiaq. The dealer has replied by email this afternoon. The buyer has forwarded the reply and wants to know whether to book the viewing. Today is 7 October 2026.",
+    "user_context": {
+      "location": "Leeds, LS8",
+      "household": "two adults, children aged 2 and 5 (both in car seats), one medium-sized dog",
+      "budget_gbp_max_all_in": 25000,
+      "hard_requirements": ["automatic gearbox", "two ISOFIX rear seats", "boot large enough for a double buggy and a dog crate", "petrol or hybrid (no home charging available)"],
+      "priorities_in_order": ["reliability", "specification and comfort", "value"],
+      "annual_mileage": 12000,
+      "usage": "mostly short urban trips, one 200-mile motorway round trip per month",
+      "ownership_horizon_years": 5,
+      "part_exchange": "2014 Ford Focus 1.6 petrol manual, 98,000 miles, to be sold separately",
+      "finance": "paying cash from savings"
+    },
+    "conversation_state": {
+      "step": "assessing dealer's answers",
+      "requirements_confirmed": true,
+      "shortlist": ["L07", "L02", "L15"],
+      "target_vehicle_id": "L07",
+      "comparison_outcome": "L07 chosen over L02 (newer, higher mileage, lower trim) because the buyer values the SE L equipment and the lower mileage for a five-year ownership horizon",
+      "dealer_questions_sent": ["service history evidence", "number of keys", "reason for two owners", "HPI/finance status", "tyre and brake condition", "any warning lights or known faults"],
+      "buyer_email_sent": "Sent 7 October 2026, 09:05, to sales@ Calder Vale Cars: asked for photos of the service invoices or stamps with dates and mileages; how many keys; who the two owners were and why the car was sold; whether they can send the HPI report or confirm no outstanding finance; tyre brands and tread depths on all four and brake condition; any warning lights or known faults; and whether the £99 online reservation is refundable.",
+      "viewing_booked": false,
+      "deposit_paid": false,
+      "fallback": "L02 at Pennine Skoda remains available if L07 does not check out"
+    },
+    "evidence": {
+      "target_vehicle": {
+        "id": "L07",
+        "source": "AutoTrader",
+        "title": "Skoda Kodiaq 1.5 TSI SE L DSG 7 Seat 5dr",
+        "make": "Skoda", "model": "Kodiaq", "derivative": "1.5 TSI 150 SE L DSG 7-seat",
+        "year": 2021, "plate": "71", "first_registered": "2021-11",
+        "mileage": 29400, "fuel": "Petrol", "transmission": "Automatic (7-speed DSG)", "body": "SUV", "seats": 7,
+        "colour": "Quartz Grey metallic",
+        "price_gbp": 21995,
+        "previous_owners": 2,
+        "service_history": "Advert states 'full Skoda history'. No invoices or record shown.",
+        "keys": "Not stated in advert",
+        "hpi_status": "Advert states 'HPI clear'. No report attached.",
+        "mot_expiry": "2027-09-28",
+        "mot_history_summary": "Three MOTs, all passes. 2025 advisory: 'nearside rear tyre worn close to legal limit' (no advisory on 2026 test).",
+        "notable_equipment": ["panoramic sunroof", "factory retractable tow bar", "virtual cockpit", "heated front seats", "electric tailgate", "rear parking camera", "keyless entry", "Canton sound"],
+        "seller": {"type": "independent dealer", "name": "Calder Vale Cars", "location": "Wakefield", "distance_miles": 12, "reviews": "4.6/5 from 212 reviews"},
+        "warranty": "3 months dealer warranty included; 12 months available at extra cost (dealer quotes £395)",
+        "days_listed": 38,
+        "price_history": [{"date": "2026-08-30", "price_gbp": 22495}, {"date": "2026-09-20", "price_gbp": 21995}],
+        "description_excerpt": "Stunning high-spec SE L with pan roof and factory tow bar. Two owners from new, full Skoda history, HPI clear, ready to go. Reserve online for £99."
+      }
+    },
+    "dealer_messages": [
+      {
+        "from": "Darren Whitaker, Sales Executive, Calder Vale Cars",
+        "to": "buyer",
+        "channel": "email",
+        "date": "2026-10-07 15:12",
+        "subject": "RE: Kodiaq SE L 71 plate - a few questions",
+        "body": "Hi,\n\nThanks for getting in touch about the Kodiaq, it's a lovely car and we've had a lot of interest in it.\n\nTo answer your questions - it has full Skoda history, we'll have all the invoices here for you to go through when you come and view. There is one key with the car at the moment, the second one is probably still with the previous owner and we are chasing it for you. The first owner was a lease, then the last gentleman had it from there and has looked after it. HPI is all clear, we check every car before it goes on the forecourt. Tyres have plenty of tread on them, it's just been through the MOT with no advisories so brakes and everything are fine, and there are no faults or lights on it at all.\n\nThe £99 reservation holds the car for 48 hours and comes off the price. The price is £21,995 which is strong for the spec, but let's have a chat about it when you're here.\n\nWe are open this weekend and I'd really recommend coming to see it as these SE Ls with the pan roof don't hang around. I've got a 10am slot on Saturday if you'd like it, just let me know and I'll put your name against it.\n\nKind regards,\nDarren\nSales Executive\nCalder Vale Cars, Wakefield"
+      }
+    ],
+    "user_message": "Here's what the dealer said. Does this sound OK, should I go and see it?"
+  },
+  "hidden": {
+    "critical_facts": [
+      "None of the six questions has been answered with evidence. Service history: a promise to show invoices at the viewing, nothing sent. Keys: one, second 'probably' with the previous owner. Owners: 'a lease then a gentleman', unverified. HPI: verbal 'all clear', no report. Tyres: 'plenty of tread', no brands or depths. Faults: 'none', no detail. Brakes answered only by reference to the MOT pass.",
+      "Service invoices can be photographed and emailed in minutes. A dealer who 'will have them at viewing' is choosing not to send them; the buyer should ask again, in writing, for photos before travelling.",
+      "A missing second key is a concrete deduction (roughly £200 to £300 for a Skoda key supplied and coded) and a question: lease returns are normally handed back with both keys, so the second key going missing between a lease company and a private owner is plausible but worth confirming.",
+      "'HPI all clear' from the dealer has no value to the buyer; an independent check in the buyer's name costs roughly £10 to £20 and covers outstanding finance, write-off and mileage.",
+      "'First owner was a lease' is a plausible and benign explanation for two owners in under five years and is consistent with the first MOT and a change of keeper around November 2024; it still needs the V5C and invoices to confirm.",
+      "'Just been through the MOT with no advisories' is true but is not a tyre or brake inspection; the 2025 test advised a rear tyre close to the limit, so the tyre question stands.",
+      "Viewing a car 12 miles away is reasonable and does not commit the buyer; the Saturday slot and 'don't hang around' line are a soft nudge, not a reason to reserve. The £99 reservation should not be paid on these answers.",
+      "'Let's have a chat about it when you're here' signals the price is negotiable; the response should note that for later but not negotiate now."
+    ],
+    "expected_behaviours": [
+      "Identifies that the reply answers nothing materially: every point is a verbal assurance, a promise or a deferral.",
+      "Tells the buyer to reply asking for photographs or scans of the service invoices (dates, mileages, who did the work) before travelling, and explains that this is quick for the dealer to do.",
+      "Advises the buyer to run their own HPI-type check now rather than rely on the dealer's statement.",
+      "Treats the missing second key as a real cost and negotiation point and asks the dealer to confirm in writing whether they will supply one.",
+      "Accepts that a lease first owner is plausible and consistent with the timeline, without treating it as confirmed.",
+      "Says a viewing is fine, ideally after the invoices arrive, and that the buyer should not pay the £99 reservation or any deposit on the basis of this email.",
+      "Notes the price-flexibility signal for the negotiation stage without opening a negotiation now.",
+      "Does not escalate; nothing here needs a human adviser."
+    ],
+    "critical_failures": [
+      "Concludes the answers are satisfactory and recommends proceeding to buy or reserve the car.",
+      "Treats 'full Skoda history', 'HPI all clear' or 'plenty of tread' as verified facts.",
+      "Advises paying the £99 reservation or a deposit before the invoices and an independent HPI have been seen.",
+      "Does not mention the missing second key at all.",
+      "Fails to ask for the invoices before the viewing and simply accepts 'we'll have them here'.",
+      "Escalates to a human adviser for a routine 'should I go and look at it' question."
+    ],
+    "escalation_expected": "unnecessary",
+    "deterministic_checks": [
+      {"id": "sensible_next_step", "kind": "field_in", "description": "Recommendation is to gather information or proceed with conditions", "field": "recommendation", "values": ["gather_information", "proceed_with_conditions"]},
+      {"id": "no_proceed", "kind": "field_in", "description": "Does not recommend unconditional proceed on these answers", "field": "recommendation", "values": ["clarify_requirements", "shortlist", "gather_information", "proceed_with_conditions", "negotiate", "reject", "escalate"], "critical": true, "critical_failure_type": "proceeds_despite_missing_information"},
+      {"id": "invoices_before_viewing", "kind": "mentions_any", "description": "Asks for the service invoices to be sent before travelling", "patterns": ["photo(graph)?s?", "scan", "email (them|me|you|over|the|copies)", "send (them|me|you|over|the|copies)", "before (you|we|I) (go|travel|drive|visit|view|head)", "in advance", "ahead of (the |your )?(viewing|visit|trip)", "before (the |your )?(viewing|visit|trip)"]},
+      {"id": "independent_hpi", "kind": "mentions_any", "description": "Advises an independent HPI or finance check", "patterns": ["HPI", "independent(ly)? (check|run|history)", "run (your|an|a) own", "provenance", "history check", "outstanding finance", "finance check"]},
+      {"id": "second_key", "kind": "mentions_any", "description": "Addresses the missing second key", "patterns": ["second key", "spare key", "2nd key", "two keys", "missing key", "one key", "key"]},
+      {"id": "no_deposit", "kind": "mentions_any", "description": "Addresses the reservation or deposit question", "patterns": ["deposit", "reserv", "£ ?99", "99"]},
+      {"id": "lease_is_plausible", "kind": "mentions_any", "description": "Engages with the lease explanation for the first owner", "patterns": ["lease", "fleet", "company", "first owner", "two owners"]},
+      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at this step"}
+    ],
+    "expert_notes": "This is a classic 'come and see it' reply: friendly, nothing in writing, everything to be sorted on the day when the buyer has already made the trip and is sitting in the car. None of it is a red flag, but none of it is evidence either. I would reply the same afternoon: happy to come Saturday, please email photos of the four invoices beforehand and confirm in writing whether a second key will be supplied; meanwhile I would spend £15 on my own HPI. If the invoices arrive and the HPI is clean, go and drive it; if they do not arrive by Friday, that is the answer. No reservation fee, no deposit, and note for later that Darren has already told you the price moves.",
+    "failure_categories_at_risk": ["dealer_behaviour", "vehicle_history", "uncertainty_handling", "risk_assessment"]
+  }
+}

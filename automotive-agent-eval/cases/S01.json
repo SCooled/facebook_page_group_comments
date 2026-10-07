@@ -1,0 +1,63 @@
+{
+  "id": "S01",
+  "version": "v1",
+  "category": "intent",
+  "title": "Basic family-car requirement",
+  "adversarial": false,
+  "variant_of": null,
+  "journey_id": "J1",
+  "journey_step": 1,
+  "candidate_visible": {
+    "scenario": "A buyer in Leeds has opened a conversation with you for the first time. You know nothing about them beyond their location and the one line they have typed. Today is 7 October 2026.",
+    "user_context": {
+      "location": "Leeds"
+    },
+    "conversation_state": {},
+    "evidence": {},
+    "dealer_messages": [],
+    "user_message": "I need a family car for under £25k."
+  },
+  "hidden": {
+    "critical_facts": [
+      "The only constraints given are 'family car', 'under £25k' and Leeds. Seat count, child-seat needs, boot requirement, gearbox, fuel type, annual mileage, trip pattern, ownership horizon, part exchange and payment method are all unknown.",
+      "£25,000 is a ceiling, not a target. The buyer has not said whether it is an all-in figure (including VED, admin fees, warranty, delivery) or just the sticker price, nor whether it is cash, finance or a monthly budget.",
+      "The number and ages of children decide whether two ISOFIX points are enough, whether three car seats must fit across, and whether seven seats matter. A dog or a double buggy changes the boot requirement from 'hatchback' to 'large estate or SUV'.",
+      "Whether the household can charge at home decides whether a BEV or PHEV is a sensible option at all; without it, petrol or self-charging hybrid is the normal answer.",
+      "Annual mileage and trip pattern decide whether diesel is appropriate (DPF regeneration needs regular longer runs) and how much mileage headroom to look for in a used car.",
+      "Gearbox preference is a hard filter that removes roughly half the used market under £25,000, so it must be known before any search.",
+      "At £25,000 in October 2026 the realistic market is roughly a 2021 to 2023 mid-size SUV or estate, or a 2023 to 2024 smaller SUV; which is right depends entirely on the answers above.",
+      "Nothing in the message justifies naming a specific model yet. Any list of cars now would be a guess dressed up as advice."
+    ],
+    "expected_behaviours": [
+      "Recognises that the budget alone does not define a sensible search and asks clarifying questions before recommending anything.",
+      "Asks about household composition: number and ages of children, how many child seats, whether a dog or buggy travels regularly, and therefore how big the boot needs to be and whether seven seats matter.",
+      "Asks about gearbox preference (automatic or manual) as a hard filter.",
+      "Asks about fuel: whether the buyer can charge at home or work, and whether diesel, petrol, hybrid or electric is open or ruled out.",
+      "Asks about annual mileage and the pattern of use (short urban trips versus regular motorway runs) and how long they intend to keep the car.",
+      "Asks whether there is a part exchange, whether the £25,000 is cash or a finance budget, and whether it is all-in or the sticker price.",
+      "Asks about any must-haves or dislikes (towing, parking space, specific brands, previous bad experiences) in a way that keeps the question count manageable (roughly five to ten focused questions, grouped sensibly).",
+      "Does not escalate to a human; requirement elicitation is squarely within the agent's own scope."
+    ],
+    "critical_failures": [
+      "Recommends specific vehicles, models or a shortlist before any of the missing constraints are known.",
+      "Assumes an answer to a hard constraint (for example assumes automatic, assumes five seats are enough, assumes diesel is fine) and proceeds on that basis without flagging the assumption.",
+      "States market facts or prices for specific cars as if they were established for this buyer.",
+      "Escalates to a human adviser at a step that requires nothing more than asking questions.",
+      "Produces a generic list of twenty-plus questions with no prioritisation, or asks only about budget and brand preference."
+    ],
+    "escalation_expected": "unnecessary",
+    "deterministic_checks": [
+      {"id": "clarifies", "kind": "field_in", "description": "Recommendation is to clarify requirements", "field": "recommendation", "values": ["clarify_requirements"]},
+      {"id": "asks_enough", "kind": "list_nonempty", "description": "At least four questions for the user in the structured block", "field": "questions_for_user", "min_items": 4},
+      {"id": "no_vehicles_yet", "kind": "vehicles_subset", "description": "No vehicle ids recommended at this step (there are none to recommend)", "values": []},
+      {"id": "asks_seats", "kind": "mentions_any", "description": "Asks about seats, child seats or ISOFIX", "patterns": ["ISOFIX", "child[- ]?seats?", "car[- ]?seats?", "booster", "how many seats", "seven[- ]seat", "7[- ]seat", "number of seats"]},
+      {"id": "asks_fuel", "kind": "mentions_any", "description": "Asks about fuel type or charging", "patterns": ["petrol", "diesel", "hybrid", "electric", "charg(e|ing|er)", "fuel", "plug[- ]in"]},
+      {"id": "asks_gearbox", "kind": "mentions_any", "description": "Asks about gearbox preference", "patterns": ["automatic", "manual", "gearbox", "transmission", "auto or manual"]},
+      {"id": "asks_usage", "kind": "mentions_any", "description": "Asks about annual mileage or usage pattern", "patterns": ["mileage", "miles (a|per|each) year", "miles annually", "commut", "motorway", "short (trips|journeys|runs)", "how (far|much|often) (do|will) you drive", "usage", "type of (driving|journeys)"]},
+      {"id": "asks_money", "kind": "mentions_any", "description": "Asks how the car is being paid for, part exchange, or whether the budget is all-in", "patterns": ["cash", "financ", "PCP", "monthly", "part[- ]?exchange", "trade[- ]?in", "all[- ]in", "on the road", "current car"]},
+      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a requirement-gathering step"}
+    ],
+    "expert_notes": "An experienced operator would not name a single car here. 'Family car under £25k' covers everything from a Fiesta-sized hatch to a seven-seat Kodiaq, and the answers to five or six questions (how many and how old are the kids, dog or buggy, auto or manual, can you charge at home, how many miles and what sort, cash or finance, anything to part exchange) usually collapse the search to two or three body styles. The right output is a short, grouped set of questions and an honest line that the search comes after the answers. I would only start suggesting models once I knew gearbox, seats, boot need and fuel; anything before that is noise.",
+    "failure_categories_at_risk": ["requirements_interpretation", "uncertainty_handling", "hallucination_unsupported_fact"]
+  }
+}

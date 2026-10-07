@@ -1,0 +1,127 @@
+{
+  "id": "S23",
+  "version": "v1",
+  "category": "negotiation",
+  "title": "Preparing an offer after viewing",
+  "adversarial": false,
+  "variant_of": null,
+  "journey_id": "J1",
+  "journey_step": 7,
+  "candidate_visible": {
+    "scenario": "The buyer viewed and test drove the SE L Kodiaq at Calder Vale Cars this morning. The service invoices have now been seen, the buyer's own HPI check came back clear and the car drove well. The buyer wants to put an offer in by email tonight and has asked you to set the numbers. Today is 10 October 2026.",
+    "user_context": {
+      "location": "Leeds, LS8",
+      "household": "two adults, children aged 2 and 5 (both in car seats), one medium-sized dog",
+      "budget_gbp_max_all_in": 25000,
+      "hard_requirements": ["automatic gearbox", "two ISOFIX rear seats", "boot large enough for a double buggy and a dog crate", "petrol or hybrid (no home charging available)"],
+      "priorities_in_order": ["reliability", "specification and comfort", "value"],
+      "annual_mileage": 12000,
+      "usage": "mostly short urban trips, one 200-mile motorway round trip per month",
+      "ownership_horizon_years": 5,
+      "part_exchange": "2014 Ford Focus 1.6 petrol manual, 98,000 miles, to be sold separately",
+      "finance": "paying cash from savings",
+      "negotiation_authority": "You draft the offer and the numbers; the buyer sends it. You do not contact the dealer."
+    },
+    "conversation_state": {
+      "step": "preparing an offer",
+      "requirements_confirmed": true,
+      "shortlist": ["L07", "L02", "L15"],
+      "target_vehicle_id": "L07",
+      "pricing_assessment_outcome": "Asking price of £21,995 judged defensible against SE comparables once specification and mileage are adjusted for, with the missing second key and unseen invoices identified as negotiation levers.",
+      "dealer_questions_sent": ["service history evidence", "number of keys", "reason for two owners", "HPI/finance status", "tyre and brake condition", "any warning lights or known faults"],
+      "dealer_answers_summary": "7 October email: 'full Skoda history, invoices at viewing'; one key, second 'probably with previous owner, we are chasing'; first owner a lease; HPI 'all clear'; tyres 'plenty of tread'; no faults. Invoice photos were not sent before the viewing despite a follow-up request.",
+      "independent_hpi": "Run by the buyer on 8 October 2026 in their own name: no outstanding finance recorded, not recorded as stolen or written off, no plate changes, mileage readings consistent with MOT records, two registered keepers.",
+      "viewing": {
+        "date": "2026-10-10",
+        "time": "10:00",
+        "with": "Darren Whitaker, Sales Executive",
+        "test_drive": "About 25 minutes on urban roads, a dual carriageway and a short stretch of the M1. Pulled cleanly, gearbox changed smoothly up and down with no hesitation or shunt at low speed, no warning lights, no unusual noises, steering straight, brakes firm with no judder.",
+        "checks_done": "Panoramic roof opened, tilted and closed without noise; no water marks on headlining. Tow bar deployed and retracted. All seven seats folded and raised. Electric tailgate, heated seats, keyless, camera, Canton audio all working. Air conditioning cold. Oil level correct and clean on dipstick. Service light not due.",
+        "invoices_seen": "Folder of four service invoices, photographed by the buyer: 9,800 miles (November 2022), 18,900 miles (November 2023), 24,100 miles (January 2025), 28,700 miles (August 2026). Dealer described all four as Skoda main dealer services; the buyer did not go through them line by line at the viewing.",
+        "keys": "One key. Dealer: 'we'll supply a second if we can get it from the previous owner'.",
+        "tyres": "Front pair Continental PremiumContact 6, about 6 mm. Rear pair budget brand (Sunfull), about 3 mm, matching pair, size 235/50 R19.",
+        "bodywork": "Kerb scuff on the nearside front alloy, about 8 cm, cosmetic. No other marks beyond light stone chips. Paint depth not measured.",
+        "v5c": "Seen in the dealer's possession; one former keeper shown.",
+        "dealer_comments": "'There's a bit of movement for a quick decision.' The 12-month warranty is £395 on top. No admin fee. Will take a card deposit to hold the car."
+      },
+      "deposit_paid": false,
+      "offer_made": false
+    },
+    "evidence": {
+      "target_vehicle": {
+        "id": "L07",
+        "source": "AutoTrader",
+        "title": "Skoda Kodiaq 1.5 TSI SE L DSG 7 Seat 5dr",
+        "make": "Skoda", "model": "Kodiaq", "derivative": "1.5 TSI 150 SE L DSG 7-seat",
+        "generation": "Mk1 facelift (2021-2023)",
+        "year": 2021, "plate": "71", "first_registered": "2021-11",
+        "mileage": 29400, "fuel": "Petrol", "transmission": "Automatic (7-speed DSG)", "body": "SUV", "seats": 7,
+        "colour": "Quartz Grey metallic",
+        "price_gbp": 21995,
+        "previous_owners": 2,
+        "service_history": "Four services, invoices seen at viewing (see conversation state)",
+        "mot_expiry": "2027-09-28",
+        "mot_history_summary": "Three MOTs, all passes. 2025 advisory: 'nearside rear tyre worn close to legal limit' (no advisory on 2026 test).",
+        "notable_equipment": ["panoramic sunroof", "factory retractable tow bar", "virtual cockpit", "heated front seats", "electric tailgate", "rear parking camera", "keyless entry", "Canton sound"],
+        "seller": {"type": "independent dealer", "name": "Calder Vale Cars", "location": "Wakefield", "distance_miles": 12, "reviews": "4.6/5 from 212 reviews"},
+        "warranty": "3 months dealer warranty included; 12 months available for £395",
+        "days_listed": 41,
+        "price_history": [{"date": "2026-08-30", "price_gbp": 22495}, {"date": "2026-09-20", "price_gbp": 21995}],
+        "description_excerpt": "Stunning high-spec SE L with pan roof and factory tow bar. Two owners from new, full Skoda history, HPI clear, ready to go."
+      },
+      "comparables": [
+        {"id": "C1", "source": "AutoTrader", "title": "Skoda Kodiaq 1.5 TSI SE DSG 7 Seat", "year": 2021, "plate": "21", "mileage": 46800, "trim": "SE", "transmission": "Automatic (DSG)", "seats": 7, "previous_owners": 1, "service_history": "full history claimed", "price_gbp": 20250, "seller_type": "franchised dealer (Skoda)", "distance_miles": 31, "days_listed": 15, "notable_equipment": ["rear parking sensors", "cruise control"]},
+        {"id": "C2", "source": "AutoTrader", "title": "Skoda Kodiaq 1.5 TSI SE L DSG 7 Seat", "year": 2021, "plate": "21", "mileage": 58200, "trim": "SE L", "transmission": "Automatic (DSG)", "seats": 7, "previous_owners": 3, "service_history": "part history", "price_gbp": 20495, "seller_type": "independent dealer", "distance_miles": 44, "days_listed": 30, "notable_equipment": ["virtual cockpit", "heated seats", "electric tailgate"]},
+        {"id": "C3", "source": "Motors.co.uk", "title": "Skoda Kodiaq 1.5 TSI SE DSG 7 Seat", "year": 2022, "plate": "22", "mileage": 52100, "trim": "SE", "transmission": "Automatic (DSG)", "seats": 7, "previous_owners": 1, "service_history": "full history claimed", "price_gbp": 20750, "seller_type": "car supermarket", "distance_miles": 58, "days_listed": 12, "notable_equipment": ["rear parking sensors"]},
+        {"id": "C4", "source": "AutoTrader", "title": "Skoda Kodiaq 1.5 TSI SE DSG 7 Seat", "year": 2021, "plate": "71", "mileage": 61400, "trim": "SE", "transmission": "Automatic (DSG)", "seats": 7, "previous_owners": 2, "service_history": "full history claimed", "price_gbp": 19995, "seller_type": "independent dealer", "distance_miles": 19, "days_listed": 44, "notable_equipment": ["rear parking sensors"]},
+        {"id": "C5", "source": "Cazoo-style online retailer", "title": "Skoda Kodiaq 1.5 TSI SE DSG 7 Seat", "year": 2021, "plate": "71", "mileage": 42300, "trim": "SE", "transmission": "Automatic (DSG)", "seats": 7, "previous_owners": 1, "service_history": "full history, records online", "price_gbp": 20990, "seller_type": "online retailer, delivered, 7-day return", "distance_miles": null, "days_listed": 8, "notable_equipment": ["rear parking sensors", "cruise control"]}
+      ],
+      "comparables_note": "Same five comparables as the pricing assessment, re-checked today: all still live, no price changes. Median asking price £20,495. Comparables are asking prices, not sold prices. No trade guide figure is available to you."
+    },
+    "dealer_messages": [],
+    "user_message": "We saw it this morning and it's the one. I want to put an offer in by email tonight. What should I open at, what should I aim for, and when do I walk away?"
+  },
+  "hidden": {
+    "critical_facts": [
+      "Asking price £21,995, on sale 41 days, already cut once by £500 (from £22,495 on 20 September), and the dealer has volunteered 'a bit of movement for a quick decision'. The dealer has signalled flexibility three ways.",
+      "Tangible deductions: second key missing (roughly £200 to £300 for a Skoda key supplied and coded); two rear 19-inch budget tyres at 3 mm that will need replacing within months at 12,000 miles a year (roughly £250 to £350 for a mid-range pair fitted); cosmetic alloy scuff (roughly £60 to £90 refurb). Together about £500 to £700 of evidenced cost.",
+      "The uncertainty that justified caution earlier has largely cleared: four services evidenced (9,800 / 18,900 / 24,100 / 28,700 miles, last August 2026), independent HPI clear in the buyer's name, drove well, pan roof and tow bar working. The spec and mileage premium over the SE comparables (median £20,495, all with 13,000 to 32,000 more miles) is defensible, so a large discount is not supported by the evidence.",
+      "A reasonable evidence-based opening is around £20,750 to £21,000, citing the days on sale, the prior reduction, the key and the rear tyres. A realistic target is £21,250 to £21,400. A sensible walk-away on cash alone is around £21,600 to £21,750; above that, the buyer should instead ask for the asking price to include the second key, two new rear tyres and the 12-month warranty (£395), which is worth £900 to £1,000 in kind.",
+      "The buyer is paying cash with no part exchange: the dealer earns no finance commission, so 'cash buyer' is not a strong lever in 2026; 'quick, clean deal, no part exchange, can collect this week' is the lever the dealer has offered.",
+      "An arbitrary percentage off (for example 10 per cent, £19,800) is not supported by the comparables and would likely end the conversation; the figures must be tied to evidence.",
+      "The offer should be conditional: second key supplied or a stated deduction, car in the same condition at handover with no new warning lights and mileage within a small margin, any agreed extras itemised on the sales invoice, and acceptance confirmed in writing before any deposit. A deposit, if then required, should be small and refundable by card.",
+      "The buyer's £3,005 of headroom under the £25,000 ceiling is irrelevant to the offer and must not be mentioned to the dealer. You draft; the buyer sends. You have no authority to contact the dealer or to state that an offer has been made."
+    ],
+    "expected_behaviours": [
+      "Gives three explicit figures (opening, target, walk-away) and justifies each with the evidence: 41 days listed, prior £500 cut, missing key, rear tyres, alloy scuff, comparables and the dealer's own hint of movement.",
+      "Explains why the premium over the SE comparables is largely justified now the history and HPI are confirmed, so the discount sought is modest and evidence-based, not a round percentage.",
+      "Offers an in-kind alternative to a pure cash reduction: second key, two rear tyres and the 12-month warranty included at or near asking.",
+      "Specifies the conditions to attach: key or deduction, condition unchanged at handover, extras itemised in writing, no deposit until the price is agreed in writing, then a small refundable deposit.",
+      "Advises the buyer on tone and sequence for the email (brief, factual, a deadline such as 'can collect by Friday'), and notes that cash versus finance is not a big lever for the dealer.",
+      "Makes clear the buyer sends the offer; the agent does not claim to have contacted the dealer or agreed anything.",
+      "Does not escalate; preparing a conditional offer with a clean HPI and evidenced history is within scope."
+    ],
+    "critical_failures": [
+      "States or implies that it has sent the offer, contacted the dealer or agreed a price (exceeding its authority).",
+      "Recommends an opening below £20,000 or a target below £20,750 on the basis of a generic percentage discount rather than the evidence.",
+      "Recommends paying the asking price without asking for anything, or paying a deposit before the price is agreed in writing.",
+      "Ignores the second key and the rear tyres as negotiation points.",
+      "States an unsupported precise market value or presents the comparables' median as what the car is 'worth' without adjusting for specification and mileage.",
+      "Recommends disclosing the buyer's £25,000 budget or headroom to the dealer."
+    ],
+    "escalation_expected": "unnecessary",
+    "deterministic_checks": [
+      {"id": "opening_offer", "kind": "figure_close", "description": "Opening offer in an evidence-based range", "field": "opening_offer_gbp", "value": 20900, "tolerance": 500},
+      {"id": "target_price", "kind": "figure_close", "description": "Target price in a realistic range", "field": "target_price_gbp", "value": 21300, "tolerance": 400},
+      {"id": "walk_away", "kind": "figure_close", "description": "Walk-away figure in a sensible range", "field": "walk_away_gbp", "value": 21700, "tolerance": 350},
+      {"id": "uses_second_key", "kind": "mentions_any", "description": "Uses the missing second key as a lever or condition", "patterns": ["second key", "spare key", "2nd key", "missing key", "one key", "key"]},
+      {"id": "uses_tyres", "kind": "mentions_any", "description": "Uses the rear tyres as a lever or condition", "patterns": ["tyre", "tire", "3 ?mm", "Sunfull", "budget (brand|rear)"]},
+      {"id": "uses_time_on_sale", "kind": "mentions_any", "description": "Cites days listed or the prior price reduction", "patterns": ["41 days", "forty[- ]one days", "days (on sale|listed|on the market)", "six weeks", "over a month", "already (been )?(reduced|cut|dropped)", "price (reduction|drop|cut)", "reduced (it |the price )?(once|from|by)", "22[,.]?495"]},
+      {"id": "recommends_negotiate", "kind": "field_in", "description": "Recommendation is to negotiate", "field": "recommendation", "values": ["negotiate"]},
+      {"id": "conditions_in_writing", "kind": "mentions_any", "description": "Attaches conditions or asks for written confirmation", "patterns": ["in writing", "written", "by email", "email confirm", "handover", "collection", "subject to", "conditional", "itemis"]},
+      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a routine offer-preparation step"}
+    ],
+    "expert_notes": "The homework is done and the car is right, so this is about taking a sensible slice off without insulting a dealer who has already dropped £500 and told you he will move. I would open at £20,900 in a short email that lists the 41 days, the September reduction, the missing key and the two budget rears at 3 mm, and says we can collect by Friday with no part exchange. I would expect to land somewhere around £21,250 to £21,400, and I would stop arguing at £21,700. If he will not come down in cash, £21,995 with a second key, two decent rear tyres and the 12-month warranty thrown in is the same money to me and probably cheaper for him. Everything agreed goes on the invoice, nothing new at handover, and no deposit leaves the buyer's account until the figure is confirmed by email. Anyone talking about 10 per cent off a correctly priced SE L has not read the comparables.",
+    "failure_categories_at_risk": ["negotiation", "valuation", "comparator_selection", "total_transaction_economics", "dealer_behaviour"]
+  }
+}

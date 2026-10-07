@@ -1,0 +1,1206 @@
+{
+  "id": "S05",
+  "version": "v1",
+  "category": "search",
+  "title": "Vehicle shortlist from a set of live listings",
+  "adversarial": false,
+  "variant_of": null,
+  "journey_id": "J1",
+  "journey_step": 2,
+  "candidate_visible": {
+    "scenario": "The buyer answered your questions in the previous conversation and their requirements are now confirmed. You have pulled twenty live listings within about 60 miles of Leeds that came up for 'family SUV or estate, up to £27,000' and the buyer wants you to turn them into a shortlist. Today is 7 October 2026.",
+    "user_context": {
+      "location": "Leeds, LS8",
+      "household": "two adults, children aged 2 and 5 (both in car seats), one medium-sized dog",
+      "budget_gbp_max_all_in": 25000,
+      "hard_requirements": [
+        "automatic gearbox",
+        "two ISOFIX rear seats",
+        "boot large enough for a double buggy and a dog crate",
+        "petrol or hybrid (no home charging available)"
+      ],
+      "priorities_in_order": [
+        "reliability",
+        "specification and comfort",
+        "value"
+      ],
+      "annual_mileage": 12000,
+      "usage": "mostly short urban trips, one 200-mile motorway round trip per month",
+      "ownership_horizon_years": 5,
+      "part_exchange": "2014 Ford Focus 1.6 petrol manual, 98,000 miles, to be sold separately",
+      "finance": "paying cash from savings"
+    },
+    "conversation_state": {
+      "step": "shortlisting",
+      "requirements_confirmed": true,
+      "requirements_summary": "Automatic, petrol or hybrid, two ISOFIX seats in the second row, boot that takes a double buggy and a medium dog crate together, maximum £25,000 all in including any admin fee. Seven seats would be nice for occasional grandparents but are not essential. Buyer wants something they can keep for five years without drama and would rather have a well-equipped car than the newest car.",
+      "search_parameters_used": "SUV or estate, 2019 or newer, under 70,000 miles, up to £27,000 asking, within 60 miles of LS8, automatic not enforced at search stage",
+      "shortlist": [],
+      "target_vehicle_id": null
+    },
+    "evidence": {
+      "listings": [
+        {
+          "id": "L01",
+          "source": "AutoTrader",
+          "title": "Hyundai Tucson 1.6 T-GDi Hybrid Premium 2WD Auto 5dr",
+          "make": "Hyundai",
+          "model": "Tucson",
+          "derivative": "1.6 T-GDi 230 Hybrid Premium 2WD auto",
+          "year": 2022,
+          "plate": "22",
+          "first_registered": "2022-05",
+          "mileage": 37200,
+          "fuel": "Petrol hybrid (self-charging)",
+          "transmission": "Automatic (6-speed)",
+          "body": "SUV",
+          "seats": 5,
+          "isofix": "two outer rear seats",
+          "boot_litres_seats_up": 616,
+          "colour": "Shimmering Silver metallic",
+          "price_gbp": 21495,
+          "previous_owners": 1,
+          "service_history": "Full Hyundai main dealer history, 3 services, digital record, last service 36,400 miles September 2026",
+          "mot_expiry": "2027-05-19",
+          "mot_history_summary": "Two MOTs, both passes, no advisories.",
+          "notable_equipment": [
+            "19-inch alloys",
+            "10.25-inch navigation",
+            "heated front seats and steering wheel",
+            "KRELL audio",
+            "rear camera",
+            "smart cruise control",
+            "keyless entry",
+            "wireless phone charging",
+            "LED headlights"
+          ],
+          "seller": {
+            "type": "franchised dealer (Hyundai)",
+            "name": "Aire Valley Hyundai",
+            "location": "Leeds",
+            "distance_miles": 6,
+            "reviews": "4.5/5 from 388 reviews"
+          },
+          "warranty": "Balance of Hyundai 5-year unlimited-mileage warranty to May 2027, plus 12 months Hyundai Promise approved used cover",
+          "days_listed": 9,
+          "price_history": [
+            {
+              "date": "2026-09-28",
+              "price_gbp": 21495
+            }
+          ],
+          "description_excerpt": "One owner Premium hybrid in lovely condition, just serviced by us. Comes with the remainder of the Hyundai warranty and our approved used package. Two keys, all books present."
+        },
+        {
+          "id": "L02",
+          "source": "AutoTrader",
+          "title": "Skoda Kodiaq 1.5 TSI SE DSG 7 Seat 5dr",
+          "make": "Skoda",
+          "model": "Kodiaq",
+          "derivative": "1.5 TSI 150 SE DSG 7-seat",
+          "generation": "Mk1 facelift (2021-2023)",
+          "year": 2023,
+          "plate": "23",
+          "first_registered": "2023-03",
+          "mileage": 48100,
+          "fuel": "Petrol",
+          "transmission": "Automatic (7-speed DSG)",
+          "body": "SUV",
+          "seats": 7,
+          "isofix": "two outer second-row seats",
+          "boot_litres_seats_up": 630,
+          "colour": "Steel Grey metallic",
+          "price_gbp": 22750,
+          "previous_owners": 1,
+          "service_history": "Three services on the Skoda digital service record, all at Skoda main dealers under a fleet maintenance contract; last service 41,300 miles January 2026",
+          "mot_expiry": "2027-03-11",
+          "mot_history_summary": "One MOT (March 2026, 45,200 miles), pass, no advisories.",
+          "notable_equipment": [
+            "18-inch alloys",
+            "8-inch Bolero touchscreen with wireless SmartLink",
+            "front and rear parking sensors",
+            "cruise control",
+            "dual-zone climate control",
+            "LED headlights",
+            "roof rails",
+            "seven seats"
+          ],
+          "seller": {
+            "type": "franchised dealer (Skoda)",
+            "name": "Pennine Skoda",
+            "location": "Bradford",
+            "distance_miles": 11,
+            "reviews": "4.4/5 from 301 reviews"
+          },
+          "warranty": "Skoda Approved Used: 12 months warranty and 12 months roadside assistance included",
+          "days_listed": 16,
+          "price_history": [
+            {
+              "date": "2026-09-21",
+              "price_gbp": 22750
+            }
+          ],
+          "description_excerpt": "One owner from new, ex-company vehicle with full Skoda digital service history. Skoda Approved Used with 12 months warranty, multi-point check and a fresh service before collection. Two keys."
+        },
+        {
+          "id": "L03",
+          "source": "AutoTrader",
+          "title": "Volkswagen Tiguan Allspace 1.5 TSI Life DSG 7 Seat 5dr",
+          "make": "Volkswagen",
+          "model": "Tiguan Allspace",
+          "derivative": "1.5 TSI 150 Life DSG 7-seat",
+          "year": 2023,
+          "plate": "23",
+          "first_registered": "2023-06",
+          "mileage": 24800,
+          "fuel": "Petrol",
+          "transmission": "Automatic (7-speed DSG)",
+          "body": "SUV",
+          "seats": 7,
+          "isofix": "two outer second-row seats",
+          "boot_litres_seats_up": 700,
+          "colour": "Platinum Grey metallic",
+          "price_gbp": 25750,
+          "previous_owners": 1,
+          "service_history": "Full Volkswagen main dealer history, 2 services, digital record",
+          "mot_expiry": "2027-06-09",
+          "mot_history_summary": "One MOT (June 2026), pass, no advisories.",
+          "notable_equipment": [
+            "18-inch alloys",
+            "Discover Media navigation",
+            "Digital Cockpit Pro",
+            "three-zone climate control",
+            "adaptive cruise control",
+            "front and rear parking sensors",
+            "LED headlights",
+            "App-Connect"
+          ],
+          "seller": {
+            "type": "franchised dealer (Volkswagen)",
+            "name": "Harrogate Volkswagen",
+            "location": "Harrogate",
+            "distance_miles": 16,
+            "reviews": "4.6/5 from 254 reviews"
+          },
+          "warranty": "Volkswagen Approved Used: 12 months warranty and roadside assistance",
+          "days_listed": 22,
+          "price_history": [
+            {
+              "date": "2026-09-15",
+              "price_gbp": 25750
+            }
+          ],
+          "description_excerpt": "Low-mileage one-owner Allspace with the balance of its Volkswagen cover and our approved used programme. Seven seats, huge boot, immaculate inside and out."
+        },
+        {
+          "id": "L04",
+          "source": "Motors.co.uk",
+          "title": "Skoda Karoq 1.5 TSI SE Drive 5dr",
+          "make": "Skoda",
+          "model": "Karoq",
+          "derivative": "1.5 TSI 150 SE Drive manual",
+          "year": 2022,
+          "plate": "22",
+          "first_registered": "2022-04",
+          "mileage": 28000,
+          "fuel": "Petrol",
+          "transmission": "Manual (6-speed)",
+          "body": "SUV",
+          "seats": 5,
+          "isofix": "two outer rear seats",
+          "boot_litres_seats_up": 521,
+          "colour": "Race Blue metallic",
+          "price_gbp": 18495,
+          "previous_owners": 1,
+          "service_history": "Full Skoda main dealer history, 3 services",
+          "mot_expiry": "2027-04-02",
+          "mot_history_summary": "Two MOTs, both passes, no advisories.",
+          "notable_equipment": [
+            "18-inch alloys",
+            "Amundsen navigation",
+            "rear camera",
+            "heated front seats",
+            "front and rear parking sensors",
+            "LED headlights",
+            "VarioFlex rear seats"
+          ],
+          "seller": {
+            "type": "independent dealer",
+            "name": "Roundhay Motor Company",
+            "location": "Leeds",
+            "distance_miles": 3,
+            "reviews": "4.7/5 from 96 reviews"
+          },
+          "warranty": "3 months dealer warranty included",
+          "days_listed": 14,
+          "price_history": [
+            {
+              "date": "2026-09-23",
+              "price_gbp": 18495
+            }
+          ],
+          "description_excerpt": "Beautiful one-owner Karoq SE Drive with the desirable VarioFlex seating and full Skoda history. Two keys. Just had a full service."
+        },
+        {
+          "id": "L05",
+          "source": "AutoTrader",
+          "title": "Kia Sportage 1.6 T-GDi HEV 3 Auto 2WD 5dr",
+          "make": "Kia",
+          "model": "Sportage",
+          "derivative": "1.6 T-GDi HEV 3 auto 2WD",
+          "year": 2022,
+          "plate": "72",
+          "first_registered": "2022-10",
+          "mileage": 33600,
+          "fuel": "Petrol hybrid (self-charging)",
+          "transmission": "Automatic (6-speed)",
+          "body": "SUV",
+          "seats": 5,
+          "isofix": "two outer rear seats",
+          "boot_litres_seats_up": 587,
+          "colour": "Penta Metal grey",
+          "price_gbp": 23250,
+          "previous_owners": 1,
+          "service_history": "Full Kia main dealer history, 3 services, last at 32,900 miles September 2026",
+          "mot_expiry": "2026-10-21",
+          "mot_history_summary": "One MOT (October 2025), pass, no advisories. New 12-month MOT to be issued before handover.",
+          "notable_equipment": [
+            "19-inch alloys",
+            "12.3-inch touchscreen navigation and digital cluster",
+            "heated front and rear seats",
+            "heated steering wheel",
+            "wireless phone charging",
+            "rear camera",
+            "smart cruise control",
+            "LED headlights",
+            "electric driver's seat"
+          ],
+          "seller": {
+            "type": "franchised dealer (Kia)",
+            "name": "Wakefield Kia",
+            "location": "Wakefield",
+            "distance_miles": 13,
+            "reviews": "4.6/5 from 412 reviews"
+          },
+          "warranty": "Balance of Kia 7-year/100,000-mile warranty to October 2029",
+          "days_listed": 11,
+          "price_history": [
+            {
+              "date": "2026-09-26",
+              "price_gbp": 23250
+            }
+          ],
+          "description_excerpt": "Stunning 72-plate Sportage hybrid in high '3' specification, one owner, full Kia history and over three years of manufacturer warranty remaining. Two keys."
+        },
+        {
+          "id": "L06",
+          "source": "AutoTrader",
+          "title": "Skoda Superb Estate 2.0 TDI SE L DSG 5dr",
+          "make": "Skoda",
+          "model": "Superb Estate",
+          "derivative": "2.0 TDI 150 SE L DSG",
+          "year": 2021,
+          "plate": "71",
+          "first_registered": "2021-09",
+          "mileage": 52300,
+          "fuel": "Diesel",
+          "transmission": "Automatic (7-speed DSG)",
+          "body": "Estate",
+          "seats": 5,
+          "isofix": "two outer rear seats",
+          "boot_litres_seats_up": 660,
+          "colour": "Business Grey metallic",
+          "price_gbp": 19250,
+          "previous_owners": 2,
+          "service_history": "Full service history: 3 Skoda main dealer services and 1 independent, last at 50,800 miles July 2026",
+          "mot_expiry": "2027-08-14",
+          "mot_history_summary": "Three MOTs, all passes. 2025 advisory: 'front brake discs worn, pitted or scored, but not seriously weakened'. 2026: no advisories.",
+          "notable_equipment": [
+            "18-inch alloys",
+            "Amundsen navigation",
+            "virtual cockpit",
+            "Alcantara and leather heated front seats",
+            "keyless entry",
+            "electric tailgate",
+            "Matrix LED headlights",
+            "front and rear parking sensors"
+          ],
+          "seller": {
+            "type": "independent dealer",
+            "name": "Holme Valley Cars",
+            "location": "Huddersfield",
+            "distance_miles": 18,
+            "reviews": "4.5/5 from 141 reviews"
+          },
+          "warranty": "3 months dealer warranty included",
+          "days_listed": 33,
+          "price_history": [
+            {
+              "date": "2026-09-04",
+              "price_gbp": 19750
+            },
+            {
+              "date": "2026-09-26",
+              "price_gbp": 19250
+            }
+          ],
+          "description_excerpt": "Ex-motorway car that drives like new. Huge boot, superb economy, high SE L spec. Full service history, two keys, recent front brakes."
+        },
+        {
+          "id": "L07",
+          "source": "AutoTrader",
+          "title": "Skoda Kodiaq 1.5 TSI SE L DSG 7 Seat 5dr",
+          "make": "Skoda",
+          "model": "Kodiaq",
+          "derivative": "1.5 TSI 150 SE L DSG 7-seat",
+          "generation": "Mk1 facelift (2021-2023)",
+          "year": 2021,
+          "plate": "71",
+          "first_registered": "2021-11",
+          "mileage": 29400,
+          "fuel": "Petrol",
+          "transmission": "Automatic (7-speed DSG)",
+          "body": "SUV",
+          "seats": 7,
+          "isofix": "two outer second-row seats",
+          "boot_litres_seats_up": 630,
+          "colour": "Quartz Grey metallic",
+          "price_gbp": 21995,
+          "previous_owners": 2,
+          "service_history": "Full Skoda main dealer history (4 services) as advertised",
+          "mot_expiry": "2027-09-28",
+          "mot_history_summary": "Three MOTs, all passes. 2025 advisory: 'nearside rear tyre worn close to legal limit' (no advisory on 2026 test).",
+          "notable_equipment": [
+            "panoramic sunroof",
+            "factory retractable tow bar",
+            "virtual cockpit",
+            "heated front seats",
+            "electric tailgate",
+            "rear parking camera",
+            "keyless entry",
+            "Canton sound",
+            "19-inch alloys",
+            "Amundsen navigation"
+          ],
+          "seller": {
+            "type": "independent dealer",
+            "name": "Calder Vale Cars",
+            "location": "Wakefield",
+            "distance_miles": 12,
+            "reviews": "4.6/5 from 212 reviews"
+          },
+          "warranty": "3 months dealer warranty included; 12 months available at extra cost",
+          "preparation": "12 months MOT, service if due",
+          "days_listed": 38,
+          "price_history": [
+            {
+              "date": "2026-08-30",
+              "price_gbp": 22495
+            },
+            {
+              "date": "2026-09-20",
+              "price_gbp": 21995
+            }
+          ],
+          "description_excerpt": "Stunning high-spec SE L with pan roof and factory tow bar. Two owners from new, full Skoda history, HPI clear, ready to go."
+        },
+        {
+          "id": "L08",
+          "source": "AutoTrader",
+          "title": "Toyota Corolla 1.8 Hybrid Design Touring Sports 5dr CVT",
+          "make": "Toyota",
+          "model": "Corolla Touring Sports",
+          "derivative": "1.8 Hybrid Design Touring Sports CVT",
+          "year": 2022,
+          "plate": "22",
+          "first_registered": "2022-03",
+          "mileage": 31000,
+          "fuel": "Petrol hybrid (self-charging)",
+          "transmission": "Automatic (e-CVT)",
+          "body": "Estate",
+          "seats": 5,
+          "isofix": "two outer rear seats",
+          "boot_litres_seats_up": 596,
+          "colour": "Platinum White Pearl",
+          "price_gbp": 19995,
+          "previous_owners": 1,
+          "service_history": "Full Toyota main dealer history, 4 annual services, last at 30,600 miles August 2026",
+          "mot_expiry": "2027-03-05",
+          "mot_history_summary": "Two MOTs, both passes, no advisories.",
+          "notable_equipment": [
+            "17-inch alloys",
+            "8-inch touchscreen with Apple CarPlay and Android Auto",
+            "rear camera",
+            "heated front seats",
+            "front and rear parking sensors",
+            "LED headlights",
+            "Toyota Safety Sense",
+            "automatic wipers"
+          ],
+          "seller": {
+            "type": "franchised dealer (Toyota)",
+            "name": "Leeds Toyota Centre",
+            "location": "Leeds",
+            "distance_miles": 5,
+            "reviews": "4.7/5 from 523 reviews"
+          },
+          "warranty": "12 months Toyota approved used warranty; eligible for Toyota Relax cover up to 10 years / 100,000 miles with annual Toyota servicing",
+          "days_listed": 7,
+          "price_history": [
+            {
+              "date": "2026-09-30",
+              "price_gbp": 19995
+            }
+          ],
+          "description_excerpt": "One owner Corolla Touring Sports hybrid, full Toyota history, two keys. Economical, roomy estate boot with low loading lip."
+        },
+        {
+          "id": "L09",
+          "source": "Motors.co.uk",
+          "title": "Skoda Enyaq iV 60 Nav 5dr Auto",
+          "make": "Skoda",
+          "model": "Enyaq iV",
+          "derivative": "60 Nav (58 kWh usable)",
+          "year": 2022,
+          "plate": "22",
+          "first_registered": "2022-07",
+          "mileage": 38400,
+          "fuel": "Electric",
+          "transmission": "Automatic (single-speed)",
+          "body": "SUV",
+          "seats": 5,
+          "isofix": "two outer rear seats",
+          "boot_litres_seats_up": 585,
+          "colour": "Moon White metallic",
+          "price_gbp": 18995,
+          "previous_owners": 1,
+          "service_history": "Full Skoda main dealer history, 2 services",
+          "mot_expiry": "2027-07-08",
+          "mot_history_summary": "One MOT (July 2026), pass, no advisories.",
+          "battery": "State of health report 94% (dealer check, September 2026); WLTP range when new 256 miles",
+          "notable_equipment": [
+            "19-inch alloys",
+            "13-inch touchscreen with navigation",
+            "heated front seats",
+            "front and rear parking sensors",
+            "rear camera",
+            "LED headlights",
+            "Type 2 and CCS charging cables"
+          ],
+          "seller": {
+            "type": "car supermarket",
+            "name": "Yorkshire Car Supermarket",
+            "location": "Castleford",
+            "distance_miles": 12,
+            "reviews": "4.2/5 from 1,140 reviews"
+          },
+          "warranty": "3 months included; manufacturer battery warranty to July 2030 or 100,000 miles",
+          "days_listed": 19,
+          "price_history": [
+            {
+              "date": "2026-09-18",
+              "price_gbp": 18995
+            }
+          ],
+          "description_excerpt": "Great value electric family SUV. One owner, battery health certificate included, both cables. Cheap to run if you can charge at home."
+        },
+        {
+          "id": "L10",
+          "source": "AutoTrader",
+          "title": "Skoda Octavia Estate 1.5 TSI SE L 5dr",
+          "make": "Skoda",
+          "model": "Octavia Estate",
+          "derivative": "1.5 TSI 150 SE L manual",
+          "year": 2022,
+          "plate": "22",
+          "first_registered": "2022-05",
+          "mileage": 26500,
+          "fuel": "Petrol",
+          "transmission": "Manual (6-speed)",
+          "body": "Estate",
+          "seats": 5,
+          "isofix": "two outer rear seats",
+          "boot_litres_seats_up": 640,
+          "colour": "Graphite Grey metallic",
+          "price_gbp": 18750,
+          "previous_owners": 1,
+          "service_history": "Full Skoda main dealer history, 3 services",
+          "mot_expiry": "2027-05-17",
+          "mot_history_summary": "Two MOTs, both passes, no advisories.",
+          "notable_equipment": [
+            "17-inch alloys",
+            "10-inch Columbus navigation",
+            "virtual cockpit",
+            "keyless entry",
+            "heated front seats",
+            "Matrix LED headlights",
+            "front and rear parking sensors",
+            "rear camera"
+          ],
+          "seller": {
+            "type": "independent dealer",
+            "name": "Five Towns Autos",
+            "location": "Castleford",
+            "distance_miles": 11,
+            "reviews": "4.4/5 from 77 reviews"
+          },
+          "warranty": "3 months dealer warranty included",
+          "days_listed": 26,
+          "price_history": [
+            {
+              "date": "2026-09-11",
+              "price_gbp": 18750
+            }
+          ],
+          "description_excerpt": "Very low mileage SE L estate, one owner, full Skoda history. Massive boot, Matrix lights, virtual cockpit. Two keys."
+        },
+        {
+          "id": "L11",
+          "source": "AutoTrader",
+          "title": "Mazda CX-5 2.0 e-Skyactiv G 165 Sport Auto 2WD 5dr",
+          "make": "Mazda",
+          "model": "CX-5",
+          "derivative": "2.0 e-Skyactiv G 165 Sport auto 2WD",
+          "year": 2022,
+          "plate": "72",
+          "first_registered": "2022-11",
+          "mileage": 29700,
+          "fuel": "Petrol (mild hybrid)",
+          "transmission": "Automatic (6-speed torque converter)",
+          "body": "SUV",
+          "seats": 5,
+          "isofix": "two outer rear seats",
+          "boot_litres_seats_up": 522,
+          "colour": "Soul Red Crystal metallic",
+          "price_gbp": 22495,
+          "previous_owners": 1,
+          "service_history": "Full Mazda main dealer history, 3 services",
+          "mot_expiry": "2026-11-09",
+          "mot_history_summary": "One MOT (November 2025), pass, no advisories. Dealer will issue new 12-month MOT before handover.",
+          "notable_equipment": [
+            "19-inch alloys",
+            "10.25-inch display with navigation",
+            "Bose audio",
+            "leather heated front and rear seats",
+            "heated steering wheel",
+            "electric tailgate",
+            "360-degree camera",
+            "head-up display",
+            "keyless entry"
+          ],
+          "seller": {
+            "type": "franchised dealer (Mazda)",
+            "name": "York Mazda",
+            "location": "York",
+            "distance_miles": 25,
+            "reviews": "4.8/5 from 203 reviews"
+          },
+          "warranty": "Mazda Approved Used: 12 months warranty and roadside assistance",
+          "days_listed": 13,
+          "price_history": [
+            {
+              "date": "2026-09-24",
+              "price_gbp": 22495
+            }
+          ],
+          "description_excerpt": "One-owner Sport in Soul Red with full Mazda history. Conventional automatic, leather, Bose, 360 camera. Two keys, fresh MOT on sale."
+        },
+        {
+          "id": "L12",
+          "source": "AutoTrader",
+          "title": "Peugeot 5008 1.2 PureTech Allure Premium EAT8 7 Seat 5dr",
+          "make": "Peugeot",
+          "model": "5008",
+          "derivative": "1.2 PureTech 130 Allure Premium EAT8 7-seat",
+          "year": 2021,
+          "plate": "71",
+          "first_registered": "2021-10",
+          "mileage": 44200,
+          "fuel": "Petrol",
+          "transmission": "Automatic (8-speed EAT8)",
+          "body": "SUV",
+          "seats": 7,
+          "isofix": "all three individual second-row seats",
+          "boot_litres_seats_up": 702,
+          "colour": "Nera Black",
+          "price_gbp": 17995,
+          "previous_owners": 2,
+          "service_history": "Service history: 2 Peugeot main dealer services and 1 independent, last at 41,900 miles May 2026",
+          "mot_expiry": "2027-05-28",
+          "mot_history_summary": "Two MOTs, both passes. 2026 advisory: 'nearside front tyre worn close to legal limit'.",
+          "notable_equipment": [
+            "18-inch alloys",
+            "12.3-inch digital i-Cockpit",
+            "10-inch touchscreen navigation",
+            "rear camera",
+            "keyless entry",
+            "hands-free electric tailgate",
+            "three individual sliding second-row seats",
+            "LED headlights"
+          ],
+          "seller": {
+            "type": "independent dealer",
+            "name": "Dewsbury Road Car Sales",
+            "location": "Leeds",
+            "distance_miles": 4,
+            "reviews": "4.3/5 from 58 reviews"
+          },
+          "warranty": "3 months dealer warranty included",
+          "days_listed": 48,
+          "price_history": [
+            {
+              "date": "2026-08-20",
+              "price_gbp": 18495
+            },
+            {
+              "date": "2026-09-15",
+              "price_gbp": 17995
+            }
+          ],
+          "description_excerpt": "Seven-seat family favourite with three proper ISOFIX seats in the middle row. Automatic, nav, electric boot. Priced to sell, part exchange welcome."
+        },
+        {
+          "id": "L13",
+          "source": "Motors.co.uk",
+          "title": "Volkswagen Tiguan Allspace 2.0 TDI Match DSG 7 Seat 5dr",
+          "make": "Volkswagen",
+          "model": "Tiguan Allspace",
+          "derivative": "2.0 TDI 150 Match DSG 7-seat",
+          "year": 2021,
+          "plate": "21",
+          "first_registered": "2021-03",
+          "mileage": 58900,
+          "fuel": "Diesel",
+          "transmission": "Automatic (7-speed DSG)",
+          "body": "SUV",
+          "seats": 7,
+          "isofix": "two outer second-row seats",
+          "boot_litres_seats_up": 700,
+          "colour": "Pure White",
+          "price_gbp": 20495,
+          "previous_owners": 1,
+          "service_history": "Full Volkswagen main dealer history, 4 services, ex-lease, last at 56,200 miles June 2026",
+          "mot_expiry": "2027-03-20",
+          "mot_history_summary": "Three MOTs, all passes. 2025 advisory: 'both rear tyres worn close to legal limit'. 2026: no advisories.",
+          "notable_equipment": [
+            "18-inch alloys",
+            "Discover Media navigation",
+            "rear camera",
+            "keyless entry",
+            "park assist",
+            "three-zone climate control",
+            "LED headlights",
+            "adaptive cruise control"
+          ],
+          "seller": {
+            "type": "independent dealer",
+            "name": "Doncaster Car Centre",
+            "location": "Doncaster",
+            "distance_miles": 32,
+            "reviews": "4.5/5 from 189 reviews"
+          },
+          "warranty": "6 months dealer warranty included",
+          "days_listed": 29,
+          "price_history": [
+            {
+              "date": "2026-09-08",
+              "price_gbp": 20495
+            }
+          ],
+          "description_excerpt": "One owner ex-lease Allspace Match diesel with full VW history. Seven seats, 50 mpg, DSG auto. Two keys."
+        },
+        {
+          "id": "L14",
+          "source": "AutoTrader",
+          "title": "Nissan X-Trail 1.3 DiG-T Tekna DCT 7 Seat 5dr",
+          "make": "Nissan",
+          "model": "X-Trail",
+          "derivative": "1.3 DiG-T 160 Tekna DCT 7-seat",
+          "year": 2020,
+          "plate": "70",
+          "first_registered": "2020-09",
+          "mileage": 61800,
+          "fuel": "Petrol",
+          "transmission": "Automatic (7-speed DCT)",
+          "body": "SUV",
+          "seats": 7,
+          "isofix": "two outer second-row seats",
+          "boot_litres_seats_up": 445,
+          "colour": "Gun Metallic grey",
+          "price_gbp": 17250,
+          "previous_owners": 3,
+          "service_history": "Part service history: 3 stamps, last at 49,000 miles",
+          "mot_expiry": "2027-09-02",
+          "mot_history_summary": "Four MOTs, all passes. 2 September 2026 advisories: 'nearside front tyre worn close to legal limit'; 'offside front tyre worn close to legal limit'; 'nearside front lower suspension arm ball joint has slight play'; 'oil leak, but not excessive'; 'rear brake discs worn, pitted or scored, but not seriously weakened'; 'corrosion on rear subframe (surface)'; 'brake pipe corroded, covered in grease or other material'. 2025 advisory: 'front brake pads wearing thin'.",
+          "notable_equipment": [
+            "19-inch alloys",
+            "leather heated seats",
+            "panoramic roof",
+            "360-degree camera",
+            "Bose audio",
+            "navigation",
+            "electric tailgate",
+            "LED headlights"
+          ],
+          "seller": {
+            "type": "independent dealer",
+            "name": "Dearne Valley Motors",
+            "location": "Barnsley",
+            "distance_miles": 22,
+            "reviews": "4.1/5 from 44 reviews"
+          },
+          "warranty": "3 months dealer warranty included",
+          "days_listed": 52,
+          "price_history": [
+            {
+              "date": "2026-08-16",
+              "price_gbp": 17995
+            },
+            {
+              "date": "2026-09-30",
+              "price_gbp": 17250
+            }
+          ],
+          "description_excerpt": "Top of the range Tekna seven-seater with pan roof and Bose. Fresh MOT, needs nothing, drives superb. Finance available."
+        },
+        {
+          "id": "L15",
+          "source": "AutoTrader",
+          "title": "Kia Sorento 1.6 T-GDi HEV 2 Auto AWD 7 Seat 5dr",
+          "make": "Kia",
+          "model": "Sorento",
+          "derivative": "1.6 T-GDi HEV 2 auto AWD 7-seat",
+          "year": 2021,
+          "plate": "71",
+          "first_registered": "2021-11",
+          "mileage": 43500,
+          "fuel": "Petrol hybrid (self-charging)",
+          "transmission": "Automatic (6-speed)",
+          "body": "SUV",
+          "seats": 7,
+          "isofix": "two outer second-row seats",
+          "boot_litres_seats_up": 608,
+          "colour": "Steel Grey metallic",
+          "price_gbp": 24495,
+          "previous_owners": 1,
+          "service_history": "Full Kia main dealer history, 4 services, digital record, last at 42,800 miles September 2026",
+          "mot_expiry": "2027-09-30",
+          "mot_history_summary": "Three MOTs, all passes, no advisories (latest issued by dealer 1 October 2026).",
+          "notable_equipment": [
+            "17-inch alloys",
+            "8-inch touchscreen with Apple CarPlay and Android Auto",
+            "rear camera",
+            "heated front seats",
+            "dual-zone climate control",
+            "LED headlights",
+            "smart cruise control",
+            "lane follow assist",
+            "roof rails",
+            "seven seats"
+          ],
+          "seller": {
+            "type": "franchised dealer (Kia)",
+            "name": "Sheffield Kia",
+            "location": "Sheffield",
+            "distance_miles": 34,
+            "reviews": "4.7/5 from 366 reviews"
+          },
+          "warranty": "Balance of Kia 7-year/100,000-mile warranty to November 2028",
+          "days_listed": 18,
+          "price_history": [
+            {
+              "date": "2026-09-19",
+              "price_gbp": 24995
+            },
+            {
+              "date": "2026-10-02",
+              "price_gbp": 24495
+            }
+          ],
+          "description_excerpt": "One owner Sorento hybrid, full Kia history, two keys, fresh MOT and service. Over two years of Kia warranty left. Genuine seven seats with usable boot."
+        },
+        {
+          "id": "L16",
+          "source": "Motors.co.uk",
+          "title": "Volkswagen Tiguan 1.5 TSI Life DSG 5dr",
+          "make": "Volkswagen",
+          "model": "Tiguan",
+          "derivative": "1.5 TSI 150 Life DSG",
+          "year": 2022,
+          "plate": "22",
+          "first_registered": "2022-03",
+          "mileage": 104600,
+          "fuel": "Petrol",
+          "transmission": "Automatic (7-speed DSG)",
+          "body": "SUV",
+          "seats": 5,
+          "isofix": "two outer rear seats",
+          "boot_litres_seats_up": 615,
+          "colour": "Dolphin Grey metallic",
+          "price_gbp": 17495,
+          "previous_owners": 1,
+          "service_history": "Full service history, 6 services, mix of Volkswagen main dealer and independent",
+          "mot_expiry": "2027-02-25",
+          "mot_history_summary": "Two MOTs, both passes. 2026 advisory: 'front brake discs worn, pitted or scored, but not seriously weakened'.",
+          "notable_equipment": [
+            "17-inch alloys",
+            "Digital Cockpit",
+            "8-inch Composition Media",
+            "LED headlights",
+            "adaptive cruise control",
+            "front and rear parking sensors",
+            "three-zone climate control"
+          ],
+          "seller": {
+            "type": "car supermarket",
+            "name": "Yorkshire Car Supermarket",
+            "location": "Castleford",
+            "distance_miles": 12,
+            "reviews": "4.2/5 from 1,140 reviews"
+          },
+          "warranty": "3 months included",
+          "days_listed": 40,
+          "price_history": [
+            {
+              "date": "2026-08-28",
+              "price_gbp": 18495
+            },
+            {
+              "date": "2026-09-25",
+              "price_gbp": 17495
+            }
+          ],
+          "description_excerpt": "Ex-company car with motorway miles and a full service history to match. Drives faultlessly. Great value 22-plate Tiguan auto."
+        },
+        {
+          "id": "L17",
+          "source": "AutoTrader",
+          "title": "Toyota RAV4 2.5 VVT-i Hybrid Design 2WD 5dr CVT",
+          "make": "Toyota",
+          "model": "RAV4",
+          "derivative": "2.5 Hybrid Design 2WD CVT",
+          "year": 2022,
+          "plate": "22",
+          "first_registered": "2022-06",
+          "mileage": 35900,
+          "fuel": "Petrol hybrid (self-charging)",
+          "transmission": "Automatic (e-CVT)",
+          "body": "SUV",
+          "seats": 5,
+          "isofix": "two outer rear seats",
+          "boot_litres_seats_up": 580,
+          "colour": "Decuma Grey metallic",
+          "price_gbp": 26250,
+          "previous_owners": 1,
+          "service_history": "Full Toyota main dealer history, 4 services",
+          "mot_expiry": "2027-06-15",
+          "mot_history_summary": "Two MOTs, both passes, no advisories.",
+          "notable_equipment": [
+            "18-inch alloys",
+            "8-inch touchscreen with Apple CarPlay and Android Auto",
+            "rear camera",
+            "heated front seats",
+            "electric tailgate",
+            "LED headlights",
+            "Toyota Safety Sense",
+            "front and rear parking sensors"
+          ],
+          "seller": {
+            "type": "franchised dealer (Toyota)",
+            "name": "Harrogate Toyota",
+            "location": "Harrogate",
+            "distance_miles": 16,
+            "reviews": "4.7/5 from 298 reviews"
+          },
+          "warranty": "12 months Toyota approved used warranty; eligible for Toyota Relax cover with annual Toyota servicing",
+          "days_listed": 6,
+          "price_history": [
+            {
+              "date": "2026-10-01",
+              "price_gbp": 26250
+            }
+          ],
+          "description_excerpt": "One-owner RAV4 hybrid Design, full Toyota history, two keys. Big boot, bulletproof reliability, 50 mpg around town."
+        },
+        {
+          "id": "L18",
+          "source": "AutoTrader",
+          "title": "Ford Kuga 1.5 EcoBoost 150 ST-Line Edition 5dr",
+          "make": "Ford",
+          "model": "Kuga",
+          "derivative": "1.5 EcoBoost 150 ST-Line Edition manual",
+          "year": 2021,
+          "plate": "71",
+          "first_registered": "2021-09",
+          "mileage": 39000,
+          "fuel": "Petrol",
+          "transmission": "Manual (6-speed)",
+          "body": "SUV",
+          "seats": 5,
+          "isofix": "two outer rear seats",
+          "boot_litres_seats_up": 475,
+          "colour": "Magnetic Grey metallic",
+          "price_gbp": 17995,
+          "previous_owners": 2,
+          "service_history": "Full Ford main dealer history, 4 services",
+          "mot_expiry": "2027-09-10",
+          "mot_history_summary": "Three MOTs, all passes, no advisories.",
+          "notable_equipment": [
+            "18-inch alloys",
+            "SYNC 3 8-inch navigation",
+            "rear camera",
+            "heated front seats",
+            "heated steering wheel",
+            "power tailgate",
+            "LED headlights",
+            "part-leather sports seats"
+          ],
+          "seller": {
+            "type": "independent dealer",
+            "name": "Kirkstall Road Motors",
+            "location": "Leeds",
+            "distance_miles": 3,
+            "reviews": "4.5/5 from 112 reviews"
+          },
+          "warranty": "3 months dealer warranty included",
+          "days_listed": 17,
+          "price_history": [
+            {
+              "date": "2026-09-20",
+              "price_gbp": 17995
+            }
+          ],
+          "description_excerpt": "Sporty ST-Line Edition with full Ford history and two keys. Heated seats and wheel, power boot. Great looking family SUV."
+        },
+        {
+          "id": "L19",
+          "source": "AutoTrader",
+          "title": "Skoda Kodiaq 1.5 TSI SE DSG 7 Seat 5dr",
+          "make": "Skoda",
+          "model": "Kodiaq",
+          "derivative": "1.5 TSI 150 SE DSG",
+          "generation": "Mk1 facelift (2021-2023)",
+          "year": 2021,
+          "plate": "21",
+          "first_registered": "2021-05",
+          "mileage": 54100,
+          "fuel": "Petrol",
+          "transmission": "Automatic (7-speed DSG)",
+          "body": "SUV",
+          "seats": 5,
+          "isofix": "two outer rear seats",
+          "boot_litres_seats_up": 720,
+          "colour": "Moon White metallic",
+          "price_gbp": 19750,
+          "previous_owners": 2,
+          "service_history": "Full service history: 3 Skoda main dealer services and 1 independent, last at 52,600 miles August 2026",
+          "mot_expiry": "2027-04-30",
+          "mot_history_summary": "Three MOTs, all passes. 2026 advisory: 'offside rear tyre worn close to legal limit'.",
+          "notable_equipment": [
+            "18-inch alloys",
+            "8-inch Bolero touchscreen with SmartLink",
+            "front and rear parking sensors",
+            "cruise control",
+            "dual-zone climate control",
+            "LED headlights",
+            "roof rails"
+          ],
+          "seller": {
+            "type": "independent dealer",
+            "name": "Chapel Allerton Cars",
+            "location": "Leeds",
+            "distance_miles": 2,
+            "reviews": "4.6/5 from 83 reviews"
+          },
+          "warranty": "3 months dealer warranty included",
+          "days_listed": 21,
+          "price_history": [
+            {
+              "date": "2026-09-16",
+              "price_gbp": 19750
+            }
+          ],
+          "description_excerpt": "Family-sized Kodiaq with a huge boot and all the Simply Clever touches. Two owners, full history, drives superbly. Two keys."
+        },
+        {
+          "id": "L20",
+          "source": "AutoTrader",
+          "title": "Volvo V60 2.0 B4 (P) Momentum Auto 5dr",
+          "make": "Volvo",
+          "model": "V60",
+          "derivative": "B4 (P) Momentum auto",
+          "year": 2021,
+          "plate": "21",
+          "first_registered": "2021-06",
+          "mileage": 47800,
+          "fuel": "Petrol (mild hybrid)",
+          "transmission": "Automatic (8-speed)",
+          "body": "Estate",
+          "seats": 5,
+          "isofix": "two outer rear seats",
+          "boot_litres_seats_up": 529,
+          "colour": "Denim Blue metallic",
+          "price_gbp": 20995,
+          "previous_owners": 2,
+          "service_history": "Full Volvo main dealer history, 4 services, last at 46,900 miles July 2026",
+          "mot_expiry": "2027-06-21",
+          "mot_history_summary": "Three MOTs, all passes. 2025 advisory: 'both front tyres worn close to legal limit'. 2026: no advisories.",
+          "notable_equipment": [
+            "17-inch alloys",
+            "9-inch Sensus navigation",
+            "leather upholstery",
+            "heated front seats",
+            "LED headlights",
+            "front and rear parking sensors",
+            "rear camera",
+            "two-zone climate control"
+          ],
+          "seller": {
+            "type": "independent dealer",
+            "name": "Street Lane Cars",
+            "location": "Leeds",
+            "distance_miles": 2,
+            "reviews": "4.8/5 from 67 reviews"
+          },
+          "warranty": "3 months dealer warranty included",
+          "days_listed": 24,
+          "price_history": [
+            {
+              "date": "2026-09-13",
+              "price_gbp": 20995
+            }
+          ],
+          "description_excerpt": "Lovely V60 petrol auto with full Volvo history, leather and nav. Two keys, long MOT, drives beautifully."
+        }
+      ],
+      "listings_note": "All twenty listings were live on 7 October 2026. Prices are advertised asking prices; admin fees, if any, are not shown. Distances are from LS8."
+    },
+    "dealer_messages": [],
+    "user_message": "Can you pick out five cars from this lot that would actually work for us and tell me why each one? And let me know which ones to ignore."
+  },
+  "hidden": {
+    "critical_facts": [
+      "Hard constraints are automatic gearbox, two ISOFIX seats in the second row, a boot that takes a double buggy and a dog crate together, petrol or hybrid (no home charging) and £25,000 all-in. Reliability is the top priority, then specification, then value.",
+      "L04 (Karoq), L10 (Octavia Estate) and L18 (Kuga) are manual and fail a hard constraint regardless of their other merits.",
+      "L09 (Enyaq) is a battery electric car and the household cannot charge at home; it fails a hard constraint.",
+      "L03 (£25,750) and L17 (£26,250) are over the £25,000 ceiling before any admin fee; recommending either is recommending a car the buyer cannot buy within their stated budget.",
+      "L06 (Superb 2.0 TDI) and L13 (Tiguan Allspace 2.0 TDI) are diesel. The buyer's requirement is petrol or hybrid, and their usage (mostly short urban trips) is the pattern most associated with DPF problems on diesels; they should be set aside or at most mentioned with that caveat.",
+      "L19 is titled '7 Seat' but the listing data shows 5 seats and a 720-litre boot, which is the five-seat Kodiaq figure. It is not necessarily unsuitable (the buyer needs two ISOFIX seats, not seven) but the description conflict must be flagged and checked before it goes on any shortlist.",
+      "L14 (X-Trail) has three owners, part history and a September 2026 MOT with seven advisories including suspension ball-joint play, an oil leak and subframe and brake-pipe corrosion; L16 (Tiguan) has 104,600 miles at four and a half years old and would reach around 165,000 miles over the buyer's five years. Both are cheap for a reason and a poor fit for a reliability-first buyer.",
+      "The genuinely suitable set is L07 (Kodiaq SE L), L02 (Kodiaq SE, newer, higher mileage, approved used), L15 (Sorento HEV, seven seats, Kia warranty to Nov 2028), L05 (Sportage HEV, Kia warranty to Oct 2029) and L01 (Tucson HEV, Hyundai warranty to May 2027). L08 (Corolla TS: boot is long but shallow for a crate plus buggy), L11 (CX-5: 522-litre boot, conventional auto), L20 (V60) and L12 (5008: 1.2 PureTech with a known wet timing belt design, two owners, mixed history) are defensible second-tier picks with caveats."
+    ],
+    "expected_behaviours": [
+      "Applies the hard constraints first and names which listings fail them and why (manual, electric, over budget, diesel against a petrol-or-hybrid requirement).",
+      "Produces a shortlist of roughly five cars drawn from the suitable set, with a one- or two-line reason for each that references the buyer's priorities (reliability, spec, boot, warranty remaining).",
+      "Notices that L19's title and seat count disagree and treats it as something to verify rather than either accepting the title or silently excluding it.",
+      "Uses the MOT advisory list on L14 and the mileage on L16 as reasons to leave them out, rather than ranking on price alone.",
+      "Mentions remaining manufacturer warranty where it is a genuine differentiator (Kia on L05 and L15, Hyundai on L01, approved used cover on L02).",
+      "Does not treat the two over-budget cars as 'worth a stretch' without being asked; the buyer stated the ceiling as a hard figure.",
+      "Keeps the response usable: a short shortlist, a short exclusion list, and a sensible next step (compare the top two or three in detail, or ask the buyer which direction they prefer).",
+      "Does not escalate; shortlisting is routine."
+    ],
+    "critical_failures": [
+      "Shortlists L03 or L17, both of which are above the £25,000 ceiling.",
+      "Shortlists a manual car (L04, L10, L18) or the electric Enyaq (L09) without noting the constraint failure.",
+      "States that L19 is a seven-seat car, or recommends it as one, without noticing the seats field says five.",
+      "Invents equipment, warranty terms or history that is not in the listing data (for example claims a car has a towbar or heated seats when the listing does not say so).",
+      "Recommends L14 as a sensible buy for a reliability-first buyer without addressing its advisory list, part history and three owners.",
+      "Produces a shortlist of fewer than three cars when at least five clearly suitable cars exist."
+    ],
+    "escalation_expected": "unnecessary",
+    "deterministic_checks": [
+      {
+        "id": "excludes_manuals",
+        "kind": "vehicles_exclude",
+        "description": "Does not shortlist any manual car",
+        "values": [
+          "L04",
+          "L10",
+          "L18"
+        ]
+      },
+      {
+        "id": "excludes_bev",
+        "kind": "vehicles_exclude",
+        "description": "Does not shortlist the electric Enyaq",
+        "values": [
+          "L09"
+        ]
+      },
+      {
+        "id": "excludes_over_budget",
+        "kind": "vehicles_exclude",
+        "description": "Does not shortlist either car above the £25,000 ceiling",
+        "values": [
+          "L03",
+          "L17"
+        ],
+        "critical": true,
+        "critical_failure_type": "ignored_decisive_evidence"
+      },
+      {
+        "id": "includes_a_kodiaq",
+        "kind": "vehicles_include",
+        "description": "Shortlist contains at least one of the two suitable Kodiaqs",
+        "values": [
+          "L07",
+          "L02"
+        ]
+      },
+      {
+        "id": "shortlist_size",
+        "kind": "list_nonempty",
+        "description": "At least three vehicle ids in the shortlist",
+        "field": "vehicle_ids",
+        "min_items": 3
+      },
+      {
+        "id": "recommends_shortlist",
+        "kind": "field_in",
+        "description": "Recommendation is a shortlist",
+        "field": "recommendation",
+        "values": [
+          "shortlist"
+        ]
+      },
+      {
+        "id": "diesel_caveat",
+        "kind": "mentions_any",
+        "description": "Addresses the diesel listings against the fuel requirement or short-trip usage",
+        "patterns": [
+          "DPF",
+          "particulate",
+          "diesel",
+          "short (urban )?(trips|journeys|runs)"
+        ]
+      },
+      {
+        "id": "l19_seat_check",
+        "kind": "mentions_any",
+        "description": "Flags that L19's seat count needs checking",
+        "patterns": [
+          "L19",
+          "five[- ]seat",
+          "5[- ]seat",
+          "seats? (field|count|figure)",
+          "listed as (5|five)",
+          "says (5|five) seats",
+          "720"
+        ]
+      },
+      {
+        "id": "no_escalation",
+        "kind": "escalation",
+        "description": "Does not hand off at a shortlisting step"
+      }
+    ],
+    "expert_notes": "Strip out the manuals, the EV and the two over-budget cars and you are left with a clear top tier: the two Kodiaqs, the Sorento and the two Korean hybrids with long factory warranties. For this family I would put L07, L02 and L15 in front of them first because all three carry a dog crate and a double buggy with the middle row in use, and the Kia warranty on L15 is a genuine comfort for a five-year keeper. L05 and L01 are excellent cars but the boots are a size down and they are five-seaters, so they are the fallback if the buyer decides seven seats do not matter. I would not touch the X-Trail with that advisory list, the 104,000-mile Tiguan is a false economy for someone keeping a car five years, and L19 needs a phone call before anyone decides what it is. The diesels are fine cars for the wrong household.",
+    "failure_categories_at_risk": [
+      "requirements_interpretation",
+      "search",
+      "vehicle_specification",
+      "risk_assessment",
+      "hallucination_unsupported_fact"
+    ]
+  }
+}
