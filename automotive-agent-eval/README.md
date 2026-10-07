@@ -2,7 +2,8 @@
 
 Tests whether a strong general-purpose model can safely handle most of a UK used-car purchase
 journey, how much a thin layer of automotive context helps, and where a human remains necessary.
-The full brief is in `BRIEF.md`.
+The full brief is in `BRIEF.md`; the economic reframing (cost, latency, reliability, throughput and
+the specialist advantage vector) is in `BRIEF_ECONOMICS.md`; the cognitive primitive map is in `PRIMITIVES.md`.
 
 ## What it does
 
@@ -58,13 +59,14 @@ python -m runners.run_benchmark run --batch b1 --providers openai --cases S16 S2
 `results/` is git-ignored. Every run record carries provider, model name, configuration, repetition,
 prompt version and hash, case version, raw response, parsed block, tokens, latency and effective temperature.
 
-## Conditions
+## Implementations and conditions
 
-| Condition | How |
+| | How |
 |---|---|
 | A general | `--configs general`: `prompts/general_agent.txt` + output format |
 | B general + automotive context | `--configs automotive_context`: adds `prompts/automotive_context.txt` (principles + checklist, deliberately thin) |
-| C human expert | `--providers human`: reads `human_responses/<case>.md`, scored by the same blind judge |
+| C general + specialist primitives | `--configs delegated`: B plus `core/primitives.py` engines (hard-constraint filter, duplicate detector, heuristic ranker, comparable valuation) pre-process the evidence; their cost and latency are charged to the run |
+| Human expert | `--providers human`: reads `human_responses/<case>.md`, scored by the same blind judge; cost and time per task from `config.yaml` |
 
 Instinct is a placeholder adapter: set `providers.instinct.base_url` (OpenAI-compatible assumed) and `INSTINCT_API_KEY`.
 
@@ -78,6 +80,15 @@ Instinct is a placeholder adapter: set `providers.instinct.base_url` (OpenAI-com
 - Breakdowns by provider, configuration, category (journey stage), case, run, adversarial; variance across repetitions; failure-category and critical-failure-type clustering; `delta_context_vs_general`.
 - human_intervention_rate is a manual metric from the calibration sheet.
 
+### Economic vector (results/summary/<batch>/economics_*.csv, esa_*.csv)
+
+Every run records tokens, model cost (from the pricing table in `config.yaml`), primitive cost and
+latency, objects in scope and validity. Per implementation, per primary cognitive primitive, per
+expected class and per case the summary reports Q quality, C cost per task / per safe completion /
+per object, L p50 and p95, R reliability, T objects per second and tasks per hour, and utility U
+under each weight profile. `esa_vs_baseline.csv` and `esa_by_primitive.csv` give the economic
+specialist advantage of B and C over A. Judge cost is recorded separately as evaluation overhead.
+
 ## Judge calibration
 
 ```
@@ -88,7 +99,8 @@ python -m runners.calibrate compare --batch b1                   # disagreement 
 
 ## Cases
 
-24 core scenarios `S01`–`S24` and 6 adversarial variants `A01`–`A06`. `S01, S05, S11, S19, S20, S16, S23, S24`
+24 core scenarios `S01`–`S24` and 6 adversarial variants `A01`–`A06`, each tagged with cognitive
+primitives (`primitives`, `primary_primitive`, `expected_class`; see `PRIMITIVES.md`). `S01, S05, S11, S19, S20, S16, S23, S24`
 form journey `J1` (one buyer, one Kodiaq, intent through to deposit decision) with seeded state at each step.
 Authoring rules: `cases/AUTHORING.md`. Listing data is synthetic; the human expert should review prices and
 hidden answer keys before results are relied on.
@@ -97,11 +109,11 @@ hidden answer keys before results are relied on.
 
 ```
 cases/        S01..S24.json, A01..A06.json, AUTHORING.md
-prompts/      general_agent.txt, automotive_context.txt, output_format.txt, judge.txt
+prompts/      general_agent.txt, automotive_context.txt, delegated.txt, output_format.txt, judge.txt
 providers/    base.py, openai_adapter.py, gemini_adapter.py, instinct_adapter.py, human_adapter.py, mock_adapter.py, registry.py
-evaluators/   deterministic.py, llm_judge.py, scoring.py
+evaluators/   deterministic.py, llm_judge.py, scoring.py, economics.py
 runners/      run_benchmark.py (CLI), report.py, calibrate.py
-core/         models.py (schemas), cases.py, prompts.py, structured.py, storage.py, config.py
+core/         models.py (schemas), cases.py, primitives.py, prompts.py, structured.py, storage.py, config.py
 schemas/      generated JSON schemas (python -m runners.run_benchmark schemas)
 human_responses/  Condition C answers
 results/      raw/ scored/ summary/ per batch (git-ignored)

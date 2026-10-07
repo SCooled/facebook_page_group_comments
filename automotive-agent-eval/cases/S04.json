@@ -7,6 +7,13 @@
   "variant_of": null,
   "journey_id": null,
   "journey_step": null,
+  "primitives": [
+    "classify",
+    "compare",
+    "communicate"
+  ],
+  "primary_primitive": "classify",
+  "expected_class": "general",
   "candidate_visible": {
     "scenario": "A buyer has described how they use a car in some detail and asked you what kind of car they should be looking for. No searches have been run and no listings are available to you. Today is 7 October 2026.",
     "user_context": {
@@ -14,7 +21,9 @@
       "household": "two adults; a third passenger most weekends and occasionally three (visiting family, friends to the pub)",
       "budget_gbp_max_all_in": 16000,
       "funding": "cash from savings, no finance, no part exchange (current car is a 2011 Vauxhall Astra 1.6 petrol hatch, manual, 128,000 miles, to be scrapped or sold for a few hundred pounds)",
-      "hard_requirements": ["automatic gearbox"],
+      "hard_requirements": [
+        "automatic gearbox"
+      ],
       "usage": [
         "commute 30 miles each way, four days a week, almost all A-road (A38/A4174 and the A369), little stop-start",
         "weekly runs to the tip and garden centre; flat-pack furniture and the odd fridge or bookcase a few times a year",
@@ -22,7 +31,12 @@
         "drives into and across the Bristol city centre regularly, including the Clean Air Zone area"
       ],
       "annual_mileage_estimate": 15000,
-      "priorities_in_order": ["low hassle and reliability", "running costs", "easy to park", "comfortable commute"],
+      "priorities_in_order": [
+        "low hassle and reliability",
+        "running costs",
+        "easy to park",
+        "comfortable commute"
+      ],
       "ownership_horizon_years": 6,
       "notes_from_buyer": "I've only ever had small hatchbacks. People keep telling me I need an SUV. I don't want to pay the Clean Air Zone charge every day."
     },
@@ -59,15 +73,86 @@
     ],
     "escalation_expected": "unnecessary",
     "deterministic_checks": [
-      {"id": "recommends_estate", "kind": "mentions_any", "description": "Identifies estate or large liftback as the fitting segment", "patterns": ["estate", "touring sports", "sportswagon", "liftback", "tourer"]},
-      {"id": "handles_caz", "kind": "mentions_any", "description": "Addresses the Bristol Clean Air Zone and Euro 6 requirement", "patterns": ["clean air zone", "\\bCAZ\\b", "euro ?6", "euro ?4", "september 2015", "2015 onwards", "£9"]},
-      {"id": "addresses_towing", "kind": "mentions_any", "description": "Addresses towing the 600 kg trailer", "patterns": ["tow", "600 ?kg", "braked", "trailer"]},
-      {"id": "addresses_automatic", "kind": "mentions_any", "description": "Addresses the automatic gearbox requirement with specifics", "patterns": ["automatic", "\\bauto\\b", "DSG", "CVT", "dual[- ]clutch", "DCT", "torque[- ]converter", "e-CVT", "gearbox"]},
-      {"id": "no_vehicle_ids", "kind": "vehicles_subset", "description": "No listings exist, so vehicle_ids must be empty", "values": []},
-      {"id": "recommendation_type", "kind": "field_in", "description": "Clarifies or proposes a segment-level shortlist", "field": "recommendation", "values": ["clarify_requirements", "shortlist"]},
-      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a requirements step"}
+      {
+        "id": "recommends_estate",
+        "kind": "mentions_any",
+        "description": "Identifies estate or large liftback as the fitting segment",
+        "patterns": [
+          "estate",
+          "touring sports",
+          "sportswagon",
+          "liftback",
+          "tourer"
+        ]
+      },
+      {
+        "id": "handles_caz",
+        "kind": "mentions_any",
+        "description": "Addresses the Bristol Clean Air Zone and Euro 6 requirement",
+        "patterns": [
+          "clean air zone",
+          "\\bCAZ\\b",
+          "euro ?6",
+          "euro ?4",
+          "september 2015",
+          "2015 onwards",
+          "£9"
+        ]
+      },
+      {
+        "id": "addresses_towing",
+        "kind": "mentions_any",
+        "description": "Addresses towing the 600 kg trailer",
+        "patterns": [
+          "tow",
+          "600 ?kg",
+          "braked",
+          "trailer"
+        ]
+      },
+      {
+        "id": "addresses_automatic",
+        "kind": "mentions_any",
+        "description": "Addresses the automatic gearbox requirement with specifics",
+        "patterns": [
+          "automatic",
+          "\\bauto\\b",
+          "DSG",
+          "CVT",
+          "dual[- ]clutch",
+          "DCT",
+          "torque[- ]converter",
+          "e-CVT",
+          "gearbox"
+        ]
+      },
+      {
+        "id": "no_vehicle_ids",
+        "kind": "vehicles_subset",
+        "description": "No listings exist, so vehicle_ids must be empty",
+        "values": []
+      },
+      {
+        "id": "recommendation_type",
+        "kind": "field_in",
+        "description": "Clarifies or proposes a segment-level shortlist",
+        "field": "recommendation",
+        "values": [
+          "clarify_requirements",
+          "shortlist"
+        ]
+      },
+      {
+        "id": "no_escalation",
+        "kind": "escalation",
+        "description": "Does not hand off at a requirements step"
+      }
     ],
     "expert_notes": "An experienced operator would say: this is an estate buyer who has been talked at by SUV owners. Thirty miles of A-road each way, flat-pack and tip runs, a 600 kg trailer and a tight on-street space all point the same way: a Golf- or Octavia-sized estate, or an Octavia liftback if the parking is really tight, which carries the loads, tows the trailer with 900 kg to spare and parks in the same gap as the old Astra. Nothing here needs four-wheel drive or a high floor. On the gearbox, the sensible shortlist at £16,000 is a Corolla 1.8 Hybrid Touring Sports (bombproof, 55 mpg, 750 kg limit is enough), an Octavia Estate 2.0 TDI DSG (wet-clutch box, 1,600 kg, Euro 6 so CAZ-free, and the commute suits a diesel) or a 1.5 TSI DSG Octavia/Golf estate with the caveat about the dry-clutch DQ200. The CAZ is a non-issue for anything they can afford as long as a diesel is post-2015. What would change the mind: if they said the trailer might become a caravan, or the third passenger becomes a child seat plus buggy, the Superb estate or a Kodiaq enter the conversation.",
-    "failure_categories_at_risk": ["requirements_interpretation", "vehicle_specification", "uncertainty_handling"]
+    "failure_categories_at_risk": [
+      "requirements_interpretation",
+      "vehicle_specification",
+      "uncertainty_handling"
+    ]
   }
 }

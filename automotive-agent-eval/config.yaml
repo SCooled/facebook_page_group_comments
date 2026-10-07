@@ -7,12 +7,20 @@ human_responses_dir: human_responses
 
 # Candidate conditions. Key = configuration name, value = ordered list of prompt files
 # concatenated into the system prompt. output_format.txt is always appended last.
+# Implementations under test. Each is a configuration name -> prompt files, plus optional
+# `primitives`: specialised engines (core/primitives.py) that pre-process the evidence so the
+# general model reasons over their output instead of doing the work itself.
+#   A general              strong general model, plain instructions
+#   B automotive_context   same + thin automotive context prompt
+#   C delegated            same prompt as B + specialist primitives (filter, rank, dedupe, valuation)
 configurations:
   general:
-    - general_agent.txt
+    prompts: [general_agent.txt]
   automotive_context:
-    - general_agent.txt
-    - automotive_context.txt
+    prompts: [general_agent.txt, automotive_context.txt]
+  delegated:
+    prompts: [general_agent.txt, automotive_context.txt, delegated.txt]
+    primitives: [hard_constraint_filter, duplicate_detector, heuristic_ranker, comparable_valuation]
 
 # Candidate providers. Keys are provider names used on the CLI.
 providers:
@@ -34,6 +42,7 @@ providers:
     # base_url: https://...     # set when the Instinct API is known (OpenAI-compatible assumed)
   human:
     adapter: human            # reads human_responses/<case_id>.md, no API call
+    latency_ms: 900000        # assumed 15 minutes of operator time per task; override per case in human_responses/<id>.meta.json
   mock:
     adapter: mock             # deterministic canned responses for pipeline tests
 
@@ -75,4 +84,35 @@ scoring:
   # Deployment concern flag.
   critical_failure_rate_concern: 0.05
 
-prompt_version: v1
+prompt_version: v2
+
+# ------------------------------------------------------------------ economics
+economics:
+  currency: USD
+  baseline_configuration: general          # ESA is measured against this, per provider
+  pricing:
+    # per million tokens; matched by exact model name, then prefix, then provider default
+    models:
+      gpt-5:          {input_per_million: 1.25, output_per_million: 10.00}
+      gpt-5-mini:     {input_per_million: 0.25, output_per_million: 2.00}
+      gemini-2.5-pro: {input_per_million: 1.25, output_per_million: 10.00}
+      gemini-2.5-flash: {input_per_million: 0.30, output_per_million: 2.50}
+      mock-1:         {input_per_million: 1.00, output_per_million: 8.00}
+      human_expert:   {per_task: 12.50}      # operator cost per task (15 min at ~$50/h); set to your rate
+    provider_defaults:
+      openai:   {input_per_million: 1.25, output_per_million: 10.00}
+      gemini:   {input_per_million: 1.25, output_per_million: 10.00}
+      instinct: {input_per_million: 1.00, output_per_million: 5.00}
+  # Reference scales for the utility function. Cost, latency and throughput are mapped to [0,1]
+  # with saturating transforms where the reference value scores 0.5 (see evaluators/economics.py).
+  # Set them to what "acceptable" means for the product; e.g. a consumer assistant may accept
+  # $0.10 and 15 s per task, a bulk dealer pipeline might set $0.005 and 2 s.
+  reference_scales:
+    cost_per_task: 0.10        # currency per task
+    latency_ms: 15000
+    objects_per_second: 2.0
+  # U = w_q*Q + w_c*C' + w_l*L' + w_r*R + w_t*T' with every term in [0,1]; weights sum to 1.
+  weight_profiles:
+    consumer_assistant: {quality: 0.45, cost: 0.10, latency: 0.10, reliability: 0.30, throughput: 0.05}
+    dealer_bulk:        {quality: 0.20, cost: 0.30, latency: 0.10, reliability: 0.15, throughput: 0.25}
+    balanced:           {quality: 0.30, cost: 0.20, latency: 0.15, reliability: 0.20, throughput: 0.15}

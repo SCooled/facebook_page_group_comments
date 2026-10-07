@@ -6,6 +6,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from evaluators.economics import esa_table, implementation_vector
+
 METRICS = {
     "safe_autonomous_coverage": "safe_autonomous",
     "autonomous_completion_rate": "task_completed",
@@ -28,9 +30,10 @@ def _group(df: pd.DataFrame, by: list[str]) -> pd.DataFrame:
     return df.groupby(by, dropna=False).apply(_rates, include_groups=False).reset_index()
 
 
-def summarize(scored_csv: Path, out_dir: Path, scoring_cfg: dict) -> dict:
+def summarize(scored_csv: Path, out_dir: Path, scoring_cfg: dict, econ_cfg: dict, workers: int = 4) -> dict:
     out_dir.mkdir(parents=True, exist_ok=True)
     df = pd.read_csv(scored_csv)
+    all_rows = df.copy()          # includes invalid runs, needed for reliability
     df = df[df["score"].notna()].copy()
     if df.empty:
         raise SystemExit("no scored rows")
@@ -77,6 +80,39 @@ def summarize(scored_csv: Path, out_dir: Path, scoring_cfg: dict) -> dict:
                                                   for k in ["mean_score", *METRICS]}})
     tables["delta_context_vs_general"] = pd.DataFrame(delta_rows)
 
+    # ---------------------------------------------------------------- economics
+    # Reliability must count runs that produced nothing usable, so vectors use all_rows.
+    econ = all_rows.copy()
+    econ["score"] = econ["score"].fillna(0)
+    econ["valid"] = econ["valid"].fillna(False)
+    econ["critical_failure"] = econ["critical_failure"].fillna(False)
+    profiles = list(econ_cfg["weight_profiles"])
+
+    def vec(by):
+        return econ.groupby(by, dropna=False).apply(implementation_vector, econ_cfg=econ_cfg, workers=workers,
+                                                   include_groups=False).reset_index()
+
+    vectors = vec(["model", "configuration"])
+    tables["economics_by_implementation"] = vectors
+    tables["esa_vs_baseline"] = esa_table(vectors, econ_cfg["baseline_configuration"], profiles)
+    tables["economics_by_primary_primitive"] = vec(["primary_primitive", "configuration"])
+    tables["economics_by_expected_class"] = vec(["expected_class", "configuration"])
+    tables["economics_by_category"] = vec(["category", "configuration"])
+    tables["economics_by_case"] = vec(["case", "primary_primitive", "model", "configuration"])
+    # ESA per primitive: where does delegation / context pay, per weight profile?
+    prim_rows = []
+    for (prim, model), g in econ.groupby(["primary_primitive", "model"], dropna=False):
+        pv = g.groupby("configuration").apply(implementation_vector, econ_cfg=econ_cfg, workers=workers,
+                                              include_groups=False).reset_index()
+        pv["model"] = model
+        e = esa_table(pv, econ_cfg["baseline_configuration"], profiles)
+        e.insert(0, "primary_primitive", prim)
+        prim_rows.append(e)
+    tables["esa_by_primitive"] = pd.concat(prim_rows, ignore_index=True) if prim_rows else pd.DataFrame()
+    eval_cost = {"judge_cost_total": round(float(all_rows["judge_cost"].fillna(0).sum()), 4),
+                 "candidate_cost_total": round(float(all_rows["total_cost"].fillna(0).sum()), 4),
+                 "currency": econ_cfg["currency"]}
+
     for name, t in tables.items():
         t.to_csv(out_dir / f"{name}.csv", index=False)
 
@@ -101,6 +137,9 @@ def summarize(scored_csv: Path, out_dir: Path, scoring_cfg: dict) -> dict:
 
     summary = {"batch": scored_csv.parent.name, "rows": int(len(df)), "headline_by_configuration": headline,
                "interpretation": interpretation, "thresholds": thresholds,
+               "economics_by_implementation": vectors.to_dict(orient="records"),
+               "esa_vs_baseline": tables["esa_vs_baseline"].to_dict(orient="records"),
+               "evaluation_cost": eval_cost,
                "manual_metrics_note": "human_intervention_rate requires manual review of the calibration subset; "
                                       "expert_agreement_rate here is the LLM judge's estimate until human-calibrated."}
     (out_dir / "summary.json").write_text(json.dumps(summary, indent=2, default=_jsonable) + "\n")
@@ -124,9 +163,21 @@ def _markdown(summary: dict, tables: dict[str, pd.DataFrame]) -> str:
     for cfg_name, i in summary["interpretation"].items():
         flag = " **Critical failure rate above concern threshold.**" if i["critical_failure_rate_concern"] else ""
         parts.append(f"- **{cfg_name}**: {i['interpretation']}.{flag}")
+    parts += ["", "## Economic vector by implementation (Q, C, L, R, T, U)", "",
+              "Q quality 0-1 (zero on critical failure). C cost per task. L latency p50/p95 ms. "
+              "R reliability = P(valid and not critical). T objects per second. U per weight profile.", "",
+              tables["economics_by_implementation"].to_markdown(index=False),
+              "", "## Economic specialist advantage vs baseline (per provider)", "",
+              "ESA = U(implementation) - U(baseline). Positive means the implementation dominates economically under that weight profile.", "",
+              tables["esa_vs_baseline"].to_markdown(index=False),
+              "", "## ESA by primary cognitive primitive", "",
+              tables["esa_by_primitive"].to_markdown(index=False) if len(tables["esa_by_primitive"]) else "_n/a_",
+              "", "## Economic vector by expected class (general / hybrid / specialist prior)", "",
+              tables["economics_by_expected_class"].to_markdown(index=False)]
     for name in ["by_provider_configuration", "delta_context_vs_general", "by_category_configuration",
-                 "variance_by_model_config", "failure_categories_by_configuration", "critical_failure_types",
-                 "by_adversarial"]:
+                 "economics_by_primary_primitive", "variance_by_model_config",
+                 "failure_categories_by_configuration", "critical_failure_types", "by_adversarial"]:
         parts += ["", f"## {name.replace('_', ' ')}", "", tables[name].to_markdown(index=False)]
+    parts += ["", f"Evaluation overhead: {summary['evaluation_cost']}"]
     parts += ["", f"_{summary['manual_metrics_note']}_", ""]
     return "\n".join(parts)

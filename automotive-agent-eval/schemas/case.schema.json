@@ -343,6 +343,70 @@
       "default": null,
       "title": "Journey Step"
     },
+    "primitives": {
+      "items": {
+        "enum": [
+          "retrieve",
+          "filter",
+          "rank",
+          "classify",
+          "extract",
+          "normalise",
+          "compare",
+          "estimate",
+          "detect_anomaly",
+          "predict",
+          "optimise",
+          "communicate"
+        ],
+        "type": "string"
+      },
+      "title": "Primitives",
+      "type": "array"
+    },
+    "primary_primitive": {
+      "anyOf": [
+        {
+          "enum": [
+            "retrieve",
+            "filter",
+            "rank",
+            "classify",
+            "extract",
+            "normalise",
+            "compare",
+            "estimate",
+            "detect_anomaly",
+            "predict",
+            "optimise",
+            "communicate"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Primary Primitive"
+    },
+    "expected_class": {
+      "anyOf": [
+        {
+          "enum": [
+            "general",
+            "specialist",
+            "hybrid"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Expected Class"
+    },
     "candidate_visible": {
       "$ref": "#/$defs/CandidateVisible"
     },

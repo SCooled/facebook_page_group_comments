@@ -17,6 +17,8 @@ from core.models import Case, DeterministicCheck, JudgeResult, StructuredBlock  
 from core.structured import extract_structured  # noqa: E402
 from evaluators.deterministic import run_checks  # noqa: E402
 from evaluators.scoring import weighted_score  # noqa: E402
+from evaluators.economics import model_cost, utility  # noqa: E402
+from core.primitives import apply_primitives  # noqa: E402
 
 WEIGHTS = {"task_completion": 0.15, "decision_quality": 0.25, "automotive_reasoning": 0.20,
            "information_handling": 0.15, "action_quality": 0.15, "escalation_judgement": 0.10}
@@ -86,17 +88,51 @@ def test_judge_requires_type_when_critical():
                     reasoning_summary="x")
 
 
+def test_every_case_tagged_with_primitives():
+    for c in load_cases(ROOT / "cases"):
+        assert c.primitives and c.primary_primitive in c.primitives and c.expected_class, c.id
+
+
+def test_model_cost_and_utility_bounds():
+    pricing = {"models": {"gpt-5": {"input_per_million": 1.0, "output_per_million": 10.0},
+                          "human_expert": {"per_task": 12.5}}, "provider_defaults": {}}
+    assert model_cost("gpt-5-2026-01", "openai", 1_000_000, 100_000, pricing) == 2.0
+    assert model_cost("human_expert", "human", None, None, pricing) == 12.5
+    assert model_cost("unknown", "x", 1, 1, pricing) is None
+    w = {"quality": 0.3, "cost": 0.2, "latency": 0.15, "reliability": 0.2, "throughput": 0.15}
+    ref = {"cost_per_task": 0.1, "latency_ms": 15000, "objects_per_second": 2.0}
+    assert utility(1.0, 0.0, 0.0, 1.0, 1e9, w, ref) == pytest.approx(1.0, abs=1e-3)
+    assert utility(0.0, 1e9, 1e9, 0.0, 0.0, w, ref) == pytest.approx(0.0, abs=1e-3)
+    assert utility(0.5, 0.1, 15000, 0.5, 2.0, w, ref) == pytest.approx(0.5, abs=1e-3)
+
+
+def test_primitives_on_shortlist_and_duplicates():
+    s05 = load_cases(ROOT / "cases", ["S05"])[0]
+    visible, outs = apply_primitives(s05, ["hard_constraint_filter", "heuristic_ranker"])
+    removed = set(outs[0].summary["removed_ids"])
+    assert {"L03", "L17", "L04", "L09"} <= removed            # over budget, manual, BEV
+    assert "L07" not in removed and len(visible.evidence["listings"]) <= 8
+    assert visible.evidence["specialist_outputs"][1]["primitive"] == "rank"
+    s06 = load_cases(ROOT / "cases", ["S06"])[0]
+    _, outs = apply_primitives(s06, ["duplicate_detector"])
+    pairs = {frozenset(p) for p in outs[0].summary["probable_duplicates"]}
+    assert frozenset({"L05", "L10"}) in pairs and frozenset({"L07", "L11"}) in pairs
+
+
 def test_cli_end_to_end_with_mock(tmp_path):
     batch = "pytest_mock"
     for stage in ("raw", "scored", "summary"):
         shutil.rmtree(ROOT / "results" / stage / batch, ignore_errors=True)
     cmd = [sys.executable, "-m", "runners.run_benchmark", "all", "--batch", batch, "--providers", "mock",
-           "--configs", "general", "automotive_context", "--reps", "2", "--cases", "S16"]
+           "--configs", "general", "automotive_context", "delegated", "--reps", "2", "--cases", "S16"]
     out = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True)
     assert out.returncode == 0, out.stderr
     summary = json.loads((ROOT / "results" / "summary" / batch / "summary.json").read_text())
-    assert summary["rows"] == 4
-    assert set(summary["headline_by_configuration"]) == {"general", "automotive_context"}
+    assert summary["rows"] == 6
+    assert set(summary["headline_by_configuration"]) == {"general", "automotive_context", "delegated"}
+    vec = {v["configuration"]: v for v in summary["economics_by_implementation"]}
+    assert 0 <= vec["delegated"]["U_balanced"] <= 1 and vec["delegated"]["C_cost_per_task"] > 0
+    assert {e["implementation"] for e in summary["esa_vs_baseline"]} == {"automotive_context", "delegated"}
     scored = (ROOT / "results" / "scored" / batch / "scored.csv").read_text()
     assert "weighted" not in scored and "score" in scored
     for stage in ("raw", "scored", "summary"):

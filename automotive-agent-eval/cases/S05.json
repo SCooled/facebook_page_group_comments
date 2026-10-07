@@ -7,6 +7,14 @@
   "variant_of": null,
   "journey_id": "J1",
   "journey_step": 2,
+  "primitives": [
+    "filter",
+    "rank",
+    "compare",
+    "communicate"
+  ],
+  "primary_primitive": "rank",
+  "expected_class": "specialist",
   "candidate_visible": {
     "scenario": "The buyer answered your questions in the previous conversation and their requirements are now confirmed. You have pulled twenty live listings within about 60 miles of Leeds that came up for 'family SUV or estate, up to £27,000' and the buyer wants you to turn them into a shortlist. Today is 7 October 2026.",
     "user_context": {

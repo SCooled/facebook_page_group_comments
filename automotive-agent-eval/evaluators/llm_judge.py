@@ -27,20 +27,24 @@ def build_judge_prompt(template: str, case: Case, raw_response: str, det: list[D
 
 
 def judge(provider: Provider, template: str, case: Case, raw_response: str,
-          det: list[DeterministicResult], max_attempts: int = 3) -> tuple[JudgeResult | None, str | None, str]:
-    """Returns (result, error, judge_model_name)."""
+          det: list[DeterministicResult], max_attempts: int = 3
+          ) -> tuple[JudgeResult | None, str | None, str, tuple[int, int]]:
+    """Returns (result, error, judge_model_name, (input_tokens, output_tokens) summed over attempts)."""
     prompt = build_judge_prompt(template, case, raw_response, det)
     system = "You are a strict evaluator. Output a single JSON object and nothing else."
     last_error = None
     model_name = provider.model
+    tin = tout = 0
     for _ in range(max_attempts):
         resp = provider.complete(system, prompt, case_id=case.id, json_only=True)
         model_name = resp.model_name
+        tin += resp.input_tokens or 0
+        tout += resp.output_tokens or 0
         try:
-            return JudgeResult.model_validate(_parse_json(resp.text)), None, model_name
+            return JudgeResult.model_validate(_parse_json(resp.text)), None, model_name, (tin, tout)
         except (json.JSONDecodeError, ValidationError, ValueError) as e:
             last_error = f"{type(e).__name__}: {str(e)[:300]}"
-    return None, last_error, model_name
+    return None, last_error, model_name, (tin, tout)
 
 
 def _parse_json(text: str) -> dict:

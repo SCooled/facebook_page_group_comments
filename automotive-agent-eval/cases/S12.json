@@ -7,14 +7,30 @@
   "variant_of": null,
   "journey_id": null,
   "journey_step": null,
+  "primitives": [
+    "detect_anomaly",
+    "classify",
+    "communicate"
+  ],
+  "primary_primitive": "detect_anomaly",
+  "expected_class": "hybrid",
   "candidate_visible": {
     "scenario": "The buyer is looking for a weekend sports car and has found a very low-mileage Mazda MX-5 at an independent dealer. They have not viewed it yet and want your assessment of the car and the price before they book a viewing. Today is 7 October 2026.",
     "user_context": {
       "location": "Woking, GU22",
       "household": "two adults, no children at home, already own a family SUV",
       "budget_gbp_max_all_in": 15000,
-      "hard_requirements": ["two-seat convertible", "manual gearbox", "petrol", "no accident damage history"],
-      "priorities_in_order": ["condition and originality", "reliability", "value"],
+      "hard_requirements": [
+        "two-seat convertible",
+        "manual gearbox",
+        "petrol",
+        "no accident damage history"
+      ],
+      "priorities_in_order": [
+        "condition and originality",
+        "reliability",
+        "value"
+      ],
       "annual_mileage": 3000,
       "usage": "weekend and summer evening drives, occasional track day spectating, will be garaged",
       "ownership_horizon_years": 6,
@@ -28,10 +44,18 @@
         "id": "L01",
         "source": "AutoTrader",
         "title": "Mazda MX-5 2.0 Sport Nav 2dr - 9,800 miles - garage kept",
-        "make": "Mazda", "model": "MX-5", "derivative": "2.0 SKYACTIV-G 160 Sport Nav",
+        "make": "Mazda",
+        "model": "MX-5",
+        "derivative": "2.0 SKYACTIV-G 160 Sport Nav",
         "generation": "ND (2015-present), pre-2019 160PS engine",
-        "year": 2016, "plate": "16", "first_registered": "2016-03",
-        "mileage": 9800, "fuel": "Petrol", "transmission": "Manual (6-speed)", "body": "Convertible (soft top)", "seats": 2,
+        "year": 2016,
+        "plate": "16",
+        "first_registered": "2016-03",
+        "mileage": 9800,
+        "fuel": "Petrol",
+        "transmission": "Manual (6-speed)",
+        "body": "Convertible (soft top)",
+        "seats": 2,
         "colour": "Soul Red metallic",
         "price_gbp": 13995,
         "previous_owners": 2,
@@ -39,30 +63,163 @@
         "service_history": "Four stamps in the Mazda service book, all Mazda main dealer: 2017-03 at 1,050 miles, 2018-04 at 1,900 miles, 2020-06 at 3,500 miles, 2022-05 at 5,100 miles. No service recorded since 2022. Mazda's schedule for this car is every 12,500 miles or 12 months, whichever comes first.",
         "mot_expiry": "2027-09-14",
         "mot_history": [
-          {"date": "2019-03-11", "result": "Pass", "mileage": 1100, "advisories": []},
-          {"date": "2020-03-09", "result": "Pass", "mileage": 2300, "advisories": []},
-          {"date": "2021-03-15", "result": "Pass", "mileage": 3900, "advisories": ["Brake disc worn, pitted or scored, but not seriously weakened (front both)"]},
-          {"date": "2022-03-14", "result": "Pass", "mileage": 5200, "advisories": []},
-          {"date": "2023-03-20", "result": "Pass", "mileage": 6400, "advisories": ["Brake disc worn, pitted or scored, but not seriously weakened (rear both) - corrosion"]},
-          {"date": "2024-03-18", "result": "Pass", "mileage": 7900, "advisories": ["Tyre has slight damage/cracking/perishing (all four)"]},
-          {"date": "2025-09-10", "result": "Pass", "mileage": 9100, "advisories": []},
-          {"date": "2026-09-14", "result": "Pass", "mileage": 9800, "advisories": []}
+          {
+            "date": "2019-03-11",
+            "result": "Pass",
+            "mileage": 1100,
+            "advisories": []
+          },
+          {
+            "date": "2020-03-09",
+            "result": "Pass",
+            "mileage": 2300,
+            "advisories": []
+          },
+          {
+            "date": "2021-03-15",
+            "result": "Pass",
+            "mileage": 3900,
+            "advisories": [
+              "Brake disc worn, pitted or scored, but not seriously weakened (front both)"
+            ]
+          },
+          {
+            "date": "2022-03-14",
+            "result": "Pass",
+            "mileage": 5200,
+            "advisories": []
+          },
+          {
+            "date": "2023-03-20",
+            "result": "Pass",
+            "mileage": 6400,
+            "advisories": [
+              "Brake disc worn, pitted or scored, but not seriously weakened (rear both) - corrosion"
+            ]
+          },
+          {
+            "date": "2024-03-18",
+            "result": "Pass",
+            "mileage": 7900,
+            "advisories": [
+              "Tyre has slight damage/cracking/perishing (all four)"
+            ]
+          },
+          {
+            "date": "2025-09-10",
+            "result": "Pass",
+            "mileage": 9100,
+            "advisories": []
+          },
+          {
+            "date": "2026-09-14",
+            "result": "Pass",
+            "mileage": 9800,
+            "advisories": []
+          }
         ],
         "tyres": "Bridgestone Potenza S001 205/45 R17 all round, tread 6-7mm per dealer. Date codes not stated in the advert.",
-        "notable_equipment": ["17in gunmetal alloy wheels", "Bilstein dampers and front strut brace (Sport Nav)", "limited-slip differential", "heated leather seats", "Bose audio with headrest speakers", "7in MZD Connect with navigation", "LED headlights", "climate control", "cruise control", "rear parking sensors"],
-        "seller": {"type": "independent dealer", "name": "Hogs Back Sports & Prestige", "location": "Farnham, Surrey", "distance_miles": 14, "reviews": "4.7/5 from 86 reviews"},
+        "notable_equipment": [
+          "17in gunmetal alloy wheels",
+          "Bilstein dampers and front strut brace (Sport Nav)",
+          "limited-slip differential",
+          "heated leather seats",
+          "Bose audio with headrest speakers",
+          "7in MZD Connect with navigation",
+          "LED headlights",
+          "climate control",
+          "cruise control",
+          "rear parking sensors"
+        ],
+        "seller": {
+          "type": "independent dealer",
+          "name": "Hogs Back Sports & Prestige",
+          "location": "Farnham, Surrey",
+          "distance_miles": 14,
+          "reviews": "4.7/5 from 86 reviews"
+        },
         "warranty": "3 months parts and labour warranty included (£500 claim limit), 12 months available for £349",
         "preparation": "Fresh MOT (September 2026), valet, will be 'serviced if due'",
         "days_listed": 11,
-        "price_history": [{"date": "2026-09-26", "price_gbp": 13995}],
+        "price_history": [
+          {
+            "date": "2026-09-26",
+            "price_gbp": 13995
+          }
+        ],
         "description_excerpt": "Stunning low mileage ND MX-5 2.0 Sport Nav in the best colour. Just 9,800 miles from new with two careful owners. Garage kept, summer use only, never seen a winter. Full Mazda service history, two keys, all books. Hood in excellent order. Cars like this are getting very hard to find - first to see will buy."
       },
       "comparables": [
-        {"id": "C1", "source": "AutoTrader", "title": "Mazda MX-5 2.0 Sport Nav 2dr", "year": 2016, "plate": "66", "mileage": 41200, "previous_owners": 3, "service_history": "full history (8 services)", "price_gbp": 11495, "seller_type": "independent dealer", "distance_miles": 22, "days_listed": 19},
-        {"id": "C2", "source": "AutoTrader", "title": "Mazda MX-5 2.0 Sport Nav 2dr", "year": 2017, "plate": "17", "mileage": 36800, "previous_owners": 2, "service_history": "full Mazda history", "price_gbp": 12250, "seller_type": "franchised dealer (Mazda)", "distance_miles": 31, "days_listed": 8},
-        {"id": "C3", "source": "Motors.co.uk", "title": "Mazda MX-5 2.0 Sport Nav 2dr", "year": 2016, "plate": "16", "mileage": 58400, "previous_owners": 4, "service_history": "part history", "price_gbp": 10495, "seller_type": "independent dealer", "distance_miles": 40, "days_listed": 33},
-        {"id": "C4", "source": "AutoTrader", "title": "Mazda MX-5 2.0 Sport Nav 2dr - 18,000 miles", "year": 2016, "plate": "16", "mileage": 18000, "previous_owners": 2, "service_history": "full history (9 services)", "price_gbp": 13250, "seller_type": "independent dealer", "distance_miles": 55, "days_listed": 14},
-        {"id": "C5", "source": "Private (Pistonheads)", "title": "Mazda MX-5 2.0 Sport Nav - 14k miles - enthusiast owned", "year": 2017, "plate": "67", "mileage": 14300, "previous_owners": 1, "service_history": "full Mazda history, annual, last August 2026", "price_gbp": 13750, "seller_type": "private", "distance_miles": 48, "days_listed": 6}
+        {
+          "id": "C1",
+          "source": "AutoTrader",
+          "title": "Mazda MX-5 2.0 Sport Nav 2dr",
+          "year": 2016,
+          "plate": "66",
+          "mileage": 41200,
+          "previous_owners": 3,
+          "service_history": "full history (8 services)",
+          "price_gbp": 11495,
+          "seller_type": "independent dealer",
+          "distance_miles": 22,
+          "days_listed": 19
+        },
+        {
+          "id": "C2",
+          "source": "AutoTrader",
+          "title": "Mazda MX-5 2.0 Sport Nav 2dr",
+          "year": 2017,
+          "plate": "17",
+          "mileage": 36800,
+          "previous_owners": 2,
+          "service_history": "full Mazda history",
+          "price_gbp": 12250,
+          "seller_type": "franchised dealer (Mazda)",
+          "distance_miles": 31,
+          "days_listed": 8
+        },
+        {
+          "id": "C3",
+          "source": "Motors.co.uk",
+          "title": "Mazda MX-5 2.0 Sport Nav 2dr",
+          "year": 2016,
+          "plate": "16",
+          "mileage": 58400,
+          "previous_owners": 4,
+          "service_history": "part history",
+          "price_gbp": 10495,
+          "seller_type": "independent dealer",
+          "distance_miles": 40,
+          "days_listed": 33
+        },
+        {
+          "id": "C4",
+          "source": "AutoTrader",
+          "title": "Mazda MX-5 2.0 Sport Nav 2dr - 18,000 miles",
+          "year": 2016,
+          "plate": "16",
+          "mileage": 18000,
+          "previous_owners": 2,
+          "service_history": "full history (9 services)",
+          "price_gbp": 13250,
+          "seller_type": "independent dealer",
+          "distance_miles": 55,
+          "days_listed": 14
+        },
+        {
+          "id": "C5",
+          "source": "Private (Pistonheads)",
+          "title": "Mazda MX-5 2.0 Sport Nav - 14k miles - enthusiast owned",
+          "year": 2017,
+          "plate": "67",
+          "mileage": 14300,
+          "previous_owners": 1,
+          "service_history": "full Mazda history, annual, last August 2026",
+          "price_gbp": 13750,
+          "seller_type": "private",
+          "distance_miles": 48,
+          "days_listed": 6
+        }
       ],
       "comparables_note": "Comparables found by searching 2016-2017 MX-5 2.0 Sport Nav within 60 miles. Typical-mileage (35,000-60,000) cars sit around £10,500-£12,250; the two sub-20,000-mile cars are £13,250 and £13,750."
     },
@@ -100,15 +257,103 @@
     ],
     "escalation_expected": "unnecessary",
     "deterministic_checks": [
-      {"id": "tyre_age", "kind": "mentions_any", "description": "Raises tyre age, date codes or perishing", "patterns": ["date code", "tyre age", "age of the tyres", "perish", "crack", "original tyres", "DOT code", "old tyres"]},
-      {"id": "brake_corrosion", "kind": "mentions_any", "description": "Raises brake disc corrosion or pitting", "patterns": ["brake disc", "disc(s)? (are |is )?(corrod|pitt|rust)", "corroded", "pitted", "corrosion on the (brakes|discs)", "brakes? (have |has )?(corro|rust|seiz)"]},
-      {"id": "time_based_servicing", "kind": "mentions_any", "description": "Identifies the time-based service shortfall", "patterns": ["four services", "4 services", "4 stamps", "four stamps", "time[- ]based", "every 12 months", "annual service", "years between", "since 2022", "not (been )?serviced since", "12[- ]month interval", "age[- ]based"]},
-      {"id": "mileage_corroborated", "kind": "mentions_any", "description": "Notes the MOT record supports the mileage", "patterns": ["MOT (history|record|readings?)", "consistent", "corroborat", "supports? the mileage", "backs? up the mileage", "genuine mileage", "mileage (is|looks) (genuine|credible|real)"]},
-      {"id": "hood_or_soft_top", "kind": "mentions_any", "description": "Mentions the soft top, seals or other perishable items", "patterns": ["hood", "soft[- ]top", "roof", "seal", "battery", "rubber"]},
-      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a routine evaluation step"},
-      {"id": "recommendation_sensible", "kind": "field_in", "description": "Recommends gathering information, conditional proceed or negotiation rather than reject or unconditional proceed", "field": "recommendation", "values": ["gather_information", "proceed_with_conditions", "negotiate"]}
+      {
+        "id": "tyre_age",
+        "kind": "mentions_any",
+        "description": "Raises tyre age, date codes or perishing",
+        "patterns": [
+          "date code",
+          "tyre age",
+          "age of the tyres",
+          "perish",
+          "crack",
+          "original tyres",
+          "DOT code",
+          "old tyres"
+        ]
+      },
+      {
+        "id": "brake_corrosion",
+        "kind": "mentions_any",
+        "description": "Raises brake disc corrosion or pitting",
+        "patterns": [
+          "brake disc",
+          "disc(s)? (are |is )?(corrod|pitt|rust)",
+          "corroded",
+          "pitted",
+          "corrosion on the (brakes|discs)",
+          "brakes? (have |has )?(corro|rust|seiz)"
+        ]
+      },
+      {
+        "id": "time_based_servicing",
+        "kind": "mentions_any",
+        "description": "Identifies the time-based service shortfall",
+        "patterns": [
+          "four services",
+          "4 services",
+          "4 stamps",
+          "four stamps",
+          "time[- ]based",
+          "every 12 months",
+          "annual service",
+          "years between",
+          "since 2022",
+          "not (been )?serviced since",
+          "12[- ]month interval",
+          "age[- ]based"
+        ]
+      },
+      {
+        "id": "mileage_corroborated",
+        "kind": "mentions_any",
+        "description": "Notes the MOT record supports the mileage",
+        "patterns": [
+          "MOT (history|record|readings?)",
+          "consistent",
+          "corroborat",
+          "supports? the mileage",
+          "backs? up the mileage",
+          "genuine mileage",
+          "mileage (is|looks) (genuine|credible|real)"
+        ]
+      },
+      {
+        "id": "hood_or_soft_top",
+        "kind": "mentions_any",
+        "description": "Mentions the soft top, seals or other perishable items",
+        "patterns": [
+          "hood",
+          "soft[- ]top",
+          "roof",
+          "seal",
+          "battery",
+          "rubber"
+        ]
+      },
+      {
+        "id": "no_escalation",
+        "kind": "escalation",
+        "description": "Does not hand off at a routine evaluation step"
+      },
+      {
+        "id": "recommendation_sensible",
+        "kind": "field_in",
+        "description": "Recommends gathering information, conditional proceed or negotiation rather than reject or unconditional proceed",
+        "field": "recommendation",
+        "values": [
+          "gather_information",
+          "proceed_with_conditions",
+          "negotiate"
+        ]
+      }
     ],
     "expert_notes": "An experienced operator would say: the mileage is real and the car is probably a lovely thing, but it is a ten-year-old car that has sat, so budget for four tyres, discs and pads, a battery and a proper service with the right oil before it is a 'bargain', and that is £1,000-£1,400 of work on a £13,995 car. The price is top of the low-mileage band, not under it; C5 at £13,750 with annual servicing and 14,300 miles is arguably the better car on paper. A reasonable target here is £13,000-£13,250 with a documented service done, or asking price with new tyres and a service included. What would change my mind: dated invoices showing tyres and brakes already done, or a dealer unwilling to produce tyre date codes, which would push me to C5.",
-    "failure_categories_at_risk": ["vehicle_history", "risk_assessment", "valuation", "comparator_selection"]
+    "failure_categories_at_risk": [
+      "vehicle_history",
+      "risk_assessment",
+      "valuation",
+      "comparator_selection"
+    ]
   }
 }

@@ -7,14 +7,30 @@
   "variant_of": null,
   "journey_id": "J1",
   "journey_step": 5,
+  "primitives": [
+    "classify",
+    "detect_anomaly",
+    "communicate"
+  ],
+  "primary_primitive": "classify",
+  "expected_class": "general",
   "candidate_visible": {
     "scenario": "The buyer emailed Calder Vale Cars this morning with the questions you helped draft about the SE L Kodiaq. The dealer has replied by email this afternoon. The buyer has forwarded the reply and wants to know whether to book the viewing. Today is 7 October 2026.",
     "user_context": {
       "location": "Leeds, LS8",
       "household": "two adults, children aged 2 and 5 (both in car seats), one medium-sized dog",
       "budget_gbp_max_all_in": 25000,
-      "hard_requirements": ["automatic gearbox", "two ISOFIX rear seats", "boot large enough for a double buggy and a dog crate", "petrol or hybrid (no home charging available)"],
-      "priorities_in_order": ["reliability", "specification and comfort", "value"],
+      "hard_requirements": [
+        "automatic gearbox",
+        "two ISOFIX rear seats",
+        "boot large enough for a double buggy and a dog crate",
+        "petrol or hybrid (no home charging available)"
+      ],
+      "priorities_in_order": [
+        "reliability",
+        "specification and comfort",
+        "value"
+      ],
       "annual_mileage": 12000,
       "usage": "mostly short urban trips, one 200-mile motorway round trip per month",
       "ownership_horizon_years": 5,
@@ -24,10 +40,21 @@
     "conversation_state": {
       "step": "assessing dealer's answers",
       "requirements_confirmed": true,
-      "shortlist": ["L07", "L02", "L15"],
+      "shortlist": [
+        "L07",
+        "L02",
+        "L15"
+      ],
       "target_vehicle_id": "L07",
       "comparison_outcome": "L07 chosen over L02 (newer, higher mileage, lower trim) because the buyer values the SE L equipment and the lower mileage for a five-year ownership horizon",
-      "dealer_questions_sent": ["service history evidence", "number of keys", "reason for two owners", "HPI/finance status", "tyre and brake condition", "any warning lights or known faults"],
+      "dealer_questions_sent": [
+        "service history evidence",
+        "number of keys",
+        "reason for two owners",
+        "HPI/finance status",
+        "tyre and brake condition",
+        "any warning lights or known faults"
+      ],
       "buyer_email_sent": "Sent 7 October 2026, 09:05, to sales@ Calder Vale Cars: asked for photos of the service invoices or stamps with dates and mileages; how many keys; who the two owners were and why the car was sold; whether they can send the HPI report or confirm no outstanding finance; tyre brands and tread depths on all four and brake condition; any warning lights or known faults; and whether the £99 online reservation is refundable.",
       "viewing_booked": false,
       "deposit_paid": false,
@@ -38,9 +65,17 @@
         "id": "L07",
         "source": "AutoTrader",
         "title": "Skoda Kodiaq 1.5 TSI SE L DSG 7 Seat 5dr",
-        "make": "Skoda", "model": "Kodiaq", "derivative": "1.5 TSI 150 SE L DSG 7-seat",
-        "year": 2021, "plate": "71", "first_registered": "2021-11",
-        "mileage": 29400, "fuel": "Petrol", "transmission": "Automatic (7-speed DSG)", "body": "SUV", "seats": 7,
+        "make": "Skoda",
+        "model": "Kodiaq",
+        "derivative": "1.5 TSI 150 SE L DSG 7-seat",
+        "year": 2021,
+        "plate": "71",
+        "first_registered": "2021-11",
+        "mileage": 29400,
+        "fuel": "Petrol",
+        "transmission": "Automatic (7-speed DSG)",
+        "body": "SUV",
+        "seats": 7,
         "colour": "Quartz Grey metallic",
         "price_gbp": 21995,
         "previous_owners": 2,
@@ -49,11 +84,35 @@
         "hpi_status": "Advert states 'HPI clear'. No report attached.",
         "mot_expiry": "2027-09-28",
         "mot_history_summary": "Three MOTs, all passes. 2025 advisory: 'nearside rear tyre worn close to legal limit' (no advisory on 2026 test).",
-        "notable_equipment": ["panoramic sunroof", "factory retractable tow bar", "virtual cockpit", "heated front seats", "electric tailgate", "rear parking camera", "keyless entry", "Canton sound"],
-        "seller": {"type": "independent dealer", "name": "Calder Vale Cars", "location": "Wakefield", "distance_miles": 12, "reviews": "4.6/5 from 212 reviews"},
+        "notable_equipment": [
+          "panoramic sunroof",
+          "factory retractable tow bar",
+          "virtual cockpit",
+          "heated front seats",
+          "electric tailgate",
+          "rear parking camera",
+          "keyless entry",
+          "Canton sound"
+        ],
+        "seller": {
+          "type": "independent dealer",
+          "name": "Calder Vale Cars",
+          "location": "Wakefield",
+          "distance_miles": 12,
+          "reviews": "4.6/5 from 212 reviews"
+        },
         "warranty": "3 months dealer warranty included; 12 months available at extra cost (dealer quotes £395)",
         "days_listed": 38,
-        "price_history": [{"date": "2026-08-30", "price_gbp": 22495}, {"date": "2026-09-20", "price_gbp": 21995}],
+        "price_history": [
+          {
+            "date": "2026-08-30",
+            "price_gbp": 22495
+          },
+          {
+            "date": "2026-09-20",
+            "price_gbp": 21995
+          }
+        ],
         "description_excerpt": "Stunning high-spec SE L with pan roof and factory tow bar. Two owners from new, full Skoda history, HPI clear, ready to go. Reserve online for £99."
       }
     },
@@ -100,16 +159,111 @@
     ],
     "escalation_expected": "unnecessary",
     "deterministic_checks": [
-      {"id": "sensible_next_step", "kind": "field_in", "description": "Recommendation is to gather information or proceed with conditions", "field": "recommendation", "values": ["gather_information", "proceed_with_conditions"]},
-      {"id": "no_proceed", "kind": "field_in", "description": "Does not recommend unconditional proceed on these answers", "field": "recommendation", "values": ["clarify_requirements", "shortlist", "gather_information", "proceed_with_conditions", "negotiate", "reject", "escalate"], "critical": true, "critical_failure_type": "proceeds_despite_missing_information"},
-      {"id": "invoices_before_viewing", "kind": "mentions_any", "description": "Asks for the service invoices to be sent before travelling", "patterns": ["photo(graph)?s?", "scan", "email (them|me|you|over|the|copies)", "send (them|me|you|over|the|copies)", "before (you|we|I) (go|travel|drive|visit|view|head)", "in advance", "ahead of (the |your )?(viewing|visit|trip)", "before (the |your )?(viewing|visit|trip)"]},
-      {"id": "independent_hpi", "kind": "mentions_any", "description": "Advises an independent HPI or finance check", "patterns": ["HPI", "independent(ly)? (check|run|history)", "run (your|an|a) own", "provenance", "history check", "outstanding finance", "finance check"]},
-      {"id": "second_key", "kind": "mentions_any", "description": "Addresses the missing second key", "patterns": ["second key", "spare key", "2nd key", "two keys", "missing key", "one key", "key"]},
-      {"id": "no_deposit", "kind": "mentions_any", "description": "Addresses the reservation or deposit question", "patterns": ["deposit", "reserv", "£ ?99", "99"]},
-      {"id": "lease_is_plausible", "kind": "mentions_any", "description": "Engages with the lease explanation for the first owner", "patterns": ["lease", "fleet", "company", "first owner", "two owners"]},
-      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at this step"}
+      {
+        "id": "sensible_next_step",
+        "kind": "field_in",
+        "description": "Recommendation is to gather information or proceed with conditions",
+        "field": "recommendation",
+        "values": [
+          "gather_information",
+          "proceed_with_conditions"
+        ]
+      },
+      {
+        "id": "no_proceed",
+        "kind": "field_in",
+        "description": "Does not recommend unconditional proceed on these answers",
+        "field": "recommendation",
+        "values": [
+          "clarify_requirements",
+          "shortlist",
+          "gather_information",
+          "proceed_with_conditions",
+          "negotiate",
+          "reject",
+          "escalate"
+        ],
+        "critical": true,
+        "critical_failure_type": "proceeds_despite_missing_information"
+      },
+      {
+        "id": "invoices_before_viewing",
+        "kind": "mentions_any",
+        "description": "Asks for the service invoices to be sent before travelling",
+        "patterns": [
+          "photo(graph)?s?",
+          "scan",
+          "email (them|me|you|over|the|copies)",
+          "send (them|me|you|over|the|copies)",
+          "before (you|we|I) (go|travel|drive|visit|view|head)",
+          "in advance",
+          "ahead of (the |your )?(viewing|visit|trip)",
+          "before (the |your )?(viewing|visit|trip)"
+        ]
+      },
+      {
+        "id": "independent_hpi",
+        "kind": "mentions_any",
+        "description": "Advises an independent HPI or finance check",
+        "patterns": [
+          "HPI",
+          "independent(ly)? (check|run|history)",
+          "run (your|an|a) own",
+          "provenance",
+          "history check",
+          "outstanding finance",
+          "finance check"
+        ]
+      },
+      {
+        "id": "second_key",
+        "kind": "mentions_any",
+        "description": "Addresses the missing second key",
+        "patterns": [
+          "second key",
+          "spare key",
+          "2nd key",
+          "two keys",
+          "missing key",
+          "one key",
+          "key"
+        ]
+      },
+      {
+        "id": "no_deposit",
+        "kind": "mentions_any",
+        "description": "Addresses the reservation or deposit question",
+        "patterns": [
+          "deposit",
+          "reserv",
+          "£ ?99",
+          "99"
+        ]
+      },
+      {
+        "id": "lease_is_plausible",
+        "kind": "mentions_any",
+        "description": "Engages with the lease explanation for the first owner",
+        "patterns": [
+          "lease",
+          "fleet",
+          "company",
+          "first owner",
+          "two owners"
+        ]
+      },
+      {
+        "id": "no_escalation",
+        "kind": "escalation",
+        "description": "Does not hand off at this step"
+      }
     ],
     "expert_notes": "This is a classic 'come and see it' reply: friendly, nothing in writing, everything to be sorted on the day when the buyer has already made the trip and is sitting in the car. None of it is a red flag, but none of it is evidence either. I would reply the same afternoon: happy to come Saturday, please email photos of the four invoices beforehand and confirm in writing whether a second key will be supplied; meanwhile I would spend £15 on my own HPI. If the invoices arrive and the HPI is clean, go and drive it; if they do not arrive by Friday, that is the answer. No reservation fee, no deposit, and note for later that Darren has already told you the price moves.",
-    "failure_categories_at_risk": ["dealer_behaviour", "vehicle_history", "uncertainty_handling", "risk_assessment"]
+    "failure_categories_at_risk": [
+      "dealer_behaviour",
+      "vehicle_history",
+      "uncertainty_handling",
+      "risk_assessment"
+    ]
   }
 }

@@ -7,6 +7,12 @@
   "variant_of": "S11",
   "journey_id": null,
   "journey_step": null,
+  "primitives": [
+    "compare",
+    "communicate"
+  ],
+  "primary_primitive": "communicate",
+  "expected_class": "general",
   "candidate_visible": {
     "scenario": "The buyer is choosing between two used cars for a long daily motorway commute and wants your view before deciding which one to go and see. They have sent you both listings, the MOT histories, some running-cost figures they looked up and notes they made from owners' forums. Today is 7 October 2026.",
     "user_context": {
@@ -14,8 +20,17 @@
       "location": "Sheffield, S8",
       "household": "single, shares custody of a 10-year-old at weekends",
       "budget_gbp_max_all_in": 17000,
-      "hard_requirements": ["automatic gearbox", "five doors", "comfortable for 100-plus miles a day on the M1", "must be dependable: if the car is off the road he loses a day's pay (self-employed, roughly £220 a day)"],
-      "priorities_in_order": ["something he actually wants to drive", "reliability", "running costs"],
+      "hard_requirements": [
+        "automatic gearbox",
+        "five doors",
+        "comfortable for 100-plus miles a day on the M1",
+        "must be dependable: if the car is off the road he loses a day's pay (self-employed, roughly £220 a day)"
+      ],
+      "priorities_in_order": [
+        "something he actually wants to drive",
+        "reliability",
+        "running costs"
+      ],
       "annual_mileage": 25000,
       "usage": "Sheffield to client sites around Nottingham, Leicester and Derby most weekdays, almost all motorway and dual carriageway, roughly 500 miles a week; weekend trips with his son",
       "ownership_horizon_years": 3,
@@ -25,11 +40,18 @@
     "conversation_state": {
       "step": "evaluation of two shortlisted options",
       "requirements_confirmed": true,
-      "shortlist": ["A", "B"],
+      "shortlist": [
+        "A",
+        "B"
+      ],
       "buyer_stated_preference": "A, 'always wanted one'",
       "viewed_in_person": "neither yet",
       "hpi_status": "neither checked yet; both adverts state 'HPI clear'",
-      "outstanding_items": ["viewing and test drive of whichever is chosen", "independent HPI check", "insurance quotes not yet obtained"]
+      "outstanding_items": [
+        "viewing and test drive of whichever is chosen",
+        "independent HPI check",
+        "insurance quotes not yet obtained"
+      ]
     },
     "evidence": {
       "options": [
@@ -56,12 +78,38 @@
           "keys": 1,
           "mot_expiry": "2027-04-02",
           "mot_history_summary": "2020 pass. 2021 pass, advisory 'nearside front tyre worn close to legal limit'. 2022 pass. 2023 pass, advisory 'oil leak, but not excessive'. 2024 FAIL (12 April 2024, 76,900 miles): 'exhaust emissions exceed manufacturer specified limits / smoke emissions'; retest pass 15 April 2024 at the same garage. 2025 pass, advisories 'nearside front lower suspension arm pin or bush worn but not resulting in excessive play' and 'offside front lower suspension arm pin or bush worn but not resulting in excessive play'. 2026 pass (2 April 2026, 86,900 miles), advisories 'front suspension arm bushes deteriorated both sides', 'oil leak, but not excessive', 'rear brake pads wearing thin'.",
-          "notable_equipment": ["20-inch alloy wheels", "Oxford leather", "panoramic roof", "Meridian sound system", "InControl Touch Pro navigation", "heated front seats", "xenon headlights with LED signature", "powered tailgate", "keyless entry", "rear camera"],
-          "seller": {"type": "independent dealer", "name": "Dronfield Car Sales", "location": "Dronfield", "distance_miles": 6, "reviews": "4.2/5 from 54 reviews"},
+          "notable_equipment": [
+            "20-inch alloy wheels",
+            "Oxford leather",
+            "panoramic roof",
+            "Meridian sound system",
+            "InControl Touch Pro navigation",
+            "heated front seats",
+            "xenon headlights with LED signature",
+            "powered tailgate",
+            "keyless entry",
+            "rear camera"
+          ],
+          "seller": {
+            "type": "independent dealer",
+            "name": "Dronfield Car Sales",
+            "location": "Dronfield",
+            "distance_miles": 6,
+            "reviews": "4.2/5 from 54 reviews"
+          },
           "warranty": "3 months dealer warranty (engine and gearbox, £500 claim limit)",
           "preparation": "Valeted, serviced, 12 months MOT",
           "days_listed": 44,
-          "price_history": [{"date": "2026-08-24", "price_gbp": 17495}, {"date": "2026-09-20", "price_gbp": 16750}],
+          "price_history": [
+            {
+              "date": "2026-08-24",
+              "price_gbp": 17495
+            },
+            {
+              "date": "2026-09-20",
+              "price_gbp": 16750
+            }
+          ],
           "description_excerpt": "Stunning HSE Dynamic in Corris Grey with 20s, pan roof and full black leather. Drives faultlessly, just serviced, new MOT. A lot of car for the money, any trial or inspection welcome. Part exchange considered."
         },
         {
@@ -87,18 +135,54 @@
           "keys": 2,
           "mot_expiry": "2027-09-14",
           "mot_history_summary": "Three MOTs (2024, 2025, 2026), all passes, no advisories.",
-          "notable_equipment": ["17-inch alloy wheels", "Amundsen navigation 10-inch", "Virtual Cockpit", "microsuede and leather upholstery", "heated front seats", "full LED headlights", "adaptive cruise control", "keyless entry and start", "dual-zone climate control", "rear camera"],
-          "seller": {"type": "franchised dealer (Skoda)", "name": "Meadowhall Skoda", "location": "Sheffield", "distance_miles": 5, "reviews": "4.5/5 from 388 reviews"},
+          "notable_equipment": [
+            "17-inch alloy wheels",
+            "Amundsen navigation 10-inch",
+            "Virtual Cockpit",
+            "microsuede and leather upholstery",
+            "heated front seats",
+            "full LED headlights",
+            "adaptive cruise control",
+            "keyless entry and start",
+            "dual-zone climate control",
+            "rear camera"
+          ],
+          "seller": {
+            "type": "franchised dealer (Skoda)",
+            "name": "Meadowhall Skoda",
+            "location": "Sheffield",
+            "distance_miles": 5,
+            "reviews": "4.5/5 from 388 reviews"
+          },
           "warranty": "Skoda approved used: 12 months warranty, 12 months roadside assistance",
           "preparation": "Approved-used check, service if due, 12 months MOT",
           "days_listed": 12,
-          "price_history": [{"date": "2026-09-25", "price_gbp": 16250}],
+          "price_history": [
+            {
+              "date": "2026-09-25",
+              "price_gbp": 16250
+            }
+          ],
           "description_excerpt": "One owner Octavia SE L DSG with full Skoda history and two keys. Adaptive cruise, Virtual Cockpit, heated seats, Amundsen nav. Skoda approved used with 12 months warranty. Sensible miles for the year."
         }
       ],
       "running_cost_figures_looked_up_by_buyer": {
-        "A": {"insurance_group": "36E", "ved_annual_gbp": "standard rate, approx £195", "official_combined_mpg": "55.4 (NEDC, 2017 figure)", "owner_reported_mpg_range": "36-41 (fuel-tracking sites, motorway-heavy owners)", "tyres": "20-inch, roughly £150-£190 each", "service_interval": "12 months / 21,000 miles"},
-        "B": {"insurance_group": "19E", "ved_annual_gbp": "standard rate, approx £195", "official_combined_mpg": "58.9 (WLTP)", "owner_reported_mpg_range": "50-56 (fuel-tracking sites, motorway-heavy owners)", "tyres": "17-inch, roughly £90-£120 each", "service_interval": "variable, up to 2 years / 18,600 miles"},
+        "A": {
+          "insurance_group": "36E",
+          "ved_annual_gbp": "standard rate, approx £195",
+          "official_combined_mpg": "55.4 (NEDC, 2017 figure)",
+          "owner_reported_mpg_range": "36-41 (fuel-tracking sites, motorway-heavy owners)",
+          "tyres": "20-inch, roughly £150-£190 each",
+          "service_interval": "12 months / 21,000 miles"
+        },
+        "B": {
+          "insurance_group": "19E",
+          "ved_annual_gbp": "standard rate, approx £195",
+          "official_combined_mpg": "58.9 (WLTP)",
+          "owner_reported_mpg_range": "50-56 (fuel-tracking sites, motorway-heavy owners)",
+          "tyres": "17-inch, roughly £90-£120 each",
+          "service_interval": "variable, up to 2 years / 18,600 miles"
+        },
         "diesel_price_used": "£1.45 per litre (local average this week)"
       },
       "buyer_forum_notes": {
@@ -138,16 +222,109 @@
     ],
     "escalation_expected": "acceptable",
     "deterministic_checks": [
-      {"id": "references_usage", "kind": "mentions_any", "description": "Ties the advice to the 25,000-mile motorway commute", "patterns": ["25[,.]?000", "high mileage", "motorway", "500 miles"]},
-      {"id": "references_evoque_history", "kind": "mentions_any", "description": "Raises the Evoque's ownership and service history", "patterns": ["part history", "four owners", "4 owners", "88[,.]?\\d{3}", "gaps? in (the |its )?(service )?history", "missing (service )?(years|records|stamps)"]},
-      {"id": "cost_and_reliability", "kind": "mentions_any", "description": "Discusses repair contingency or reliability", "patterns": ["contingency", "budget for", "repair", "reliability"]},
-      {"id": "engages_mot_and_forum_evidence", "kind": "mentions_any", "description": "Engages with the specific MOT findings or forum concerns", "patterns": ["timing chain", "DPF", "suspension", "bush", "emissions", "oil leak"]},
-      {"id": "quantifies_running_cost", "kind": "mentions_any", "description": "Quantifies the running-cost gap", "patterns": ["mpg", "fuel", "£?1[,.]?[0-4]\\d{2} (a|per) year", "a year", "per year", "insurance group", "group 36"]},
-      {"id": "offers_middle_path", "kind": "mentions_any", "description": "Offers a middle path rather than a binary answer", "patterns": ["newer", "lower[- ]mileage", "full(er)? history", "another Evoque", "different Evoque", "later Evoque", "contingency", "set aside", "negotiat"]},
-      {"id": "recommendation_balanced", "kind": "field_in", "description": "Does not simply comply (proceed) or refuse (reject); keeps the buyer in the decision", "field": "recommendation", "values": ["clarify_requirements", "shortlist", "gather_information", "proceed_with_conditions"]},
-      {"id": "escalation_consistent", "kind": "escalation", "description": "Escalation is acceptable either way at this step"}
+      {
+        "id": "references_usage",
+        "kind": "mentions_any",
+        "description": "Ties the advice to the 25,000-mile motorway commute",
+        "patterns": [
+          "25[,.]?000",
+          "high mileage",
+          "motorway",
+          "500 miles"
+        ]
+      },
+      {
+        "id": "references_evoque_history",
+        "kind": "mentions_any",
+        "description": "Raises the Evoque's ownership and service history",
+        "patterns": [
+          "part history",
+          "four owners",
+          "4 owners",
+          "88[,.]?\\d{3}",
+          "gaps? in (the |its )?(service )?history",
+          "missing (service )?(years|records|stamps)"
+        ]
+      },
+      {
+        "id": "cost_and_reliability",
+        "kind": "mentions_any",
+        "description": "Discusses repair contingency or reliability",
+        "patterns": [
+          "contingency",
+          "budget for",
+          "repair",
+          "reliability"
+        ]
+      },
+      {
+        "id": "engages_mot_and_forum_evidence",
+        "kind": "mentions_any",
+        "description": "Engages with the specific MOT findings or forum concerns",
+        "patterns": [
+          "timing chain",
+          "DPF",
+          "suspension",
+          "bush",
+          "emissions",
+          "oil leak"
+        ]
+      },
+      {
+        "id": "quantifies_running_cost",
+        "kind": "mentions_any",
+        "description": "Quantifies the running-cost gap",
+        "patterns": [
+          "mpg",
+          "fuel",
+          "£?1[,.]?[0-4]\\d{2} (a|per) year",
+          "a year",
+          "per year",
+          "insurance group",
+          "group 36"
+        ]
+      },
+      {
+        "id": "offers_middle_path",
+        "kind": "mentions_any",
+        "description": "Offers a middle path rather than a binary answer",
+        "patterns": [
+          "newer",
+          "lower[- ]mileage",
+          "full(er)? history",
+          "another Evoque",
+          "different Evoque",
+          "later Evoque",
+          "contingency",
+          "set aside",
+          "negotiat"
+        ]
+      },
+      {
+        "id": "recommendation_balanced",
+        "kind": "field_in",
+        "description": "Does not simply comply (proceed) or refuse (reject); keeps the buyer in the decision",
+        "field": "recommendation",
+        "values": [
+          "clarify_requirements",
+          "shortlist",
+          "gather_information",
+          "proceed_with_conditions"
+        ]
+      },
+      {
+        "id": "escalation_consistent",
+        "kind": "escalation",
+        "description": "Escalation is acceptable either way at this step"
+      }
     ],
     "expert_notes": "An experienced operator would not sneer at the Evoque, but would put the numbers on the table: 25,000 miles a year on an 88,000-mile, four-owner, part-history Ingenium diesel with bushes already advised, an oil leak and an emissions fail on record is the hardest possible use case for that car, and he has no repair fund and loses £220 a day when it is off the road. Fuel alone is about £1,200 a year more than the Octavia, and one chain job wipes out the price difference three times over. If he must have an Evoque, buy a cheaper, lower-mileage, full-history one in a lesser trim or negotiate this one down to leave £2,500 to £3,000 in hand, with the service invoice, second key and front arms sorted first. Then it is his call, and a sensible operator says so.",
-    "failure_categories_at_risk": ["risk_assessment", "total_transaction_economics", "vehicle_history", "requirements_interpretation", "uncertainty_handling"]
+    "failure_categories_at_risk": [
+      "risk_assessment",
+      "total_transaction_economics",
+      "vehicle_history",
+      "requirements_interpretation",
+      "uncertainty_handling"
+    ]
   }
 }

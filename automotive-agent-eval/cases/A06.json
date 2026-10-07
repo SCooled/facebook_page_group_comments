@@ -7,6 +7,13 @@
   "variant_of": "S14",
   "journey_id": null,
   "journey_step": null,
+  "primitives": [
+    "classify",
+    "detect_anomaly",
+    "communicate"
+  ],
+  "primary_primitive": "detect_anomaly",
+  "expected_class": "hybrid",
   "candidate_visible": {
     "scenario": "The buyer is close to agreeing on a used Ford Fiesta at an independent dealer in Derby. After seeing 'full service history' in the advert they asked the dealer for the records, and have forwarded you the reply along with the listing, the MOT history, a couple of other Fiestas they looked at and some notes of their own. Today is 7 October 2026.",
     "user_context": {
@@ -14,8 +21,18 @@
       "location": "Long Eaton, NG10",
       "household": "single, lives with a flatmate",
       "budget_gbp_max_all_in": 10500,
-      "hard_requirements": ["petrol", "manual", "five doors", "under 45,000 miles", "cheap to insure and run"],
-      "priorities_in_order": ["reliability", "running costs", "looks"],
+      "hard_requirements": [
+        "petrol",
+        "manual",
+        "five doors",
+        "under 45,000 miles",
+        "cheap to insure and run"
+      ],
+      "priorities_in_order": [
+        "reliability",
+        "running costs",
+        "looks"
+      ],
       "annual_mileage": 7000,
       "usage": "mostly short trips around Long Eaton and Nottingham, 3 to 6 miles at a time; occasional longer trip to Birmingham",
       "ownership_horizon_years": 4,
@@ -31,7 +48,11 @@
       "keys": 2,
       "service_history_seen": "none: no service book in the car (dealer said Ford went digital), no invoices, no printout or screenshot of any digital record",
       "deposit": "dealer asked for £200 to hold the car; not yet paid",
-      "outstanding_items": ["service history evidence", "independent HPI check", "price not discussed (advert says 'no offers')"]
+      "outstanding_items": [
+        "service history evidence",
+        "independent HPI check",
+        "price not discussed (advert says 'no offers')"
+      ]
     },
     "evidence": {
       "target_vehicle": {
@@ -57,24 +78,99 @@
         "keys": 2,
         "mot_expiry": "2027-09-29",
         "mot_history_summary": "Four MOTs: October 2023 (29,400 miles), October 2024 (33,600), October 2025 (37,200) and a fresh test on 29 September 2026 (39,050) arranged by the dealer. All passes, no advisories on any test.",
-        "notable_equipment": ["17-inch alloy wheels", "ST-Line body styling and rear spoiler", "SYNC 3 8-inch touchscreen with navigation", "Apple CarPlay / Android Auto", "sports seats", "flat-bottomed steering wheel", "rear privacy glass", "rear parking sensors", "cruise control", "Quickclear heated windscreen", "lane keeping aid", "LED daytime running lights"],
-        "seller": {"type": "independent dealer", "name": "Osmaston Road Car Centre", "location": "Derby", "distance_miles": 11, "reviews": "4.1/5 from 67 reviews"},
+        "notable_equipment": [
+          "17-inch alloy wheels",
+          "ST-Line body styling and rear spoiler",
+          "SYNC 3 8-inch touchscreen with navigation",
+          "Apple CarPlay / Android Auto",
+          "sports seats",
+          "flat-bottomed steering wheel",
+          "rear privacy glass",
+          "rear parking sensors",
+          "cruise control",
+          "Quickclear heated windscreen",
+          "lane keeping aid",
+          "LED daytime running lights"
+        ],
+        "seller": {
+          "type": "independent dealer",
+          "name": "Osmaston Road Car Centre",
+          "location": "Derby",
+          "distance_miles": 11,
+          "reviews": "4.1/5 from 67 reviews"
+        },
         "warranty": "3 months dealer warranty included",
         "preparation": "Valeted, new MOT; dealer says a service is 'not due'",
         "days_listed": 17,
-        "price_history": [{"date": "2026-09-20", "price_gbp": 10250}],
+        "price_history": [
+          {
+            "date": "2026-09-20",
+            "price_gbp": 10250
+          }
+        ],
         "description_excerpt": "FULL SERVICE HISTORY, 2 keys, new MOT. ST-Line Edition with sat nav, Apple CarPlay, 17 inch alloys, privacy glass, heated screen. Immaculate inside and out, drives superb. Finance available. £10,250 no offers."
       },
       "other_fiestas_seen": [
-        {"id": "C1", "source": "AutoTrader", "title": "Ford Fiesta 1.0 EcoBoost 125 ST-Line Edition 5dr", "year": 2020, "plate": "20", "mileage": 41300, "previous_owners": 2, "service_history": "full history, 5 invoices photographed in advert, last 06/2026", "price_gbp": 9795, "seller_type": "independent dealer", "distance_miles": 9, "days_listed": 23},
-        {"id": "C2", "source": "Ford dealer website", "title": "Ford Fiesta 1.0 EcoBoost 125 ST-Line Edition 5dr", "year": 2020, "plate": "70", "mileage": 35200, "previous_owners": 1, "service_history": "full Ford history, digital service record screenshot shown in advert (4 services)", "price_gbp": 10495, "seller_type": "franchised dealer (Ford approved used, 12 months warranty)", "distance_miles": 14, "days_listed": 8},
-        {"id": "C3", "source": "Motors.co.uk", "title": "Ford Fiesta 1.0 EcoBoost 125 mHEV ST-Line Edition 5dr", "year": 2021, "plate": "21", "mileage": 32600, "previous_owners": 1, "service_history": "full history claimed", "price_gbp": 11250, "seller_type": "car supermarket", "distance_miles": 19, "days_listed": 12}
+        {
+          "id": "C1",
+          "source": "AutoTrader",
+          "title": "Ford Fiesta 1.0 EcoBoost 125 ST-Line Edition 5dr",
+          "year": 2020,
+          "plate": "20",
+          "mileage": 41300,
+          "previous_owners": 2,
+          "service_history": "full history, 5 invoices photographed in advert, last 06/2026",
+          "price_gbp": 9795,
+          "seller_type": "independent dealer",
+          "distance_miles": 9,
+          "days_listed": 23
+        },
+        {
+          "id": "C2",
+          "source": "Ford dealer website",
+          "title": "Ford Fiesta 1.0 EcoBoost 125 ST-Line Edition 5dr",
+          "year": 2020,
+          "plate": "70",
+          "mileage": 35200,
+          "previous_owners": 1,
+          "service_history": "full Ford history, digital service record screenshot shown in advert (4 services)",
+          "price_gbp": 10495,
+          "seller_type": "franchised dealer (Ford approved used, 12 months warranty)",
+          "distance_miles": 14,
+          "days_listed": 8
+        },
+        {
+          "id": "C3",
+          "source": "Motors.co.uk",
+          "title": "Ford Fiesta 1.0 EcoBoost 125 mHEV ST-Line Edition 5dr",
+          "year": 2021,
+          "plate": "21",
+          "mileage": 32600,
+          "previous_owners": 1,
+          "service_history": "full history claimed",
+          "price_gbp": 11250,
+          "seller_type": "car supermarket",
+          "distance_miles": 19,
+          "days_listed": 12
+        }
       ],
       "buyer_notes": "From the Fiesta owners' forum and a couple of YouTube videos: the 1.0 EcoBoost runs its cam belt inside the engine in oil (people call it a wet belt). Lots of posts say the belt and the oil condition go together, that Ford want a specific 5W-20 oil and changes every 12 months or 10,000 miles, and that cars with missed or cheap services have had belt material end up in the oil pick-up. Ford's belt change point on this engine seems to be 10 years or 150,000 miles, though some posts say dealers now suggest earlier. Not sure how much of this is real or how much it matters at 39,000 miles."
     },
     "dealer_messages": [
-      {"from": "buyer", "channel": "WhatsApp", "timestamp": "2026-10-05 19:48", "to": "Osmaston Road Car Centre", "text": "Hi, could you send me the service history for the Fiesta please? Stamps, invoices or a printout, whatever you've got. Thanks, Aisha"},
-      {"from": "dealer", "channel": "WhatsApp", "timestamp": "2026-10-06 09:12", "sender": "Osmaston Road Car Centre (Kam)", "text": "Full service history as stated, it's all on the Ford system, the main dealers can see it, we don't print it out. Car's been through our workshop and it's spot on. Let me know if you want to go ahead and I'll get the paperwork sorted, the £200 holds it for you."}
+      {
+        "from": "buyer",
+        "channel": "WhatsApp",
+        "timestamp": "2026-10-05 19:48",
+        "to": "Osmaston Road Car Centre",
+        "text": "Hi, could you send me the service history for the Fiesta please? Stamps, invoices or a printout, whatever you've got. Thanks, Aisha"
+      },
+      {
+        "from": "dealer",
+        "channel": "WhatsApp",
+        "timestamp": "2026-10-06 09:12",
+        "sender": "Osmaston Road Car Centre (Kam)",
+        "text": "Full service history as stated, it's all on the Ford system, the main dealers can see it, we don't print it out. Car's been through our workshop and it's spot on. Let me know if you want to go ahead and I'll get the paperwork sorted, the £200 holds it for you."
+      }
     ],
     "user_message": "The dealer says it's full history on Ford's system. Is that enough to go ahead?"
   },
@@ -107,17 +203,118 @@
     ],
     "escalation_expected": "unnecessary",
     "deterministic_checks": [
-      {"id": "how_to_get_record", "kind": "mentions_any", "description": "Tells the buyer how the digital record can be obtained or verified", "patterns": ["digital service record", "DSR", "Ford dealer can", "print", "screenshot", "ask (a|any) Ford", "Ford (main )?dealer", "phone (a|any|your local) Ford", "with the (reg|registration|VIN)"]},
-      {"id": "engine_context", "kind": "mentions_any", "description": "Connects servicing to the wet-belt engine and oil changes", "patterns": ["wet[- ]belt", "timing belt", "cambelt", "cam belt", "belt in oil", "oil"]},
-      {"id": "claim_not_evidence", "kind": "mentions_any", "description": "Treats the dealer's statement as an unverified claim", "patterns": ["claim", "unverified", "evidence", "proof", "not (been )?(seen|verified|shown|provided)", "take (their|his|the dealer'?s) word"]},
-      {"id": "mot_not_servicing", "kind": "mentions_any", "description": "Notes that MOT history is not service history", "patterns": ["MOT (does not|doesn'?t|is not|isn'?t|won'?t)", "MOT.{0,60}(not|nothing).{0,40}servic", "MOT.{0,40}separate"]},
-      {"id": "refusal_is_information", "kind": "mentions_any", "description": "Treats a refusal to provide the record as meaningful", "patterns": ["if (the dealer|they|he) (refuse|won'?t|declines?|can'?t|cannot|still)", "refus", "walk away", "red flag", "tells? you something", "price (it|the car) as (having )?no history"]},
-      {"id": "asks_dealer", "kind": "list_nonempty", "description": "Puts at least one question to the dealer", "field": "questions_for_dealer", "min_items": 1},
-      {"id": "recommendation_holds", "kind": "field_in", "description": "Recommends gathering information, negotiating or rejecting", "field": "recommendation", "values": ["gather_information", "reject", "negotiate"]},
-      {"id": "no_proceed_without_history", "kind": "field_in", "description": "Does not recommend proceed while service history is unevidenced", "field": "recommendation", "values": ["clarify_requirements", "shortlist", "gather_information", "proceed_with_conditions", "negotiate", "reject", "escalate"], "critical": true, "critical_failure_type": "proceeds_despite_missing_information"},
-      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a routine verification step"}
+      {
+        "id": "how_to_get_record",
+        "kind": "mentions_any",
+        "description": "Tells the buyer how the digital record can be obtained or verified",
+        "patterns": [
+          "digital service record",
+          "DSR",
+          "Ford dealer can",
+          "print",
+          "screenshot",
+          "ask (a|any) Ford",
+          "Ford (main )?dealer",
+          "phone (a|any|your local) Ford",
+          "with the (reg|registration|VIN)"
+        ]
+      },
+      {
+        "id": "engine_context",
+        "kind": "mentions_any",
+        "description": "Connects servicing to the wet-belt engine and oil changes",
+        "patterns": [
+          "wet[- ]belt",
+          "timing belt",
+          "cambelt",
+          "cam belt",
+          "belt in oil",
+          "oil"
+        ]
+      },
+      {
+        "id": "claim_not_evidence",
+        "kind": "mentions_any",
+        "description": "Treats the dealer's statement as an unverified claim",
+        "patterns": [
+          "claim",
+          "unverified",
+          "evidence",
+          "proof",
+          "not (been )?(seen|verified|shown|provided)",
+          "take (their|his|the dealer'?s) word"
+        ]
+      },
+      {
+        "id": "mot_not_servicing",
+        "kind": "mentions_any",
+        "description": "Notes that MOT history is not service history",
+        "patterns": [
+          "MOT (does not|doesn'?t|is not|isn'?t|won'?t)",
+          "MOT.{0,60}(not|nothing).{0,40}servic",
+          "MOT.{0,40}separate"
+        ]
+      },
+      {
+        "id": "refusal_is_information",
+        "kind": "mentions_any",
+        "description": "Treats a refusal to provide the record as meaningful",
+        "patterns": [
+          "if (the dealer|they|he) (refuse|won'?t|declines?|can'?t|cannot|still)",
+          "refus",
+          "walk away",
+          "red flag",
+          "tells? you something",
+          "price (it|the car) as (having )?no history"
+        ]
+      },
+      {
+        "id": "asks_dealer",
+        "kind": "list_nonempty",
+        "description": "Puts at least one question to the dealer",
+        "field": "questions_for_dealer",
+        "min_items": 1
+      },
+      {
+        "id": "recommendation_holds",
+        "kind": "field_in",
+        "description": "Recommends gathering information, negotiating or rejecting",
+        "field": "recommendation",
+        "values": [
+          "gather_information",
+          "reject",
+          "negotiate"
+        ]
+      },
+      {
+        "id": "no_proceed_without_history",
+        "kind": "field_in",
+        "description": "Does not recommend proceed while service history is unevidenced",
+        "field": "recommendation",
+        "values": [
+          "clarify_requirements",
+          "shortlist",
+          "gather_information",
+          "proceed_with_conditions",
+          "negotiate",
+          "reject",
+          "escalate"
+        ],
+        "critical": true,
+        "critical_failure_type": "proceeds_despite_missing_information"
+      },
+      {
+        "id": "no_escalation",
+        "kind": "escalation",
+        "description": "Does not hand off at a routine verification step"
+      }
     ],
     "expert_notes": "An experienced operator would say: 'full service history' is a claim until somebody shows you the record, and on a wet-belt EcoBoost doing short trips the record is the whole point, because what you want to see is an oil change every year with the right oil, not a tick in a box. Any Ford dealer will print or screenshot the digital history from the reg in five minutes, and the Ford dealer up the road has done exactly that for C2, so 'we don't print it out' is a dealer choosing not to. Ring a Ford dealer yourself or tell Kam the £200 follows the printout. If it arrives and shows four on-time services, the car is fine but still £450 dearer than C1 and barely cheaper than an approved-used car with a year's warranty, so there is a price conversation to have despite 'no offers'. If it does not arrive, walk; there are plenty of these.",
-    "failure_categories_at_risk": ["vehicle_history", "uncertainty_handling", "dealer_behaviour", "valuation"]
+    "failure_categories_at_risk": [
+      "vehicle_history",
+      "uncertainty_handling",
+      "dealer_behaviour",
+      "valuation"
+    ]
   }
 }

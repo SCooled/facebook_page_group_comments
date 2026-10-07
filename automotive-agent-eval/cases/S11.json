@@ -7,14 +7,30 @@
   "variant_of": null,
   "journey_id": "J1",
   "journey_step": 3,
+  "primitives": [
+    "compare",
+    "estimate",
+    "communicate"
+  ],
+  "primary_primitive": "compare",
+  "expected_class": "hybrid",
   "candidate_visible": {
     "scenario": "From the shortlist you produced, the buyer has narrowed the choice to two Skoda Kodiaq 1.5 TSI DSG seven-seaters and wants a recommendation between them before contacting either dealer. You have the full listing detail for both. Today is 7 October 2026.",
     "user_context": {
       "location": "Leeds, LS8",
       "household": "two adults, children aged 2 and 5 (both in car seats), one medium-sized dog",
       "budget_gbp_max_all_in": 25000,
-      "hard_requirements": ["automatic gearbox", "two ISOFIX rear seats", "boot large enough for a double buggy and a dog crate", "petrol or hybrid (no home charging available)"],
-      "priorities_in_order": ["reliability", "specification and comfort", "value"],
+      "hard_requirements": [
+        "automatic gearbox",
+        "two ISOFIX rear seats",
+        "boot large enough for a double buggy and a dog crate",
+        "petrol or hybrid (no home charging available)"
+      ],
+      "priorities_in_order": [
+        "reliability",
+        "specification and comfort",
+        "value"
+      ],
       "annual_mileage": 12000,
       "usage": "mostly short urban trips, one 200-mile motorway round trip per month",
       "ownership_horizon_years": 5,
@@ -24,7 +40,11 @@
     "conversation_state": {
       "step": "comparing two shortlisted cars",
       "requirements_confirmed": true,
-      "shortlist": ["L07", "L02", "L15"],
+      "shortlist": [
+        "L07",
+        "L02",
+        "L15"
+      ],
       "shortlist_note": "Buyer prefers a Kodiaq over the Sorento (L15) for the boot shape, the lower price and because they know someone who has one; L15 is held in reserve if neither Kodiaq works out.",
       "target_vehicle_id": null,
       "dealers_contacted": false,
@@ -35,28 +55,65 @@
         "id": "L02",
         "source": "AutoTrader",
         "title": "Skoda Kodiaq 1.5 TSI SE DSG 7 Seat 5dr",
-        "make": "Skoda", "model": "Kodiaq", "derivative": "1.5 TSI 150 SE DSG 7-seat",
+        "make": "Skoda",
+        "model": "Kodiaq",
+        "derivative": "1.5 TSI 150 SE DSG 7-seat",
         "generation": "Mk1 facelift (2021-2023)",
         "engine": "1.5 TSI 150 PS petrol (EA211 evo), front-wheel drive",
-        "year": 2023, "plate": "23", "first_registered": "2023-03",
-        "mileage": 48100, "fuel": "Petrol", "transmission": "Automatic (7-speed DSG)", "body": "SUV", "seats": 7,
-        "isofix": "two outer second-row seats", "boot_litres_seats_up": 630,
+        "year": 2023,
+        "plate": "23",
+        "first_registered": "2023-03",
+        "mileage": 48100,
+        "fuel": "Petrol",
+        "transmission": "Automatic (7-speed DSG)",
+        "body": "SUV",
+        "seats": 7,
+        "isofix": "two outer second-row seats",
+        "boot_litres_seats_up": 630,
         "colour": "Steel Grey metallic",
         "price_gbp": 22750,
         "previous_owners": 1,
         "owner_detail": "Registered from new to a fleet leasing company; ex-company vehicle",
         "service_history": "Three services on the Skoda digital service record, all at Skoda main dealers under a fleet maintenance contract: 10,200 miles (March 2024), 25,600 miles (February 2025), 41,300 miles (January 2026). Dealer will carry out a further service before collection as part of Approved Used preparation.",
         "mot_history": [
-          {"date": "2026-03-11", "mileage": 45200, "result": "Pass", "advisories": []}
+          {
+            "date": "2026-03-11",
+            "mileage": 45200,
+            "result": "Pass",
+            "advisories": []
+          }
         ],
         "mot_expiry": "2027-03-11",
         "manufacturer_warranty": "Skoda 3-year/60,000-mile warranty from first registration (March 2023)",
         "warranty_offered": "Skoda Approved Used: 12 months unlimited-mileage warranty and 12 months roadside assistance included; extendable at extra cost",
-        "notable_equipment": ["18-inch alloys", "8-inch Bolero touchscreen with wireless SmartLink (Apple CarPlay and Android Auto)", "front and rear parking sensors", "cruise control", "dual-zone climate control", "LED headlights", "roof rails", "fabric upholstery", "seven seats", "DAB radio", "rear-seat tablet holders"],
+        "notable_equipment": [
+          "18-inch alloys",
+          "8-inch Bolero touchscreen with wireless SmartLink (Apple CarPlay and Android Auto)",
+          "front and rear parking sensors",
+          "cruise control",
+          "dual-zone climate control",
+          "LED headlights",
+          "roof rails",
+          "fabric upholstery",
+          "seven seats",
+          "DAB radio",
+          "rear-seat tablet holders"
+        ],
         "keys": "Two keys stated",
-        "seller": {"type": "franchised dealer (Skoda)", "name": "Pennine Skoda", "location": "Bradford", "distance_miles": 11, "reviews": "4.4/5 from 301 reviews"},
+        "seller": {
+          "type": "franchised dealer (Skoda)",
+          "name": "Pennine Skoda",
+          "location": "Bradford",
+          "distance_miles": 11,
+          "reviews": "4.4/5 from 301 reviews"
+        },
         "days_listed": 16,
-        "price_history": [{"date": "2026-09-21", "price_gbp": 22750}],
+        "price_history": [
+          {
+            "date": "2026-09-21",
+            "price_gbp": 22750
+          }
+        ],
         "admin_fee_gbp": 0,
         "description_excerpt": "One owner from new, ex-company vehicle with full Skoda digital service history. Skoda Approved Used with 12 months warranty, 142-point check and a fresh service before collection. Two keys. Finance available, part exchange welcome."
       },
@@ -64,31 +121,88 @@
         "id": "L07",
         "source": "AutoTrader",
         "title": "Skoda Kodiaq 1.5 TSI SE L DSG 7 Seat 5dr",
-        "make": "Skoda", "model": "Kodiaq", "derivative": "1.5 TSI 150 SE L DSG 7-seat",
+        "make": "Skoda",
+        "model": "Kodiaq",
+        "derivative": "1.5 TSI 150 SE L DSG 7-seat",
         "generation": "Mk1 facelift (2021-2023)",
         "engine": "1.5 TSI 150 PS petrol (EA211 evo), front-wheel drive",
-        "year": 2021, "plate": "71", "first_registered": "2021-11",
-        "mileage": 29400, "fuel": "Petrol", "transmission": "Automatic (7-speed DSG)", "body": "SUV", "seats": 7,
-        "isofix": "two outer second-row seats", "boot_litres_seats_up": 630,
+        "year": 2021,
+        "plate": "71",
+        "first_registered": "2021-11",
+        "mileage": 29400,
+        "fuel": "Petrol",
+        "transmission": "Automatic (7-speed DSG)",
+        "body": "SUV",
+        "seats": 7,
+        "isofix": "two outer second-row seats",
+        "boot_litres_seats_up": 630,
         "colour": "Quartz Grey metallic",
         "price_gbp": 21995,
         "previous_owners": 2,
         "owner_detail": "Two owners from new; reason for change not stated in the advert",
         "service_history": "Advertised as full Skoda main dealer history (4 services). No invoices or service record shown in the advert.",
         "mot_history": [
-          {"date": "2024-11-04", "mileage": 23760, "result": "Pass", "advisories": []},
-          {"date": "2025-10-28", "mileage": 27900, "result": "Pass", "advisories": ["Nearside rear tyre worn close to legal limit"]},
-          {"date": "2026-09-28", "mileage": 29380, "result": "Pass", "advisories": []}
+          {
+            "date": "2024-11-04",
+            "mileage": 23760,
+            "result": "Pass",
+            "advisories": []
+          },
+          {
+            "date": "2025-10-28",
+            "mileage": 27900,
+            "result": "Pass",
+            "advisories": [
+              "Nearside rear tyre worn close to legal limit"
+            ]
+          },
+          {
+            "date": "2026-09-28",
+            "mileage": 29380,
+            "result": "Pass",
+            "advisories": []
+          }
         ],
         "mot_expiry": "2027-09-28",
         "manufacturer_warranty": "Skoda 3-year/60,000-mile warranty from first registration (November 2021)",
         "warranty_offered": "3 months dealer warranty included; 12 months available at extra cost (dealer quotes £395)",
-        "notable_equipment": ["19-inch alloys", "Amundsen 8-inch navigation", "10.25-inch virtual cockpit", "Alcantara and leather upholstery", "heated front seats", "keyless entry and start", "electric tailgate", "rear parking camera", "front and rear parking sensors", "three-zone climate control", "LED headlights", "panoramic sunroof", "factory retractable tow bar", "Canton sound system", "seven seats"],
+        "notable_equipment": [
+          "19-inch alloys",
+          "Amundsen 8-inch navigation",
+          "10.25-inch virtual cockpit",
+          "Alcantara and leather upholstery",
+          "heated front seats",
+          "keyless entry and start",
+          "electric tailgate",
+          "rear parking camera",
+          "front and rear parking sensors",
+          "three-zone climate control",
+          "LED headlights",
+          "panoramic sunroof",
+          "factory retractable tow bar",
+          "Canton sound system",
+          "seven seats"
+        ],
         "keys": "Not stated",
-        "seller": {"type": "independent dealer", "name": "Calder Vale Cars", "location": "Wakefield", "distance_miles": 12, "reviews": "4.6/5 from 212 reviews"},
+        "seller": {
+          "type": "independent dealer",
+          "name": "Calder Vale Cars",
+          "location": "Wakefield",
+          "distance_miles": 12,
+          "reviews": "4.6/5 from 212 reviews"
+        },
         "preparation": "12 months MOT, service if due",
         "days_listed": 38,
-        "price_history": [{"date": "2026-08-30", "price_gbp": 22495}, {"date": "2026-09-20", "price_gbp": 21995}],
+        "price_history": [
+          {
+            "date": "2026-08-30",
+            "price_gbp": 22495
+          },
+          {
+            "date": "2026-09-20",
+            "price_gbp": 21995
+          }
+        ],
         "admin_fee_gbp": 0,
         "description_excerpt": "Stunning high-spec SE L with pan roof and factory tow bar. Two owners from new, full Skoda history, HPI clear, ready to go. Part exchange welcome, finance available."
       },
@@ -128,17 +242,114 @@
     ],
     "escalation_expected": "unnecessary",
     "deterministic_checks": [
-      {"id": "names_one_of_the_two", "kind": "vehicles_include", "description": "Recommends L07 or L02 (either is defensible)", "values": ["L07", "L02"]},
-      {"id": "only_these_two", "kind": "vehicles_subset", "description": "Does not introduce vehicles outside the comparison", "values": ["L07", "L02"]},
-      {"id": "warranty_reasoning", "kind": "mentions_any", "description": "Discusses warranty position", "patterns": ["warranty", "approved used", "expired", "out of (manufacturer|skoda) (warranty|cover)"]},
-      {"id": "mileage_per_year", "kind": "mentions_any", "description": "Reasons about annual mileage or projected mileage over ownership", "patterns": ["per year", "a year", "annual", "per annum", "12[,.]?000", "13[,.]?[0-9]00", "6[,.]?000", "over five years", "over 5 years", "by the time you sell", "end up (at|with|around)"]},
-      {"id": "same_drivetrain", "kind": "mentions_any", "description": "Recognises both cars share the same engine and DSG", "patterns": ["DSG", "DQ200", "dry[- ]clutch", "mechatronic", "same (engine|gearbox|drivetrain|powertrain|mechanical)"]},
-      {"id": "history_unverified", "kind": "mentions_any", "description": "Treats L07's history claim as unverified", "patterns": ["invoice", "unverified", "not (yet )?(been )?(seen|verified|confirmed|evidenced)", "claimed", "advert(ised)? as", "digital service record", "evidence of"]},
-      {"id": "fleet_or_lease", "kind": "mentions_any", "description": "Comments on ex-fleet ownership of L02", "patterns": ["fleet", "lease", "company car", "ex-company"]},
-      {"id": "sensible_recommendation", "kind": "field_in", "description": "Recommendation is a conditional choice or further information, not proceed or reject", "field": "recommendation", "values": ["shortlist", "gather_information", "proceed_with_conditions"]},
-      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a comparison step"}
+      {
+        "id": "names_one_of_the_two",
+        "kind": "vehicles_include",
+        "description": "Recommends L07 or L02 (either is defensible)",
+        "values": [
+          "L07",
+          "L02"
+        ]
+      },
+      {
+        "id": "only_these_two",
+        "kind": "vehicles_subset",
+        "description": "Does not introduce vehicles outside the comparison",
+        "values": [
+          "L07",
+          "L02"
+        ]
+      },
+      {
+        "id": "warranty_reasoning",
+        "kind": "mentions_any",
+        "description": "Discusses warranty position",
+        "patterns": [
+          "warranty",
+          "approved used",
+          "expired",
+          "out of (manufacturer|skoda) (warranty|cover)"
+        ]
+      },
+      {
+        "id": "mileage_per_year",
+        "kind": "mentions_any",
+        "description": "Reasons about annual mileage or projected mileage over ownership",
+        "patterns": [
+          "per year",
+          "a year",
+          "annual",
+          "per annum",
+          "12[,.]?000",
+          "13[,.]?[0-9]00",
+          "6[,.]?000",
+          "over five years",
+          "over 5 years",
+          "by the time you sell",
+          "end up (at|with|around)"
+        ]
+      },
+      {
+        "id": "same_drivetrain",
+        "kind": "mentions_any",
+        "description": "Recognises both cars share the same engine and DSG",
+        "patterns": [
+          "DSG",
+          "DQ200",
+          "dry[- ]clutch",
+          "mechatronic",
+          "same (engine|gearbox|drivetrain|powertrain|mechanical)"
+        ]
+      },
+      {
+        "id": "history_unverified",
+        "kind": "mentions_any",
+        "description": "Treats L07's history claim as unverified",
+        "patterns": [
+          "invoice",
+          "unverified",
+          "not (yet )?(been )?(seen|verified|confirmed|evidenced)",
+          "claimed",
+          "advert(ised)? as",
+          "digital service record",
+          "evidence of"
+        ]
+      },
+      {
+        "id": "fleet_or_lease",
+        "kind": "mentions_any",
+        "description": "Comments on ex-fleet ownership of L02",
+        "patterns": [
+          "fleet",
+          "lease",
+          "company car",
+          "ex-company"
+        ]
+      },
+      {
+        "id": "sensible_recommendation",
+        "kind": "field_in",
+        "description": "Recommendation is a conditional choice or further information, not proceed or reject",
+        "field": "recommendation",
+        "values": [
+          "shortlist",
+          "gather_information",
+          "proceed_with_conditions"
+        ]
+      },
+      {
+        "id": "no_escalation",
+        "kind": "escalation",
+        "description": "Does not hand off at a comparison step"
+      }
     ],
     "expert_notes": "Same engine, same box, same body; this is a spec-and-provenance decision, not a mechanical one. For a family that will keep the car five years at 12,000 a year and has told me comfort matters, the SE L with 29,000 miles is the car I would want to own, and it is £755 cheaper. But the dealer car has the better paperwork: digital history anyone can check, two keys, one fleet keeper and twelve months of Skoda cover against a DSG that does occasionally need a mechatronic unit. So my answer is L07, conditional on the four invoices turning up, a key count, a reason for the second owner and a clean independent HPI; if any of those wobble, L02 at the Skoda dealer is a perfectly good car and the safer buy. Nobody should be told 'newer is better' or 'fewer miles is better' here; both cars are out of factory warranty and both will need a bit of care.",
-    "failure_categories_at_risk": ["vehicle_specification", "vehicle_history", "risk_assessment", "uncertainty_handling", "valuation"]
+    "failure_categories_at_risk": [
+      "vehicle_specification",
+      "vehicle_history",
+      "risk_assessment",
+      "uncertainty_handling",
+      "valuation"
+    ]
   }
 }

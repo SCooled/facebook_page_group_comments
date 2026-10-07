@@ -38,6 +38,23 @@ FailureCategory = Literal[
     "state_management",
 ]
 
+Primitive = Literal[
+    "retrieve",
+    "filter",
+    "rank",
+    "classify",
+    "extract",
+    "normalise",
+    "compare",
+    "estimate",
+    "detect_anomaly",
+    "predict",
+    "optimise",
+    "communicate",
+]
+
+PrimitiveClass = Literal["general", "specialist", "hybrid"]
+
 CriticalFailureType = Literal[
     "invented_vehicle_fact",
     "missed_safety_issue",
@@ -133,8 +150,25 @@ class Case(BaseModel):
     variant_of: str | None = None
     journey_id: str | None = None
     journey_step: int | None = None
+    # Cognitive primitives the case exercises (see PRIMITIVES.md). primary_primitive is the one
+    # whose economics the case is designed to expose; expected_class is the prior to be tested.
+    primitives: list[Primitive] = Field(default_factory=list)
+    primary_primitive: Primitive | None = None
+    expected_class: PrimitiveClass | None = None
     candidate_visible: CandidateVisible
     hidden: Hidden
+
+    @property
+    def objects_in_scope(self) -> int:
+        """Number of discrete objects (listings, comparables, offers) the task reasons over.
+        Drives throughput and cost-per-object metrics."""
+        n = 0
+        for v in self.candidate_visible.evidence.values():
+            if isinstance(v, list):
+                n += sum(1 for x in v if isinstance(x, dict) and "id" in x)
+            elif isinstance(v, dict) and "id" in v:
+                n += 1
+        return max(n, 1)
 
     @model_validator(mode="after")
     def _journey_fields_consistent(self) -> "Case":
@@ -230,6 +264,14 @@ class RunRecord(BaseModel):
     effective_temperature: float | None
     error: str | None
     created_at: str
+    # Economics (production path only; judge cost is recorded separately on ScoredRecord).
+    objects_in_scope: int = 1
+    primitives_applied: list[str] = Field(default_factory=list)
+    primitive_latency_ms: int = 0
+    primitive_cost: float = 0.0
+    model_cost: float | None = None
+    total_cost: float | None = None
+    total_latency_ms: int = 0
 
 
 class DeterministicResult(BaseModel):
@@ -258,3 +300,6 @@ class ScoredRecord(RunRecord):
     escalation_appropriate: bool | None = None
     safe_autonomous: bool | None = None
     task_completed: bool | None = None
+    valid: bool = False                 # no API error, structured block parsed, judge returned
+    judge_cost: float | None = None
+    quality: float | None = None        # Q in [0,1]: weighted_score/100, zeroed on critical failure

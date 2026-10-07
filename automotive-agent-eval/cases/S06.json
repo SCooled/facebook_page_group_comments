@@ -7,6 +7,14 @@
   "variant_of": null,
   "journey_id": null,
   "journey_step": null,
+  "primitives": [
+    "normalise",
+    "detect_anomaly",
+    "filter",
+    "rank"
+  ],
+  "primary_primitive": "normalise",
+  "expected_class": "specialist",
   "candidate_visible": {
     "scenario": "The buyer has settled on a used Toyota Corolla 1.8 Hybrid Touring Sports and asked you to search for them. You have pulled every listing matching their brief within 30 miles of their postcode from AutoTrader, Motors.co.uk, eBay Motors, dealer websites, Facebook Marketplace and an online retailer. The results are below exactly as the platforms presented them. Today is 7 October 2026.",
     "user_context": {
@@ -15,8 +23,18 @@
       "budget_gbp_max_all_in": 17500,
       "funding": "£12,000 cash plus a small personal loan already agreed; no part exchange",
       "target": "Toyota Corolla 1.8 Hybrid Touring Sports, 2020-2022, Icon Tech or Design trim",
-      "hard_requirements": ["automatic (hybrid)", "reversing camera", "two keys", "service history that can be evidenced"],
-      "priorities_in_order": ["reliability and warranty", "low running costs", "lowest sensible mileage for the money", "colour not important"],
+      "hard_requirements": [
+        "automatic (hybrid)",
+        "reversing camera",
+        "two keys",
+        "service history that can be evidenced"
+      ],
+      "priorities_in_order": [
+        "reliability and warranty",
+        "low running costs",
+        "lowest sensible mileage for the money",
+        "colour not important"
+      ],
       "annual_mileage": 9000,
       "usage": "nursery runs and shopping in Nottingham, monthly 300-mile round trip to Norfolk",
       "ownership_horizon_years": 7,
@@ -33,9 +51,17 @@
           "id": "L01",
           "source": "AutoTrader",
           "title": "Toyota Corolla 1.8 VVT-i Hybrid Icon Tech Touring Sports CVT 5dr",
-          "make": "Toyota", "model": "Corolla Touring Sports", "derivative": "1.8 Hybrid Icon Tech CVT",
-          "year": 2021, "plate": "21", "first_registered": "2021-05",
-          "mileage": 34100, "fuel": "Petrol hybrid", "transmission": "Automatic (e-CVT)", "body": "Estate", "seats": 5,
+          "make": "Toyota",
+          "model": "Corolla Touring Sports",
+          "derivative": "1.8 Hybrid Icon Tech CVT",
+          "year": 2021,
+          "plate": "21",
+          "first_registered": "2021-05",
+          "mileage": 34100,
+          "fuel": "Petrol hybrid",
+          "transmission": "Automatic (e-CVT)",
+          "body": "Estate",
+          "seats": 5,
           "colour": "Tyrol Silver metallic",
           "price_gbp": 16995,
           "previous_owners": 1,
@@ -44,8 +70,23 @@
           "mot_history_summary": "Three MOTs, all passes, no advisories.",
           "keys": 2,
           "photo_count": 40,
-          "notable_equipment": ["8-inch touchscreen with navigation", "reversing camera", "front and rear parking sensors", "heated front seats", "dual-zone climate", "Toyota Safety Sense (adaptive cruise, lane trace)", "LED headlights", "16-inch alloys"],
-          "seller": {"type": "franchised dealer (Toyota)", "name": "Lenton Toyota", "location": "Nottingham NG7", "distance_miles": 3, "reviews": "4.7/5 from 486 reviews"},
+          "notable_equipment": [
+            "8-inch touchscreen with navigation",
+            "reversing camera",
+            "front and rear parking sensors",
+            "heated front seats",
+            "dual-zone climate",
+            "Toyota Safety Sense (adaptive cruise, lane trace)",
+            "LED headlights",
+            "16-inch alloys"
+          ],
+          "seller": {
+            "type": "franchised dealer (Toyota)",
+            "name": "Lenton Toyota",
+            "location": "Nottingham NG7",
+            "distance_miles": 3,
+            "reviews": "4.7/5 from 486 reviews"
+          },
           "warranty": "12 months Toyota Approved Used warranty and roadside assistance; extendable with Toyota servicing",
           "days_listed": 11,
           "price_history": [],
@@ -55,9 +96,17 @@
           "id": "L02",
           "source": "AutoTrader",
           "title": "Toyota Corolla 1.8 VVT-i Hybrid Design Touring Sports CVT 5dr",
-          "make": "Toyota", "model": "Corolla Touring Sports", "derivative": "1.8 Hybrid Design CVT",
-          "year": 2021, "plate": "21", "first_registered": "2021-03",
-          "mileage": 41250, "fuel": "Petrol hybrid", "transmission": "Automatic (e-CVT)", "body": "Estate", "seats": 5,
+          "make": "Toyota",
+          "model": "Corolla Touring Sports",
+          "derivative": "1.8 Hybrid Design CVT",
+          "year": 2021,
+          "plate": "21",
+          "first_registered": "2021-03",
+          "mileage": 41250,
+          "fuel": "Petrol hybrid",
+          "transmission": "Automatic (e-CVT)",
+          "body": "Estate",
+          "seats": 5,
           "colour": "Oxide Bronze metallic",
           "price_gbp": 16495,
           "previous_owners": 1,
@@ -67,8 +116,24 @@
           "keys": 2,
           "photo_count": 24,
           "registration_shown_in_photos": "FE21 ***",
-          "notable_equipment": ["17-inch alloys", "rear privacy glass", "LED front fog lights", "reversing camera", "navigation", "heated front seats", "auto wipers", "auto-folding mirrors", "Toyota Safety Sense"],
-          "seller": {"type": "independent dealer", "name": "Trent Bridge Motor Company", "location": "West Bridgford NG2", "distance_miles": 4, "reviews": "4.5/5 from 97 reviews"},
+          "notable_equipment": [
+            "17-inch alloys",
+            "rear privacy glass",
+            "LED front fog lights",
+            "reversing camera",
+            "navigation",
+            "heated front seats",
+            "auto wipers",
+            "auto-folding mirrors",
+            "Toyota Safety Sense"
+          ],
+          "seller": {
+            "type": "independent dealer",
+            "name": "Trent Bridge Motor Company",
+            "location": "West Bridgford NG2",
+            "distance_miles": 4,
+            "reviews": "4.5/5 from 97 reviews"
+          },
           "warranty": "3 months dealer warranty, 12 months available",
           "days_listed": 23,
           "price_history": [],
@@ -78,9 +143,17 @@
           "id": "L03",
           "source": "Facebook Marketplace",
           "title": "Toyota Corolla hybrid estate 2020 Design",
-          "make": "Toyota", "model": "Corolla Touring Sports", "derivative": "1.8 Hybrid Design CVT (as described by seller)",
-          "year": 2020, "plate": "20", "first_registered": "2020-06",
-          "mileage": 62400, "fuel": "Petrol hybrid", "transmission": "Automatic", "body": "Estate", "seats": 5,
+          "make": "Toyota",
+          "model": "Corolla Touring Sports",
+          "derivative": "1.8 Hybrid Design CVT (as described by seller)",
+          "year": 2020,
+          "plate": "20",
+          "first_registered": "2020-06",
+          "mileage": 62400,
+          "fuel": "Petrol hybrid",
+          "transmission": "Automatic",
+          "body": "Estate",
+          "seats": 5,
           "colour": "Eclipse Black",
           "price_gbp": 13900,
           "previous_owners": 2,
@@ -89,8 +162,20 @@
           "mot_history_summary": "Four MOTs, all passes. 2024 advisory: 'both front tyres wearing on inner edges'. 2026 advisory: 'offside rear tyre worn close to legal limit'.",
           "keys": 2,
           "photo_count": 8,
-          "notable_equipment": ["17-inch alloys", "privacy glass", "reversing camera", "sat nav", "heated seats"],
-          "seller": {"type": "private seller", "name": "Marketplace user (joined 2019)", "location": "Beeston NG9", "distance_miles": 5, "reviews": null},
+          "notable_equipment": [
+            "17-inch alloys",
+            "privacy glass",
+            "reversing camera",
+            "sat nav",
+            "heated seats"
+          ],
+          "seller": {
+            "type": "private seller",
+            "name": "Marketplace user (joined 2019)",
+            "location": "Beeston NG9",
+            "distance_miles": 5,
+            "reviews": null
+          },
           "warranty": "none",
           "days_listed": 6,
           "price_history": [],
@@ -100,9 +185,17 @@
           "id": "L04",
           "source": "Motors.co.uk",
           "title": "Toyota Corolla Touring Sports 1.8 Hybrid Icon Tech 5dr CVT",
-          "make": "Toyota", "model": "Corolla Touring Sports", "derivative": "1.8 Hybrid Icon Tech CVT",
-          "year": 2020, "plate": "70", "first_registered": "2020-10",
-          "mileage": 52600, "fuel": "Petrol hybrid", "transmission": "Automatic (e-CVT)", "body": "Estate", "seats": 5,
+          "make": "Toyota",
+          "model": "Corolla Touring Sports",
+          "derivative": "1.8 Hybrid Icon Tech CVT",
+          "year": 2020,
+          "plate": "70",
+          "first_registered": "2020-10",
+          "mileage": 52600,
+          "fuel": "Petrol hybrid",
+          "transmission": "Automatic (e-CVT)",
+          "body": "Estate",
+          "seats": 5,
           "colour": "Pure White",
           "price_gbp": 14995,
           "previous_owners": 2,
@@ -111,20 +204,50 @@
           "mot_history_summary": "Three MOTs, all passes. 2025 advisory: 'rear brake discs worn, pitted or scored, but not seriously weakened'.",
           "keys": 2,
           "photo_count": 15,
-          "notable_equipment": ["navigation", "reversing camera", "parking sensors", "heated front seats", "dual-zone climate", "16-inch alloys"],
-          "seller": {"type": "independent dealer", "name": "Derby Road Car Sales", "location": "Derby DE1", "distance_miles": 16, "reviews": "4.1/5 from 38 reviews"},
+          "notable_equipment": [
+            "navigation",
+            "reversing camera",
+            "parking sensors",
+            "heated front seats",
+            "dual-zone climate",
+            "16-inch alloys"
+          ],
+          "seller": {
+            "type": "independent dealer",
+            "name": "Derby Road Car Sales",
+            "location": "Derby DE1",
+            "distance_miles": 16,
+            "reviews": "4.1/5 from 38 reviews"
+          },
           "warranty": "3 months dealer warranty",
           "days_listed": 47,
-          "price_history": [{"date": "2026-08-21", "price_gbp": 15495}, {"date": "2026-09-18", "price_gbp": 14995}],
+          "price_history": [
+            {
+              "date": "2026-08-21",
+              "price_gbp": 15495
+            },
+            {
+              "date": "2026-09-18",
+              "price_gbp": 14995
+            }
+          ],
           "description_excerpt": "Great value Corolla hybrid estate with sat nav and reversing camera. Drives superb, very economical. New MOT will be put on before collection. Warranty included, finance available."
         },
         {
           "id": "L05",
           "source": "Dealer website",
           "title": "Toyota Corolla 1.8 Hybrid Icon Tech Touring Sports - Pearl White - 2 Keys",
-          "make": "Toyota", "model": "Corolla Touring Sports", "derivative": "1.8 Hybrid Icon Tech CVT",
-          "year": 2021, "plate": "70", "first_registered": "2021-01",
-          "mileage": 58900, "fuel": "Petrol hybrid", "transmission": "Automatic (e-CVT)", "body": "Estate", "seats": 5,
+          "make": "Toyota",
+          "model": "Corolla Touring Sports",
+          "derivative": "1.8 Hybrid Icon Tech CVT",
+          "year": 2021,
+          "plate": "70",
+          "first_registered": "2021-01",
+          "mileage": 58900,
+          "fuel": "Petrol hybrid",
+          "transmission": "Automatic (e-CVT)",
+          "body": "Estate",
+          "seats": 5,
           "colour": "Pearl White",
           "price_gbp": 15795,
           "previous_owners": 2,
@@ -134,8 +257,22 @@
           "keys": 2,
           "photo_count": 31,
           "registration_shown_in_photos": "YK70 ***",
-          "notable_equipment": ["navigation", "reversing camera", "front and rear parking sensors", "heated front seats", "dual-zone climate", "adaptive cruise control", "16-inch alloys"],
-          "seller": {"type": "independent dealer", "name": "Mapperley Car Centre", "location": "Mapperley NG3", "distance_miles": 3, "reviews": "4.6/5 from 141 reviews (Google)"},
+          "notable_equipment": [
+            "navigation",
+            "reversing camera",
+            "front and rear parking sensors",
+            "heated front seats",
+            "dual-zone climate",
+            "adaptive cruise control",
+            "16-inch alloys"
+          ],
+          "seller": {
+            "type": "independent dealer",
+            "name": "Mapperley Car Centre",
+            "location": "Mapperley NG3",
+            "distance_miles": 3,
+            "reviews": "4.6/5 from 141 reviews (Google)"
+          },
           "warranty": "6 months dealer warranty included",
           "days_listed": 19,
           "price_history": [],
@@ -145,9 +282,17 @@
           "id": "L06",
           "source": "Motors.co.uk",
           "title": "Toyota Corolla 1.8 VVT-h Icon Tech Touring Sports CVT Euro 6 (s/s) 5dr",
-          "make": "Toyota", "model": "Corolla Touring Sports", "derivative": "1.8 Hybrid Icon Tech CVT",
-          "year": 2020, "plate": "20", "first_registered": "2020-03",
-          "mileage": 71300, "fuel": "Petrol hybrid", "transmission": "Automatic (e-CVT)", "body": "Estate", "seats": 5,
+          "make": "Toyota",
+          "model": "Corolla Touring Sports",
+          "derivative": "1.8 Hybrid Icon Tech CVT",
+          "year": 2020,
+          "plate": "20",
+          "first_registered": "2020-03",
+          "mileage": 71300,
+          "fuel": "Petrol hybrid",
+          "transmission": "Automatic (e-CVT)",
+          "body": "Estate",
+          "seats": 5,
           "colour": "Scarlet Flare",
           "price_gbp": 14250,
           "previous_owners": 2,
@@ -156,20 +301,49 @@
           "mot_history_summary": "Four MOTs, all passes. 2025 advisory: 'nearside front tyre worn close to legal limit'. 2026 advisory: 'rear brake discs worn, pitted or scored'.",
           "keys": 1,
           "photo_count": 20,
-          "notable_equipment": ["navigation", "reversing camera", "parking sensors", "heated front seats", "16-inch alloys"],
-          "seller": {"type": "car supermarket", "name": "Castle Marina Car Supermarket", "location": "Nottingham NG7", "distance_miles": 2, "reviews": "4.0/5 from 1,120 reviews"},
+          "notable_equipment": [
+            "navigation",
+            "reversing camera",
+            "parking sensors",
+            "heated front seats",
+            "16-inch alloys"
+          ],
+          "seller": {
+            "type": "car supermarket",
+            "name": "Castle Marina Car Supermarket",
+            "location": "Nottingham NG7",
+            "distance_miles": 2,
+            "reviews": "4.0/5 from 1,120 reviews"
+          },
           "warranty": "3 months included, upgrade available",
           "days_listed": 33,
-          "price_history": [{"date": "2026-09-04", "price_gbp": 14750}, {"date": "2026-09-27", "price_gbp": 14250}],
+          "price_history": [
+            {
+              "date": "2026-09-04",
+              "price_gbp": 14750
+            },
+            {
+              "date": "2026-09-27",
+              "price_gbp": 14250
+            }
+          ],
           "description_excerpt": "Reduced. Over 400 cars in stock. Low rate finance available. This Corolla hybrid estate comes with sat nav, reversing camera and heated seats. Second key may be available at extra cost."
         },
         {
           "id": "L07",
           "source": "Online retailer (Cazoo-style)",
           "title": "Toyota Corolla Touring Sports 1.8 VVT-i Hybrid Design CVT",
-          "make": "Toyota", "model": "Corolla Touring Sports", "derivative": "1.8 Hybrid Design CVT",
-          "year": 2022, "plate": "22", "first_registered": "2022-03",
-          "mileage": 28400, "fuel": "Petrol hybrid", "transmission": "Automatic (e-CVT)", "body": "Estate", "seats": 5,
+          "make": "Toyota",
+          "model": "Corolla Touring Sports",
+          "derivative": "1.8 Hybrid Design CVT",
+          "year": 2022,
+          "plate": "22",
+          "first_registered": "2022-03",
+          "mileage": 28400,
+          "fuel": "Petrol hybrid",
+          "transmission": "Automatic (e-CVT)",
+          "body": "Estate",
+          "seats": 5,
           "colour": "Manhattan Grey metallic",
           "price_gbp": 17450,
           "previous_owners": 1,
@@ -178,8 +352,23 @@
           "mot_history_summary": "Two MOTs, both passes, no advisories.",
           "keys": 2,
           "photo_count": 60,
-          "notable_equipment": ["17-inch alloys", "rear privacy glass", "LED front fog lights", "reversing camera", "navigation", "heated front seats", "auto wipers", "Toyota Safety Sense"],
-          "seller": {"type": "online retailer, delivered to your door", "name": "Drivvo", "location": "East Midlands hub, Castle Donington", "distance_miles": null, "reviews": "4.4/5 Trustpilot"},
+          "notable_equipment": [
+            "17-inch alloys",
+            "rear privacy glass",
+            "LED front fog lights",
+            "reversing camera",
+            "navigation",
+            "heated front seats",
+            "auto wipers",
+            "Toyota Safety Sense"
+          ],
+          "seller": {
+            "type": "online retailer, delivered to your door",
+            "name": "Drivvo",
+            "location": "East Midlands hub, Castle Donington",
+            "distance_miles": null,
+            "reviews": "4.4/5 Trustpilot"
+          },
           "warranty": "90-day warranty, 14-day money-back return, price includes home delivery",
           "days_listed": 15,
           "price_history": [],
@@ -189,9 +378,17 @@
           "id": "L08",
           "source": "Motors.co.uk",
           "title": "Toyota Corolla 1.8 VVT-h Design Tech Touring Sports CVT 5dr",
-          "make": "Toyota", "model": "Corolla Touring Sports", "derivative": "1.8 Hybrid Design Tech CVT (as listed)",
-          "year": 2021, "plate": "21", "first_registered": "2021-03",
-          "mileage": 41180, "fuel": "Petrol hybrid", "transmission": "Automatic (e-CVT)", "body": "Estate", "seats": 5,
+          "make": "Toyota",
+          "model": "Corolla Touring Sports",
+          "derivative": "1.8 Hybrid Design Tech CVT (as listed)",
+          "year": 2021,
+          "plate": "21",
+          "first_registered": "2021-03",
+          "mileage": 41180,
+          "fuel": "Petrol hybrid",
+          "transmission": "Automatic (e-CVT)",
+          "body": "Estate",
+          "seats": 5,
           "colour": "Bronze metallic",
           "price_gbp": 16295,
           "previous_owners": 1,
@@ -200,20 +397,51 @@
           "mot_history_summary": "Three MOTs, all passes, no advisories.",
           "keys": 2,
           "photo_count": 9,
-          "notable_equipment": ["17-inch alloys", "privacy glass", "navigation", "reversing camera", "heated seats", "fog lights", "Toyota Safety Sense"],
-          "seller": {"type": "independent dealer", "name": "TBMC Ltd", "location": "West Bridgford NG2", "distance_miles": 4, "reviews": "4.5/5 from 61 reviews"},
+          "notable_equipment": [
+            "17-inch alloys",
+            "privacy glass",
+            "navigation",
+            "reversing camera",
+            "heated seats",
+            "fog lights",
+            "Toyota Safety Sense"
+          ],
+          "seller": {
+            "type": "independent dealer",
+            "name": "TBMC Ltd",
+            "location": "West Bridgford NG2",
+            "distance_miles": 4,
+            "reviews": "4.5/5 from 61 reviews"
+          },
           "warranty": "warranty included",
           "days_listed": 31,
-          "price_history": [{"date": "2026-09-06", "price_gbp": 16495}, {"date": "2026-10-01", "price_gbp": 16295}],
+          "price_history": [
+            {
+              "date": "2026-09-06",
+              "price_gbp": 16495
+            },
+            {
+              "date": "2026-10-01",
+              "price_gbp": 16295
+            }
+          ],
           "description_excerpt": "One owner Design in bronze metallic with black cloth, 17in alloys and privacy glass, serviced at Toyota every year from new. Two keys, HPI clear, warranty included. PX welcome."
         },
         {
           "id": "L09",
           "source": "AutoTrader",
           "title": "Toyota Corolla 1.8 VVT-i Hybrid Design Touring Sports CVT 5dr",
-          "make": "Toyota", "model": "Corolla Touring Sports", "derivative": "1.8 Hybrid Design CVT",
-          "year": 2021, "plate": "21", "first_registered": "2021-06",
-          "mileage": 38200, "fuel": "Petrol hybrid", "transmission": "Automatic (e-CVT)", "body": "Estate", "seats": 5,
+          "make": "Toyota",
+          "model": "Corolla Touring Sports",
+          "derivative": "1.8 Hybrid Design CVT",
+          "year": 2021,
+          "plate": "21",
+          "first_registered": "2021-06",
+          "mileage": 38200,
+          "fuel": "Petrol hybrid",
+          "transmission": "Automatic (e-CVT)",
+          "body": "Estate",
+          "seats": 5,
           "colour": "Denim Blue metallic",
           "price_gbp": 15995,
           "previous_owners": 1,
@@ -222,20 +450,57 @@
           "mot_history_summary": "Three MOTs, all passes, no advisories.",
           "keys": 2,
           "photo_count": 28,
-          "notable_equipment": ["17-inch alloys", "rear privacy glass", "LED front fog lights", "reversing camera", "navigation", "heated front seats", "auto wipers", "auto-folding mirrors", "Toyota Safety Sense"],
-          "seller": {"type": "independent dealer", "name": "Arnold Autos", "location": "Arnold NG5", "distance_miles": 2, "reviews": "4.8/5 from 203 reviews"},
+          "notable_equipment": [
+            "17-inch alloys",
+            "rear privacy glass",
+            "LED front fog lights",
+            "reversing camera",
+            "navigation",
+            "heated front seats",
+            "auto wipers",
+            "auto-folding mirrors",
+            "Toyota Safety Sense"
+          ],
+          "seller": {
+            "type": "independent dealer",
+            "name": "Arnold Autos",
+            "location": "Arnold NG5",
+            "distance_miles": 2,
+            "reviews": "4.8/5 from 203 reviews"
+          },
           "warranty": "3 months dealer warranty, 12 months available at £299",
           "days_listed": 58,
-          "price_history": [{"date": "2026-08-10", "price_gbp": 16495}, {"date": "2026-09-05", "price_gbp": 16250}, {"date": "2026-09-26", "price_gbp": 15995}],
+          "price_history": [
+            {
+              "date": "2026-08-10",
+              "price_gbp": 16495
+            },
+            {
+              "date": "2026-09-05",
+              "price_gbp": 16250
+            },
+            {
+              "date": "2026-09-26",
+              "price_gbp": 15995
+            }
+          ],
           "description_excerpt": "Reduced again to clear. One owner from new with a full Toyota main dealer service history, the last service done at Toyota in August with invoices in the file. Two keys, HPI clear, 17in alloys, privacy glass, reversing camera. Any inspection welcome, part exchange welcome."
         },
         {
           "id": "L10",
           "source": "eBay Motors",
           "title": "2021 70 Toyota Corolla 1.8 Hybrid Icon Tech Estate Auto Pearl White 2 Keys",
-          "make": "Toyota", "model": "Corolla Touring Sports", "derivative": "1.8 Hybrid Icon Tech CVT",
-          "year": 2021, "plate": "70", "first_registered": "2021-01",
-          "mileage": 59200, "fuel": "Petrol hybrid", "transmission": "Automatic", "body": "Estate", "seats": 5,
+          "make": "Toyota",
+          "model": "Corolla Touring Sports",
+          "derivative": "1.8 Hybrid Icon Tech CVT",
+          "year": 2021,
+          "plate": "70",
+          "first_registered": "2021-01",
+          "mileage": 59200,
+          "fuel": "Petrol hybrid",
+          "transmission": "Automatic",
+          "body": "Estate",
+          "seats": 5,
           "colour": "Pearl White",
           "price_gbp": 15695,
           "previous_owners": 2,
@@ -244,8 +509,21 @@
           "mot_history_summary": "Three MOTs, all passes, no advisories.",
           "keys": 2,
           "photo_count": 12,
-          "notable_equipment": ["sat nav", "reversing camera", "parking sensors", "heated seats", "adaptive cruise", "climate control"],
-          "seller": {"type": "business seller (eBay)", "name": "nottsautosdirect", "location": "Nottingham NG3", "distance_miles": 3, "reviews": "99.1% positive (312)"},
+          "notable_equipment": [
+            "sat nav",
+            "reversing camera",
+            "parking sensors",
+            "heated seats",
+            "adaptive cruise",
+            "climate control"
+          ],
+          "seller": {
+            "type": "business seller (eBay)",
+            "name": "nottsautosdirect",
+            "location": "Nottingham NG3",
+            "distance_miles": 3,
+            "reviews": "99.1% positive (312)"
+          },
           "warranty": "3 months warranty",
           "days_listed": 9,
           "price_history": [],
@@ -255,9 +533,17 @@
           "id": "L11",
           "source": "AutoTrader",
           "title": "Toyota Corolla 1.8 VVT-i Hybrid Design Touring Sports CVT 5dr",
-          "make": "Toyota", "model": "Corolla Touring Sports", "derivative": "1.8 Hybrid Design CVT",
-          "year": 2022, "plate": "22", "first_registered": "2022-03",
-          "mileage": 28650, "fuel": "Petrol hybrid", "transmission": "Automatic (e-CVT)", "body": "Estate", "seats": 5,
+          "make": "Toyota",
+          "model": "Corolla Touring Sports",
+          "derivative": "1.8 Hybrid Design CVT",
+          "year": 2022,
+          "plate": "22",
+          "first_registered": "2022-03",
+          "mileage": 28650,
+          "fuel": "Petrol hybrid",
+          "transmission": "Automatic (e-CVT)",
+          "body": "Estate",
+          "seats": 5,
           "colour": "Manhattan Grey metallic",
           "price_gbp": 17250,
           "previous_owners": 1,
@@ -266,20 +552,51 @@
           "mot_history_summary": "Two MOTs, both passes, no advisories.",
           "keys": 2,
           "photo_count": 42,
-          "notable_equipment": ["17-inch alloys", "rear privacy glass", "LED front fog lights", "reversing camera", "navigation", "heated front seats", "Toyota Safety Sense"],
-          "seller": {"type": "online retailer", "name": "DRV Cars (East Midlands)", "location": "Castle Donington DE74", "distance_miles": 14, "reviews": "4.4/5 from 2,908 reviews"},
+          "notable_equipment": [
+            "17-inch alloys",
+            "rear privacy glass",
+            "LED front fog lights",
+            "reversing camera",
+            "navigation",
+            "heated front seats",
+            "Toyota Safety Sense"
+          ],
+          "seller": {
+            "type": "online retailer",
+            "name": "DRV Cars (East Midlands)",
+            "location": "Castle Donington DE74",
+            "distance_miles": 14,
+            "reviews": "4.4/5 from 2,908 reviews"
+          },
           "warranty": "90 days included, 14-day returns",
           "days_listed": 15,
-          "price_history": [{"date": "2026-09-22", "price_gbp": 17450}, {"date": "2026-10-03", "price_gbp": 17250}],
+          "price_history": [
+            {
+              "date": "2026-09-22",
+              "price_gbp": 17450
+            },
+            {
+              "date": "2026-10-03",
+              "price_gbp": 17250
+            }
+          ],
           "description_excerpt": "Fully inspected and prepared. One previous keeper, full service history, two keys. Delivery available nationwide or collect from our East Midlands hub. 14-day returns."
         },
         {
           "id": "L12",
           "source": "eBay Motors",
           "title": "2022 22 Toyota Corolla 1.8 Hybrid Icon Tech Touring Sports Auto 1 Owner FSH",
-          "make": "Toyota", "model": "Corolla Touring Sports", "derivative": "1.8 Hybrid Icon Tech CVT",
-          "year": 2022, "plate": "22", "first_registered": "2022-05",
-          "mileage": 44900, "fuel": "Petrol hybrid", "transmission": "Automatic (e-CVT)", "body": "Estate", "seats": 5,
+          "make": "Toyota",
+          "model": "Corolla Touring Sports",
+          "derivative": "1.8 Hybrid Icon Tech CVT",
+          "year": 2022,
+          "plate": "22",
+          "first_registered": "2022-05",
+          "mileage": 44900,
+          "fuel": "Petrol hybrid",
+          "transmission": "Automatic (e-CVT)",
+          "body": "Estate",
+          "seats": 5,
           "colour": "Decuma Grey metallic",
           "price_gbp": 16850,
           "previous_owners": 1,
@@ -288,8 +605,22 @@
           "mot_history_summary": "Two MOTs, both passes. 2026 advisory: 'nearside front tyre worn close to legal limit'.",
           "keys": 2,
           "photo_count": 18,
-          "notable_equipment": ["navigation", "reversing camera", "front and rear parking sensors", "heated front seats", "dual-zone climate", "16-inch alloys", "Toyota Safety Sense"],
-          "seller": {"type": "independent dealer (eBay business seller)", "name": "Ilkeston Trade Cars", "location": "Ilkeston DE7", "distance_miles": 9, "reviews": "98.4% positive (188)"},
+          "notable_equipment": [
+            "navigation",
+            "reversing camera",
+            "front and rear parking sensors",
+            "heated front seats",
+            "dual-zone climate",
+            "16-inch alloys",
+            "Toyota Safety Sense"
+          ],
+          "seller": {
+            "type": "independent dealer (eBay business seller)",
+            "name": "Ilkeston Trade Cars",
+            "location": "Ilkeston DE7",
+            "distance_miles": 9,
+            "reviews": "98.4% positive (188)"
+          },
           "warranty": "3 months dealer warranty",
           "days_listed": 12,
           "price_history": [],
@@ -331,16 +662,102 @@
     ],
     "escalation_expected": "unnecessary",
     "deterministic_checks": [
-      {"id": "counts_nine", "kind": "mentions_any", "description": "States there are nine distinct cars", "patterns": ["\\bnine\\b", "\\b9\\b.{0,40}(distinct|different|unique|individual|separate|genuine|genuinely|actual|physical|real)", "(distinct|different|unique|separate|genuine|genuinely|actual|physical|real)[^.]{0,40}\\b9\\b", "\\b9 cars\\b", "nine cars", "9 (vehicles|listings)"]},
-      {"id": "flags_duplicates", "kind": "mentions_any", "description": "Identifies duplicate listings", "patterns": ["duplicate", "same (physical )?car", "same vehicle", "listed twice", "double[- ]listed", "cross[- ]listed", "advertised (on|in) (both|two)", "appears? (on|in) (both|two)", "two (adverts|listings) for"]},
-      {"id": "names_a_pair", "kind": "mentions_any", "description": "Pairs at least one duplicate set by id", "patterns": ["L02.{0,40}L08", "L08.{0,40}L02", "L05.{0,40}L10", "L10.{0,40}L05", "L07.{0,40}L11", "L11.{0,40}L07"]},
-      {"id": "shortlists_best_value", "kind": "vehicles_include", "description": "Shortlist includes L09 or L01, the strongest distinct cars", "values": ["L09", "L01"]},
-      {"id": "not_dearer_duplicate", "kind": "vehicles_exclude", "description": "Does not shortlist the dearer listing of any duplicate pair", "values": ["L02", "L05", "L07"]},
-      {"id": "facebook_history", "kind": "mentions_any", "description": "Flags the private Facebook listing's lack of evidenced history", "patterns": ["L03", "facebook", "private (seller|sale|listing|advert)", "no (service )?(invoices|receipts|records|evidence)", "unverified history", "can't be (verified|evidenced)", "cannot be (verified|evidenced)"]},
-      {"id": "recommendation_shortlist", "kind": "field_in", "description": "Produces a shortlist", "field": "recommendation", "values": ["shortlist"]},
-      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a search review step"}
+      {
+        "id": "counts_nine",
+        "kind": "mentions_any",
+        "description": "States there are nine distinct cars",
+        "patterns": [
+          "\\bnine\\b",
+          "\\b9\\b.{0,40}(distinct|different|unique|individual|separate|genuine|genuinely|actual|physical|real)",
+          "(distinct|different|unique|separate|genuine|genuinely|actual|physical|real)[^.]{0,40}\\b9\\b",
+          "\\b9 cars\\b",
+          "nine cars",
+          "9 (vehicles|listings)"
+        ]
+      },
+      {
+        "id": "flags_duplicates",
+        "kind": "mentions_any",
+        "description": "Identifies duplicate listings",
+        "patterns": [
+          "duplicate",
+          "same (physical )?car",
+          "same vehicle",
+          "listed twice",
+          "double[- ]listed",
+          "cross[- ]listed",
+          "advertised (on|in) (both|two)",
+          "appears? (on|in) (both|two)",
+          "two (adverts|listings) for"
+        ]
+      },
+      {
+        "id": "names_a_pair",
+        "kind": "mentions_any",
+        "description": "Pairs at least one duplicate set by id",
+        "patterns": [
+          "L02.{0,40}L08",
+          "L08.{0,40}L02",
+          "L05.{0,40}L10",
+          "L10.{0,40}L05",
+          "L07.{0,40}L11",
+          "L11.{0,40}L07"
+        ]
+      },
+      {
+        "id": "shortlists_best_value",
+        "kind": "vehicles_include",
+        "description": "Shortlist includes L09 or L01, the strongest distinct cars",
+        "values": [
+          "L09",
+          "L01"
+        ]
+      },
+      {
+        "id": "not_dearer_duplicate",
+        "kind": "vehicles_exclude",
+        "description": "Does not shortlist the dearer listing of any duplicate pair",
+        "values": [
+          "L02",
+          "L05",
+          "L07"
+        ]
+      },
+      {
+        "id": "facebook_history",
+        "kind": "mentions_any",
+        "description": "Flags the private Facebook listing's lack of evidenced history",
+        "patterns": [
+          "L03",
+          "facebook",
+          "private (seller|sale|listing|advert)",
+          "no (service )?(invoices|receipts|records|evidence)",
+          "unverified history",
+          "can't be (verified|evidenced)",
+          "cannot be (verified|evidenced)"
+        ]
+      },
+      {
+        "id": "recommendation_shortlist",
+        "kind": "field_in",
+        "description": "Produces a shortlist",
+        "field": "recommendation",
+        "values": [
+          "shortlist"
+        ]
+      },
+      {
+        "id": "no_escalation",
+        "kind": "escalation",
+        "description": "Does not hand off at a search review step"
+      }
     ],
     "expert_notes": "An experienced operator would spot the doubles in a minute: same postcode district, same colour, same first-registration month, same MOT expiry and the same sentence in the advert is the same car, whatever the trim string says. So nine cars, and the call list is short. L09 at Arnold Autos is the one to see first: one owner, Toyota history with August invoices, two keys, two miles away and the dealer has already cut it three times in two months, so there is room below £15,995. L01 at Lenton Toyota is the safe alternative if the buyer values the Approved Used warranty for a seven-year keep. L11 is the one to see if they want the newest car and can live with £17,250 and a 90-day warranty. L08 is a fair fourth. Walk past L03 unless the seller produces invoices and agrees to an HPI; walk past L06 for the single key and part history. What would change the view: if L09's invoices do not match the advert, or the Approved Used warranty terms turn out to require Toyota servicing the buyer will not pay for.",
-    "failure_categories_at_risk": ["search", "comparator_selection", "vehicle_history", "uncertainty_handling"]
+    "failure_categories_at_risk": [
+      "search",
+      "comparator_selection",
+      "vehicle_history",
+      "uncertainty_handling"
+    ]
   }
 }

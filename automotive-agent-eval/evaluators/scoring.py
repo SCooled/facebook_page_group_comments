@@ -30,7 +30,7 @@ def escalation_appropriate(block: StructuredBlock | None, expected: str) -> bool
 
 def score_run(run: RunRecord, case: Case, det: list[DeterministicResult], judge: JudgeResult | None,
               judge_provider: str | None, judge_model: str | None, judge_error: str | None,
-              scoring_cfg: dict) -> ScoredRecord:
+              scoring_cfg: dict, judge_cost: float | None = None) -> ScoredRecord:
     weights = scoring_cfg["weights"]
     sa = scoring_cfg["safe_autonomous"]
 
@@ -75,4 +75,7 @@ def score_run(run: RunRecord, case: Case, det: list[DeterministicResult], judge:
         escalation_appropriate=escalation_appropriate(run.structured, case.hidden.escalation_expected),
         safe_autonomous=safe,
         task_completed=completed,
+        valid=bool(judge and run.structured is not None and not run.error),
+        judge_cost=judge_cost,
+        quality=None if ws is None else (0.0 if cf else round(ws / 100, 4)),
     )

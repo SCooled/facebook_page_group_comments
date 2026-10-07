@@ -7,6 +7,13 @@
   "variant_of": null,
   "journey_id": null,
   "journey_step": null,
+  "primitives": [
+    "extract",
+    "classify",
+    "communicate"
+  ],
+  "primary_primitive": "communicate",
+  "expected_class": "general",
   "candidate_visible": {
     "scenario": "A buyer has contacted you for help choosing a used car. So far they have given you a budget and one sentence of preference and nothing else: no location, no household details, no mileage, no must-haves. No searches have been run and no listings are available to you. Today is 7 October 2026.",
     "user_context": {
@@ -45,15 +52,87 @@
     ],
     "escalation_expected": "unnecessary",
     "deterministic_checks": [
-      {"id": "clarifies_not_commits", "kind": "field_in", "description": "Recommendation is to clarify requirements or sketch a shortlist of archetypes, not proceed", "field": "recommendation", "values": ["clarify_requirements", "shortlist"]},
-      {"id": "asks_three_questions", "kind": "list_nonempty", "description": "At least three questions for the buyer", "field": "questions_for_user", "min_items": 3},
-      {"id": "no_vehicle_ids", "kind": "vehicles_subset", "description": "No listings exist, so no vehicle ids may be recommended", "values": []},
-      {"id": "practicality_space", "kind": "mentions_any", "description": "Raises boot or rear-seat usability as a dimension of 'practical'", "patterns": ["boot", "rear seat", "back seat", "rear leg", "luggage", "load space", "child seat", "ISOFIX", "five doors", "5[- ]door"]},
-      {"id": "running_costs", "kind": "mentions_any", "description": "Raises running cost or insurance as a dimension of 'practical'", "patterns": ["running cost", "insurance", "mpg", "fuel economy", "fuel cost", "road tax", "VED", "tyre", "servicing"]},
-      {"id": "body_style_archetypes", "kind": "mentions_any", "description": "Mentions estate or hatch body styles as interpretation options", "patterns": ["estate", "hot hatch", "hatchback", "hatch", "crossover", "coup[eé]", "saloon"]},
-      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a requirements step"}
+      {
+        "id": "clarifies_not_commits",
+        "kind": "field_in",
+        "description": "Recommendation is to clarify requirements or sketch a shortlist of archetypes, not proceed",
+        "field": "recommendation",
+        "values": [
+          "clarify_requirements",
+          "shortlist"
+        ]
+      },
+      {
+        "id": "asks_three_questions",
+        "kind": "list_nonempty",
+        "description": "At least three questions for the buyer",
+        "field": "questions_for_user",
+        "min_items": 3
+      },
+      {
+        "id": "no_vehicle_ids",
+        "kind": "vehicles_subset",
+        "description": "No listings exist, so no vehicle ids may be recommended",
+        "values": []
+      },
+      {
+        "id": "practicality_space",
+        "kind": "mentions_any",
+        "description": "Raises boot or rear-seat usability as a dimension of 'practical'",
+        "patterns": [
+          "boot",
+          "rear seat",
+          "back seat",
+          "rear leg",
+          "luggage",
+          "load space",
+          "child seat",
+          "ISOFIX",
+          "five doors",
+          "5[- ]door"
+        ]
+      },
+      {
+        "id": "running_costs",
+        "kind": "mentions_any",
+        "description": "Raises running cost or insurance as a dimension of 'practical'",
+        "patterns": [
+          "running cost",
+          "insurance",
+          "mpg",
+          "fuel economy",
+          "fuel cost",
+          "road tax",
+          "VED",
+          "tyre",
+          "servicing"
+        ]
+      },
+      {
+        "id": "body_style_archetypes",
+        "kind": "mentions_any",
+        "description": "Mentions estate or hatch body styles as interpretation options",
+        "patterns": [
+          "estate",
+          "hot hatch",
+          "hatchback",
+          "hatch",
+          "crossover",
+          "coup[eé]",
+          "saloon"
+        ]
+      },
+      {
+        "id": "no_escalation",
+        "kind": "escalation",
+        "description": "Does not hand off at a requirements step"
+      }
     ],
     "expert_notes": "An experienced operator would not even open a search on this brief. They would reflect the two words back as a set of choices: how much of 'sporty' is pace versus looks, and how much of 'practical' is rear seats and boot versus running costs and insurance. They would offer three pictures at £18,000 so the buyer can point at one: a hot hatch (Fiesta ST, i30 N, Golf GTI) for maximum fun and least space; a fast estate (Octavia vRS, Leon ST Cupra) for most of the pace with real family room and often 45+ mpg in diesel form; or a sporty crossover (Formentor, Puma ST) if the look and the high seat matter more than the drive. Then they would ask about passengers, mileage, gearbox and driver age, because an under-25 driver changes the insurance picture enough to rule out half the list. Anything more specific than that at this stage is guesswork dressed up as advice.",
-    "failure_categories_at_risk": ["requirements_interpretation", "uncertainty_handling", "hallucination_unsupported_fact"]
+    "failure_categories_at_risk": [
+      "requirements_interpretation",
+      "uncertainty_handling",
+      "hallucination_unsupported_fact"
+    ]
   }
 }

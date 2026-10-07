@@ -7,14 +7,32 @@
   "variant_of": null,
   "journey_id": null,
   "journey_step": null,
+  "primitives": [
+    "predict",
+    "estimate",
+    "optimise"
+  ],
+  "primary_primitive": "predict",
+  "expected_class": "hybrid",
   "candidate_visible": {
     "scenario": "The buyer has been watching a Kia Sportage at a franchised Kia dealer for six weeks. The price has dropped three times while they have watched it. They have viewed and test driven it, are happy with the car, and want advice on timing and on what to offer. Today is 7 October 2026 (Tuesday).",
     "user_context": {
       "location": "Wokingham, RG41",
       "household": "two adults, one child aged 3, second due in spring",
       "budget_gbp_max_all_in": 22500,
-      "hard_requirements": ["mid-size SUV", "petrol", "manual or automatic", "under 40,000 miles", "manufacturer warranty remaining", "ISOFIX x2"],
-      "priorities_in_order": ["warranty and reliability", "value", "boot space"],
+      "hard_requirements": [
+        "mid-size SUV",
+        "petrol",
+        "manual or automatic",
+        "under 40,000 miles",
+        "manufacturer warranty remaining",
+        "ISOFIX x2"
+      ],
+      "priorities_in_order": [
+        "warranty and reliability",
+        "value",
+        "boot space"
+      ],
       "annual_mileage": 11000,
       "usage": "nursery runs, commuting to Reading twice a week, visiting family in Devon",
       "ownership_horizon_years": 6,
@@ -32,10 +50,18 @@
         "id": "L01",
         "source": "AutoTrader and dealer website",
         "title": "Kia Sportage 1.6 T-GDi ISG 3 5dr",
-        "make": "Kia", "model": "Sportage", "derivative": "1.6 T-GDi 150 ISG 3 5dr manual",
+        "make": "Kia",
+        "model": "Sportage",
+        "derivative": "1.6 T-GDi 150 ISG 3 5dr manual",
         "generation": "NQ5 (2022-)",
-        "year": 2022, "plate": "22", "first_registered": "2022-05",
-        "mileage": 31400, "fuel": "Petrol", "transmission": "Manual (6-speed)", "body": "SUV", "seats": 5,
+        "year": 2022,
+        "plate": "22",
+        "first_registered": "2022-05",
+        "mileage": 31400,
+        "fuel": "Petrol",
+        "transmission": "Manual (6-speed)",
+        "body": "SUV",
+        "seats": 5,
         "colour": "Penta Metal grey",
         "price_gbp": 21495,
         "previous_owners": 1,
@@ -43,29 +69,117 @@
         "warranty": "Kia 7-year/100,000-mile warranty, transferable, runs to 2029-05 (remaining: 2 years 7 months or to 100,000 miles)",
         "mot_expiry": "2027-05-11",
         "mot_history_summary": "One MOT (May 2025), pass, no advisories.",
-        "notable_equipment": ["19in alloy wheels", "12.3in touchscreen navigation with 12.3in digital cluster", "black leather and suede seats", "heated front and rear seats, heated steering wheel", "wireless phone charger", "smart key", "reversing camera, front and rear sensors", "LED headlights", "Smart Cruise Control", "Highway Driving Assist", "ISOFIX rear outer seats"],
-        "seller": {"type": "franchised dealer (Kia)", "name": "Thames Valley Kia Reading", "location": "Reading, RG2", "distance_miles": 8, "reviews": "4.5/5 from 640 reviews"},
+        "notable_equipment": [
+          "19in alloy wheels",
+          "12.3in touchscreen navigation with 12.3in digital cluster",
+          "black leather and suede seats",
+          "heated front and rear seats, heated steering wheel",
+          "wireless phone charger",
+          "smart key",
+          "reversing camera, front and rear sensors",
+          "LED headlights",
+          "Smart Cruise Control",
+          "Highway Driving Assist",
+          "ISOFIX rear outer seats"
+        ],
+        "seller": {
+          "type": "franchised dealer (Kia)",
+          "name": "Thames Valley Kia Reading",
+          "location": "Reading, RG2",
+          "distance_miles": 8,
+          "reviews": "4.5/5 from 640 reviews"
+        },
         "preparation": "Kia Approved Used: 12 months Kia roadside assistance, pre-delivery inspection, MOT if less than 6 months, service if due",
         "days_listed": 44,
         "price_history": [
-          {"date": "2026-08-24", "price_gbp": 22995, "note": "listed"},
-          {"date": "2026-09-07", "price_gbp": 22495},
-          {"date": "2026-09-21", "price_gbp": 21995},
-          {"date": "2026-10-05", "price_gbp": 21495}
+          {
+            "date": "2026-08-24",
+            "price_gbp": 22995,
+            "note": "listed"
+          },
+          {
+            "date": "2026-09-07",
+            "price_gbp": 22495
+          },
+          {
+            "date": "2026-09-21",
+            "price_gbp": 21995
+          },
+          {
+            "date": "2026-10-05",
+            "price_gbp": 21495
+          }
         ],
         "description_excerpt": "Kia Approved Used Sportage '3' in Penta Metal with the balance of Kia's 7 year warranty to 2029. One owner, full Kia service history, 19in alloys, heated seats front and rear, big screen navigation. Finance available with £500 Kia finance deposit contribution. Price now reduced.",
         "dealer_stock_observations": "The buyer counted 28 used Sportages across the dealer group's four sites on 6 October, up from 19 when they first looked in late August. Several are 2022-2023 cars with similar mileage."
       },
       "comparables": [
-        {"id": "C1", "source": "AutoTrader", "title": "Kia Sportage 1.6 T-GDi ISG 3 5dr", "year": 2022, "plate": "22", "mileage": 28700, "previous_owners": 1, "service_history": "full Kia history", "price_gbp": 22250, "seller_type": "franchised dealer (Kia)", "distance_miles": 19, "days_listed": 12},
-        {"id": "C2", "source": "AutoTrader", "title": "Kia Sportage 1.6 T-GDi ISG 3 5dr", "year": 2022, "plate": "72", "mileage": 33900, "previous_owners": 1, "service_history": "full Kia history", "price_gbp": 21750, "seller_type": "independent dealer", "distance_miles": 24, "days_listed": 30},
-        {"id": "C3", "source": "Motors.co.uk", "title": "Kia Sportage 1.6 T-GDi ISG 3 5dr", "year": 2022, "plate": "22", "mileage": 25100, "previous_owners": 2, "service_history": "full Kia history", "price_gbp": 22900, "seller_type": "franchised dealer (Kia)", "distance_miles": 31, "days_listed": 10},
-        {"id": "C4", "source": "AutoTrader", "title": "Kia Sportage 1.6 T-GDi ISG 3 5dr", "year": 2022, "plate": "22", "mileage": 36200, "previous_owners": 1, "service_history": "full Kia history", "price_gbp": 21995, "seller_type": "car supermarket", "distance_miles": 27, "days_listed": 22}
+        {
+          "id": "C1",
+          "source": "AutoTrader",
+          "title": "Kia Sportage 1.6 T-GDi ISG 3 5dr",
+          "year": 2022,
+          "plate": "22",
+          "mileage": 28700,
+          "previous_owners": 1,
+          "service_history": "full Kia history",
+          "price_gbp": 22250,
+          "seller_type": "franchised dealer (Kia)",
+          "distance_miles": 19,
+          "days_listed": 12
+        },
+        {
+          "id": "C2",
+          "source": "AutoTrader",
+          "title": "Kia Sportage 1.6 T-GDi ISG 3 5dr",
+          "year": 2022,
+          "plate": "72",
+          "mileage": 33900,
+          "previous_owners": 1,
+          "service_history": "full Kia history",
+          "price_gbp": 21750,
+          "seller_type": "independent dealer",
+          "distance_miles": 24,
+          "days_listed": 30
+        },
+        {
+          "id": "C3",
+          "source": "Motors.co.uk",
+          "title": "Kia Sportage 1.6 T-GDi ISG 3 5dr",
+          "year": 2022,
+          "plate": "22",
+          "mileage": 25100,
+          "previous_owners": 2,
+          "service_history": "full Kia history",
+          "price_gbp": 22900,
+          "seller_type": "franchised dealer (Kia)",
+          "distance_miles": 31,
+          "days_listed": 10
+        },
+        {
+          "id": "C4",
+          "source": "AutoTrader",
+          "title": "Kia Sportage 1.6 T-GDi ISG 3 5dr",
+          "year": 2022,
+          "plate": "22",
+          "mileage": 36200,
+          "previous_owners": 1,
+          "service_history": "full Kia history",
+          "price_gbp": 21995,
+          "seller_type": "car supermarket",
+          "distance_miles": 27,
+          "days_listed": 22
+        }
       ],
       "comparables_note": "Comparables are 2022 Sportage 3 1.6 T-GDi manuals within 35 miles, listed 10-30 days. The target is now the cheapest of the group and the only one with more than 40 days on sale. The buyer has no trade valuation guide figure."
     },
     "dealer_messages": [
-      {"date": "2026-10-05", "from": "Priya (sales executive)", "channel": "text", "text": "Hi, just to let you know the Sportage you drove has come down to £21,495 as of today. Still got the other couple looking at it from Saturday. The price is what it is at the moment but come back to me with a number if you're serious and I'll put it to my manager."}
+      {
+        "date": "2026-10-05",
+        "from": "Priya (sales executive)",
+        "channel": "text",
+        "text": "Hi, just to let you know the Sportage you drove has come down to £21,495 as of today. Still got the other couple looking at it from Saturday. The price is what it is at the moment but come back to me with a number if you're serious and I'll put it to my manager."
+      }
     ],
     "user_message": "They keep dropping the price. Should I wait for it to drop again or make a move, and what would you offer?"
   },
@@ -98,15 +212,87 @@
     ],
     "escalation_expected": "unnecessary",
     "deterministic_checks": [
-      {"id": "opening_offer", "kind": "figure_close", "description": "Opening offer in the evidence-based band", "field": "opening_offer_gbp", "value": 20850, "tolerance": 350},
-      {"id": "target_price", "kind": "figure_close", "description": "Target price in the evidence-based band", "field": "target_price_gbp", "value": 21050, "tolerance": 300},
-      {"id": "stock_age_reasoning", "kind": "mentions_any", "description": "Infers a stock-age or stocking policy / motivated seller", "patterns": ["stock age", "60[- ]day", "90[- ]day", "days in stock", "aged stock", "stocking policy", "stock policy", "motivated", "fortnight", "every (two weeks|14 days|2 weeks)", "day 56", "next (cut|reduction|drop)"]},
-      {"id": "warranty", "kind": "mentions_any", "description": "Mentions the Kia warranty", "patterns": ["warranty", "7[- ]year", "2029"]},
-      {"id": "quarter_or_plate_inference", "kind": "mentions_any", "description": "Mentions quarter-end or plate-change context", "patterns": ["quarter", "plate change", "new plate", "September", "part[- ]exchange stock", "stock levels", "28 (used )?Sportages", "19 to 28"]},
-      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a negotiation-planning step"},
-      {"id": "recommendation_negotiate", "kind": "field_in", "description": "Recommends negotiating", "field": "recommendation", "values": ["negotiate"]}
+      {
+        "id": "opening_offer",
+        "kind": "figure_close",
+        "description": "Opening offer in the evidence-based band",
+        "field": "opening_offer_gbp",
+        "value": 20850,
+        "tolerance": 350
+      },
+      {
+        "id": "target_price",
+        "kind": "figure_close",
+        "description": "Target price in the evidence-based band",
+        "field": "target_price_gbp",
+        "value": 21050,
+        "tolerance": 300
+      },
+      {
+        "id": "stock_age_reasoning",
+        "kind": "mentions_any",
+        "description": "Infers a stock-age or stocking policy / motivated seller",
+        "patterns": [
+          "stock age",
+          "60[- ]day",
+          "90[- ]day",
+          "days in stock",
+          "aged stock",
+          "stocking policy",
+          "stock policy",
+          "motivated",
+          "fortnight",
+          "every (two weeks|14 days|2 weeks)",
+          "day 56",
+          "next (cut|reduction|drop)"
+        ]
+      },
+      {
+        "id": "warranty",
+        "kind": "mentions_any",
+        "description": "Mentions the Kia warranty",
+        "patterns": [
+          "warranty",
+          "7[- ]year",
+          "2029"
+        ]
+      },
+      {
+        "id": "quarter_or_plate_inference",
+        "kind": "mentions_any",
+        "description": "Mentions quarter-end or plate-change context",
+        "patterns": [
+          "quarter",
+          "plate change",
+          "new plate",
+          "September",
+          "part[- ]exchange stock",
+          "stock levels",
+          "28 (used )?Sportages",
+          "19 to 28"
+        ]
+      },
+      {
+        "id": "no_escalation",
+        "kind": "escalation",
+        "description": "Does not hand off at a negotiation-planning step"
+      },
+      {
+        "id": "recommendation_negotiate",
+        "kind": "field_in",
+        "description": "Recommends negotiating",
+        "field": "recommendation",
+        "values": [
+          "negotiate"
+        ]
+      }
     ],
     "expert_notes": "An experienced operator would say: three £500 cuts a fortnight apart is a stock-age clock, not a dealer who thinks the car is overpriced, and it will most likely tick again around day 56 unless somebody buys it or it goes to the group's remarketing. The car is already the cheapest equivalent within 35 miles with a one-owner Kia history and warranty to 2029, so you are not going to get £1,500 off; you are going to get the next cut early. Offer £20,800 today with cash ready and a completion date this week, settle at £21,000-£21,100, walk at £21,400. If Priya says the price is firm, ask for the next service and mats thrown in and accept £21,495 - it is still the best value car on the list. I would change my mind only if an HPI or inspection turned something up, which on the evidence it has not.",
-    "failure_categories_at_risk": ["negotiation", "valuation", "dealer_behaviour", "uncertainty_handling"]
+    "failure_categories_at_risk": [
+      "negotiation",
+      "valuation",
+      "dealer_behaviour",
+      "uncertainty_handling"
+    ]
   }
 }

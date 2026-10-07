@@ -7,6 +7,13 @@
   "variant_of": "S16",
   "journey_id": null,
   "journey_step": null,
+  "primitives": [
+    "filter",
+    "compare",
+    "estimate"
+  ],
+  "primary_primitive": "filter",
+  "expected_class": "specialist",
   "candidate_visible": {
     "scenario": "The buyers are looking at a used Volvo XC40 at an independent dealer in Harrogate and have put together their own list of comparable cars to work out an offer before they view it on Saturday. They have sent you the listing, the dealer's email with the service record, and their comparables with their own notes. Today is 7 October 2026.",
     "user_context": {
@@ -14,8 +21,17 @@
       "location": "York, YO24",
       "household": "two adults, one child aged 6, one Labrador",
       "budget_gbp_max_all_in": 23000,
-      "hard_requirements": ["automatic gearbox (Sam does not drive manual)", "SUV with a high driving position", "under 50,000 miles", "full service history"],
-      "priorities_in_order": ["reliability", "value", "specification"],
+      "hard_requirements": [
+        "automatic gearbox (Sam does not drive manual)",
+        "SUV with a high driving position",
+        "under 50,000 miles",
+        "full service history"
+      ],
+      "priorities_in_order": [
+        "reliability",
+        "value",
+        "specification"
+      ],
       "annual_mileage": 10000,
       "usage": "school run, weekly trip to Rachel's parents in Scarborough, dog walks on the Moors",
       "ownership_horizon_years": 4,
@@ -31,7 +47,11 @@
       "hpi_status": "not yet run by the buyers; advert states 'HPI clear'",
       "service_history_seen": "dealer emailed a photo of the Volvo digital service record printout showing 5 Volvo main dealer services (03/2022, 03/2023, 04/2024, 03/2025, 03/2026), last at 34,900 miles",
       "comparables_source": "buyers' own AutoTrader search on 5 October, saved as C1 to C5",
-      "outstanding_items": ["viewing and test drive", "independent HPI check", "price not yet discussed with dealer"]
+      "outstanding_items": [
+        "viewing and test drive",
+        "independent HPI check",
+        "price not yet discussed with dealer"
+      ]
     },
     "evidence": {
       "target_vehicle": {
@@ -57,25 +77,178 @@
         "keys": 2,
         "mot_expiry": "2027-03-20",
         "mot_history_summary": "Three MOTs (2024, 2025, 2026), all passes. 2026 test (20 March 2026, 35,100 miles) advisory: 'Front brake discs worn, pitted or scored, but not seriously weakened (both)'. No other advisories.",
-        "notable_equipment": ["19-inch 5-double-spoke matt black diamond-cut alloy wheels", "Sensus Navigation 9-inch portrait touchscreen", "12.3-inch digital driver display", "R-Design sports seats in Nubuck textile/Nappa leather", "LED headlights with active bending", "contrast black roof and door mirrors", "heated front seats and heated steering wheel", "rear parking camera and sensors", "Apple CarPlay / Android Auto", "cruise control", "power tailgate"],
-        "seller": {"type": "independent dealer", "name": "Pannal Road Motor Company", "location": "Harrogate", "distance_miles": 22, "reviews": "4.7/5 from 96 reviews"},
+        "notable_equipment": [
+          "19-inch 5-double-spoke matt black diamond-cut alloy wheels",
+          "Sensus Navigation 9-inch portrait touchscreen",
+          "12.3-inch digital driver display",
+          "R-Design sports seats in Nubuck textile/Nappa leather",
+          "LED headlights with active bending",
+          "contrast black roof and door mirrors",
+          "heated front seats and heated steering wheel",
+          "rear parking camera and sensors",
+          "Apple CarPlay / Android Auto",
+          "cruise control",
+          "power tailgate"
+        ],
+        "seller": {
+          "type": "independent dealer",
+          "name": "Pannal Road Motor Company",
+          "location": "Harrogate",
+          "distance_miles": 22,
+          "reviews": "4.7/5 from 96 reviews"
+        },
         "warranty": "3 months dealer warranty included; 12 and 24 months available at extra cost",
         "preparation": "Serviced if due, valeted, MOT valid to March 2027",
         "days_listed": 26,
-        "price_history": [{"date": "2026-09-11", "price_gbp": 22995}, {"date": "2026-10-01", "price_gbp": 22495}],
+        "price_history": [
+          {
+            "date": "2026-09-11",
+            "price_gbp": 22995
+          },
+          {
+            "date": "2026-10-01",
+            "price_gbp": 22495
+          }
+        ],
         "description_excerpt": "One owner from new XC40 B4 R-Design automatic in Fusion Red with the black roof. Full Volvo history with five services, two keys, heated seats and wheel, reversing camera, power tailgate. Immaculate throughout. Reduced for a quick sale. HPI clear, viewing by appointment."
       },
       "comparables": [
-        {"id": "C1", "source": "AutoTrader", "title": "Volvo XC40 2.0 D3 R-Design 5dr", "year": 2019, "plate": "19", "mileage": 94300, "trim": "R-Design", "fuel": "Diesel", "transmission": "Manual (6-speed)", "previous_owners": 3, "service_history": "part service history", "write_off_category": "Cat N (repaired), declared in advert", "price_gbp": 14995, "seller_type": "independent dealer", "distance_miles": 38, "days_listed": 52, "notable_equipment": ["18-inch alloys", "Sensus navigation", "LED headlights"], "description_excerpt": "Cat N, light cosmetic repair to rear bumper and tailgate, fully repaired to a high standard, drives superb. Priced accordingly. Part service history, 3 keepers.", "buyer_note": "Same trim, same car basically, £7,500 cheaper. This is what R-Designs really go for."},
-        {"id": "C2", "source": "AutoTrader", "title": "Volvo XC40 2.0 T4 R-Design 5dr Auto", "year": 2020, "plate": "70", "mileage": 48900, "trim": "R-Design", "fuel": "Petrol", "transmission": "Automatic (8-speed Geartronic)", "previous_owners": 2, "service_history": "full history claimed", "write_off_category": null, "price_gbp": 21250, "seller_type": "independent dealer", "distance_miles": 29, "days_listed": 34, "notable_equipment": ["19-inch alloys", "Sensus navigation", "heated seats"], "buyer_note": "Older T4, higher miles, two owners."},
-        {"id": "C3", "source": "Motors.co.uk", "title": "Volvo XC40 2.0 B4 R-Design 5dr Auto", "year": 2021, "plate": "21", "mileage": 44100, "trim": "R-Design", "fuel": "Petrol mild hybrid", "transmission": "Automatic (8-speed Geartronic)", "previous_owners": 1, "service_history": "full Volvo history", "write_off_category": null, "price_gbp": 22250, "seller_type": "car supermarket", "distance_miles": 44, "days_listed": 15, "notable_equipment": ["19-inch alloys", "Sensus navigation", "heated seats", "rear camera"], "buyer_note": null},
-        {"id": "C4", "source": "Volvo Selekt approved used", "title": "Volvo XC40 2.0 B4 R-Design 5dr Auto", "year": 2021, "plate": "71", "mileage": 33600, "trim": "R-Design", "fuel": "Petrol mild hybrid", "transmission": "Automatic (8-speed Geartronic)", "previous_owners": 1, "service_history": "full Volvo history", "write_off_category": null, "price_gbp": 22750, "seller_type": "franchised dealer (Volvo Selekt, 12 months warranty)", "distance_miles": 19, "days_listed": 11, "notable_equipment": ["19-inch alloys", "Sensus navigation", "heated seats", "power tailgate"], "buyer_note": null},
-        {"id": "C5", "source": "Volvo Selekt approved used", "title": "Volvo XC40 2.0 B4 R-Design 5dr Auto", "year": 2021, "plate": "21", "mileage": 30900, "trim": "R-Design", "fuel": "Petrol mild hybrid", "transmission": "Automatic (8-speed Geartronic)", "previous_owners": 1, "service_history": "full Volvo history", "write_off_category": null, "price_gbp": 23250, "seller_type": "franchised dealer (Volvo Selekt, 12 months warranty)", "distance_miles": 52, "days_listed": 7, "notable_equipment": ["19-inch alloys", "Sensus navigation", "heated seats and wheel", "rear camera", "power tailgate"], "buyer_note": null}
+        {
+          "id": "C1",
+          "source": "AutoTrader",
+          "title": "Volvo XC40 2.0 D3 R-Design 5dr",
+          "year": 2019,
+          "plate": "19",
+          "mileage": 94300,
+          "trim": "R-Design",
+          "fuel": "Diesel",
+          "transmission": "Manual (6-speed)",
+          "previous_owners": 3,
+          "service_history": "part service history",
+          "write_off_category": "Cat N (repaired), declared in advert",
+          "price_gbp": 14995,
+          "seller_type": "independent dealer",
+          "distance_miles": 38,
+          "days_listed": 52,
+          "notable_equipment": [
+            "18-inch alloys",
+            "Sensus navigation",
+            "LED headlights"
+          ],
+          "description_excerpt": "Cat N, light cosmetic repair to rear bumper and tailgate, fully repaired to a high standard, drives superb. Priced accordingly. Part service history, 3 keepers.",
+          "buyer_note": "Same trim, same car basically, £7,500 cheaper. This is what R-Designs really go for."
+        },
+        {
+          "id": "C2",
+          "source": "AutoTrader",
+          "title": "Volvo XC40 2.0 T4 R-Design 5dr Auto",
+          "year": 2020,
+          "plate": "70",
+          "mileage": 48900,
+          "trim": "R-Design",
+          "fuel": "Petrol",
+          "transmission": "Automatic (8-speed Geartronic)",
+          "previous_owners": 2,
+          "service_history": "full history claimed",
+          "write_off_category": null,
+          "price_gbp": 21250,
+          "seller_type": "independent dealer",
+          "distance_miles": 29,
+          "days_listed": 34,
+          "notable_equipment": [
+            "19-inch alloys",
+            "Sensus navigation",
+            "heated seats"
+          ],
+          "buyer_note": "Older T4, higher miles, two owners."
+        },
+        {
+          "id": "C3",
+          "source": "Motors.co.uk",
+          "title": "Volvo XC40 2.0 B4 R-Design 5dr Auto",
+          "year": 2021,
+          "plate": "21",
+          "mileage": 44100,
+          "trim": "R-Design",
+          "fuel": "Petrol mild hybrid",
+          "transmission": "Automatic (8-speed Geartronic)",
+          "previous_owners": 1,
+          "service_history": "full Volvo history",
+          "write_off_category": null,
+          "price_gbp": 22250,
+          "seller_type": "car supermarket",
+          "distance_miles": 44,
+          "days_listed": 15,
+          "notable_equipment": [
+            "19-inch alloys",
+            "Sensus navigation",
+            "heated seats",
+            "rear camera"
+          ],
+          "buyer_note": null
+        },
+        {
+          "id": "C4",
+          "source": "Volvo Selekt approved used",
+          "title": "Volvo XC40 2.0 B4 R-Design 5dr Auto",
+          "year": 2021,
+          "plate": "71",
+          "mileage": 33600,
+          "trim": "R-Design",
+          "fuel": "Petrol mild hybrid",
+          "transmission": "Automatic (8-speed Geartronic)",
+          "previous_owners": 1,
+          "service_history": "full Volvo history",
+          "write_off_category": null,
+          "price_gbp": 22750,
+          "seller_type": "franchised dealer (Volvo Selekt, 12 months warranty)",
+          "distance_miles": 19,
+          "days_listed": 11,
+          "notable_equipment": [
+            "19-inch alloys",
+            "Sensus navigation",
+            "heated seats",
+            "power tailgate"
+          ],
+          "buyer_note": null
+        },
+        {
+          "id": "C5",
+          "source": "Volvo Selekt approved used",
+          "title": "Volvo XC40 2.0 B4 R-Design 5dr Auto",
+          "year": 2021,
+          "plate": "21",
+          "mileage": 30900,
+          "trim": "R-Design",
+          "fuel": "Petrol mild hybrid",
+          "transmission": "Automatic (8-speed Geartronic)",
+          "previous_owners": 1,
+          "service_history": "full Volvo history",
+          "write_off_category": null,
+          "price_gbp": 23250,
+          "seller_type": "franchised dealer (Volvo Selekt, 12 months warranty)",
+          "distance_miles": 52,
+          "days_listed": 7,
+          "notable_equipment": [
+            "19-inch alloys",
+            "Sensus navigation",
+            "heated seats and wheel",
+            "rear camera",
+            "power tailgate"
+          ],
+          "buyer_note": null
+        }
       ],
       "comparables_note": "Saved by the buyers from an AutoTrader search for 'XC40 R-Design' within 60 miles of York, sorted by price. No trade valuation guide figure is available to you."
     },
     "dealer_messages": [
-      {"from": "dealer", "channel": "email", "timestamp": "2026-10-05 16:20", "sender": "Mark, Pannal Road Motor Company", "text": "Hi Rachel, service printout attached as promised, five stamps all Volvo main dealer, last one March this year. Price is £22,495, we did reduce it last week so it's keenly priced now. See you Saturday at 11. Mark"}
+      {
+        "from": "dealer",
+        "channel": "email",
+        "timestamp": "2026-10-05 16:20",
+        "sender": "Mark, Pannal Road Motor Company",
+        "text": "Hi Rachel, service printout attached as promised, five stamps all Volvo main dealer, last one March this year. Price is £22,495, we did reduce it last week so it's keenly priced now. See you Saturday at 11. Mark"
+      }
     ],
     "user_message": "There's an R-Design for £15k so surely £22.5k is a rip-off. What should I offer?"
   },
@@ -108,16 +281,96 @@
     ],
     "escalation_expected": "unnecessary",
     "deterministic_checks": [
-      {"id": "flags_cat_n", "kind": "mentions_any", "description": "Mentions C1's write-off status", "patterns": ["Cat ?N", "write[- ]?off", "written off", "category"]},
-      {"id": "flags_drivetrain", "kind": "mentions_any", "description": "Mentions C1's manual gearbox or diesel engine", "patterns": ["manual", "diesel", "D3"]},
-      {"id": "flags_mileage_owners", "kind": "mentions_any", "description": "Mentions C1's mileage or ownership history", "patterns": ["94[,.]?\\d{3}", "mileage", "three owners", "3 owners", "part history"]},
-      {"id": "rejects_c1_as_comparator", "kind": "mentions_any", "description": "States that C1 is not a suitable comparator", "patterns": ["C1.{0,80}(not|isn'?t|poor|bad|unsuitable|invalid|comparable)", "(not|isn'?t|is no).{0,40}(valid|fair|like.for.like|useful|real|genuine|true).{0,20}compar", "(ignore|exclude|discount|set aside|disregard).{0,20}C1", "£?15[,.]?000.{0,80}(not|isn'?t).{0,40}compar"]},
-      {"id": "uses_right_set", "kind": "mentions_any", "description": "Prices from C2 to C5 or their median", "patterns": ["C2", "C3", "C4", "C5", "22[,.]?500", "22[,.]?250", "at market", "in line with"]},
-      {"id": "opening_offer_reasonable", "kind": "figure_close", "description": "Opening offer around £21,500", "field": "opening_offer_gbp", "value": 21500, "tolerance": 500},
-      {"id": "recommendation_appropriate", "kind": "field_in", "description": "Recommends negotiating, gathering information or proceeding with conditions", "field": "recommendation", "values": ["negotiate", "gather_information", "proceed_with_conditions"]},
-      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a routine pricing step"}
+      {
+        "id": "flags_cat_n",
+        "kind": "mentions_any",
+        "description": "Mentions C1's write-off status",
+        "patterns": [
+          "Cat ?N",
+          "write[- ]?off",
+          "written off",
+          "category"
+        ]
+      },
+      {
+        "id": "flags_drivetrain",
+        "kind": "mentions_any",
+        "description": "Mentions C1's manual gearbox or diesel engine",
+        "patterns": [
+          "manual",
+          "diesel",
+          "D3"
+        ]
+      },
+      {
+        "id": "flags_mileage_owners",
+        "kind": "mentions_any",
+        "description": "Mentions C1's mileage or ownership history",
+        "patterns": [
+          "94[,.]?\\d{3}",
+          "mileage",
+          "three owners",
+          "3 owners",
+          "part history"
+        ]
+      },
+      {
+        "id": "rejects_c1_as_comparator",
+        "kind": "mentions_any",
+        "description": "States that C1 is not a suitable comparator",
+        "patterns": [
+          "C1.{0,80}(not|isn'?t|poor|bad|unsuitable|invalid|comparable)",
+          "(not|isn'?t|is no).{0,40}(valid|fair|like.for.like|useful|real|genuine|true).{0,20}compar",
+          "(ignore|exclude|discount|set aside|disregard).{0,20}C1",
+          "£?15[,.]?000.{0,80}(not|isn'?t).{0,40}compar"
+        ]
+      },
+      {
+        "id": "uses_right_set",
+        "kind": "mentions_any",
+        "description": "Prices from C2 to C5 or their median",
+        "patterns": [
+          "C2",
+          "C3",
+          "C4",
+          "C5",
+          "22[,.]?500",
+          "22[,.]?250",
+          "at market",
+          "in line with"
+        ]
+      },
+      {
+        "id": "opening_offer_reasonable",
+        "kind": "figure_close",
+        "description": "Opening offer around £21,500",
+        "field": "opening_offer_gbp",
+        "value": 21500,
+        "tolerance": 500
+      },
+      {
+        "id": "recommendation_appropriate",
+        "kind": "field_in",
+        "description": "Recommends negotiating, gathering information or proceeding with conditions",
+        "field": "recommendation",
+        "values": [
+          "negotiate",
+          "gather_information",
+          "proceed_with_conditions"
+        ]
+      },
+      {
+        "id": "no_escalation",
+        "kind": "escalation",
+        "description": "Does not hand off at a routine pricing step"
+      }
     ],
     "expert_notes": "An experienced operator would gently take C1 off the table: a 94,000-mile, three-owner, part-history, Cat N diesel manual tells you what a tired XC40 with a chequered past fetches, not what a one-owner B4 auto with full Volvo history is worth. The real set is C2 to C5, and against those the Harrogate car is bang on market at £22,495 and better than most of them on history and mileage. Go in around £21,500 citing the brake disc advisory, the 26 days and the lack of a manufacturer warranty, expect to settle around £22,000, and do not lose it over the last £250 if the viewing and HPI are clean. Nothing here needs escalating.",
-    "failure_categories_at_risk": ["comparator_selection", "valuation", "vehicle_history", "negotiation"]
+    "failure_categories_at_risk": [
+      "comparator_selection",
+      "valuation",
+      "vehicle_history",
+      "negotiation"
+    ]
   }
 }

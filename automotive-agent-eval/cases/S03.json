@@ -7,6 +7,13 @@
   "variant_of": null,
   "journey_id": null,
   "journey_step": null,
+  "primitives": [
+    "classify",
+    "optimise",
+    "communicate"
+  ],
+  "primary_primitive": "communicate",
+  "expected_class": "general",
   "candidate_visible": {
     "scenario": "A buyer has filled in your requirements form and sent a short message asking you to find cars. No searches have been run yet and no listings are available to you. Today is 7 October 2026.",
     "user_context": {
@@ -22,7 +29,9 @@
         "under 5 years old",
         "automatic"
       ],
-      "priorities_in_order": ["as listed above, all of them please"],
+      "priorities_in_order": [
+        "as listed above, all of them please"
+      ],
       "annual_mileage": 14000,
       "usage": "school run and club runs in and around Guildford, weekend trips to the grandparents in Chichester, two long holiday drives a year to Cornwall",
       "ownership_horizon_years": 6,
@@ -61,15 +70,89 @@
     ],
     "escalation_expected": "unnecessary",
     "deterministic_checks": [
-      {"id": "clarify_only", "kind": "field_in", "description": "Recommendation is to clarify requirements", "field": "recommendation", "values": ["clarify_requirements"]},
-      {"id": "asks_ranking_questions", "kind": "list_nonempty", "description": "At least two questions asking what gives", "field": "questions_for_user", "min_items": 2},
-      {"id": "no_vehicle_ids", "kind": "vehicles_subset", "description": "No listings exist, so vehicle_ids must be empty", "values": []},
-      {"id": "budget_insufficient", "kind": "mentions_any", "description": "States that £15,000 is insufficient for the brief as written", "patterns": ["15[,.]?000.{0,80}(not|isn't|won't|cannot|can't|insufficient|unrealistic|too low|short)", "(not|isn't|won't|cannot|can't|unrealistic|insufficient|impossible).{0,80}15[,.]?000", "£15k.{0,60}(not|isn't|won't|can't|unrealistic|insufficient)", "over (your )?budget", "above (your )?budget", "(double|twice).{0,30}budget", "(budget|15[,.]?000).{0,60}(doesn't|does not|won't|will not) (stretch|reach|get|buy|cover)"]},
-      {"id": "names_conflict_mpg", "kind": "mentions_any", "description": "Identifies the economy versus large SUV conflict", "patterns": ["50 ?mpg", "fifty", "mpg", "economy", "economical", "fuel"]},
-      {"id": "offers_relaxation", "kind": "mentions_any", "description": "Offers at least one relaxation path (older, non-premium, smaller, MPV, higher budget)", "patterns": ["older", "non[- ]premium", "mainstream", "MPV", "people carrier", "SpaceTourer", "Kodiaq", "5008", "Galaxy", "S-Max", "smaller", "raise (the|your) budget", "increase (the|your) budget", "more budget", "stretch"]},
-      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a requirements step"}
+      {
+        "id": "clarify_only",
+        "kind": "field_in",
+        "description": "Recommendation is to clarify requirements",
+        "field": "recommendation",
+        "values": [
+          "clarify_requirements"
+        ]
+      },
+      {
+        "id": "asks_ranking_questions",
+        "kind": "list_nonempty",
+        "description": "At least two questions asking what gives",
+        "field": "questions_for_user",
+        "min_items": 2
+      },
+      {
+        "id": "no_vehicle_ids",
+        "kind": "vehicles_subset",
+        "description": "No listings exist, so vehicle_ids must be empty",
+        "values": []
+      },
+      {
+        "id": "budget_insufficient",
+        "kind": "mentions_any",
+        "description": "States that £15,000 is insufficient for the brief as written",
+        "patterns": [
+          "15[,.]?000.{0,80}(not|isn't|won't|cannot|can't|insufficient|unrealistic|too low|short)",
+          "(not|isn't|won't|cannot|can't|unrealistic|insufficient|impossible).{0,80}15[,.]?000",
+          "£15k.{0,60}(not|isn't|won't|can't|unrealistic|insufficient)",
+          "over (your )?budget",
+          "above (your )?budget",
+          "(double|twice).{0,30}budget",
+          "(budget|15[,.]?000).{0,60}(doesn't|does not|won't|will not) (stretch|reach|get|buy|cover)"
+        ]
+      },
+      {
+        "id": "names_conflict_mpg",
+        "kind": "mentions_any",
+        "description": "Identifies the economy versus large SUV conflict",
+        "patterns": [
+          "50 ?mpg",
+          "fifty",
+          "mpg",
+          "economy",
+          "economical",
+          "fuel"
+        ]
+      },
+      {
+        "id": "offers_relaxation",
+        "kind": "mentions_any",
+        "description": "Offers at least one relaxation path (older, non-premium, smaller, MPV, higher budget)",
+        "patterns": [
+          "older",
+          "non[- ]premium",
+          "mainstream",
+          "MPV",
+          "people carrier",
+          "SpaceTourer",
+          "Kodiaq",
+          "5008",
+          "Galaxy",
+          "S-Max",
+          "smaller",
+          "raise (the|your) budget",
+          "increase (the|your) budget",
+          "more budget",
+          "stretch"
+        ]
+      },
+      {
+        "id": "no_escalation",
+        "kind": "escalation",
+        "description": "Does not hand off at a requirements step"
+      }
     ],
     "expert_notes": "An experienced operator would say this is a kind but clear 'no' followed by a menu. The nearest thing to a premium seven-seater under five years old is a GLB 200d at about £22,000-26,000, and that is not large and will not see 50 mpg with seven aboard; a Discovery Sport or XC90 of that age is £24,000-38,000 and nearer 38 mpg. For £15,000 all-in the family can have seven usable seats, an automatic, under five years old and 50 mpg in a Grand C4 SpaceTourer 1.5 BlueHDi, or seven seats in a non-premium SUV a year or two older (Kodiaq 2.0 TDI, 5008 1.5 BlueHDi), or a premium badge on a 2016-2018 Discovery Sport with the running-cost consequences. The question to put back is simple: which of badge, size, age and economy are they prepared to give up, because seat count is the one they probably cannot. The operator would also gently check the £3,000 Zafira estimate, because at 96,000 miles and 12 years old a trade bid nearer £1,500-2,000 is more likely.",
-    "failure_categories_at_risk": ["requirements_interpretation", "uncertainty_handling", "valuation", "total_transaction_economics"]
+    "failure_categories_at_risk": [
+      "requirements_interpretation",
+      "uncertainty_handling",
+      "valuation",
+      "total_transaction_economics"
+    ]
   }
 }

@@ -377,6 +377,57 @@
       "title": "Created At",
       "type": "string"
     },
+    "objects_in_scope": {
+      "default": 1,
+      "title": "Objects In Scope",
+      "type": "integer"
+    },
+    "primitives_applied": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Primitives Applied",
+      "type": "array"
+    },
+    "primitive_latency_ms": {
+      "default": 0,
+      "title": "Primitive Latency Ms",
+      "type": "integer"
+    },
+    "primitive_cost": {
+      "default": 0.0,
+      "title": "Primitive Cost",
+      "type": "number"
+    },
+    "model_cost": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Model Cost"
+    },
+    "total_cost": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Total Cost"
+    },
+    "total_latency_ms": {
+      "default": 0,
+      "title": "Total Latency Ms",
+      "type": "integer"
+    },
     "deterministic": {
       "items": {
         "$ref": "#/$defs/DeterministicResult"
@@ -540,6 +591,35 @@
       ],
       "default": null,
       "title": "Task Completed"
+    },
+    "valid": {
+      "default": false,
+      "title": "Valid",
+      "type": "boolean"
+    },
+    "judge_cost": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Judge Cost"
+    },
+    "quality": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Quality"
     }
   },
   "required": [

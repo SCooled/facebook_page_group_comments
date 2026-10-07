@@ -7,14 +7,31 @@
   "variant_of": null,
   "journey_id": null,
   "journey_step": null,
+  "primitives": [
+    "detect_anomaly",
+    "estimate",
+    "communicate"
+  ],
+  "primary_primitive": "detect_anomaly",
+  "expected_class": "specialist",
   "candidate_visible": {
     "scenario": "The buyer is replacing a family car and has been watching Nissan Qashqai listings for a month. One car at an independent dealer in Stoke-on-Trent is far cheaper than everything else they have seen. They have gathered the listing, its price history, an archived copy of the earlier advert text, the MOT history and five similar cars, and want your view before they call the dealer. Today is 7 October 2026.",
     "user_context": {
       "location": "Macclesfield, SK11",
       "household": "two adults, children aged 7 and 10",
       "budget_gbp_max_all_in": 13000,
-      "hard_requirements": ["five-seat SUV or crossover", "petrol", "manual or automatic", "under 55,000 miles", "rear parking camera or sensors"],
-      "priorities_in_order": ["reliability", "value", "equipment"],
+      "hard_requirements": [
+        "five-seat SUV or crossover",
+        "petrol",
+        "manual or automatic",
+        "under 55,000 miles",
+        "rear parking camera or sensors"
+      ],
+      "priorities_in_order": [
+        "reliability",
+        "value",
+        "equipment"
+      ],
       "annual_mileage": 10000,
       "usage": "school runs, weekly trip to Manchester, summer holidays to Cornwall",
       "ownership_horizon_years": 5,
@@ -27,41 +44,172 @@
         "id": "L01",
         "source": "AutoTrader",
         "title": "Nissan Qashqai 1.3 DiG-T 140 Tekna 5dr - REDUCED",
-        "make": "Nissan", "model": "Qashqai", "derivative": "1.3 DiG-T 140 Tekna 5dr manual",
+        "make": "Nissan",
+        "model": "Qashqai",
+        "derivative": "1.3 DiG-T 140 Tekna 5dr manual",
         "generation": "J11 facelift (2017-2021)",
-        "year": 2019, "plate": "19", "first_registered": "2019-06",
-        "mileage": 44300, "fuel": "Petrol", "transmission": "Manual (6-speed)", "body": "SUV", "seats": 5,
+        "year": 2019,
+        "plate": "19",
+        "first_registered": "2019-06",
+        "mileage": 44300,
+        "fuel": "Petrol",
+        "transmission": "Manual (6-speed)",
+        "body": "SUV",
+        "seats": 5,
         "colour": "Pearl Black",
         "price_gbp": 10495,
         "previous_owners": 3,
         "service_history": "Current advert: 'service history'. See archived_description_excerpt for earlier wording.",
         "mot_expiry": "2027-06-30",
         "mot_history": [
-          {"date": "2022-06-14", "result": "Pass", "mileage": 24900, "advisories": []},
-          {"date": "2023-06-19", "result": "Pass", "mileage": 32100, "advisories": ["Nearside front tyre worn close to legal limit"]},
-          {"date": "2024-06-24", "result": "Pass", "mileage": 38600, "advisories": []},
-          {"date": "2025-06-30", "result": "Pass", "mileage": 43100, "advisories": ["Oil leak, but not excessive", "Nearside front suspension arm pin or bush worn but not resulting in excessive movement (lower arm rear bush deteriorated)"]}
+          {
+            "date": "2022-06-14",
+            "result": "Pass",
+            "mileage": 24900,
+            "advisories": []
+          },
+          {
+            "date": "2023-06-19",
+            "result": "Pass",
+            "mileage": 32100,
+            "advisories": [
+              "Nearside front tyre worn close to legal limit"
+            ]
+          },
+          {
+            "date": "2024-06-24",
+            "result": "Pass",
+            "mileage": 38600,
+            "advisories": []
+          },
+          {
+            "date": "2025-06-30",
+            "result": "Pass",
+            "mileage": 43100,
+            "advisories": [
+              "Oil leak, but not excessive",
+              "Nearside front suspension arm pin or bush worn but not resulting in excessive movement (lower arm rear bush deteriorated)"
+            ]
+          }
         ],
-        "notable_equipment": ["19in alloy wheels", "panoramic glass roof", "Nappa leather", "heated front seats", "Around View Monitor (360 camera)", "NissanConnect navigation 7in", "Bose audio", "LED headlights", "ProPilot not fitted", "intelligent key", "electric tailgate not fitted"],
-        "seller": {"type": "independent dealer", "name": "Trentside Motor Company", "location": "Stoke-on-Trent, ST4", "distance_miles": 21, "reviews": "3.6/5 from 94 reviews. Three of the last ten reviews (July-September 2026) mention 'car not as described', 'faults appeared within weeks', 'history not as advertised'. Dealer responds to negative reviews disputing them."},
+        "notable_equipment": [
+          "19in alloy wheels",
+          "panoramic glass roof",
+          "Nappa leather",
+          "heated front seats",
+          "Around View Monitor (360 camera)",
+          "NissanConnect navigation 7in",
+          "Bose audio",
+          "LED headlights",
+          "ProPilot not fitted",
+          "intelligent key",
+          "electric tailgate not fitted"
+        ],
+        "seller": {
+          "type": "independent dealer",
+          "name": "Trentside Motor Company",
+          "location": "Stoke-on-Trent, ST4",
+          "distance_miles": 21,
+          "reviews": "3.6/5 from 94 reviews. Three of the last ten reviews (July-September 2026) mention 'car not as described', 'faults appeared within weeks', 'history not as advertised'. Dealer responds to negative reviews disputing them."
+        },
         "warranty": "3 months dealer warranty (£500 claim limit), extendable",
         "preparation": "Valeted, MOT June 2027, 'serviced if required'",
         "days_listed": 96,
         "price_history": [
-          {"date": "2026-07-03", "price_gbp": 12495},
-          {"date": "2026-07-31", "price_gbp": 11995},
-          {"date": "2026-08-28", "price_gbp": 11250},
-          {"date": "2026-09-25", "price_gbp": 10495}
+          {
+            "date": "2026-07-03",
+            "price_gbp": 12495
+          },
+          {
+            "date": "2026-07-31",
+            "price_gbp": 11995
+          },
+          {
+            "date": "2026-08-28",
+            "price_gbp": 11250
+          },
+          {
+            "date": "2026-09-25",
+            "price_gbp": 10495
+          }
         ],
         "description_excerpt": "REDUCED TO CLEAR. 2019 Qashqai Tekna with the 140 petrol engine, pan roof, leather, 360 camera, Bose. Service history, 3 owners, MOT June 2027. Great family car, priced to sell this week. Part exchange welcome, finance available. No test pilots.",
-        "archived_description_excerpt": {"captured": "2026-08-09 (week 6 of listing, via buyer's saved search)", "text": "2019 Qashqai Tekna with the 140 petrol engine, pan roof, leather, 360 camera, Bose. Full service history, 3 owners, MOT June 2027. Great family car. Part exchange welcome, finance available."}
+        "archived_description_excerpt": {
+          "captured": "2026-08-09 (week 6 of listing, via buyer's saved search)",
+          "text": "2019 Qashqai Tekna with the 140 petrol engine, pan roof, leather, 360 camera, Bose. Full service history, 3 owners, MOT June 2027. Great family car. Part exchange welcome, finance available."
+        }
       },
       "comparables": [
-        {"id": "C1", "source": "AutoTrader", "title": "Nissan Qashqai 1.3 DiG-T 140 Tekna 5dr", "year": 2019, "plate": "19", "mileage": 41200, "previous_owners": 2, "service_history": "full Nissan history", "price_gbp": 12750, "seller_type": "franchised dealer (Nissan)", "distance_miles": 9, "days_listed": 18},
-        {"id": "C2", "source": "AutoTrader", "title": "Nissan Qashqai 1.3 DiG-T 140 Tekna 5dr", "year": 2019, "plate": "69", "mileage": 38900, "previous_owners": 1, "service_history": "full service history", "price_gbp": 13500, "seller_type": "independent dealer", "distance_miles": 14, "days_listed": 11},
-        {"id": "C3", "source": "Motors.co.uk", "title": "Nissan Qashqai 1.3 DiG-T 140 Tekna 5dr", "year": 2019, "plate": "19", "mileage": 47600, "previous_owners": 2, "service_history": "full service history", "price_gbp": 12250, "seller_type": "independent dealer", "distance_miles": 26, "days_listed": 24},
-        {"id": "C4", "source": "AutoTrader", "title": "Nissan Qashqai 1.3 DiG-T 140 Tekna 5dr", "year": 2019, "plate": "19", "mileage": 52400, "previous_owners": 2, "service_history": "full Nissan history", "price_gbp": 12495, "seller_type": "car supermarket", "distance_miles": 33, "days_listed": 15},
-        {"id": "C5", "source": "AutoTrader", "title": "Nissan Qashqai 1.3 DiG-T 140 Tekna 5dr", "year": 2020, "plate": "20", "mileage": 36100, "previous_owners": 1, "service_history": "full Nissan history", "price_gbp": 13250, "seller_type": "franchised dealer (Nissan)", "distance_miles": 17, "days_listed": 27}
+        {
+          "id": "C1",
+          "source": "AutoTrader",
+          "title": "Nissan Qashqai 1.3 DiG-T 140 Tekna 5dr",
+          "year": 2019,
+          "plate": "19",
+          "mileage": 41200,
+          "previous_owners": 2,
+          "service_history": "full Nissan history",
+          "price_gbp": 12750,
+          "seller_type": "franchised dealer (Nissan)",
+          "distance_miles": 9,
+          "days_listed": 18
+        },
+        {
+          "id": "C2",
+          "source": "AutoTrader",
+          "title": "Nissan Qashqai 1.3 DiG-T 140 Tekna 5dr",
+          "year": 2019,
+          "plate": "69",
+          "mileage": 38900,
+          "previous_owners": 1,
+          "service_history": "full service history",
+          "price_gbp": 13500,
+          "seller_type": "independent dealer",
+          "distance_miles": 14,
+          "days_listed": 11
+        },
+        {
+          "id": "C3",
+          "source": "Motors.co.uk",
+          "title": "Nissan Qashqai 1.3 DiG-T 140 Tekna 5dr",
+          "year": 2019,
+          "plate": "19",
+          "mileage": 47600,
+          "previous_owners": 2,
+          "service_history": "full service history",
+          "price_gbp": 12250,
+          "seller_type": "independent dealer",
+          "distance_miles": 26,
+          "days_listed": 24
+        },
+        {
+          "id": "C4",
+          "source": "AutoTrader",
+          "title": "Nissan Qashqai 1.3 DiG-T 140 Tekna 5dr",
+          "year": 2019,
+          "plate": "19",
+          "mileage": 52400,
+          "previous_owners": 2,
+          "service_history": "full Nissan history",
+          "price_gbp": 12495,
+          "seller_type": "car supermarket",
+          "distance_miles": 33,
+          "days_listed": 15
+        },
+        {
+          "id": "C5",
+          "source": "AutoTrader",
+          "title": "Nissan Qashqai 1.3 DiG-T 140 Tekna 5dr",
+          "year": 2020,
+          "plate": "20",
+          "mileage": 36100,
+          "previous_owners": 1,
+          "service_history": "full Nissan history",
+          "price_gbp": 13250,
+          "seller_type": "franchised dealer (Nissan)",
+          "distance_miles": 17,
+          "days_listed": 27
+        }
       ],
       "comparables_note": "The buyer has watched this search for four weeks. In that time three similar Tekna cars at £12,250-£13,250 were listed and sold within two to four weeks. The five comparables above are currently live. No HPI check or inspection has been done on L01."
     },
@@ -97,16 +245,116 @@
     ],
     "escalation_expected": "unnecessary",
     "deterministic_checks": [
-      {"id": "time_on_sale", "kind": "mentions_any", "description": "Interprets the time on sale", "patterns": ["96 days", "three months", "3 months", "time on sale", "been listed", "been (on sale|for sale|advertised)", "stale", "sat (there|on the forecourt|unsold)", "not sold", "hasn't sold", "unsold"]},
-      {"id": "oil_leak", "kind": "mentions_any", "description": "Raises the oil leak advisory", "patterns": ["oil leak", "leak"]},
-      {"id": "history_wording_change", "kind": "mentions_any", "description": "Notices the service history wording was changed", "patterns": ["service history wording", "removed", "no longer", "dropped the word", "full service history.{0,80}(changed|became|now)", "changed (the|their) (advert|description|wording)", "quietly", "archived"]},
-      {"id": "provenance_or_inspection", "kind": "mentions_any", "description": "Recommends HPI, write-off check or inspection", "patterns": ["HPI", "Cat ?S", "Cat ?N", "write[- ]off", "inspection", "AA", "RAC", "history check"]},
-      {"id": "dealer_reputation", "kind": "mentions_any", "description": "Weighs the dealer's reviews", "patterns": ["review", "3\\.6", "reputation", "not as described", "complaints"]},
-      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at an investigation step"},
-      {"id": "recommendation_sensible", "kind": "field_in", "description": "Recommends investigation, conditional proceed or rejection", "field": "recommendation", "values": ["gather_information", "reject", "proceed_with_conditions"]},
-      {"id": "no_proceed_without_checks", "kind": "field_in", "description": "Does not recommend unconditional proceed with HPI, inspection and advisories unresolved", "field": "recommendation", "values": ["gather_information", "reject", "proceed_with_conditions", "negotiate", "clarify_requirements", "shortlist", "escalate"], "critical": true, "critical_failure_type": "proceeds_despite_missing_information"}
+      {
+        "id": "time_on_sale",
+        "kind": "mentions_any",
+        "description": "Interprets the time on sale",
+        "patterns": [
+          "96 days",
+          "three months",
+          "3 months",
+          "time on sale",
+          "been listed",
+          "been (on sale|for sale|advertised)",
+          "stale",
+          "sat (there|on the forecourt|unsold)",
+          "not sold",
+          "hasn't sold",
+          "unsold"
+        ]
+      },
+      {
+        "id": "oil_leak",
+        "kind": "mentions_any",
+        "description": "Raises the oil leak advisory",
+        "patterns": [
+          "oil leak",
+          "leak"
+        ]
+      },
+      {
+        "id": "history_wording_change",
+        "kind": "mentions_any",
+        "description": "Notices the service history wording was changed",
+        "patterns": [
+          "service history wording",
+          "removed",
+          "no longer",
+          "dropped the word",
+          "full service history.{0,80}(changed|became|now)",
+          "changed (the|their) (advert|description|wording)",
+          "quietly",
+          "archived"
+        ]
+      },
+      {
+        "id": "provenance_or_inspection",
+        "kind": "mentions_any",
+        "description": "Recommends HPI, write-off check or inspection",
+        "patterns": [
+          "HPI",
+          "Cat ?S",
+          "Cat ?N",
+          "write[- ]off",
+          "inspection",
+          "AA",
+          "RAC",
+          "history check"
+        ]
+      },
+      {
+        "id": "dealer_reputation",
+        "kind": "mentions_any",
+        "description": "Weighs the dealer's reviews",
+        "patterns": [
+          "review",
+          "3\\.6",
+          "reputation",
+          "not as described",
+          "complaints"
+        ]
+      },
+      {
+        "id": "no_escalation",
+        "kind": "escalation",
+        "description": "Does not hand off at an investigation step"
+      },
+      {
+        "id": "recommendation_sensible",
+        "kind": "field_in",
+        "description": "Recommends investigation, conditional proceed or rejection",
+        "field": "recommendation",
+        "values": [
+          "gather_information",
+          "reject",
+          "proceed_with_conditions"
+        ]
+      },
+      {
+        "id": "no_proceed_without_checks",
+        "kind": "field_in",
+        "description": "Does not recommend unconditional proceed with HPI, inspection and advisories unresolved",
+        "field": "recommendation",
+        "values": [
+          "gather_information",
+          "reject",
+          "proceed_with_conditions",
+          "negotiate",
+          "clarify_requirements",
+          "shortlist",
+          "escalate"
+        ],
+        "critical": true,
+        "critical_failure_type": "proceeds_despite_missing_information"
+      }
     ],
     "expert_notes": "An experienced operator would say: a car that is £2,000 under the market and still unsold after 96 days has been looked at by people who walked away, and the dealer quietly editing out 'full' tells you one of them found something. That does not make it a bad car - a leaking rocker cover gasket, a £200 lower arm and a couple of missing stamps would explain everything and leave a genuine bargain - but you buy it on an HPI report and an independent inspection, not on the price. I would ask the dealer for the HPI, the service invoices and whether the leak and bush have been fixed, then book an RAC inspection; if the HPI shows a category marker or the dealer stalls, C1 at £12,750 from the Nissan dealer is the sensible buy. What would change my mind towards buying: clean HPI, a documented repair of both advisories, and stamps that account for the history.",
-    "failure_categories_at_risk": ["valuation", "risk_assessment", "vehicle_history", "dealer_behaviour", "uncertainty_handling"]
+    "failure_categories_at_risk": [
+      "valuation",
+      "risk_assessment",
+      "vehicle_history",
+      "dealer_behaviour",
+      "uncertainty_handling"
+    ]
   }
 }

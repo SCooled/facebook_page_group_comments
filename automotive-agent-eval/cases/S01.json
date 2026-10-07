@@ -7,6 +7,13 @@
   "variant_of": null,
   "journey_id": "J1",
   "journey_step": 1,
+  "primitives": [
+    "extract",
+    "classify",
+    "communicate"
+  ],
+  "primary_primitive": "communicate",
+  "expected_class": "general",
   "candidate_visible": {
     "scenario": "A buyer in Leeds has opened a conversation with you for the first time. You know nothing about them beyond their location and the one line they have typed. Today is 7 October 2026.",
     "user_context": {
@@ -47,17 +54,112 @@
     ],
     "escalation_expected": "unnecessary",
     "deterministic_checks": [
-      {"id": "clarifies", "kind": "field_in", "description": "Recommendation is to clarify requirements", "field": "recommendation", "values": ["clarify_requirements"]},
-      {"id": "asks_enough", "kind": "list_nonempty", "description": "At least four questions for the user in the structured block", "field": "questions_for_user", "min_items": 4},
-      {"id": "no_vehicles_yet", "kind": "vehicles_subset", "description": "No vehicle ids recommended at this step (there are none to recommend)", "values": []},
-      {"id": "asks_seats", "kind": "mentions_any", "description": "Asks about seats, child seats or ISOFIX", "patterns": ["ISOFIX", "child[- ]?seats?", "car[- ]?seats?", "booster", "how many seats", "seven[- ]seat", "7[- ]seat", "number of seats"]},
-      {"id": "asks_fuel", "kind": "mentions_any", "description": "Asks about fuel type or charging", "patterns": ["petrol", "diesel", "hybrid", "electric", "charg(e|ing|er)", "fuel", "plug[- ]in"]},
-      {"id": "asks_gearbox", "kind": "mentions_any", "description": "Asks about gearbox preference", "patterns": ["automatic", "manual", "gearbox", "transmission", "auto or manual"]},
-      {"id": "asks_usage", "kind": "mentions_any", "description": "Asks about annual mileage or usage pattern", "patterns": ["mileage", "miles (a|per|each) year", "miles annually", "commut", "motorway", "short (trips|journeys|runs)", "how (far|much|often) (do|will) you drive", "usage", "type of (driving|journeys)"]},
-      {"id": "asks_money", "kind": "mentions_any", "description": "Asks how the car is being paid for, part exchange, or whether the budget is all-in", "patterns": ["cash", "financ", "PCP", "monthly", "part[- ]?exchange", "trade[- ]?in", "all[- ]in", "on the road", "current car"]},
-      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a requirement-gathering step"}
+      {
+        "id": "clarifies",
+        "kind": "field_in",
+        "description": "Recommendation is to clarify requirements",
+        "field": "recommendation",
+        "values": [
+          "clarify_requirements"
+        ]
+      },
+      {
+        "id": "asks_enough",
+        "kind": "list_nonempty",
+        "description": "At least four questions for the user in the structured block",
+        "field": "questions_for_user",
+        "min_items": 4
+      },
+      {
+        "id": "no_vehicles_yet",
+        "kind": "vehicles_subset",
+        "description": "No vehicle ids recommended at this step (there are none to recommend)",
+        "values": []
+      },
+      {
+        "id": "asks_seats",
+        "kind": "mentions_any",
+        "description": "Asks about seats, child seats or ISOFIX",
+        "patterns": [
+          "ISOFIX",
+          "child[- ]?seats?",
+          "car[- ]?seats?",
+          "booster",
+          "how many seats",
+          "seven[- ]seat",
+          "7[- ]seat",
+          "number of seats"
+        ]
+      },
+      {
+        "id": "asks_fuel",
+        "kind": "mentions_any",
+        "description": "Asks about fuel type or charging",
+        "patterns": [
+          "petrol",
+          "diesel",
+          "hybrid",
+          "electric",
+          "charg(e|ing|er)",
+          "fuel",
+          "plug[- ]in"
+        ]
+      },
+      {
+        "id": "asks_gearbox",
+        "kind": "mentions_any",
+        "description": "Asks about gearbox preference",
+        "patterns": [
+          "automatic",
+          "manual",
+          "gearbox",
+          "transmission",
+          "auto or manual"
+        ]
+      },
+      {
+        "id": "asks_usage",
+        "kind": "mentions_any",
+        "description": "Asks about annual mileage or usage pattern",
+        "patterns": [
+          "mileage",
+          "miles (a|per|each) year",
+          "miles annually",
+          "commut",
+          "motorway",
+          "short (trips|journeys|runs)",
+          "how (far|much|often) (do|will) you drive",
+          "usage",
+          "type of (driving|journeys)"
+        ]
+      },
+      {
+        "id": "asks_money",
+        "kind": "mentions_any",
+        "description": "Asks how the car is being paid for, part exchange, or whether the budget is all-in",
+        "patterns": [
+          "cash",
+          "financ",
+          "PCP",
+          "monthly",
+          "part[- ]?exchange",
+          "trade[- ]?in",
+          "all[- ]in",
+          "on the road",
+          "current car"
+        ]
+      },
+      {
+        "id": "no_escalation",
+        "kind": "escalation",
+        "description": "Does not hand off at a requirement-gathering step"
+      }
     ],
     "expert_notes": "An experienced operator would not name a single car here. 'Family car under £25k' covers everything from a Fiesta-sized hatch to a seven-seat Kodiaq, and the answers to five or six questions (how many and how old are the kids, dog or buggy, auto or manual, can you charge at home, how many miles and what sort, cash or finance, anything to part exchange) usually collapse the search to two or three body styles. The right output is a short, grouped set of questions and an honest line that the search comes after the answers. I would only start suggesting models once I knew gearbox, seats, boot need and fuel; anything before that is noise.",
-    "failure_categories_at_risk": ["requirements_interpretation", "uncertainty_handling", "hallucination_unsupported_fact"]
+    "failure_categories_at_risk": [
+      "requirements_interpretation",
+      "uncertainty_handling",
+      "hallucination_unsupported_fact"
+    ]
   }
 }

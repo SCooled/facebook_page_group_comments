@@ -7,14 +7,31 @@
   "variant_of": null,
   "journey_id": null,
   "journey_step": null,
+  "primitives": [
+    "detect_anomaly",
+    "classify",
+    "communicate"
+  ],
+  "primary_primitive": "detect_anomaly",
+  "expected_class": "hybrid",
   "candidate_visible": {
     "scenario": "The buyer has viewed and test driven a Ford Focus being sold privately in Nottingham. The seller explained that the service book was lost in a house move and has given the buyer the receipts he could find. The buyer liked the car and the seller and wants your opinion before making an offer. Today is 7 October 2026.",
     "user_context": {
       "location": "Beeston, Nottingham, NG9",
       "household": "couple, first child due in January",
       "budget_gbp_max_all_in": 12000,
-      "hard_requirements": ["five-door hatchback", "petrol", "manual", "under 60,000 miles", "ISOFIX"],
-      "priorities_in_order": ["reliability over the next 4-5 years", "running costs", "value"],
+      "hard_requirements": [
+        "five-door hatchback",
+        "petrol",
+        "manual",
+        "under 60,000 miles",
+        "ISOFIX"
+      ],
+      "priorities_in_order": [
+        "reliability over the next 4-5 years",
+        "running costs",
+        "value"
+      ],
       "annual_mileage": 9000,
       "usage": "mixed: 15-minute commute each way, weekend trips to Derby and Lincoln",
       "ownership_horizon_years": 5,
@@ -28,38 +45,154 @@
         "id": "L01",
         "source": "Facebook Marketplace",
         "title": "Ford Focus 1.0 EcoBoost ST-Line X 2019 - 47k - lovely car",
-        "make": "Ford", "model": "Focus", "derivative": "1.0 EcoBoost 125 ST-Line X 5dr",
+        "make": "Ford",
+        "model": "Focus",
+        "derivative": "1.0 EcoBoost 125 ST-Line X 5dr",
         "generation": "Mk4 (2018-)",
-        "year": 2019, "plate": "19", "first_registered": "2019-05",
-        "mileage": 47300, "fuel": "Petrol", "transmission": "Manual (6-speed)", "body": "Hatchback", "seats": 5,
+        "year": 2019,
+        "plate": "19",
+        "first_registered": "2019-05",
+        "mileage": 47300,
+        "fuel": "Petrol",
+        "transmission": "Manual (6-speed)",
+        "body": "Hatchback",
+        "seats": 5,
         "colour": "Magnetic grey metallic",
         "price_gbp": 11495,
         "previous_owners": 2,
         "keys": 2,
         "service_history": "Seller states 'serviced regularly'. Service book not available (lost in house move, per seller). Receipts supplied: see receipts_supplied. Ford's schedule for this engine is every 12 months or 12,500 miles, whichever comes first, using Ford WSS-M2C948-B specification 5W-20 oil.",
         "receipts_supplied": [
-          {"date": "2022-08-16", "garage": "Carlton Service Centre, Nottingham NG4", "mileage": 31240, "work": "Oil and filter service, pollen filter, 5W-20 oil (brand not itemised)", "amount_gbp": 148},
-          {"date": "2024-05-03", "garage": "Kwik Fit, Nottingham Castle Boulevard", "mileage": 42350, "work": "Front brake pads and discs", "amount_gbp": 289}
+          {
+            "date": "2022-08-16",
+            "garage": "Carlton Service Centre, Nottingham NG4",
+            "mileage": 31240,
+            "work": "Oil and filter service, pollen filter, 5W-20 oil (brand not itemised)",
+            "amount_gbp": 148
+          },
+          {
+            "date": "2024-05-03",
+            "garage": "Kwik Fit, Nottingham Castle Boulevard",
+            "mileage": 42350,
+            "work": "Front brake pads and discs",
+            "amount_gbp": 289
+          }
         ],
         "mot_expiry": "2027-05-19",
         "mot_history": [
-          {"date": "2022-05-10", "result": "Pass", "mileage": 30120, "advisories": []},
-          {"date": "2023-05-15", "result": "Pass", "mileage": 36850, "advisories": []},
-          {"date": "2024-05-13", "result": "Pass", "mileage": 42410, "advisories": []},
-          {"date": "2025-05-19", "result": "Pass", "mileage": 46210, "advisories": []}
+          {
+            "date": "2022-05-10",
+            "result": "Pass",
+            "mileage": 30120,
+            "advisories": []
+          },
+          {
+            "date": "2023-05-15",
+            "result": "Pass",
+            "mileage": 36850,
+            "advisories": []
+          },
+          {
+            "date": "2024-05-13",
+            "result": "Pass",
+            "mileage": 42410,
+            "advisories": []
+          },
+          {
+            "date": "2025-05-19",
+            "result": "Pass",
+            "mileage": 46210,
+            "advisories": []
+          }
         ],
-        "notable_equipment": ["ST-Line body kit and rear spoiler", "18in alloy wheels", "sports suspension", "partial leather sports seats", "heated front seats and steering wheel", "SYNC 3 8in touchscreen with navigation", "B&O audio", "rear parking camera", "keyless entry and start", "LED headlights", "cruise control with speed limiter", "ISOFIX rear outer seats"],
-        "seller": {"type": "private", "name": "Darren", "location": "Carlton, Nottingham", "distance_miles": 6, "notes": "Owned since March 2021 (bought from a Ford dealer as an approved used car at 19,000 miles). Selling because he has been given a company van."},
+        "notable_equipment": [
+          "ST-Line body kit and rear spoiler",
+          "18in alloy wheels",
+          "sports suspension",
+          "partial leather sports seats",
+          "heated front seats and steering wheel",
+          "SYNC 3 8in touchscreen with navigation",
+          "B&O audio",
+          "rear parking camera",
+          "keyless entry and start",
+          "LED headlights",
+          "cruise control with speed limiter",
+          "ISOFIX rear outer seats"
+        ],
+        "seller": {
+          "type": "private",
+          "name": "Darren",
+          "location": "Carlton, Nottingham",
+          "distance_miles": 6,
+          "notes": "Owned since March 2021 (bought from a Ford dealer as an approved used car at 19,000 miles). Selling because he has been given a company van."
+        },
         "buyer_viewing_notes": "Drove well, no warning lights, clutch and gearbox felt fine, tyres Continental all round with 4-6mm. Interior clean. Oil level between marks and looked brown rather than black. Seller said he 'changes the oil himself in between, every year or so, from Halfords' but has no receipts for that. He said he'd never heard of any belt needing doing. Logbook (V5C) in his name at his address, matches the reg, VIN plate checked.",
         "days_listed": 9,
-        "price_history": [{"date": "2026-09-28", "price_gbp": 11495}],
+        "price_history": [
+          {
+            "date": "2026-09-28",
+            "price_gbp": 11495
+          }
+        ],
         "description_excerpt": "Reluctant sale of my Focus ST-Line X, 2019, 47k miles. Full spec with heated seats, B&O, sat nav, camera. Serviced regularly, book lost in house move but have receipts for some of it. MOT till May 2027, no advisories. Two keys. Drives perfect. No timewasters please, no silly offers."
       },
       "comparables": [
-        {"id": "C1", "source": "AutoTrader", "title": "Ford Focus 1.0 EcoBoost 125 ST-Line X 5dr", "year": 2019, "plate": "19", "mileage": 44900, "previous_owners": 2, "service_history": "full Ford service history", "price_gbp": 12295, "seller_type": "independent dealer", "distance_miles": 11, "days_listed": 16},
-        {"id": "C2", "source": "AutoTrader", "title": "Ford Focus 1.0 EcoBoost 125 ST-Line X 5dr", "year": 2019, "plate": "69", "mileage": 52300, "previous_owners": 1, "service_history": "full service history, belt replaced 2026 (invoice)", "price_gbp": 12495, "seller_type": "franchised dealer (Ford)", "distance_miles": 8, "days_listed": 7},
-        {"id": "C3", "source": "Gumtree", "title": "Ford Focus ST-Line X 1.0 125 2019 private", "year": 2019, "plate": "19", "mileage": 58700, "previous_owners": 3, "service_history": "part service history", "price_gbp": 10250, "seller_type": "private", "distance_miles": 19, "days_listed": 24},
-        {"id": "C4", "source": "Motors.co.uk", "title": "Ford Focus 1.0 EcoBoost 125 ST-Line 5dr", "year": 2019, "plate": "19", "mileage": 41800, "previous_owners": 2, "service_history": "full service history", "price_gbp": 11495, "seller_type": "independent dealer", "distance_miles": 14, "days_listed": 21}
+        {
+          "id": "C1",
+          "source": "AutoTrader",
+          "title": "Ford Focus 1.0 EcoBoost 125 ST-Line X 5dr",
+          "year": 2019,
+          "plate": "19",
+          "mileage": 44900,
+          "previous_owners": 2,
+          "service_history": "full Ford service history",
+          "price_gbp": 12295,
+          "seller_type": "independent dealer",
+          "distance_miles": 11,
+          "days_listed": 16
+        },
+        {
+          "id": "C2",
+          "source": "AutoTrader",
+          "title": "Ford Focus 1.0 EcoBoost 125 ST-Line X 5dr",
+          "year": 2019,
+          "plate": "69",
+          "mileage": 52300,
+          "previous_owners": 1,
+          "service_history": "full service history, belt replaced 2026 (invoice)",
+          "price_gbp": 12495,
+          "seller_type": "franchised dealer (Ford)",
+          "distance_miles": 8,
+          "days_listed": 7
+        },
+        {
+          "id": "C3",
+          "source": "Gumtree",
+          "title": "Ford Focus ST-Line X 1.0 125 2019 private",
+          "year": 2019,
+          "plate": "19",
+          "mileage": 58700,
+          "previous_owners": 3,
+          "service_history": "part service history",
+          "price_gbp": 10250,
+          "seller_type": "private",
+          "distance_miles": 19,
+          "days_listed": 24
+        },
+        {
+          "id": "C4",
+          "source": "Motors.co.uk",
+          "title": "Ford Focus 1.0 EcoBoost 125 ST-Line 5dr",
+          "year": 2019,
+          "plate": "19",
+          "mileage": 41800,
+          "previous_owners": 2,
+          "service_history": "full service history",
+          "price_gbp": 11495,
+          "seller_type": "independent dealer",
+          "distance_miles": 14,
+          "days_listed": 21
+        }
       ],
       "comparables_note": "Private 2019 ST-Line X cars with full history are typically £700-£1,000 below dealer asking. The buyer has not yet had an independent inspection or an HPI check done."
     },
@@ -96,15 +229,102 @@
     ],
     "escalation_expected": "unnecessary",
     "deterministic_checks": [
-      {"id": "wet_belt", "kind": "mentions_any", "description": "Identifies the wet belt / timing belt issue on this engine", "patterns": ["wet[- ]belt", "belt[- ]in[- ]oil", "timing belt", "cambelt", "cam belt", "belt in the oil", "oil[- ]immersed belt"]},
-      {"id": "oil_changes", "kind": "mentions_any", "description": "Links the gap to oil changes or oil specification", "patterns": ["oil change", "oil service", "oil spec", "oil specification", "correct oil", "right oil", "5W-20", "WSS-M2C948", "oil (and|&) filter"]},
-      {"id": "chase_records", "kind": "mentions_any", "description": "Suggests chasing receipts, garages or invoices", "patterns": ["receipt", "garage name", "invoice", "Carlton Service", "Ford dealer", "digital service record", "service record", "call the garage", "phone the garage", "ring the garage", "contact the garage"]},
-      {"id": "provenance", "kind": "mentions_any", "description": "Recommends an HPI or provenance check on a private sale", "patterns": ["HPI", "history check", "outstanding finance", "provenance", "write[- ]off", "stolen"]},
-      {"id": "no_belt_conclusion", "kind": "not_mentions", "description": "Does not assert the belt has failed or is failing", "patterns": ["belt (has|is) (already )?(failed|failing|gone|shredded|disintegrat)", "belt will fail", "the belt is (definitely |certainly )?(worn|damaged|degraded)"]},
-      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a routine evaluation step"},
-      {"id": "recommendation_sensible", "kind": "field_in", "description": "Recommends gathering information, negotiating, conditional proceed or rejecting, not unconditional proceed", "field": "recommendation", "values": ["gather_information", "negotiate", "proceed_with_conditions", "reject"]}
+      {
+        "id": "wet_belt",
+        "kind": "mentions_any",
+        "description": "Identifies the wet belt / timing belt issue on this engine",
+        "patterns": [
+          "wet[- ]belt",
+          "belt[- ]in[- ]oil",
+          "timing belt",
+          "cambelt",
+          "cam belt",
+          "belt in the oil",
+          "oil[- ]immersed belt"
+        ]
+      },
+      {
+        "id": "oil_changes",
+        "kind": "mentions_any",
+        "description": "Links the gap to oil changes or oil specification",
+        "patterns": [
+          "oil change",
+          "oil service",
+          "oil spec",
+          "oil specification",
+          "correct oil",
+          "right oil",
+          "5W-20",
+          "WSS-M2C948",
+          "oil (and|&) filter"
+        ]
+      },
+      {
+        "id": "chase_records",
+        "kind": "mentions_any",
+        "description": "Suggests chasing receipts, garages or invoices",
+        "patterns": [
+          "receipt",
+          "garage name",
+          "invoice",
+          "Carlton Service",
+          "Ford dealer",
+          "digital service record",
+          "service record",
+          "call the garage",
+          "phone the garage",
+          "ring the garage",
+          "contact the garage"
+        ]
+      },
+      {
+        "id": "provenance",
+        "kind": "mentions_any",
+        "description": "Recommends an HPI or provenance check on a private sale",
+        "patterns": [
+          "HPI",
+          "history check",
+          "outstanding finance",
+          "provenance",
+          "write[- ]off",
+          "stolen"
+        ]
+      },
+      {
+        "id": "no_belt_conclusion",
+        "kind": "not_mentions",
+        "description": "Does not assert the belt has failed or is failing",
+        "patterns": [
+          "belt (has|is) (already )?(failed|failing|gone|shredded|disintegrat)",
+          "belt will fail",
+          "the belt is (definitely |certainly )?(worn|damaged|degraded)"
+        ]
+      },
+      {
+        "id": "no_escalation",
+        "kind": "escalation",
+        "description": "Does not hand off at a routine evaluation step"
+      },
+      {
+        "id": "recommendation_sensible",
+        "kind": "field_in",
+        "description": "Recommends gathering information, negotiating, conditional proceed or rejecting, not unconditional proceed",
+        "field": "recommendation",
+        "values": [
+          "gather_information",
+          "negotiate",
+          "proceed_with_conditions",
+          "reject"
+        ]
+      }
     ],
     "expert_notes": "An experienced operator would say: on most petrol cars a lost book with clean MOTs and a decent owner is a shrug; on a 1.0 EcoBoost it is the one thing you cannot shrug at, because the belt lives in the oil and nobody can prove what oil went in or when. The car may well be fine, and nothing here says it is not, but the buyer should price in a precautionary belt and ancillaries (£900-£1,200) or get evidence that removes the need. Reasonable money for this car as it stands is £10,250-£10,500, not £11,000, and C2 at £12,495 with the belt done and a Ford warranty is arguably the cheaper car over five years. What would change my mind: Ford digital records showing annual dealer services to 2021 plus the Carlton garage confirming more visits than the one receipt, in which case £10,750-£11,000 is fair.",
-    "failure_categories_at_risk": ["vehicle_history", "risk_assessment", "valuation", "uncertainty_handling", "hallucination_unsupported_fact"]
+    "failure_categories_at_risk": [
+      "vehicle_history",
+      "risk_assessment",
+      "valuation",
+      "uncertainty_handling",
+      "hallucination_unsupported_fact"
+    ]
   }
 }

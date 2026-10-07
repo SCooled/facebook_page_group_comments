@@ -7,6 +7,12 @@
   "variant_of": null,
   "journey_id": null,
   "journey_step": null,
+  "primitives": [
+    "compare",
+    "communicate"
+  ],
+  "primary_primitive": "compare",
+  "expected_class": "hybrid",
   "candidate_visible": {
     "scenario": "The buyer has a shortlisted car (A) and a friend has pointed them at a cheaper car (B) in the same segment. You have both listings in full, plus a third estate (L03) that came up in the same search. The buyer wants to know whether the friend's claim stands up. Today is 7 October 2026.",
     "user_context": {
@@ -16,14 +22,27 @@
       "health_note": "two herniated lumbar discs (L4/L5); current car's seats cause pain after 40 minutes and the physio has told him to prioritise seat support and avoid repeated clutch work",
       "budget_gbp_max_all_in": 22000,
       "funding": "£10,000 cash plus a bank loan already approved for up to £12,000; current 2015 Vauxhall Insignia Sports Tourer 2.0 CDTi manual, 134,000 miles, to be sold privately",
-      "priorities_in_order": ["refinement and comfort over 90 minutes of motorway, including stop-start", "seats that support a bad back (lumbar adjustment, long cushion)", "adaptive cruise control for the M62 queues", "quiet cabin", "a good automatic gearbox", "running costs and reliability"],
-      "hard_requirements": ["automatic gearbox", "adaptive cruise control", "estate body (bikes and a dog crate at weekends)"],
+      "priorities_in_order": [
+        "refinement and comfort over 90 minutes of motorway, including stop-start",
+        "seats that support a bad back (lumbar adjustment, long cushion)",
+        "adaptive cruise control for the M62 queues",
+        "quiet cabin",
+        "a good automatic gearbox",
+        "running costs and reliability"
+      ],
+      "hard_requirements": [
+        "automatic gearbox",
+        "adaptive cruise control",
+        "estate body (bikes and a dog crate at weekends)"
+      ],
       "ownership_horizon_years": 5
     },
     "conversation_state": {
       "step": "comparing shortlisted vehicle against an alternative",
       "requirements_confirmed": true,
-      "shortlist": ["A"],
+      "shortlist": [
+        "A"
+      ],
       "friend_suggestion": "B"
     },
     "evidence": {
@@ -32,9 +51,17 @@
           "id": "A",
           "source": "AutoTrader",
           "title": "Volkswagen Passat Estate 2.0 TDI SCR 150 SEL DSG 5dr",
-          "make": "Volkswagen", "model": "Passat Estate", "derivative": "2.0 TDI SCR 150 SEL DSG (B8 facelift)",
-          "year": 2021, "plate": "21", "first_registered": "2021-03",
-          "mileage": 54000, "fuel": "Diesel", "transmission": "Automatic (7-speed DSG, wet clutch)", "body": "Estate", "seats": 5,
+          "make": "Volkswagen",
+          "model": "Passat Estate",
+          "derivative": "2.0 TDI SCR 150 SEL DSG (B8 facelift)",
+          "year": 2021,
+          "plate": "21",
+          "first_registered": "2021-03",
+          "mileage": 54000,
+          "fuel": "Diesel",
+          "transmission": "Automatic (7-speed DSG, wet clutch)",
+          "body": "Estate",
+          "seats": 5,
           "engine": "2.0 TDI, 150 PS, 360 Nm, four cylinders",
           "colour": "Manganese Grey metallic",
           "price_gbp": 19995,
@@ -43,20 +70,53 @@
           "mot_expiry": "2027-07-02",
           "mot_history_summary": "Three MOTs, all passes, no advisories.",
           "keys": 2,
-          "notable_equipment": ["ergoComfort 14-way electrically adjustable driver's seat with adjustable lumbar support, massage and seat-cushion extension (AGR-certified)", "Adaptive Cruise Control with Stop & Go", "Travel Assist (lane centring)", "Nappa leather upholstery", "heated front seats", "Discover Navigation Pro 9.2-inch", "Active Info Display digital instruments", "IQ.Light LED Matrix headlights", "three-zone climate control", "rear view camera and Park Assist", "electric tailgate", "18-inch alloys", "acoustic windscreen"],
-          "seller": {"type": "franchised dealer (Volkswagen)", "name": "Stockport Volkswagen", "location": "Stockport SK3", "distance_miles": 6, "reviews": "4.5/5 from 622 reviews"},
+          "notable_equipment": [
+            "ergoComfort 14-way electrically adjustable driver's seat with adjustable lumbar support, massage and seat-cushion extension (AGR-certified)",
+            "Adaptive Cruise Control with Stop & Go",
+            "Travel Assist (lane centring)",
+            "Nappa leather upholstery",
+            "heated front seats",
+            "Discover Navigation Pro 9.2-inch",
+            "Active Info Display digital instruments",
+            "IQ.Light LED Matrix headlights",
+            "three-zone climate control",
+            "rear view camera and Park Assist",
+            "electric tailgate",
+            "18-inch alloys",
+            "acoustic windscreen"
+          ],
+          "seller": {
+            "type": "franchised dealer (Volkswagen)",
+            "name": "Stockport Volkswagen",
+            "location": "Stockport SK3",
+            "distance_miles": 6,
+            "reviews": "4.5/5 from 622 reviews"
+          },
           "warranty": "12 months Volkswagen Approved Used warranty and roadside assistance",
           "days_listed": 19,
-          "price_history": [{"date": "2026-09-18", "price_gbp": 20495}],
+          "price_history": [
+            {
+              "date": "2026-09-18",
+              "price_gbp": 20495
+            }
+          ],
           "description_excerpt": "Volkswagen Approved Used. Range-topping SEL with the ergoComfort massage seat, Matrix LED lights, Travel Assist and adaptive cruise. Two owners, full VW history including DSG service, two keys. Supplied with 12 months warranty."
         },
         {
           "id": "B",
           "source": "AutoTrader",
           "title": "Skoda Octavia Estate 1.0 TSI SE 5dr",
-          "make": "Skoda", "model": "Octavia Estate", "derivative": "1.0 TSI 110 SE manual (Mk4)",
-          "year": 2021, "plate": "21", "first_registered": "2021-05",
-          "mileage": 38000, "fuel": "Petrol", "transmission": "Manual (6-speed)", "body": "Estate", "seats": 5,
+          "make": "Skoda",
+          "model": "Octavia Estate",
+          "derivative": "1.0 TSI 110 SE manual (Mk4)",
+          "year": 2021,
+          "plate": "21",
+          "first_registered": "2021-05",
+          "mileage": 38000,
+          "fuel": "Petrol",
+          "transmission": "Manual (6-speed)",
+          "body": "Estate",
+          "seats": 5,
           "engine": "1.0 TSI, 110 PS, 200 Nm, three cylinders",
           "colour": "Moon White metallic",
           "price_gbp": 15750,
@@ -65,8 +125,25 @@
           "mot_expiry": "2027-05-11",
           "mot_history_summary": "Three MOTs, all passes, no advisories.",
           "keys": 2,
-          "notable_equipment": ["cruise control with speed limiter", "standard cloth seats with manual adjustment and manual lumbar on driver's seat", "8.25-inch touchscreen with Apple CarPlay and Android Auto", "Virtual Cockpit", "LED headlights", "dual-zone climate control", "rear parking sensors", "16-inch alloys", "front assist", "lane assist"],
-          "seller": {"type": "franchised dealer (Skoda)", "name": "Sale Skoda", "location": "Sale M33", "distance_miles": 5, "reviews": "4.6/5 from 404 reviews"},
+          "notable_equipment": [
+            "cruise control with speed limiter",
+            "standard cloth seats with manual adjustment and manual lumbar on driver's seat",
+            "8.25-inch touchscreen with Apple CarPlay and Android Auto",
+            "Virtual Cockpit",
+            "LED headlights",
+            "dual-zone climate control",
+            "rear parking sensors",
+            "16-inch alloys",
+            "front assist",
+            "lane assist"
+          ],
+          "seller": {
+            "type": "franchised dealer (Skoda)",
+            "name": "Sale Skoda",
+            "location": "Sale M33",
+            "distance_miles": 5,
+            "reviews": "4.6/5 from 404 reviews"
+          },
           "warranty": "12 months Skoda Approved Used warranty",
           "days_listed": 11,
           "price_history": [],
@@ -76,9 +153,17 @@
           "id": "L03",
           "source": "Motors.co.uk",
           "title": "Skoda Octavia Estate 2.0 TDI 150 SE L DSG 5dr",
-          "make": "Skoda", "model": "Octavia Estate", "derivative": "2.0 TDI 150 SE L DSG (Mk4)",
-          "year": 2021, "plate": "71", "first_registered": "2021-09",
-          "mileage": 61400, "fuel": "Diesel", "transmission": "Automatic (7-speed DSG, wet clutch)", "body": "Estate", "seats": 5,
+          "make": "Skoda",
+          "model": "Octavia Estate",
+          "derivative": "2.0 TDI 150 SE L DSG (Mk4)",
+          "year": 2021,
+          "plate": "71",
+          "first_registered": "2021-09",
+          "mileage": 61400,
+          "fuel": "Diesel",
+          "transmission": "Automatic (7-speed DSG, wet clutch)",
+          "body": "Estate",
+          "seats": 5,
           "engine": "2.0 TDI, 150 PS, 360 Nm, four cylinders",
           "colour": "Graphite Grey metallic",
           "price_gbp": 18250,
@@ -87,11 +172,38 @@
           "mot_expiry": "2027-09-14",
           "mot_history_summary": "Two MOTs, both passes. 2026 advisory: 'front brake pads wearing thin'.",
           "keys": 2,
-          "notable_equipment": ["Adaptive Cruise Control (fitted)", "heated front seats", "Suedia and leather upholstery with electrically adjustable driver's seat and manual lumbar", "10-inch Columbus navigation", "Virtual Cockpit", "Matrix LED headlights", "keyless entry", "rear view camera", "electric tailgate", "17-inch alloys", "dual-zone climate control"],
-          "seller": {"type": "independent dealer", "name": "Cheadle Hulme Car Sales", "location": "Cheadle Hulme SK8", "distance_miles": 6, "reviews": "4.7/5 from 157 reviews"},
+          "notable_equipment": [
+            "Adaptive Cruise Control (fitted)",
+            "heated front seats",
+            "Suedia and leather upholstery with electrically adjustable driver's seat and manual lumbar",
+            "10-inch Columbus navigation",
+            "Virtual Cockpit",
+            "Matrix LED headlights",
+            "keyless entry",
+            "rear view camera",
+            "electric tailgate",
+            "17-inch alloys",
+            "dual-zone climate control"
+          ],
+          "seller": {
+            "type": "independent dealer",
+            "name": "Cheadle Hulme Car Sales",
+            "location": "Cheadle Hulme SK8",
+            "distance_miles": 6,
+            "reviews": "4.7/5 from 157 reviews"
+          },
           "warranty": "6 months dealer warranty, 12 months available at £329",
           "days_listed": 33,
-          "price_history": [{"date": "2026-09-04", "price_gbp": 18750}, {"date": "2026-09-29", "price_gbp": 18250}],
+          "price_history": [
+            {
+              "date": "2026-09-04",
+              "price_gbp": 18750
+            },
+            {
+              "date": "2026-09-29",
+              "price_gbp": 18250
+            }
+          ],
           "description_excerpt": "Octavia SE L estate with the 150 diesel and DSG box, adaptive cruise, heated electric seats, Matrix LEDs and the big Columbus screen. Two owners, full Skoda history with DSG service done, two keys. Reduced."
         }
       ]
@@ -128,17 +240,114 @@
     ],
     "escalation_expected": "unnecessary",
     "deterministic_checks": [
-      {"id": "not_b", "kind": "vehicles_exclude", "description": "Does not recommend B", "values": ["B"]},
-      {"id": "keeps_a_or_l03", "kind": "vehicles_include", "description": "Keeps A and/or identifies L03 as the real middle ground", "values": ["A", "L03"]},
-      {"id": "gearbox_point", "kind": "mentions_any", "description": "Identifies the manual gearbox issue", "patterns": ["manual", "gearbox", "\\bDSG\\b", "clutch", "automatic"]},
-      {"id": "acc_point", "kind": "mentions_any", "description": "Identifies the adaptive cruise difference", "patterns": ["adaptive cruise", "\\bACC\\b", "stop ?& ?go", "stop and go", "standard cruise"]},
-      {"id": "seat_point", "kind": "mentions_any", "description": "Addresses seats, back support or comfort", "patterns": ["ergoComfort", "\\bseat", "lumbar", "back pain", "bad back", "disc", "comfort", "massage"]},
-      {"id": "engine_point", "kind": "mentions_any", "description": "Addresses the engine and refinement gap", "patterns": ["three[- ]cylinder", "3[- ]cyl", "torque", "360 ?Nm", "200 ?Nm", "1\\.0", "110 ?(PS|bhp|hp)", "refine", "noise", "quiet"]},
-      {"id": "quantifies_gap", "kind": "mentions_any", "description": "Quantifies the price difference", "patterns": ["4[,.]?245", "four grand", "£4[,.]?2", "4[.,]2k", "1[,.]?745"]},
-      {"id": "recommendation_type", "kind": "field_in", "description": "Shortlists, gathers information or proceeds with conditions", "field": "recommendation", "values": ["shortlist", "gather_information", "proceed_with_conditions"]},
-      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a comparison step"}
+      {
+        "id": "not_b",
+        "kind": "vehicles_exclude",
+        "description": "Does not recommend B",
+        "values": [
+          "B"
+        ]
+      },
+      {
+        "id": "keeps_a_or_l03",
+        "kind": "vehicles_include",
+        "description": "Keeps A and/or identifies L03 as the real middle ground",
+        "values": [
+          "A",
+          "L03"
+        ]
+      },
+      {
+        "id": "gearbox_point",
+        "kind": "mentions_any",
+        "description": "Identifies the manual gearbox issue",
+        "patterns": [
+          "manual",
+          "gearbox",
+          "\\bDSG\\b",
+          "clutch",
+          "automatic"
+        ]
+      },
+      {
+        "id": "acc_point",
+        "kind": "mentions_any",
+        "description": "Identifies the adaptive cruise difference",
+        "patterns": [
+          "adaptive cruise",
+          "\\bACC\\b",
+          "stop ?& ?go",
+          "stop and go",
+          "standard cruise"
+        ]
+      },
+      {
+        "id": "seat_point",
+        "kind": "mentions_any",
+        "description": "Addresses seats, back support or comfort",
+        "patterns": [
+          "ergoComfort",
+          "\\bseat",
+          "lumbar",
+          "back pain",
+          "bad back",
+          "disc",
+          "comfort",
+          "massage"
+        ]
+      },
+      {
+        "id": "engine_point",
+        "kind": "mentions_any",
+        "description": "Addresses the engine and refinement gap",
+        "patterns": [
+          "three[- ]cylinder",
+          "3[- ]cyl",
+          "torque",
+          "360 ?Nm",
+          "200 ?Nm",
+          "1\\.0",
+          "110 ?(PS|bhp|hp)",
+          "refine",
+          "noise",
+          "quiet"
+        ]
+      },
+      {
+        "id": "quantifies_gap",
+        "kind": "mentions_any",
+        "description": "Quantifies the price difference",
+        "patterns": [
+          "4[,.]?245",
+          "four grand",
+          "£4[,.]?2",
+          "4[.,]2k",
+          "1[,.]?745"
+        ]
+      },
+      {
+        "id": "recommendation_type",
+        "kind": "field_in",
+        "description": "Shortlists, gathers information or proceeds with conditions",
+        "field": "recommendation",
+        "values": [
+          "shortlist",
+          "gather_information",
+          "proceed_with_conditions"
+        ]
+      },
+      {
+        "id": "no_escalation",
+        "kind": "escalation",
+        "description": "Does not hand off at a comparison step"
+      }
     ],
     "expert_notes": "An experienced operator would say the mate is comparing boots, not cars. B is a very good Octavia for someone else: a manual three-pot with ordinary seats and ordinary cruise is the opposite of what a man with two bad discs and 90 minutes of M62 queues each way asked for, and he would be back in the market inside a year. The honest answer to 'can I spend less' is L03: the same 150 TDI and wet-clutch DSG as the Passat, adaptive cruise, an electric heated seat, Matrix lights and Skoda history with the DSG serviced, for £1,745 less and already cut twice, so £17,750 is a sensible target. Whether that beats the Passat comes down to the ergoComfort seat, which for this back is worth real money; he should sit in both for half an hour with the lumbar set before choosing. What would change the view: if the SE L seat proves comfortable on a long test, L03 is the buy with the £329 warranty added; if not, the Passat at £19,500 or so is the right spend.",
-    "failure_categories_at_risk": ["substitution", "requirements_interpretation", "vehicle_specification", "total_transaction_economics"]
+    "failure_categories_at_risk": [
+      "substitution",
+      "requirements_interpretation",
+      "vehicle_specification",
+      "total_transaction_economics"
+    ]
   }
 }

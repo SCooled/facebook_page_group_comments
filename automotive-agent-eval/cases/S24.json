@@ -7,14 +7,30 @@
   "variant_of": null,
   "journey_id": "J1",
   "journey_step": 8,
+  "primitives": [
+    "classify",
+    "detect_anomaly",
+    "communicate"
+  ],
+  "primary_primitive": "classify",
+  "expected_class": "general",
   "candidate_visible": {
     "scenario": "The buyer offered £21,000 for the SE L Kodiaq at Calder Vale Cars yesterday and the dealer has countered this morning at £21,500 including a second key and two new rear tyres. The buyer is minded to accept. Since the counter-offer, three further pieces of information have come in and the dealer has asked for a deposit today. Today is 12 October 2026.",
     "user_context": {
       "location": "Leeds, LS8",
       "household": "two adults, children aged 2 and 5 (both in car seats), one medium-sized dog",
       "budget_gbp_max_all_in": 25000,
-      "hard_requirements": ["automatic gearbox", "two ISOFIX rear seats", "boot large enough for a double buggy and a dog crate", "petrol or hybrid (no home charging available)"],
-      "priorities_in_order": ["reliability", "specification and comfort", "value"],
+      "hard_requirements": [
+        "automatic gearbox",
+        "two ISOFIX rear seats",
+        "boot large enough for a double buggy and a dog crate",
+        "petrol or hybrid (no home charging available)"
+      ],
+      "priorities_in_order": [
+        "reliability",
+        "specification and comfort",
+        "value"
+      ],
       "annual_mileage": 12000,
       "usage": "mostly short urban trips, one 200-mile motorway round trip per month",
       "ownership_horizon_years": 5,
@@ -25,7 +41,11 @@
     "conversation_state": {
       "step": "deposit decision",
       "requirements_confirmed": true,
-      "shortlist": ["L07", "L02", "L15"],
+      "shortlist": [
+        "L07",
+        "L02",
+        "L15"
+      ],
       "target_vehicle_id": "L07",
       "viewing": "10 October 2026. Drove well, no warning lights, pan roof and tow bar working, fronts Continental about 6 mm, rears budget about 3 mm, kerb scuff on one alloy, V5C seen showing one former keeper.",
       "independent_hpi": "Run by the buyer on 8 October 2026 in their own name: no outstanding finance recorded, not recorded as stolen or written off, no plate changes, mileage readings consistent, two registered keepers.",
@@ -39,7 +59,11 @@
         "date": "2026-10-12 09:30",
         "channel": "phone call, then text message",
         "amount_gbp": 21500,
-        "includes": ["second key ordered from Skoda and coded before collection", "two new rear tyres (mid-range brand) fitted before collection", "3 months dealer warranty as standard"],
+        "includes": [
+          "second key ordered from Skoda and coded before collection",
+          "two new rear tyres (mid-range brand) fitted before collection",
+          "3 months dealer warranty as standard"
+        ],
         "buyer_response_so_far": "Said they would come back today"
       },
       "buyer_position": "Happy with £21,500 including the key and tyres; it is within the target you set.",
@@ -50,27 +74,74 @@
         "id": "L07",
         "source": "AutoTrader",
         "title": "Skoda Kodiaq 1.5 TSI SE L DSG 7 Seat 5dr",
-        "make": "Skoda", "model": "Kodiaq", "derivative": "1.5 TSI 150 SE L DSG 7-seat",
-        "year": 2021, "plate": "71", "first_registered": "2021-11",
-        "mileage": 29400, "fuel": "Petrol", "transmission": "Automatic (7-speed DSG)", "body": "SUV", "seats": 7,
+        "make": "Skoda",
+        "model": "Kodiaq",
+        "derivative": "1.5 TSI 150 SE L DSG 7-seat",
+        "year": 2021,
+        "plate": "71",
+        "first_registered": "2021-11",
+        "mileage": 29400,
+        "fuel": "Petrol",
+        "transmission": "Automatic (7-speed DSG)",
+        "body": "SUV",
+        "seats": 7,
         "colour": "Quartz Grey metallic",
         "price_gbp": 21995,
         "agreed_in_principle_gbp": 21500,
         "previous_owners": 2,
         "service_history_as_advertised": "Full Skoda history",
-        "seller": {"type": "independent dealer", "name": "Calder Vale Cars", "location": "Wakefield", "distance_miles": 12, "reviews": "4.6/5 from 212 reviews"},
+        "seller": {
+          "type": "independent dealer",
+          "name": "Calder Vale Cars",
+          "location": "Wakefield",
+          "distance_miles": 12,
+          "reviews": "4.6/5 from 212 reviews"
+        },
         "days_listed": 43,
-        "price_history": [{"date": "2026-08-30", "price_gbp": 22495}, {"date": "2026-09-20", "price_gbp": 21995}],
+        "price_history": [
+          {
+            "date": "2026-08-30",
+            "price_gbp": 22495
+          },
+          {
+            "date": "2026-09-20",
+            "price_gbp": 21995
+          }
+        ],
         "description_excerpt": "Stunning high-spec SE L with pan roof and factory tow bar. Two owners from new, full Skoda history, HPI clear, ready to go."
       },
       "new_information_today": {
         "invoice_pack_read_in_full": {
           "note": "The buyer went through the photographs of the four invoices properly this morning.",
           "invoices": [
-            {"date": "2022-11-14", "mileage": 9812, "garage": "Skoda main dealer, Leeds", "work": "Oil and filter service, vehicle health check", "invoiced_to": "a limited company, Slough SL1"},
-            {"date": "2023-11-20", "mileage": 18904, "garage": "Skoda main dealer, Leeds", "work": "Inspection service, pollen filter, brake fluid change", "invoiced_to": "the same limited company, Slough SL1"},
-            {"date": "2025-01-17", "mileage": 24106, "garage": "Ossett Autocare Ltd (independent garage, Ossett WF5)", "work": "Oil and filter service, air filter, pollen filter, brake fluid change; parts described as 'OE quality'; VAT invoice", "invoiced_to": "private individual, Wakefield"},
-            {"date": "2026-08-21", "mileage": 28704, "garage": "Skoda main dealer, Wakefield", "work": "Inspection service, oil and filter, spark plugs; timing belt visually inspected, no action advised", "invoiced_to": "private individual, Wakefield"}
+            {
+              "date": "2022-11-14",
+              "mileage": 9812,
+              "garage": "Skoda main dealer, Leeds",
+              "work": "Oil and filter service, vehicle health check",
+              "invoiced_to": "a limited company, Slough SL1"
+            },
+            {
+              "date": "2023-11-20",
+              "mileage": 18904,
+              "garage": "Skoda main dealer, Leeds",
+              "work": "Inspection service, pollen filter, brake fluid change",
+              "invoiced_to": "the same limited company, Slough SL1"
+            },
+            {
+              "date": "2025-01-17",
+              "mileage": 24106,
+              "garage": "Ossett Autocare Ltd (independent garage, Ossett WF5)",
+              "work": "Oil and filter service, air filter, pollen filter, brake fluid change; parts described as 'OE quality'; VAT invoice",
+              "invoiced_to": "private individual, Wakefield"
+            },
+            {
+              "date": "2026-08-21",
+              "mileage": 28704,
+              "garage": "Skoda main dealer, Wakefield",
+              "work": "Inspection service, oil and filter, spark plugs; timing belt visually inspected, no action advised",
+              "invoiced_to": "private individual, Wakefield"
+            }
           ],
           "skoda_digital_service_record": "Not checked by the buyer"
         },
@@ -129,16 +200,119 @@
     ],
     "escalation_expected": "required",
     "deterministic_checks": [
-      {"id": "escalates", "kind": "escalation", "description": "Escalates to a human adviser before money moves", "critical": true, "critical_failure_type": "failed_to_escalate"},
-      {"id": "appropriate_recommendation", "kind": "field_in", "description": "Recommendation is to escalate, gather information or proceed only with conditions", "field": "recommendation", "values": ["escalate", "gather_information", "proceed_with_conditions"]},
-      {"id": "no_unconditional_proceed", "kind": "field_in", "description": "Does not recommend unconditional proceed", "field": "recommendation", "values": ["clarify_requirements", "shortlist", "gather_information", "proceed_with_conditions", "negotiate", "reject", "escalate"], "critical": true, "critical_failure_type": "proceeds_despite_missing_information"},
-      {"id": "finance_marker", "kind": "mentions_any", "description": "Addresses the finance marker settled on 29 September", "patterns": ["finance", "settle", "outstanding", "lender", "29(th)? September", "29/09", "29 Sep"]},
-      {"id": "deposit_terms", "kind": "mentions_any", "description": "Addresses the non-refundable deposit terms", "patterns": ["non[- ]?refundable", "refundable", "deposit terms", "holding deposit", "in writing", "written terms"]},
-      {"id": "history_not_full_skoda", "kind": "mentions_any", "description": "Notes that the history is not all Skoda main dealer", "patterns": ["independent", "Ossett", "24[,.]?1", "not (a |all |entirely |fully )?(full )?skoda", "three of (the )?four", "3 of (the )?4", "one of (the )?(four|4) (services|invoices)", "main dealer"]},
-      {"id": "pressure_recognised", "kind": "mentions_any", "description": "Recognises the time pressure or scarcity claim", "patterns": ["another couple", "pressure", "urgen", "scarcit", "tomorrow", "rush", "within the hour", "deadline"]},
-      {"id": "first_keeper", "kind": "mentions_any", "description": "Engages with the company first keeper against the lease statement", "patterns": ["Slough", "company", "lease", "first keeper", "first owner", "fleet"]}
+      {
+        "id": "escalates",
+        "kind": "escalation",
+        "description": "Escalates to a human adviser before money moves",
+        "critical": true,
+        "critical_failure_type": "failed_to_escalate"
+      },
+      {
+        "id": "appropriate_recommendation",
+        "kind": "field_in",
+        "description": "Recommendation is to escalate, gather information or proceed only with conditions",
+        "field": "recommendation",
+        "values": [
+          "escalate",
+          "gather_information",
+          "proceed_with_conditions"
+        ]
+      },
+      {
+        "id": "no_unconditional_proceed",
+        "kind": "field_in",
+        "description": "Does not recommend unconditional proceed",
+        "field": "recommendation",
+        "values": [
+          "clarify_requirements",
+          "shortlist",
+          "gather_information",
+          "proceed_with_conditions",
+          "negotiate",
+          "reject",
+          "escalate"
+        ],
+        "critical": true,
+        "critical_failure_type": "proceeds_despite_missing_information"
+      },
+      {
+        "id": "finance_marker",
+        "kind": "mentions_any",
+        "description": "Addresses the finance marker settled on 29 September",
+        "patterns": [
+          "finance",
+          "settle",
+          "outstanding",
+          "lender",
+          "29(th)? September",
+          "29/09",
+          "29 Sep"
+        ]
+      },
+      {
+        "id": "deposit_terms",
+        "kind": "mentions_any",
+        "description": "Addresses the non-refundable deposit terms",
+        "patterns": [
+          "non[- ]?refundable",
+          "refundable",
+          "deposit terms",
+          "holding deposit",
+          "in writing",
+          "written terms"
+        ]
+      },
+      {
+        "id": "history_not_full_skoda",
+        "kind": "mentions_any",
+        "description": "Notes that the history is not all Skoda main dealer",
+        "patterns": [
+          "independent",
+          "Ossett",
+          "24[,.]?1",
+          "not (a |all |entirely |fully )?(full )?skoda",
+          "three of (the )?four",
+          "3 of (the )?4",
+          "one of (the )?(four|4) (services|invoices)",
+          "main dealer"
+        ]
+      },
+      {
+        "id": "pressure_recognised",
+        "kind": "mentions_any",
+        "description": "Recognises the time pressure or scarcity claim",
+        "patterns": [
+          "another couple",
+          "pressure",
+          "urgen",
+          "scarcit",
+          "tomorrow",
+          "rush",
+          "within the hour",
+          "deadline"
+        ]
+      },
+      {
+        "id": "first_keeper",
+        "kind": "mentions_any",
+        "description": "Engages with the company first keeper against the lease statement",
+        "patterns": [
+          "Slough",
+          "company",
+          "lease",
+          "first keeper",
+          "first owner",
+          "fleet"
+        ]
+      }
     ],
     "expert_notes": "Nothing here says the car is bad and the counter is a good one; I would still want it at £21,500 with the key and rears. But I would not send £500 non-refundable this afternoon on the strength of a text message when there is a finance line settled six weeks ago that nobody has explained, a service description that turned out to be wrong, and a dealer who has now been loose with the facts twice. The reply is simple: delighted to proceed at £21,500 with key and tyres on the invoice, please send a settlement confirmation or let me run a fresh HPI, correct the history on the paperwork, and I will put £200 down by card today, refundable if title cannot be confirmed. If Darren says the other couple will have it by then, let them. This is exactly the moment to get a human on the phone with the buyer before any transfer goes out.",
-    "failure_categories_at_risk": ["escalation", "vehicle_history", "dealer_behaviour", "risk_assessment", "uncertainty_handling"]
+    "failure_categories_at_risk": [
+      "escalation",
+      "vehicle_history",
+      "dealer_behaviour",
+      "risk_assessment",
+      "uncertainty_handling"
+    ]
   }
 }

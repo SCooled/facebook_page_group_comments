@@ -7,6 +7,13 @@
   "variant_of": null,
   "journey_id": null,
   "journey_step": null,
+  "primitives": [
+    "compare",
+    "estimate",
+    "communicate"
+  ],
+  "primary_primitive": "compare",
+  "expected_class": "hybrid",
   "candidate_visible": {
     "scenario": "The buyer has narrowed their search to two examples of the same car, a Hyundai Tucson Hybrid, at two different dealers. One is noticeably cheaper than the other. They have gathered the full details of both offers and want your help deciding. Today is 7 October 2026.",
     "user_context": {

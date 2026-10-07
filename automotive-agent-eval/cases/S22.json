@@ -7,14 +7,31 @@
   "variant_of": null,
   "journey_id": null,
   "journey_step": null,
+  "primitives": [
+    "estimate",
+    "compare",
+    "communicate"
+  ],
+  "primary_primitive": "estimate",
+  "expected_class": "specialist",
   "candidate_visible": {
     "scenario": "The buyer has agreed in principle to buy a Peugeot 2008 from a franchised dealer and is now deciding how to pay. The dealer has quoted a lower 'finance price' that only applies if the buyer takes the dealer's PCP. The buyer has the cash but has also been offered a personal loan by their bank. They have forwarded the dealer's finance illustration and the bank's loan offer and want to know which route costs least. Today is 7 October 2026.",
     "user_context": {
       "location": "Norwich, NR4",
       "household": "single, works as a nurse at the Norfolk and Norwich",
       "budget_gbp_max_all_in": 19000,
-      "hard_requirements": ["small automatic SUV", "petrol", "under 30,000 miles", "under 3 years old", "reversing camera"],
-      "priorities_in_order": ["lowest total cost of ownership", "keeping a savings buffer", "simplicity"],
+      "hard_requirements": [
+        "small automatic SUV",
+        "petrol",
+        "under 30,000 miles",
+        "under 3 years old",
+        "reversing camera"
+      ],
+      "priorities_in_order": [
+        "lowest total cost of ownership",
+        "keeping a savings buffer",
+        "simplicity"
+      ],
       "annual_mileage": 8000,
       "usage": "shift commute, weekend trips to the coast",
       "ownership_horizon_years": 5,
@@ -24,7 +41,12 @@
     "conversation_state": {
       "step": "payment method",
       "vehicle_agreed": "L01",
-      "checks_completed": ["test drive", "HPI clear (dealer report plus buyer's own)", "service history verified (2 Peugeot services)", "V5C and VIN checked"],
+      "checks_completed": [
+        "test drive",
+        "HPI clear (dealer report plus buyer's own)",
+        "service history verified (2 Peugeot services)",
+        "V5C and VIN checked"
+      ],
       "price_negotiation": "Cash price negotiated from £18,995 to £18,495; dealer says this is their final cash price."
     },
     "evidence": {
@@ -32,10 +54,18 @@
         "id": "L01",
         "source": "Franchised dealer website",
         "title": "Peugeot 2008 1.2 PureTech 130 GT EAT8 5dr",
-        "make": "Peugeot", "model": "2008", "derivative": "1.2 PureTech 130 GT EAT8 auto",
+        "make": "Peugeot",
+        "model": "2008",
+        "derivative": "1.2 PureTech 130 GT EAT8 auto",
         "generation": "P24 (2020-), facelift",
-        "year": 2023, "plate": "73", "first_registered": "2023-09",
-        "mileage": 21400, "fuel": "Petrol", "transmission": "Automatic (8-speed EAT8)", "body": "SUV", "seats": 5,
+        "year": 2023,
+        "plate": "73",
+        "first_registered": "2023-09",
+        "mileage": 21400,
+        "fuel": "Petrol",
+        "transmission": "Automatic (8-speed EAT8)",
+        "body": "SUV",
+        "seats": 5,
         "colour": "Vertigo Blue metallic",
         "price_gbp_cash": 18495,
         "price_gbp_finance": 17495,
@@ -44,8 +74,24 @@
         "service_history": "Full Peugeot history: 2024 (8,100) and 2025 (15,900). Next due September 2026 - dealer will carry out the 3rd service before handover (confirmed in writing).",
         "warranty": "Peugeot 3-year manufacturer warranty expired 2026-09. Dealer includes 12 months Peugeot Approved warranty.",
         "mot_expiry": "First MOT due 2026-09; new MOT issued 2026-09-30, no advisories",
-        "notable_equipment": ["GT: 3D i-Cockpit", "10in touchscreen navigation", "reversing camera", "adaptive cruise control", "LED headlights", "keyless entry", "Alcantara-effect seats", "wireless charging", "18in alloys"],
-        "seller": {"type": "franchised dealer (Peugeot)", "name": "Busseys Peugeot Norwich", "location": "Norwich, NR6", "distance_miles": 4, "reviews": "4.5/5 from 480 reviews"},
+        "notable_equipment": [
+          "GT: 3D i-Cockpit",
+          "10in touchscreen navigation",
+          "reversing camera",
+          "adaptive cruise control",
+          "LED headlights",
+          "keyless entry",
+          "Alcantara-effect seats",
+          "wireless charging",
+          "18in alloys"
+        ],
+        "seller": {
+          "type": "franchised dealer (Peugeot)",
+          "name": "Busseys Peugeot Norwich",
+          "location": "Norwich, NR6",
+          "distance_miles": 4,
+          "reviews": "4.5/5 from 480 reviews"
+        },
         "days_listed": 19,
         "description_excerpt": "Peugeot Approved 2008 GT EAT8, one owner, full Peugeot history, 12 months Peugeot Approved warranty. Cash price £18,495 / Finance price £17,495*. Ask about our PCP offers."
       },
@@ -57,7 +103,10 @@
         "total_deposit_gbp": 3000,
         "amount_of_credit_gbp": 15495,
         "duration_months": 48,
-        "monthly_payments": {"count": 48, "amount_gbp": 289.00},
+        "monthly_payments": {
+          "count": 48,
+          "amount_gbp": 289.0
+        },
         "optional_final_payment_gbp": 7950,
         "optional_final_payment_note": "Includes £10 option to purchase fee",
         "total_amount_payable_gbp": 24822,
@@ -82,7 +131,12 @@
       }
     },
     "dealer_messages": [
-      {"date": "2026-10-06", "from": "Tom (business manager)", "channel": "email", "text": "Hi, as discussed the cash price is £18,495 and that's as far as we can go on cash. If you go on our PCP you get the £1,000 Peugeot contribution so the price becomes £17,495 - illustration attached. Monthly is £289 over 48 months with a £7,950 optional final payment, 13.9% APR. Just so you're aware, you'd lose the £1,000 contribution if you settle early, so it's really designed for people who keep the finance running. Let me know which way you'd like to go and I'll get the paperwork started."}
+      {
+        "date": "2026-10-06",
+        "from": "Tom (business manager)",
+        "channel": "email",
+        "text": "Hi, as discussed the cash price is £18,495 and that's as far as we can go on cash. If you go on our PCP you get the £1,000 Peugeot contribution so the price becomes £17,495 - illustration attached. Monthly is £289 over 48 months with a £7,950 optional final payment, 13.9% APR. Just so you're aware, you'd lose the £1,000 contribution if you settle early, so it's really designed for people who keep the finance running. Let me know which way you'd like to go and I'll get the paperwork started."
+      }
     ],
     "user_message": "Is the finance price actually cheaper? What's the smartest way to pay?"
   },
@@ -116,16 +170,100 @@
     ],
     "escalation_expected": "unnecessary",
     "deterministic_checks": [
-      {"id": "pcp_total_payable", "kind": "figure_close", "description": "States the PCP total amount payable correctly", "field": "finance_total_payable_gbp", "value": 24822, "tolerance": 50},
-      {"id": "early_settlement", "kind": "mentions_any", "description": "Raises early settlement / withdrawal", "patterns": ["settle", "settlement", "14 days", "14-day", "cooling[- ]off", "withdraw", "right to withdraw"]},
-      {"id": "contribution", "kind": "mentions_any", "description": "Discusses the deposit contribution", "patterns": ["contribution", "£1,?000"]},
-      {"id": "total_cost_language", "kind": "mentions_any", "description": "Compares on total cost rather than headline", "patterns": ["total (amount )?payable", "cost of credit", "total cost", "charge for credit", "over the (full )?term", "interest"]},
-      {"id": "loan_interest", "kind": "mentions_any", "description": "Quantifies the bank loan interest", "patterns": ["2[,.]?11\\d", "2[,.]?1\\d\\d", "around £2,?100", "about £2,?100", "18[,.]?11\\d", "377"]},
-      {"id": "verify_terms", "kind": "mentions_any", "description": "Recommends checking the agreement wording", "patterns": ["in writing", "agreement", "terms and conditions", "T&Cs", "written confirmation", "wording", "claw[- ]?back"]},
-      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a payment-method decision"},
-      {"id": "recommendation_sensible", "kind": "field_in", "description": "Recommends negotiation, conditional proceed or information gathering", "field": "recommendation", "values": ["negotiate", "proceed_with_conditions", "gather_information"]}
+      {
+        "id": "pcp_total_payable",
+        "kind": "figure_close",
+        "description": "States the PCP total amount payable correctly",
+        "field": "finance_total_payable_gbp",
+        "value": 24822,
+        "tolerance": 50
+      },
+      {
+        "id": "early_settlement",
+        "kind": "mentions_any",
+        "description": "Raises early settlement / withdrawal",
+        "patterns": [
+          "settle",
+          "settlement",
+          "14 days",
+          "14-day",
+          "cooling[- ]off",
+          "withdraw",
+          "right to withdraw"
+        ]
+      },
+      {
+        "id": "contribution",
+        "kind": "mentions_any",
+        "description": "Discusses the deposit contribution",
+        "patterns": [
+          "contribution",
+          "£1,?000"
+        ]
+      },
+      {
+        "id": "total_cost_language",
+        "kind": "mentions_any",
+        "description": "Compares on total cost rather than headline",
+        "patterns": [
+          "total (amount )?payable",
+          "cost of credit",
+          "total cost",
+          "charge for credit",
+          "over the (full )?term",
+          "interest"
+        ]
+      },
+      {
+        "id": "loan_interest",
+        "kind": "mentions_any",
+        "description": "Quantifies the bank loan interest",
+        "patterns": [
+          "2[,.]?11\\d",
+          "2[,.]?1\\d\\d",
+          "around £2,?100",
+          "about £2,?100",
+          "18[,.]?11\\d",
+          "377"
+        ]
+      },
+      {
+        "id": "verify_terms",
+        "kind": "mentions_any",
+        "description": "Recommends checking the agreement wording",
+        "patterns": [
+          "in writing",
+          "agreement",
+          "terms and conditions",
+          "T&Cs",
+          "written confirmation",
+          "wording",
+          "claw[- ]?back"
+        ]
+      },
+      {
+        "id": "no_escalation",
+        "kind": "escalation",
+        "description": "Does not hand off at a payment-method decision"
+      },
+      {
+        "id": "recommendation_sensible",
+        "kind": "field_in",
+        "description": "Recommends negotiation, conditional proceed or information gathering",
+        "field": "recommendation",
+        "values": [
+          "negotiate",
+          "proceed_with_conditions",
+          "gather_information"
+        ]
+      }
     ],
     "expert_notes": "An experienced operator would say: the finance price is a hook, and if you run that PCP you will pay £23,822 for a car you could have for £18,495 in cash - the £1,000 is bought back off you at 13.9%. The clever route is the usual one: sign the PCP, take the £1,000, and withdraw within 14 days with cash, which lands the car at roughly £17,550-£17,600 if the contribution stands. Tom's 'you'd lose it' line is almost always about his commission rather than your contract, but you do not act on 'almost always' - you get Peugeot Financial Services' withdrawal and contribution terms in writing first. If they confirm clawback, pay cash at £18,495 (or take a small loan for the buffer) and forget the PCP. The bank loan on the full cash price is the worst of the sensible options at £2,100 of interest, unless keeping the £6,000 buffer matters more than the money.",
-    "failure_categories_at_risk": ["finance", "total_transaction_economics", "dealer_behaviour", "uncertainty_handling"]
+    "failure_categories_at_risk": [
+      "finance",
+      "total_transaction_economics",
+      "dealer_behaviour",
+      "uncertainty_handling"
+    ]
   }
 }

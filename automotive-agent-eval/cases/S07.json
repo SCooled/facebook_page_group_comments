@@ -7,6 +7,14 @@
   "variant_of": null,
   "journey_id": null,
   "journey_step": null,
+  "primitives": [
+    "filter",
+    "rank",
+    "compare",
+    "communicate"
+  ],
+  "primary_primitive": "rank",
+  "expected_class": "hybrid",
   "candidate_visible": {
     "scenario": "The buyer asked you to find a used BMW 3 Series Touring. You searched within 110 miles of Edinburgh and the eight most relevant results are below, including three non-BMW estates that matched the buyer's stated needs and came up in the same price band. Today is 7 October 2026.",
     "user_context": {
@@ -16,7 +24,13 @@
       "budget_gbp_max_all_in": 20000,
       "funding": "£14,000 cash plus a 2016 Ford Mondeo 2.0 TDCi Titanium Estate, 142,000 miles, expected to fetch around £3,500-4,000 in part exchange or private sale",
       "requirements_as_stated": "a BMW 3 Series Touring, 2019-2021, diesel or petrol, under £20,000, must have adaptive cruise control and heated seats, and I want it to last",
-      "priorities_in_order": ["will cope with 25,000 miles a year for five years", "comfort and driver aids on long motorway days (adaptive cruise is a must)", "heated seats", "running costs", "boot for the dog"],
+      "priorities_in_order": [
+        "will cope with 25,000 miles a year for five years",
+        "comfort and driver aids on long motorway days (adaptive cruise is a must)",
+        "heated seats",
+        "running costs",
+        "boot for the dog"
+      ],
       "ownership_horizon_years": 5,
       "notes_from_buyer": "I've always liked the way 3 Series drive. Had an E91 years ago and loved it."
     },
@@ -31,9 +45,17 @@
           "id": "L01",
           "source": "AutoTrader",
           "title": "BMW 3 Series 2.0 320d M Sport Touring Auto 5dr",
-          "make": "BMW", "model": "3 Series Touring", "derivative": "320d M Sport Touring Steptronic (G21)",
-          "year": 2019, "plate": "69", "first_registered": "2019-10",
-          "mileage": 88400, "fuel": "Diesel", "transmission": "Automatic (8-speed)", "body": "Estate", "seats": 5,
+          "make": "BMW",
+          "model": "3 Series Touring",
+          "derivative": "320d M Sport Touring Steptronic (G21)",
+          "year": 2019,
+          "plate": "69",
+          "first_registered": "2019-10",
+          "mileage": 88400,
+          "fuel": "Diesel",
+          "transmission": "Automatic (8-speed)",
+          "body": "Estate",
+          "seats": 5,
           "colour": "Mineral Grey metallic",
           "price_gbp": 17495,
           "previous_owners": 3,
@@ -41,20 +63,52 @@
           "mot_expiry": "2027-06-30",
           "mot_history_summary": "Four MOTs, all passes. 2025 advisory: 'front brake discs worn, pitted or scored'. 2026: no advisories.",
           "keys": 2,
-          "notable_equipment": ["Driving Assistant Professional (Active Cruise Control with Stop & Go, steering and lane control assistant)", "heated front seats", "M Sport suspension", "18-inch M alloys", "Live Cockpit Professional", "LED headlights", "Parking Assistant with reversing camera", "electric tailgate"],
-          "seller": {"type": "independent dealer", "name": "Clyde Valley Prestige", "location": "Glasgow G52", "distance_miles": 48, "reviews": "4.5/5 from 164 reviews"},
+          "notable_equipment": [
+            "Driving Assistant Professional (Active Cruise Control with Stop & Go, steering and lane control assistant)",
+            "heated front seats",
+            "M Sport suspension",
+            "18-inch M alloys",
+            "Live Cockpit Professional",
+            "LED headlights",
+            "Parking Assistant with reversing camera",
+            "electric tailgate"
+          ],
+          "seller": {
+            "type": "independent dealer",
+            "name": "Clyde Valley Prestige",
+            "location": "Glasgow G52",
+            "distance_miles": 48,
+            "reviews": "4.5/5 from 164 reviews"
+          },
           "warranty": "3 months dealer warranty, 12 months available",
           "days_listed": 29,
-          "price_history": [{"date": "2026-09-08", "price_gbp": 17995}, {"date": "2026-09-30", "price_gbp": 17495}],
+          "price_history": [
+            {
+              "date": "2026-09-08",
+              "price_gbp": 17995
+            },
+            {
+              "date": "2026-09-30",
+              "price_gbp": 17495
+            }
+          ],
           "description_excerpt": "High-spec M Sport Touring with the Driving Assistant Professional pack giving adaptive cruise with lane keeping, a rare find at this price. Three keepers, full BMW history, two keys, HPI clear. Drives superbly."
         },
         {
           "id": "L02",
           "source": "AutoTrader",
           "title": "BMW 3 Series 2.0 320d M Sport Touring Auto 5dr",
-          "make": "BMW", "model": "3 Series Touring", "derivative": "320d M Sport Touring Steptronic (G21)",
-          "year": 2020, "plate": "20", "first_registered": "2020-06",
-          "mileage": 64200, "fuel": "Diesel", "transmission": "Automatic (8-speed)", "body": "Estate", "seats": 5,
+          "make": "BMW",
+          "model": "3 Series Touring",
+          "derivative": "320d M Sport Touring Steptronic (G21)",
+          "year": 2020,
+          "plate": "20",
+          "first_registered": "2020-06",
+          "mileage": 64200,
+          "fuel": "Diesel",
+          "transmission": "Automatic (8-speed)",
+          "body": "Estate",
+          "seats": 5,
           "colour": "Portimao Blue metallic",
           "price_gbp": 19750,
           "previous_owners": 1,
@@ -62,8 +116,25 @@
           "mot_expiry": "2027-06-12",
           "mot_history_summary": "Three MOTs, all passes, no advisories.",
           "keys": 2,
-          "notable_equipment": ["cruise control with braking function", "heated front seats", "M Sport suspension", "19-inch M alloys", "Live Cockpit Professional", "LED headlights", "Parking Assistant with reversing camera", "electric tailgate", "Harman Kardon audio", "sun protection glass"],
-          "seller": {"type": "franchised dealer (BMW)", "name": "Edinburgh BMW (Seafield)", "location": "Edinburgh EH6", "distance_miles": 6, "reviews": "4.4/5 from 712 reviews"},
+          "notable_equipment": [
+            "cruise control with braking function",
+            "heated front seats",
+            "M Sport suspension",
+            "19-inch M alloys",
+            "Live Cockpit Professional",
+            "LED headlights",
+            "Parking Assistant with reversing camera",
+            "electric tailgate",
+            "Harman Kardon audio",
+            "sun protection glass"
+          ],
+          "seller": {
+            "type": "franchised dealer (BMW)",
+            "name": "Edinburgh BMW (Seafield)",
+            "location": "Edinburgh EH6",
+            "distance_miles": 6,
+            "reviews": "4.4/5 from 712 reviews"
+          },
           "warranty": "12 months BMW Approved Used warranty",
           "days_listed": 8,
           "price_history": [],
@@ -73,9 +144,17 @@
           "id": "L03",
           "source": "Motors.co.uk",
           "title": "BMW 3 Series 2.0 320i M Sport Touring Auto",
-          "make": "BMW", "model": "3 Series Touring", "derivative": "320i M Sport Touring Steptronic (G21)",
-          "year": 2020, "plate": "70", "first_registered": "2020-11",
-          "mileage": 61800, "fuel": "Petrol", "transmission": "Automatic (8-speed)", "body": "Estate", "seats": 5,
+          "make": "BMW",
+          "model": "3 Series Touring",
+          "derivative": "320i M Sport Touring Steptronic (G21)",
+          "year": 2020,
+          "plate": "70",
+          "first_registered": "2020-11",
+          "mileage": 61800,
+          "fuel": "Petrol",
+          "transmission": "Automatic (8-speed)",
+          "body": "Estate",
+          "seats": 5,
           "colour": "Black Sapphire metallic",
           "price_gbp": 19250,
           "previous_owners": 2,
@@ -83,8 +162,23 @@
           "mot_expiry": "2027-11-02",
           "mot_history_summary": "Two MOTs, both passes, no advisories.",
           "keys": 2,
-          "notable_equipment": ["cruise control with braking function", "heated front seats", "M Sport suspension", "18-inch M alloys", "Live Cockpit Professional", "LED headlights", "reversing camera", "electric tailgate"],
-          "seller": {"type": "independent dealer", "name": "Fife Car Company", "location": "Dunfermline KY11", "distance_miles": 18, "reviews": "4.6/5 from 88 reviews"},
+          "notable_equipment": [
+            "cruise control with braking function",
+            "heated front seats",
+            "M Sport suspension",
+            "18-inch M alloys",
+            "Live Cockpit Professional",
+            "LED headlights",
+            "reversing camera",
+            "electric tailgate"
+          ],
+          "seller": {
+            "type": "independent dealer",
+            "name": "Fife Car Company",
+            "location": "Dunfermline KY11",
+            "distance_miles": 18,
+            "reviews": "4.6/5 from 88 reviews"
+          },
           "warranty": "6 months dealer warranty",
           "days_listed": 21,
           "price_history": [],
@@ -94,9 +188,17 @@
           "id": "L04",
           "source": "AutoTrader",
           "title": "BMW 3 Series 2.0 320d SE Touring Auto 5dr",
-          "make": "BMW", "model": "3 Series Touring", "derivative": "320d SE Touring Steptronic (G21)",
-          "year": 2019, "plate": "69", "first_registered": "2019-11",
-          "mileage": 76500, "fuel": "Diesel", "transmission": "Automatic (8-speed)", "body": "Estate", "seats": 5,
+          "make": "BMW",
+          "model": "3 Series Touring",
+          "derivative": "320d SE Touring Steptronic (G21)",
+          "year": 2019,
+          "plate": "69",
+          "first_registered": "2019-11",
+          "mileage": 76500,
+          "fuel": "Diesel",
+          "transmission": "Automatic (8-speed)",
+          "body": "Estate",
+          "seats": 5,
           "colour": "Alpine White",
           "price_gbp": 17250,
           "previous_owners": 2,
@@ -104,20 +206,55 @@
           "mot_expiry": "2027-02-18",
           "mot_history_summary": "Four MOTs, all passes. 2025 advisory: 'oil leak, but not excessive'. 2026 advisory: 'nearside rear tyre worn close to legal limit', 'oil leak, but not excessive'.",
           "keys": 1,
-          "notable_equipment": ["Active Cruise Control with Stop & Go", "heated front seats", "17-inch alloys", "Live Cockpit Plus", "LED headlights", "rear parking sensors", "electric tailgate"],
-          "seller": {"type": "independent dealer", "name": "Almond Valley Motors", "location": "Livingston EH54", "distance_miles": 16, "reviews": "3.9/5 from 44 reviews"},
+          "notable_equipment": [
+            "Active Cruise Control with Stop & Go",
+            "heated front seats",
+            "17-inch alloys",
+            "Live Cockpit Plus",
+            "LED headlights",
+            "rear parking sensors",
+            "electric tailgate"
+          ],
+          "seller": {
+            "type": "independent dealer",
+            "name": "Almond Valley Motors",
+            "location": "Livingston EH54",
+            "distance_miles": 16,
+            "reviews": "3.9/5 from 44 reviews"
+          },
           "warranty": "3 months dealer warranty",
           "days_listed": 52,
-          "price_history": [{"date": "2026-08-16", "price_gbp": 17995}, {"date": "2026-09-12", "price_gbp": 17495}, {"date": "2026-10-02", "price_gbp": 17250}],
+          "price_history": [
+            {
+              "date": "2026-08-16",
+              "price_gbp": 17995
+            },
+            {
+              "date": "2026-09-12",
+              "price_gbp": 17495
+            },
+            {
+              "date": "2026-10-02",
+              "price_gbp": 17250
+            }
+          ],
           "description_excerpt": "320d SE Touring with the factory adaptive cruise option, a comfortable long-distance car. Service history present, one key, drives well. Reduced for quick sale."
         },
         {
           "id": "L05",
           "source": "AutoTrader",
           "title": "BMW 3 Series 2.0 320d M Sport Touring Auto 5dr (Tech Pack)",
-          "make": "BMW", "model": "3 Series Touring", "derivative": "320d M Sport Touring Steptronic (G21)",
-          "year": 2021, "plate": "21", "first_registered": "2021-03",
-          "mileage": 93600, "fuel": "Diesel", "transmission": "Automatic (8-speed)", "body": "Estate", "seats": 5,
+          "make": "BMW",
+          "model": "3 Series Touring",
+          "derivative": "320d M Sport Touring Steptronic (G21)",
+          "year": 2021,
+          "plate": "21",
+          "first_registered": "2021-03",
+          "mileage": 93600,
+          "fuel": "Diesel",
+          "transmission": "Automatic (8-speed)",
+          "body": "Estate",
+          "seats": 5,
           "colour": "Skyscraper Grey metallic",
           "price_gbp": 18995,
           "previous_owners": 1,
@@ -125,8 +262,24 @@
           "mot_expiry": "2027-03-04",
           "mot_history_summary": "Three MOTs, all passes, no advisories.",
           "keys": 2,
-          "notable_equipment": ["Driving Assistant Professional (Active Cruise Control with Stop & Go, steering and lane control assistant)", "Technology Pack (head-up display, Harman Kardon, wireless charging)", "heated front seats", "M Sport suspension", "18-inch M alloys", "Live Cockpit Professional", "LED headlights", "Parking Assistant with reversing camera", "electric tailgate"],
-          "seller": {"type": "independent dealer (ex-fleet specialist)", "name": "Tyne Valley Fleet Sales", "location": "Newcastle upon Tyne NE15", "distance_miles": 105, "reviews": "4.7/5 from 391 reviews"},
+          "notable_equipment": [
+            "Driving Assistant Professional (Active Cruise Control with Stop & Go, steering and lane control assistant)",
+            "Technology Pack (head-up display, Harman Kardon, wireless charging)",
+            "heated front seats",
+            "M Sport suspension",
+            "18-inch M alloys",
+            "Live Cockpit Professional",
+            "LED headlights",
+            "Parking Assistant with reversing camera",
+            "electric tailgate"
+          ],
+          "seller": {
+            "type": "independent dealer (ex-fleet specialist)",
+            "name": "Tyne Valley Fleet Sales",
+            "location": "Newcastle upon Tyne NE15",
+            "distance_miles": 105,
+            "reviews": "4.7/5 from 391 reviews"
+          },
           "warranty": "6 months dealer warranty, 12 months available",
           "days_listed": 17,
           "price_history": [],
@@ -136,9 +289,17 @@
           "id": "L06",
           "source": "AutoTrader",
           "title": "Volvo V60 2.0 B4 (D) Inscription Auto 5dr",
-          "make": "Volvo", "model": "V60", "derivative": "B4 (diesel mild hybrid) Inscription Geartronic",
-          "year": 2021, "plate": "21", "first_registered": "2021-05",
-          "mileage": 48000, "fuel": "Diesel mild hybrid", "transmission": "Automatic (8-speed)", "body": "Estate", "seats": 5,
+          "make": "Volvo",
+          "model": "V60",
+          "derivative": "B4 (diesel mild hybrid) Inscription Geartronic",
+          "year": 2021,
+          "plate": "21",
+          "first_registered": "2021-05",
+          "mileage": 48000,
+          "fuel": "Diesel mild hybrid",
+          "transmission": "Automatic (8-speed)",
+          "body": "Estate",
+          "seats": 5,
           "colour": "Denim Blue metallic",
           "price_gbp": 19250,
           "previous_owners": 1,
@@ -146,8 +307,25 @@
           "mot_expiry": "2027-07-21",
           "mot_history_summary": "Three MOTs, all passes, no advisories.",
           "keys": 2,
-          "notable_equipment": ["Pilot Assist (adaptive cruise with steering assistance, standard fit)", "heated front seats", "heated steering wheel", "leather upholstery", "power driver's seat with memory", "9-inch Sensus touchscreen with navigation", "LED headlights", "rear parking camera", "power tailgate", "load cover and dog guard"],
-          "seller": {"type": "franchised dealer (Volvo)", "name": "Edinburgh Volvo (Sighthill)", "location": "Edinburgh EH11", "distance_miles": 5, "reviews": "4.6/5 from 503 reviews"},
+          "notable_equipment": [
+            "Pilot Assist (adaptive cruise with steering assistance, standard fit)",
+            "heated front seats",
+            "heated steering wheel",
+            "leather upholstery",
+            "power driver's seat with memory",
+            "9-inch Sensus touchscreen with navigation",
+            "LED headlights",
+            "rear parking camera",
+            "power tailgate",
+            "load cover and dog guard"
+          ],
+          "seller": {
+            "type": "franchised dealer (Volvo)",
+            "name": "Edinburgh Volvo (Sighthill)",
+            "location": "Edinburgh EH11",
+            "distance_miles": 5,
+            "reviews": "4.6/5 from 503 reviews"
+          },
           "warranty": "12 months Volvo Selekt approved used warranty and roadside assistance",
           "days_listed": 13,
           "price_history": [],
@@ -157,9 +335,17 @@
           "id": "L07",
           "source": "AutoTrader",
           "title": "Skoda Superb Estate 2.0 TDI 190 SportLine DSG 4x4 5dr",
-          "make": "Skoda", "model": "Superb Estate", "derivative": "2.0 TDI 190 SportLine DSG 4x4",
-          "year": 2020, "plate": "20", "first_registered": "2020-07",
-          "mileage": 52000, "fuel": "Diesel", "transmission": "Automatic (7-speed DSG)", "body": "Estate", "seats": 5,
+          "make": "Skoda",
+          "model": "Superb Estate",
+          "derivative": "2.0 TDI 190 SportLine DSG 4x4",
+          "year": 2020,
+          "plate": "20",
+          "first_registered": "2020-07",
+          "mileage": 52000,
+          "fuel": "Diesel",
+          "transmission": "Automatic (7-speed DSG)",
+          "body": "Estate",
+          "seats": 5,
           "colour": "Race Blue metallic",
           "price_gbp": 17995,
           "previous_owners": 2,
@@ -167,20 +353,54 @@
           "mot_expiry": "2027-07-09",
           "mot_history_summary": "Three MOTs, all passes, no advisories.",
           "keys": 2,
-          "notable_equipment": ["Adaptive Cruise Control", "heated front and rear seats", "Alcantara and leather sports seats", "Virtual Cockpit", "Columbus navigation", "Matrix LED headlights", "rear camera", "electric tailgate", "19-inch alloys", "4x4"],
-          "seller": {"type": "franchised dealer (Skoda)", "name": "Perth Skoda", "location": "Perth PH1", "distance_miles": 44, "reviews": "4.5/5 from 268 reviews"},
+          "notable_equipment": [
+            "Adaptive Cruise Control",
+            "heated front and rear seats",
+            "Alcantara and leather sports seats",
+            "Virtual Cockpit",
+            "Columbus navigation",
+            "Matrix LED headlights",
+            "rear camera",
+            "electric tailgate",
+            "19-inch alloys",
+            "4x4"
+          ],
+          "seller": {
+            "type": "franchised dealer (Skoda)",
+            "name": "Perth Skoda",
+            "location": "Perth PH1",
+            "distance_miles": 44,
+            "reviews": "4.5/5 from 268 reviews"
+          },
           "warranty": "12 months Skoda Approved Used warranty",
           "days_listed": 26,
-          "price_history": [{"date": "2026-09-11", "price_gbp": 18495}, {"date": "2026-10-01", "price_gbp": 17995}],
+          "price_history": [
+            {
+              "date": "2026-09-11",
+              "price_gbp": 18495
+            },
+            {
+              "date": "2026-10-01",
+              "price_gbp": 17995
+            }
+          ],
           "description_excerpt": "Skoda Approved Used. Superb SportLine 190 DSG 4x4 with adaptive cruise, heated seats front and rear, Matrix LEDs and Virtual Cockpit. Two owners, full Skoda history including DSG service. Enormous boot. 12 months warranty."
         },
         {
           "id": "L08",
           "source": "Motors.co.uk",
           "title": "Audi A4 Avant 40 TDI S line S tronic 5dr",
-          "make": "Audi", "model": "A4 Avant", "derivative": "40 TDI 190 S line S tronic (B9 facelift)",
-          "year": 2020, "plate": "20", "first_registered": "2020-04",
-          "mileage": 71000, "fuel": "Diesel mild hybrid", "transmission": "Automatic (7-speed S tronic)", "body": "Estate", "seats": 5,
+          "make": "Audi",
+          "model": "A4 Avant",
+          "derivative": "40 TDI 190 S line S tronic (B9 facelift)",
+          "year": 2020,
+          "plate": "20",
+          "first_registered": "2020-04",
+          "mileage": 71000,
+          "fuel": "Diesel mild hybrid",
+          "transmission": "Automatic (7-speed S tronic)",
+          "body": "Estate",
+          "seats": 5,
           "colour": "Daytona Grey pearl",
           "price_gbp": 19500,
           "previous_owners": 2,
@@ -188,11 +408,32 @@
           "mot_expiry": "2027-04-14",
           "mot_history_summary": "Three MOTs, all passes. 2026 advisory: 'front brake pads wearing thin'.",
           "keys": 2,
-          "notable_equipment": ["cruise control", "heated front seats", "S line sports seats", "Virtual Cockpit", "MMI navigation plus", "LED headlights", "rear parking camera", "electric tailgate", "19-inch alloys"],
-          "seller": {"type": "independent dealer", "name": "Forth Valley Cars", "location": "Stirling FK7", "distance_miles": 36, "reviews": "4.3/5 from 120 reviews"},
+          "notable_equipment": [
+            "cruise control",
+            "heated front seats",
+            "S line sports seats",
+            "Virtual Cockpit",
+            "MMI navigation plus",
+            "LED headlights",
+            "rear parking camera",
+            "electric tailgate",
+            "19-inch alloys"
+          ],
+          "seller": {
+            "type": "independent dealer",
+            "name": "Forth Valley Cars",
+            "location": "Stirling FK7",
+            "distance_miles": 36,
+            "reviews": "4.3/5 from 120 reviews"
+          },
           "warranty": "3 months dealer warranty",
           "days_listed": 40,
-          "price_history": [{"date": "2026-09-19", "price_gbp": 19995}],
+          "price_history": [
+            {
+              "date": "2026-09-19",
+              "price_gbp": 19995
+            }
+          ],
           "description_excerpt": "Beautiful A4 Avant S line in Daytona Grey, two owners, full Audi history, two keys. Virtual Cockpit, heated seats, 19in alloys. Finance and part exchange welcome."
         }
       ]
@@ -232,16 +473,105 @@
     ],
     "escalation_expected": "unnecessary",
     "deterministic_checks": [
-      {"id": "raises_alternatives", "kind": "vehicles_include", "description": "Shortlist includes the Volvo or the Superb", "values": ["L06", "L07"]},
-      {"id": "mentions_acc", "kind": "mentions_any", "description": "Discusses adaptive cruise and which cars have it", "patterns": ["adaptive cruise", "\\bACC\\b", "active cruise", "driving assistant", "pilot assist", "cruise control with braking"]},
-      {"id": "checks_brand_constraint", "kind": "mentions_any", "description": "Checks whether BMW is a hard constraint", "patterns": ["hard requirement", "hard constraint", "must be a BMW", "has to be a BMW", "open to", "non[- ]negotiable", "set on (a |the )?BMW", "wedded to", "dead set", "(brand|badge|make).{0,40}(preference|flexible|negotiable|essential|deal[- ]?breaker)", "only (want|consider|buy) (a )?BMW", "flexible on (the )?(brand|badge|make)", "(prefer|preference).{0,30}(BMW|brand|badge)"]},
-      {"id": "excludes_no_acc_bmws", "kind": "vehicles_exclude", "description": "Does not shortlist the BMWs and Audi without adaptive cruise", "values": ["L02", "L03", "L08"]},
-      {"id": "flags_l04_history", "kind": "mentions_any", "description": "Flags L04's service gap or oil leak", "patterns": ["L04.{0,200}(gap|nothing (recorded )?since|no (service|record)|oil leak|one key|patchy|incomplete)", "(gap|patchy|incomplete|oil leak|one key|nothing (recorded )?since).{0,200}L04", "52[,.]?300", "24[,.]?(000|k) miles (without|unrecorded|since)"]},
-      {"id": "flags_mileage", "kind": "mentions_any", "description": "Weighs the high mileage of the qualifying BMWs", "patterns": ["88[,.]?4", "93[,.]?6", "high(er|est)? mile", "high miles", "mileage"]},
-      {"id": "recommendation_type", "kind": "field_in", "description": "Shortlists or clarifies rather than proceeding", "field": "recommendation", "values": ["shortlist", "clarify_requirements", "gather_information"]},
-      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a shortlist step"}
+      {
+        "id": "raises_alternatives",
+        "kind": "vehicles_include",
+        "description": "Shortlist includes the Volvo or the Superb",
+        "values": [
+          "L06",
+          "L07"
+        ]
+      },
+      {
+        "id": "mentions_acc",
+        "kind": "mentions_any",
+        "description": "Discusses adaptive cruise and which cars have it",
+        "patterns": [
+          "adaptive cruise",
+          "\\bACC\\b",
+          "active cruise",
+          "driving assistant",
+          "pilot assist",
+          "cruise control with braking"
+        ]
+      },
+      {
+        "id": "checks_brand_constraint",
+        "kind": "mentions_any",
+        "description": "Checks whether BMW is a hard constraint",
+        "patterns": [
+          "hard requirement",
+          "hard constraint",
+          "must be a BMW",
+          "has to be a BMW",
+          "open to",
+          "non[- ]negotiable",
+          "set on (a |the )?BMW",
+          "wedded to",
+          "dead set",
+          "(brand|badge|make).{0,40}(preference|flexible|negotiable|essential|deal[- ]?breaker)",
+          "only (want|consider|buy) (a )?BMW",
+          "flexible on (the )?(brand|badge|make)",
+          "(prefer|preference).{0,30}(BMW|brand|badge)"
+        ]
+      },
+      {
+        "id": "excludes_no_acc_bmws",
+        "kind": "vehicles_exclude",
+        "description": "Does not shortlist the BMWs and Audi without adaptive cruise",
+        "values": [
+          "L02",
+          "L03",
+          "L08"
+        ]
+      },
+      {
+        "id": "flags_l04_history",
+        "kind": "mentions_any",
+        "description": "Flags L04's service gap or oil leak",
+        "patterns": [
+          "L04.{0,200}(gap|nothing (recorded )?since|no (service|record)|oil leak|one key|patchy|incomplete)",
+          "(gap|patchy|incomplete|oil leak|one key|nothing (recorded )?since).{0,200}L04",
+          "52[,.]?300",
+          "24[,.]?(000|k) miles (without|unrecorded|since)"
+        ]
+      },
+      {
+        "id": "flags_mileage",
+        "kind": "mentions_any",
+        "description": "Weighs the high mileage of the qualifying BMWs",
+        "patterns": [
+          "88[,.]?4",
+          "93[,.]?6",
+          "high(er|est)? mile",
+          "high miles",
+          "mileage"
+        ]
+      },
+      {
+        "id": "recommendation_type",
+        "kind": "field_in",
+        "description": "Shortlists or clarifies rather than proceeding",
+        "field": "recommendation",
+        "values": [
+          "shortlist",
+          "clarify_requirements",
+          "gather_information"
+        ]
+      },
+      {
+        "id": "no_escalation",
+        "kind": "escalation",
+        "description": "Does not hand off at a shortlist step"
+      }
     ],
     "expert_notes": "An experienced operator would answer the BMW question straight: the only ones with the adaptive cruise he insists on are the two high-milers (L01 at 88k, L05 at 94k) and the Livingston SE with a service gap and an oil weep (L04), and the pretty Approved Used car at Seafield (L02) does not have it at all. Then they would say what any good salesperson says to a 25,000-mile-a-year engineer: before you buy a 94,000-mile B47 with 125,000 to go, look at the 48,000-mile Selekt V60 five miles from your house with Pilot Assist standard, or the 52,000-mile Superb 190 4x4 with ACC, a DSG service and a Skoda warranty for a thousand pounds less than the best BMW. If the badge is non-negotiable, L05 is the one, inspected, with a 12-month warranty negotiated in and the mileage used to get it under £18,500. What would change the view: if the buyer says the drive matters more than the miles, then L05 stands; if L06 turns out to have the smaller 18-inch wheels and the dog guard thrown in, it becomes very hard to argue against.",
-    "failure_categories_at_risk": ["requirements_interpretation", "search", "vehicle_specification", "vehicle_history", "comparator_selection"]
+    "failure_categories_at_risk": [
+      "requirements_interpretation",
+      "search",
+      "vehicle_specification",
+      "vehicle_history",
+      "comparator_selection"
+    ]
   }
 }

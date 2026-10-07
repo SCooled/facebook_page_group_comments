@@ -21,7 +21,9 @@ from pathlib import Path
 from core.cases import build_candidate_payload, load_cases
 from core.config import load_config, resolve
 from core.models import Case, JudgeResult, RunRecord, ScoredRecord, StructuredBlock
+from core.primitives import apply_primitives
 from core.prompts import build_system_prompt, load_prompt, prompt_hash
+from evaluators.economics import model_cost
 from core.storage import append_jsonl, read_jsonl, write_jsonl
 from core.structured import extract_structured
 from evaluators.deterministic import run_checks
@@ -61,16 +63,27 @@ def cmd_validate(args, cfg):
         by_cat[c.category] = by_cat.get(c.category, 0) + 1
     print(f"{len(cases)} cases valid. adversarial={sum(c.adversarial for c in cases)} journeys={journeys}")
     print("by category:", json.dumps(by_cat))
-    for cfg_name, files in cfg["configurations"].items():
-        sp = build_system_prompt(resolve(cfg, "prompts_dir"), files)
-        print(f"prompt {cfg_name}: {len(sp)} chars, hash {prompt_hash(sp)}")
+    for cfg_name, spec in cfg["configurations"].items():
+        sp = build_system_prompt(resolve(cfg, "prompts_dir"), spec["prompts"])
+        print(f"prompt {cfg_name}: {len(sp)} chars, hash {prompt_hash(sp)}, primitives={spec.get('primitives', [])}")
+    untagged = [c.id for c in cases if not c.primitives]
+    if untagged:
+        print(f"WARNING: cases without primitive tags: {untagged}")
 
 
 # ----------------------------------------------------------------------- run
 
 
 def _execute(provider, system_prompt, sp_hash, case: Case, config_name: str, rep: int, batch: str, cfg) -> RunRecord:
-    payload = build_candidate_payload(case)
+    prim_names = cfg["configurations"][config_name].get("primitives", [])
+    prim_outputs = []
+    if prim_names:
+        visible, prim_outputs = apply_primitives(case, prim_names)
+        payload = build_candidate_payload(case.model_copy(update={"candidate_visible": visible}))
+    else:
+        payload = build_candidate_payload(case)
+    prim_latency = sum(o.latency_ms for o in prim_outputs)
+    prim_cost = sum(o.cost for o in prim_outputs)
     retries = cfg["run"]["request_retries"]
     backoff = cfg["run"]["retry_backoff_seconds"]
     resp = None
@@ -86,6 +99,12 @@ def _execute(provider, system_prompt, sp_hash, case: Case, config_name: str, rep
                 time.sleep(backoff * (2**attempt))
     text = resp.text if resp else ""
     block, perr = extract_structured(text) if text else (None, "empty response")
+    mcost = model_cost(resp.model_name if resp else provider.model, provider.name,
+                       resp.input_tokens if resp else None, resp.output_tokens if resp else None,
+                       cfg["economics"]["pricing"]) if resp else None
+    latency = resp.latency_ms if resp else 0
+    if provider.name == "human":
+        latency = provider.settings.get("latency_ms", latency)
     return RunRecord(
         run_id=uuid.uuid4().hex[:12],
         batch_id=batch,
@@ -109,6 +128,13 @@ def _execute(provider, system_prompt, sp_hash, case: Case, config_name: str, rep
         effective_temperature=resp.effective_temperature if resp else None,
         error=error,
         created_at=_now(),
+        objects_in_scope=case.objects_in_scope,
+        primitives_applied=prim_names,
+        primitive_latency_ms=prim_latency,
+        primitive_cost=prim_cost,
+        model_cost=mcost,
+        total_cost=None if mcost is None else round(mcost + prim_cost, 6),
+        total_latency_ms=latency + prim_latency,
     )
 
 
@@ -126,7 +152,7 @@ def cmd_run(args, cfg):
 
     prompts = {}
     for config_name in args.configs:
-        sp = build_system_prompt(prompts_dir, cfg["configurations"][config_name])
+        sp = build_system_prompt(prompts_dir, cfg["configurations"][config_name]["prompts"])
         prompts[config_name] = (sp, prompt_hash(sp))
 
     jobs = []
@@ -185,8 +211,9 @@ def cmd_score(args, cfg):
         case = cases[run.case_id]
         det = run_checks(case, run.raw_response, run.structured)
         jname, jprov = judge_for(run.model_provider)
-        jres, jerr, jmodel = run_judge(jprov, template, case, run.raw_response, det, jcfg["max_attempts"])
-        return score_run(run, case, det, jres, jname, jmodel, jerr, cfg["scoring"])
+        jres, jerr, jmodel, jusage = run_judge(jprov, template, case, run.raw_response, det, jcfg["max_attempts"])
+        jcost = model_cost(jmodel, jname, jusage[0], jusage[1], cfg["economics"]["pricing"])
+        return score_run(run, case, det, jres, jname, jmodel, jerr, cfg["scoring"], judge_cost=jcost)
 
     results = [ScoredRecord.model_validate(r) for r in already.values()]
     with ThreadPoolExecutor(max_workers=args.workers or cfg["run"]["workers"]) as ex:
@@ -197,13 +224,15 @@ def cmd_score(args, cfg):
             print(f"[{i}/{len(todo)}] {rec.case_id} {rec.model_provider} {rec.configuration} r{rec.repetition} score={rec.weighted_score}{cf}")
     results.sort(key=lambda r: (r.case_id, r.model_provider, r.configuration, r.repetition))
     write_jsonl(scored_path, results)
-    _write_scored_csv(results, scored_dir / "scored.csv")
+    _write_scored_csv(results, scored_dir / "scored.csv", cases)
     print(f"scored -> {scored_path}")
 
 
-def _write_scored_csv(results: list[ScoredRecord], path: Path):
+def _write_scored_csv(results: list[ScoredRecord], path: Path, cases: dict[str, Case]):
     import pandas as pd
 
+    case_meta = {cid: {"primary_primitive": c.primary_primitive, "primitives": c.primitives,
+                       "expected_class": c.expected_class} for cid, c in cases.items()}
     rows = []
     for r in results:
         j = r.judge
@@ -227,6 +256,14 @@ def _write_scored_csv(results: list[ScoredRecord], path: Path):
             "deterministic_pass_rate": r.deterministic_pass_rate,
             "structured_ok": r.structured is not None,
             "tokens_in": r.input_tokens, "tokens_out": r.output_tokens, "latency_ms": r.latency_ms,
+            "valid": r.valid, "quality": r.quality,
+            "model_cost": r.model_cost, "primitive_cost": r.primitive_cost, "total_cost": r.total_cost,
+            "primitive_latency_ms": r.primitive_latency_ms, "total_latency_ms": r.total_latency_ms,
+            "objects_in_scope": r.objects_in_scope, "primitives_applied": ";".join(r.primitives_applied),
+            "primary_primitive": case_meta.get(r.case_id, {}).get("primary_primitive"),
+            "primitives": ";".join(case_meta.get(r.case_id, {}).get("primitives", [])),
+            "expected_class": case_meta.get(r.case_id, {}).get("expected_class"),
+            "judge_cost": r.judge_cost,
             "judge": r.judge_provider, "judge_error": r.judge_error, "run_id": r.run_id,
         })
     pd.DataFrame(rows).to_csv(path, index=False)
@@ -238,7 +275,7 @@ def _write_scored_csv(results: list[ScoredRecord], path: Path):
 def cmd_summarize(args, cfg):
     scored_csv = resolve(cfg, "results_dir") / "scored" / args.batch / "scored.csv"
     out_dir = resolve(cfg, "results_dir") / "summary" / args.batch
-    summarize(scored_csv, out_dir, cfg["scoring"])
+    summarize(scored_csv, out_dir, cfg["scoring"], cfg["economics"], cfg["run"]["workers"])
     print(f"summary -> {out_dir}")
 
 
@@ -268,7 +305,7 @@ def main(argv=None):
     def add_run_args(sp):
         sp.add_argument("--batch", required=True, help="batch id; results/<stage>/<batch>/")
         sp.add_argument("--providers", nargs="+", default=["openai", "gemini"])
-        sp.add_argument("--configs", nargs="+", default=["general", "automotive_context"])
+        sp.add_argument("--configs", nargs="+", default=["general", "automotive_context", "delegated"])
         sp.add_argument("--reps", type=int, default=None)
         sp.add_argument("--cases", nargs="+", default=None, help="subset of case ids")
         sp.add_argument("--model", default=None, help="override model name for all providers")
