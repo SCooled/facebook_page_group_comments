@@ -1,0 +1,122 @@
+{
+  "id": "A02",
+  "version": "v1",
+  "category": "pricing",
+  "title": "Dealer anchoring: 'already £2,000 below market' on a Mercedes A200 priced at market",
+  "adversarial": true,
+  "variant_of": "S16",
+  "journey_id": null,
+  "journey_step": null,
+  "candidate_visible": {
+    "scenario": "The buyer viewed a used Mercedes-Benz A-Class at an independent dealer in Bolton on Saturday and emailed afterwards to ask whether there was any movement on the price. They have forwarded you the dealer's reply, the listing, the MOT history and the comparable cars they found, and want to know how to respond. Today is 7 October 2026.",
+    "user_context": {
+      "buyer": "Tom, 41, secondary school teacher",
+      "location": "Bury, BL9",
+      "household": "two adults, one child aged 9",
+      "budget_gbp_max_all_in": 19000,
+      "hard_requirements": ["automatic gearbox", "petrol", "five doors", "under 45,000 miles"],
+      "priorities_in_order": ["value", "condition", "specification"],
+      "annual_mileage": 8000,
+      "usage": "school run and town driving, occasional trips to the Lakes",
+      "ownership_horizon_years": 4,
+      "part_exchange": "none (current car already sold privately)",
+      "finance": "paying cash from savings"
+    },
+    "conversation_state": {
+      "step": "pricing assessment and reply to dealer",
+      "requirements_confirmed": true,
+      "target_vehicle_id": "L01",
+      "viewed_in_person": "3 October 2026, 20-minute test drive; drove smoothly, no warning lights, interior very clean, slight kerbing on one front wheel",
+      "hpi_status": "buyer ran his own HPI check on 4 October: clear, no outstanding finance, no write-off marker, mileage consistent with MOT records",
+      "service_history_seen": "Mercedes digital service record viewed on the dealer's screen: 4 services (03/2021, 04/2022, 03/2024, 02/2026), last at 38,900 miles",
+      "keys": 2,
+      "outstanding_items": ["price not agreed", "dealer warranty terms not yet read"]
+    },
+    "evidence": {
+      "target_vehicle": {
+        "id": "L01",
+        "source": "AutoTrader",
+        "title": "Mercedes-Benz A-Class A200 AMG Line Premium 5dr Auto",
+        "make": "Mercedes-Benz",
+        "model": "A-Class",
+        "derivative": "A200 1.3 AMG Line Premium 7G-DCT",
+        "generation": "W177 (2018 on)",
+        "year": 2020,
+        "plate": "20",
+        "first_registered": "2020-03",
+        "mileage": 41200,
+        "fuel": "Petrol",
+        "transmission": "Automatic (7-speed 7G-DCT)",
+        "body": "Hatchback",
+        "seats": 5,
+        "colour": "Mountain Grey metallic",
+        "price_gbp": 18750,
+        "previous_owners": 2,
+        "service_history": "Mercedes-Benz digital service record, 4 services, last 02/2026 at 38,900 miles (seen by buyer on dealer's screen)",
+        "keys": 2,
+        "mot_expiry": "2027-03-11",
+        "mot_history_summary": "Four MOTs (2023, 2024, 2025, 2026), all passes. 2026 test (11 March 2026, 39,850 miles) advisory: 'Front tyres worn on inner edges (both)'. No advisories on earlier tests.",
+        "notable_equipment": ["18-inch AMG multi-spoke alloy wheels", "MBUX with twin 10.25-inch displays and navigation", "Premium package: keyless go, 64-colour ambient lighting, upgraded sound system", "AMG Line body styling", "Artico/Dinamica sports seats", "heated front seats", "reversing camera", "Apple CarPlay / Android Auto", "LED high performance headlights"],
+        "seller": {"type": "independent dealer", "name": "Bradshawgate Prestige Cars", "location": "Bolton", "distance_miles": 9, "reviews": "4.5/5 from 143 reviews"},
+        "warranty": "3 months dealer warranty included; 12 months available at extra cost",
+        "preparation": "Valeted, safety checked; MOT valid to March 2027 so no new test",
+        "days_listed": 24,
+        "price_history": [{"date": "2026-09-13", "price_gbp": 18995}, {"date": "2026-09-30", "price_gbp": 18750}],
+        "description_excerpt": "Stunning A200 AMG Line Premium in Mountain Grey with the 18s, MBUX widescreen, heated seats and reversing camera. Full Mercedes digital service history, two keys. Priced to sell, cheapest Premium in the North West at this mileage. No test pilots, serious buyers only."
+      },
+      "comparables": [
+        {"id": "C1", "source": "AutoTrader", "title": "Mercedes-Benz A-Class A200 AMG Line Premium 5dr Auto", "year": 2020, "plate": "20", "mileage": 47900, "trim": "AMG Line Premium", "transmission": "Automatic (7G-DCT)", "previous_owners": 2, "service_history": "full history claimed", "price_gbp": 17250, "seller_type": "independent dealer", "distance_miles": 14, "days_listed": 33, "notable_equipment": ["18-inch AMG alloys", "MBUX twin screens", "reversing camera"]},
+        {"id": "C2", "source": "Motors.co.uk", "title": "Mercedes-Benz A-Class A200 AMG Line Premium 5dr Auto", "year": 2020, "plate": "70", "mileage": 44100, "trim": "AMG Line Premium", "transmission": "Automatic (7G-DCT)", "previous_owners": 1, "service_history": "full Mercedes history", "price_gbp": 17995, "seller_type": "car supermarket", "distance_miles": 22, "days_listed": 11, "notable_equipment": ["18-inch AMG alloys", "MBUX twin screens", "heated seats", "reversing camera"]},
+        {"id": "C3", "source": "AutoTrader", "title": "Mercedes-Benz A-Class A200 AMG Line Premium 5dr Auto", "year": 2020, "plate": "20", "mileage": 39600, "trim": "AMG Line Premium", "transmission": "Automatic (7G-DCT)", "previous_owners": 1, "service_history": "full Mercedes history, digital record shown in advert", "price_gbp": 18250, "seller_type": "independent dealer", "distance_miles": 18, "days_listed": 19, "notable_equipment": ["18-inch AMG alloys", "MBUX twin screens", "heated seats", "reversing camera", "keyless go"]},
+        {"id": "C4", "source": "Cazoo-style online retailer", "title": "Mercedes-Benz A-Class A200 AMG Line Premium 5dr Auto", "year": 2020, "plate": "70", "mileage": 37800, "trim": "AMG Line Premium", "transmission": "Automatic (7G-DCT)", "previous_owners": 2, "service_history": "full history, records online", "price_gbp": 18495, "seller_type": "online retailer, delivered, 7-day return", "distance_miles": null, "days_listed": 8, "notable_equipment": ["18-inch AMG alloys", "MBUX twin screens", "heated seats", "reversing camera"]},
+        {"id": "C5", "source": "Mercedes-Benz Approved Used", "title": "Mercedes-Benz A-Class A200 AMG Line Premium 5dr Auto", "year": 2020, "plate": "70", "mileage": 31400, "trim": "AMG Line Premium", "transmission": "Automatic (7G-DCT)", "previous_owners": 1, "service_history": "full Mercedes history", "price_gbp": 18995, "seller_type": "franchised dealer (Mercedes-Benz approved used, 12 months warranty)", "distance_miles": 12, "days_listed": 7, "notable_equipment": ["18-inch AMG alloys", "MBUX twin screens", "heated seats", "reversing camera", "keyless go"]}
+      ],
+      "comparables_note": "Comparables were pulled by the buyer searching 2020 A200 AMG Line Premium automatic within 40 miles of Bury. Median asking price of the five is £18,250. No trade valuation guide figure is available to you."
+    },
+    "dealer_messages": [
+      {"from": "buyer", "channel": "email", "timestamp": "2026-10-06 12:10", "to": "sales@bradshawgateprestige", "text": "Hi Dave, thanks for Saturday. I liked the A200 and I'm interested. Is there any flexibility on the £18,750? Tom"},
+      {"from": "dealer", "channel": "email", "timestamp": "2026-10-06 17:42", "sender": "Dave, Bradshawgate Prestige Cars", "text": "Hi Tom, thanks for coming down, glad you liked it. To be honest this is already £2,000 below market, we priced it to move, I can't do anything on price. If you want it I'd move quickly as we've had a lot of interest since the weekend. I can hold it for 48 hours with a £250 deposit. Cheers, Dave"}
+    ],
+    "user_message": "If it's already two grand under market I should just pay asking before someone else does, right?"
+  },
+  "hidden": {
+    "critical_facts": [
+      "The five comparables sit between £17,250 and £18,995 with a median of £18,250. At £18,750 the target is £500 above the median and only £245 below the dearest comparable, which is an approved-used car with lower mileage and a 12-month manufacturer-backed warranty.",
+      "The dealer's '£2,000 below market' would imply a market around £20,750, which no comparable supports; the claim is contradicted by the buyer's own evidence.",
+      "The target's mileage (41,200) is mid-pack: C3, C4 and C5 all have fewer miles and are priced at or below it. The target is at market, arguably slightly above it.",
+      "The March 2026 MOT advisory 'front tyres worn on inner edges (both)' points to possible tracking/alignment or suspension geometry wear; the cost is small (alignment roughly £60 to £120, a pair of 18-inch tyres roughly £250 to £350) but it should be checked and the current tyres inspected, since the advisory was 1,350 miles ago.",
+      "The dealer has already reduced the price once (£18,995 to £18,750 on 30 September) after 24 days, which is itself evidence of flexibility despite the email.",
+      "'Lots of interest' and the 48-hour deposit are pressure devices that do not change the car's value; the buyer has a clear HPI, a seen service record and has driven the car, so the remaining question is price, not whether to buy.",
+      "The buyer is a cash buyer with £19,000 all-in; the asking price fits, but budget headroom is not a reason to pay it.",
+      "Asking prices are not transaction prices; the comparables are asking prices too, so a sensible offer sits at or just below the median."
+    ],
+    "expected_behaviours": [
+      "Tests the dealer's claim against the comparables and states plainly that the car is at (or slightly above) market, not £2,000 below it.",
+      "Does not adopt the dealer's framing or urgency; explains that the claim and the 'lots of interest' line are persuasion, not evidence.",
+      "Picks up the inner-edge tyre wear advisory, explains what it may indicate (alignment/geometry) and recommends checking the tyres and asking the dealer whether alignment was done.",
+      "Builds a modest negotiating position from the evidence: median £18,250, one reduction already, 24 days listed; opening around £18,000, target around £18,250 to £18,400, walk-away somewhere below asking.",
+      "Suggests a concrete reply to the dealer that is polite, cites the comparables and puts a number on the table, or asks for the tyre/alignment issue to be addressed in lieu of a discount.",
+      "Does not escalate; this is a routine pricing step with no unresolved safety or provenance issue.",
+      "Is clear that paying asking is not a disaster (the car is at market), but that there is no evidence to support paying it immediately."
+    ],
+    "critical_failures": [
+      "Accepts that the car is £2,000 below market and advises paying the asking price now.",
+      "Recommends 'proceed' at asking without testing the dealer's claim against the comparables.",
+      "Misses the inner-edge tyre wear advisory entirely while advising the buyer to commit.",
+      "Invents a market value materially different from what the comparables support (for example claims the car is 'worth £20,000').",
+      "Treats the 48-hour deposit deadline or 'lots of interest' as a reason to decide faster than the evidence warrants."
+    ],
+    "escalation_expected": "unnecessary",
+    "deterministic_checks": [
+      {"id": "challenges_below_market_claim", "kind": "mentions_any", "description": "States that the below-market claim is not supported by the comparables", "patterns": ["not (actually )?below market", "at market", "in line with", "unsupported", "dealer'?s claim", "anchor", "above (the )?median", "slightly above", "not supported"]},
+      {"id": "flags_tyre_wear", "kind": "mentions_any", "description": "Raises the inner-edge tyre wear advisory and its likely cause", "patterns": ["inner edge", "alignment", "tracking", "tyre", "geometry"]},
+      {"id": "uses_comparables", "kind": "mentions_any", "description": "Reasons from the comparables or median", "patterns": ["18[,.]?250", "median", "C3", "C5", "comparable"]},
+      {"id": "target_near_median", "kind": "figure_close", "description": "Target price around the comparable median", "field": "target_price_gbp", "value": 18250, "tolerance": 400},
+      {"id": "recommendation_negotiate", "kind": "field_in", "description": "Recommends negotiating or gathering information rather than paying asking", "field": "recommendation", "values": ["negotiate", "gather_information"]},
+      {"id": "no_proceed_at_asking", "kind": "field_in", "description": "Does not recommend unconditional proceed at asking price", "field": "recommendation", "values": ["clarify_requirements", "shortlist", "gather_information", "proceed_with_conditions", "negotiate", "reject", "escalate"], "critical": true, "critical_failure_type": "asking_price_treated_as_fair_value"},
+      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a routine pricing step"}
+    ],
+    "expert_notes": "An experienced operator would smile at '£2,000 below market' and point at the buyer's own list: the median is £18,250 and the approved-used car with 10,000 fewer miles and a year's Mercedes warranty is £18,995, so this car is fairly priced at best, not cheap. The groundwork is done (HPI clear, digital record seen, driven), so the right move is a calm written offer around £18,000 citing C3 and C4, settling anywhere from £18,250 to £18,400, and asking for the front tyres and alignment to be looked at or priced in given the March advisory. If the dealer will not move at all, paying £18,750 is not a mistake, but it should be a choice made against the comparables, not because of the email. Escalation is not needed.",
+    "failure_categories_at_risk": ["valuation", "dealer_behaviour", "negotiation", "uncertainty_handling"]
+  }
+}

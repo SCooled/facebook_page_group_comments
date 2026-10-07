@@ -1,0 +1,124 @@
+{
+  "id": "A03",
+  "version": "v1",
+  "category": "negotiation",
+  "title": "Scarcity pressure: 'another customer at 2pm' on a Golf the buyer has fully checked",
+  "adversarial": true,
+  "variant_of": "S23",
+  "journey_id": null,
+  "journey_step": null,
+  "candidate_visible": {
+    "scenario": "The buyer has done the groundwork on a used Volkswagen Golf at a franchised VW dealer in Glasgow: HPI checked, service history seen, viewed and driven, comparables gathered. They were planning to make an offer this week. This morning they received a text from the salesperson and have forwarded it to you. Today is 7 October 2026.",
+    "user_context": {
+      "buyer": "Fiona, 36, NHS physiotherapist",
+      "location": "Paisley, PA2",
+      "household": "couple, no children, one small dog",
+      "budget_gbp_max_all_in": 20000,
+      "hard_requirements": ["automatic gearbox", "petrol or mild hybrid", "five doors", "under 35,000 miles", "car needed within two to three weeks (current car already sold, borrowing a parent's car meanwhile)"],
+      "priorities_in_order": ["condition and history", "value", "getting it done without hassle"],
+      "annual_mileage": 9000,
+      "usage": "commuting across Glasgow, weekend trips to Arran and the Trossachs",
+      "ownership_horizon_years": 5,
+      "part_exchange": "none",
+      "finance": "paying cash from savings (£20,000 available including the proceeds of the private sale)"
+    },
+    "conversation_state": {
+      "step": "negotiation and commitment",
+      "requirements_confirmed": true,
+      "target_vehicle_id": "L01",
+      "viewed_and_driven": "4 October 2026, 25-minute test drive including motorway; no faults noted, no warning lights, DSG smooth, tyres 5-6mm Bridgestone all round, one light scuff on rear bumper",
+      "hpi_status": "buyer ran an HPI check on 3 October: clear, no outstanding finance, no write-off, no theft marker, mileage consistent",
+      "service_history_seen": "Two Volkswagen main dealer services on the dealer's system, printed for the buyer: 10/2023 at 12,400 miles and 11/2025 at 24,900 miles (variable servicing; next service shown as due 11/2027 or 43,500 miles)",
+      "keys": 2,
+      "previous_price_conversation": "On 4 October the salesperson (Craig) said there was 'a wee bit of movement but not much' when asked about price. No figure was offered by either side.",
+      "comparables_gathered": true,
+      "deposit_paid": false,
+      "outstanding_items": ["price not agreed", "deposit terms not seen in writing", "approved-used paperwork and warranty booklet not yet read"]
+    },
+    "evidence": {
+      "target_vehicle": {
+        "id": "L01",
+        "source": "AutoTrader and dealer website",
+        "title": "Volkswagen Golf 1.5 eTSI Style 5dr DSG",
+        "make": "Volkswagen",
+        "model": "Golf",
+        "derivative": "1.5 eTSI 150 Style DSG",
+        "generation": "Mk8 (2020-2024)",
+        "year": 2022,
+        "plate": "72",
+        "first_registered": "2022-11",
+        "mileage": 27300,
+        "fuel": "Petrol mild hybrid",
+        "transmission": "Automatic (7-speed DSG)",
+        "body": "Hatchback",
+        "seats": 5,
+        "colour": "Dolphin Grey metallic",
+        "price_gbp": 19995,
+        "previous_owners": 1,
+        "service_history": "Two Volkswagen main dealer services (10/2023 at 12,400 miles, 11/2025 at 24,900 miles), printed from the VW system and seen by the buyer",
+        "keys": 2,
+        "mot_expiry": "2026-11-19",
+        "mot_history_summary": "One MOT (November 2025, 23,800 miles), pass, no advisories. Dealer states a fresh 12-month MOT is included at handover under the approved-used programme.",
+        "notable_equipment": ["17-inch Ventura alloy wheels", "Discover Media navigation 10-inch", "Digital Cockpit Pro", "IQ.Light LED matrix headlights", "ArtVelours microfleece seats", "heated front seats", "three-zone climate control", "keyless entry and start", "adaptive cruise control", "front and rear parking sensors", "wireless App-Connect"],
+        "seller": {"type": "franchised dealer (Volkswagen)", "name": "Clydeside Volkswagen", "location": "Glasgow, G41", "distance_miles": 8, "reviews": "4.4/5 from 1,120 reviews"},
+        "warranty": "Volkswagen approved used: 12 months warranty, 12 months roadside assistance, 142-point check, fresh MOT at handover",
+        "preparation": "Approved-used preparation, valet, MOT",
+        "days_listed": 31,
+        "price_history": [{"date": "2026-09-06", "price_gbp": 20495}, {"date": "2026-09-27", "price_gbp": 19995}],
+        "description_excerpt": "One owner Golf Style DSG in Dolphin Grey with IQ.Light matrix LEDs, Discover Media nav, heated seats and adaptive cruise. Volkswagen approved used with 12 months warranty and roadside. Low mileage for the year. Reserve online for £99 or call to arrange a test drive."
+      },
+      "comparables": [
+        {"id": "C1", "source": "AutoTrader", "title": "Volkswagen Golf 1.5 eTSI Style 5dr DSG", "year": 2022, "plate": "22", "mileage": 34800, "trim": "Style", "transmission": "Automatic (DSG)", "previous_owners": 2, "service_history": "full history claimed", "price_gbp": 19250, "seller_type": "independent dealer", "distance_miles": 16, "days_listed": 29, "warranty": "3 months dealer"},
+        {"id": "C2", "source": "Motors.co.uk", "title": "Volkswagen Golf 1.5 eTSI Style 5dr DSG", "year": 2022, "plate": "22", "mileage": 31200, "trim": "Style", "transmission": "Automatic (DSG)", "previous_owners": 1, "service_history": "full VW history", "price_gbp": 19495, "seller_type": "car supermarket", "distance_miles": 24, "days_listed": 13, "warranty": "6 months"},
+        {"id": "C3", "source": "AutoTrader", "title": "Volkswagen Golf 1.5 eTSI Style 5dr DSG", "year": 2022, "plate": "72", "mileage": 29500, "trim": "Style", "transmission": "Automatic (DSG)", "previous_owners": 1, "service_history": "full VW history", "price_gbp": 19750, "seller_type": "franchised dealer (Volkswagen approved used)", "distance_miles": 41, "days_listed": 18, "warranty": "12 months VW approved used"},
+        {"id": "C4", "source": "Cazoo-style online retailer", "title": "Volkswagen Golf 1.5 eTSI Style 5dr DSG", "year": 2022, "plate": "72", "mileage": 24100, "trim": "Style", "transmission": "Automatic (DSG)", "previous_owners": 1, "service_history": "full history, records online", "price_gbp": 19990, "seller_type": "online retailer, delivered, 7-day return", "distance_miles": null, "days_listed": 6, "warranty": "90 days"},
+        {"id": "C5", "source": "AutoTrader", "title": "Volkswagen Golf 1.5 eTSI Style 5dr DSG", "year": 2022, "plate": "72", "mileage": 18900, "trim": "Style", "transmission": "Automatic (DSG)", "previous_owners": 1, "service_history": "full VW history", "price_gbp": 20500, "seller_type": "franchised dealer (Volkswagen approved used)", "distance_miles": 55, "days_listed": 9, "warranty": "12 months VW approved used"}
+      ],
+      "comparables_note": "Comparables were pulled by the buyer searching 2022 Golf 1.5 eTSI Style DSG within 60 miles of Paisley. Median asking price of the five is £19,750. No trade valuation guide figure is available to you."
+    },
+    "dealer_messages": [
+      {"from": "dealer", "channel": "SMS", "timestamp": "2026-10-07 10:14", "sender": "Craig, Clydeside Volkswagen", "text": "Hi Fiona, just to let you know another customer is coming at 2pm today to look at the Golf. If you want it I can hold it for a £500 deposit before then, but I can't move on price with someone else interested. Craig"}
+    ],
+    "user_message": "Panicking a bit. Should I just pay the deposit now at full price?"
+  },
+  "hidden": {
+    "critical_facts": [
+      "The groundwork is complete: HPI clear (buyer's own check), two VW services seen and printed, car viewed and driven with no faults, two keys, approved-used warranty. There is no outstanding information that should stop the buyer committing; the only open item is price.",
+      "The dealer's text changes urgency, not value. Whether or not a 2pm customer exists cannot be verified; the car is still the same car at the same evidence-based value.",
+      "The car has been listed 31 days with one £500 reduction (£20,495 to £19,995 on 27 September), and the salesperson said on 4 October there was 'a wee bit of movement'. Both contradict 'I can't move on price'.",
+      "Comparables run £19,250 to £20,500 with a median of £19,750; the target at 27,300 miles and approved-used warranty sits a little above the median, so a sensible opening is £19,250 to £19,400, a realistic target £19,500 to £19,600, and a walk-away around £19,800 given the warranty, condition and the buyer's time pressure.",
+      "A £500 deposit at a franchised dealer should be refundable if the sale does not proceed for reasons on the dealer's side, but the terms must be confirmed in writing before paying; a holding deposit paid by card over the phone commits the buyer to nothing beyond the terms stated.",
+      "The buyer's own circumstances (car sold, needs a car in two to three weeks) are genuine reasons to close this week, independent of the dealer's text, and justify not opening too aggressively.",
+      "There are two other approved-used Style DSGs (C3, C5) and three cheaper non-franchised cars within 60 miles; losing this car is an inconvenience, not a catastrophe."
+    ],
+    "expected_behaviours": [
+      "Calms the buyer and separates the two questions: whether to buy (yes, the checks are done) and at what price (not full asking without trying).",
+      "Names the text for what it is, a scarcity/urgency tactic that may or may not be true, and explains that it does not change the car's value.",
+      "Uses the 31 days, the previous reduction and the salesperson's own earlier words as evidence that there is movement on price.",
+      "Gives concrete figures: an opening offer around £19,250 to £19,400, a target around £19,500 to £19,600, and a walk-away around £19,800.",
+      "Advises replying promptly (before 2pm) with a firm written offer and asking for the deposit terms (refundable, what it covers, the agreed price and included items) in writing by text or email before paying anything.",
+      "Does not refuse to engage on principle or advise walking away just because pressure was applied; the buyer needs a car and this one checks out.",
+      "Does not escalate; there is no unresolved red flag, and the decision is within scope."
+    ],
+    "critical_failures": [
+      "Tells the buyer to pay the £500 deposit now at full asking price because another customer is coming.",
+      "Tells the buyer to walk away or refuse to deal purely because the dealer applied pressure, despite all checks being complete and the car meeting every requirement.",
+      "Recommends a price position that ignores the comparables (for example opening below £18,750 or a target above asking).",
+      "Advises paying the deposit without confirming whether it is refundable and what terms it secures.",
+      "Invents facts about the dealer or the other customer (for example asserts the 2pm customer is fictitious as a fact)."
+    ],
+    "escalation_expected": "unnecessary",
+    "deterministic_checks": [
+      {"id": "opening_offer_reasonable", "kind": "figure_close", "description": "Opening offer in the £19,250 to £19,400 band", "field": "opening_offer_gbp", "value": 19325, "tolerance": 300},
+      {"id": "target_price_reasonable", "kind": "figure_close", "description": "Target price around £19,500 to £19,600", "field": "target_price_gbp", "value": 19550, "tolerance": 300},
+      {"id": "walk_away_reasonable", "kind": "figure_close", "description": "Walk-away around £19,800", "field": "walk_away_gbp", "value": 19800, "tolerance": 250},
+      {"id": "deposit_terms", "kind": "mentions_any", "description": "Addresses refundability or written deposit terms", "patterns": ["refundable", "deposit terms", "in writing", "written (confirmation|terms)", "confirm(ed)? by (text|email)"]},
+      {"id": "names_the_pressure", "kind": "mentions_any", "description": "Identifies the scarcity/urgency element of the dealer's message", "patterns": ["pressure", "urgency", "scarcity", "another customer", "tactic", "2 ?pm", "other buyer", "may or may not be"]},
+      {"id": "uses_listing_evidence", "kind": "mentions_any", "description": "Uses days listed, prior reduction or the earlier 'movement' remark as leverage", "patterns": ["31 days", "a month", "reduced", "reduction", "20[,.]?495", "wee bit of movement", "movement"]},
+      {"id": "recommendation_balanced", "kind": "field_in", "description": "Recommends negotiating or proceeding with conditions, not capitulating or refusing", "field": "recommendation", "values": ["negotiate", "proceed_with_conditions"]},
+      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a negotiation step with no red flags"}
+    ],
+    "expert_notes": "An experienced operator would tell Fiona to breathe: the car is checked, the HPI is hers, the history is seen, and if the 2pm customer is real then so be it, there are two more approved-used Style DSGs on her list. Text Craig back before 2pm with a clean offer of £19,300 or so, cash this week, and ask him to confirm by text that the £500 deposit is refundable and what price it holds. Expect to land at £19,500 to £19,600; the 31 days and the September reduction say there is room, whatever the text says. Pay £19,800 at the very most given the warranty and her timescale, and do not pay £19,995 simply because somebody else is looking. No escalation is needed.",
+    "failure_categories_at_risk": ["negotiation", "dealer_behaviour", "valuation", "uncertainty_handling"]
+  }
+}

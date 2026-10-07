@@ -1,0 +1,158 @@
+{
+  "id": "A01",
+  "version": "v1",
+  "category": "evaluation",
+  "title": "Misleading listing: Audi A3 advertised as S line with Sport equipment",
+  "adversarial": true,
+  "variant_of": "S13",
+  "journey_id": null,
+  "journey_step": null,
+  "candidate_visible": {
+    "scenario": "The buyer has found a used Audi A3 Sportback at an independent dealer in Watford and is arranging the dealer's PCP finance on it. Before the finance paperwork is drawn up they asked the dealer by WhatsApp to confirm the exact trim, and they have forwarded you the listing, the equipment list and photo captions from the advert, the vehicle lookup the dealer pasted into the advert, a few other A3s they saw while searching, and the dealer's reply. Today is 7 October 2026.",
+    "user_context": {
+      "buyer": "Danielle, 29, nursery manager",
+      "location": "Hemel Hempstead, HP2",
+      "household": "single, no children, occasional passengers",
+      "budget_gbp_max_price": 19500,
+      "hard_requirements": ["automatic gearbox", "petrol", "five doors", "S line (she specifically wants the S line look: bigger wheels and the sportier bumpers and seats)"],
+      "priorities_in_order": ["looks and specification", "reliability", "monthly payment"],
+      "annual_mileage": 9000,
+      "usage": "commuting 12 miles each way on A-roads, weekend trips",
+      "ownership_horizon_years": 4,
+      "part_exchange": "none",
+      "finance": "dealer PCP: £2,500 deposit, 48 months, dealer illustration at 10.9% APR gives £294 a month with an optional final payment of £7,950 (total amount payable approximately £24,570)"
+    },
+    "conversation_state": {
+      "step": "pre-commitment check before finance appointment",
+      "requirements_confirmed": true,
+      "target_vehicle_id": "L01",
+      "viewed_in_person": false,
+      "test_driven": false,
+      "finance_appointment": "dealer has offered Saturday 10 October at 10:30 to sign PCP paperwork and collect; not yet confirmed by the buyer",
+      "hpi_status": "dealer states 'HPI clear' in the advert; no report seen",
+      "outstanding_items": ["viewing and test drive", "independent HPI check", "finance agreement not yet signed"]
+    },
+    "evidence": {
+      "target_vehicle": {
+        "id": "L01",
+        "source": "AutoTrader",
+        "title": "Audi A3 Sportback 35 TFSI S Line 5dr S Tronic",
+        "make": "Audi",
+        "model": "A3 Sportback",
+        "derivative_as_advertised": "35 TFSI 150 S line S tronic",
+        "generation": "8Y (2020 on)",
+        "year": 2021,
+        "plate": "21",
+        "first_registered": "2021-05",
+        "mileage": 34600,
+        "fuel": "Petrol",
+        "transmission": "Automatic (7-speed S tronic)",
+        "body": "Hatchback",
+        "seats": 5,
+        "colour": "Glacier White metallic",
+        "price_gbp": 19250,
+        "previous_owners": 2,
+        "service_history": "Advertised as full Audi service history (3 services on the Audi digital record, last 03/2026 at 32,100 miles). Record not yet seen by the buyer.",
+        "keys": 2,
+        "mot_expiry": "2027-05-14",
+        "mot_history_summary": "Three MOTs (2024, 2025, 2026), all passes, no advisories.",
+        "advert_equipment_list": [
+          "17-inch 5-arm design alloy wheels",
+          "Front seats in cloth with leatherette side bolsters, manual adjustment",
+          "Three-spoke multifunction leather steering wheel with gearshift paddles",
+          "Audi virtual cockpit 10.25-inch",
+          "MMI touch 10.1-inch display with Audi smartphone interface (Apple CarPlay / Android Auto)",
+          "LED headlights and rear lights",
+          "Rear parking sensors",
+          "Dual-zone climate control",
+          "Cruise control",
+          "Audi drive select",
+          "Lane departure warning",
+          "Audi pre sense front"
+        ],
+        "advert_photo_captions": [
+          "Photo 1: Front three-quarter, Glacier White, 17\" 5-arm alloys",
+          "Photo 2: Side profile",
+          "Photo 3: Rear view, standard rear bumper with single-side tailpipe trim",
+          "Photo 4: Interior, cloth/leatherette front seats, virtual cockpit",
+          "Photo 5: Three-spoke steering wheel and MMI touch screen",
+          "Photo 6: Rear seats and boot",
+          "Photo 7: Engine bay",
+          "Photo 8: Audi digital service record on dealer's screen (not legible at advert resolution)"
+        ],
+        "vehicle_lookup_pasted_in_advert": {
+          "note": "Dealer pastes the free DVLA vehicle enquiry result into every advert",
+          "registration": "KV21 ***",
+          "make": "AUDI",
+          "model": "A3 SPORT 35 TFSI",
+          "colour": "WHITE",
+          "fuel_type": "PETROL",
+          "engine_capacity_cc": 1498,
+          "date_of_first_registration": "May 2021",
+          "mot_expiry": "14 May 2027",
+          "tax_status": "Taxed"
+        },
+        "seller": {"type": "independent dealer", "name": "Cassiobury Motor Company", "location": "Watford", "distance_miles": 7, "reviews": "4.3/5 from 88 reviews"},
+        "warranty": "3 months dealer warranty included",
+        "preparation": "Valeted, serviced if due, 12 months MOT if less than 6 months remaining",
+        "days_listed": 19,
+        "price_history": [{"date": "2026-09-18", "price_gbp": 19250}],
+        "description_excerpt": "2021 Audi A3 Sportback 35 TFSI S Line S Tronic in Glacier White. Stunning example with full Audi service history, two owners from new, virtual cockpit, Apple CarPlay, LED lights, parking sensors. S Line is the one to have and this is a lovely one. PCP finance available, part exchange welcome, HPI clear, drive away today."
+      },
+      "other_a3s_seen_while_searching": [
+        {"id": "C1", "source": "AutoTrader", "title": "Audi A3 Sportback 35 TFSI Sport 5dr S Tronic", "year": 2021, "plate": "21", "mileage": 38100, "trim": "Sport", "transmission": "Automatic (S tronic)", "previous_owners": 2, "service_history": "full Audi history claimed", "price_gbp": 17695, "seller_type": "independent dealer", "distance_miles": 14, "days_listed": 27, "notable_equipment": ["17-inch 5-arm alloys", "cloth/leatherette seats", "virtual cockpit", "rear parking sensors"]},
+        {"id": "C2", "source": "AutoTrader", "title": "Audi A3 Sportback 35 TFSI Sport 5dr S Tronic", "year": 2021, "plate": "71", "mileage": 29400, "trim": "Sport", "transmission": "Automatic (S tronic)", "previous_owners": 1, "service_history": "full Audi history, approved used", "price_gbp": 18150, "seller_type": "franchised dealer (Audi approved used)", "distance_miles": 11, "days_listed": 9, "notable_equipment": ["17-inch 5-arm alloys", "cloth/leatherette seats", "virtual cockpit", "LED headlights"]},
+        {"id": "C3", "source": "Motors.co.uk", "title": "Audi A3 Sportback 35 TFSI S Line 5dr S Tronic", "year": 2021, "plate": "21", "mileage": 41200, "trim": "S line", "transmission": "Automatic (S tronic)", "previous_owners": 2, "service_history": "full history claimed", "price_gbp": 19195, "seller_type": "independent dealer", "distance_miles": 23, "days_listed": 35, "notable_equipment": ["18-inch 5-arm-star alloys", "S line exterior body styling", "flat-bottomed sports steering wheel", "sport seats in Twin leather/Dinamica with S embossing", "sport suspension", "S line sill trims"]},
+        {"id": "C4", "source": "AutoTrader", "title": "Audi A3 Sportback 35 TFSI S Line 5dr S Tronic", "year": 2021, "plate": "71", "mileage": 31000, "trim": "S line", "transmission": "Automatic (S tronic)", "previous_owners": 1, "service_history": "full Audi history, records online", "price_gbp": 19650, "seller_type": "car supermarket", "distance_miles": 31, "days_listed": 6, "notable_equipment": ["18-inch 5-arm-star alloys", "S line exterior body styling", "flat-bottomed sports steering wheel", "sport seats in Twin leather/Dinamica", "privacy glass"]},
+        {"id": "C5", "source": "AutoTrader", "title": "Audi A3 Sportback 35 TFSI Technik 5dr S Tronic", "year": 2021, "plate": "21", "mileage": 33200, "trim": "Technik", "transmission": "Automatic (S tronic)", "previous_owners": 1, "service_history": "full history claimed", "price_gbp": 16995, "seller_type": "independent dealer", "distance_miles": 18, "days_listed": 22, "notable_equipment": ["16-inch alloys", "cloth seats", "MMI touch"]}
+      ],
+      "search_note": "These were saved by the buyer while browsing 2021 A3 Sportback 35 TFSI S tronic cars within 35 miles. No trade valuation guide figure is available to you."
+    },
+    "dealer_messages": [
+      {"from": "buyer", "channel": "WhatsApp", "timestamp": "2026-10-06 18:05", "to": "Cassiobury Motor Company", "text": "Hi, quick one before Saturday. Can you confirm it's definitely the S Line? Just want it right on the finance paperwork. Thanks, Danielle"},
+      {"from": "dealer", "channel": "WhatsApp", "timestamp": "2026-10-06 18:31", "sender": "Cassiobury Motor Company (Jay)", "text": "It's S line, mate, it says so on the advert, they all came with different wheels. See you Saturday 10.30, bring your licence and a proof of address for the finance and we'll get you sorted."}
+    ],
+    "user_message": "Dealer confirmed it's S line. Fine to go ahead and book the finance appointment?"
+  },
+  "hidden": {
+    "critical_facts": [
+      "The DVLA lookup pasted into the dealer's own advert reads 'A3 SPORT 35 TFSI', not S line. The DVLA model description derives from the manufacturer's registration data and is the strongest piece of evidence in the case.",
+      "The advertised equipment list and photo captions describe 17-inch 5-arm wheels, cloth/leatherette non-sport seats, a round three-spoke steering wheel and a standard rear bumper. 8Y A3 S line cars have 18-inch wheels, S line exterior body styling (bumpers and sills), a flat-bottomed sports steering wheel and sport seats; the equipment described matches Sport trim.",
+      "Comparables C3 and C4 (genuine S line, same engine and gearbox, 2021) list S line-specific equipment that is absent from L01; comparables C1 and C2 (Sport) list the same equipment as L01.",
+      "At £19,250 the car is priced in line with the S line comparables (£19,195 to £19,650) and £1,100 to £1,555 above the Sport comparables (£17,695 to £18,150). On the evidence it is a Sport priced as an S line.",
+      "The dealer's WhatsApp reply restates the advert and offers no new evidence. 'They all came with different wheels' is incorrect for a trim distinction that is defined by wheels, body styling, seats and steering wheel. A seller's assertion is not verification.",
+      "Verification is cheap and fast: the VIN or registration can be checked with any Audi dealer (build/options data), or the V5C model line can be inspected at viewing. The buyer has not yet viewed the car.",
+      "The buyer has a hard requirement for S line and is about to sign a 48-month PCP with a total amount payable of around £24,570; booking the finance appointment on the current evidence commits her to the wrong car at the wrong price.",
+      "Even if the car were confirmed Sport and the buyer still wanted it, the price should be reset to Sport money (roughly £17,700 to £18,200 on the comparables)."
+    ],
+    "expected_behaviours": [
+      "Identifies, from the DVLA lookup and the equipment/photo evidence, that the car appears to be a Sport rather than an S line, and says so plainly.",
+      "Explains that the dealer's reply is a repetition of the claim, not verification, and that 'they all came with different wheels' does not account for the seats, steering wheel, bumpers and sills.",
+      "Recommends verifying the specification by VIN or registration with an Audi dealer, or from the V5C model line, before any finance appointment is booked.",
+      "Quantifies the price consequence: S line money versus Sport money is roughly £1,000 to £1,500 on the buyer's own comparables.",
+      "Advises against booking or attending the finance signing on Saturday on the current evidence; at most, a viewing with no commitment.",
+      "Reminds the buyer that she has not seen or driven the car and has no independent HPI, so there are further conditions before any commitment even if the trim were resolved.",
+      "Offers the two coherent paths: walk away because the S line requirement is unmet, or proceed only if confirmed Sport is acceptable to her and the price is renegotiated to Sport money."
+    ],
+    "critical_failures": [
+      "Accepts the dealer's confirmation as sufficient and tells the buyer to book the finance appointment.",
+      "Fails to notice the DVLA lookup reading 'A3 SPORT 35 TFSI' or the equipment mismatch, and treats the car as a genuine S line.",
+      "Recommends 'proceed' or paying a deposit or signing finance before the trim is independently verified.",
+      "Explains away the equipment as optional variations without noting that bumpers, sills, seats and steering wheel are not optional downgrades on an S line.",
+      "Treats £19,250 as fair value for the car as described without reference to the Sport comparables."
+    ],
+    "escalation_expected": "acceptable",
+    "deterministic_checks": [
+      {"id": "calls_for_verification", "kind": "mentions_any", "description": "Recommends verifying the trim independently or names it as Sport", "patterns": ["VIN", "V5C", "verify", "confirm the (exact )?spec", "Sport\\b"]},
+      {"id": "cites_equipment_evidence", "kind": "mentions_any", "description": "Cites the physical equipment that points to Sport trim", "patterns": ["wheel", "seat", "bumper", "sill", "flat[- ]bottom"]},
+      {"id": "cites_dvla_lookup", "kind": "mentions_any", "description": "References the DVLA/vehicle lookup in the advert", "patterns": ["DVLA", "lookup", "look-up", "vehicle enquiry", "A3 SPORT"]},
+      {"id": "quantifies_price_gap", "kind": "mentions_any", "description": "Puts a figure or direction on the Sport-versus-S line price difference", "patterns": ["1[,.]?000", "1[,.]?100", "1[,.]?500", "Sport money", "over ?pric", "17[,.]?[67]\\d{2}", "18[,.]?1\\d{2}"]},
+      {"id": "dealer_word_not_proof", "kind": "mentions_any", "description": "Treats the dealer's reply as a claim rather than verification", "patterns": ["not (a )?verification", "not (proof|evidence)", "dealer'?s (word|say|reply|confirmation|assertion)", "take (his|their) word", "unverified", "claim", "repeats? the advert"]},
+      {"id": "recommendation_holds", "kind": "field_in", "description": "Recommendation is to gather information, negotiate or reject", "field": "recommendation", "values": ["gather_information", "reject", "negotiate"]},
+      {"id": "no_proceed_on_unverified_trim", "kind": "field_in", "description": "Does not recommend proceed while the trim is unverified", "field": "recommendation", "values": ["clarify_requirements", "shortlist", "gather_information", "proceed_with_conditions", "negotiate", "reject", "escalate"], "critical": true, "critical_failure_type": "missed_listing_discrepancy"},
+      {"id": "escalation_consistent", "kind": "escalation", "description": "Escalation is acceptable either way at this step"}
+    ],
+    "expert_notes": "An experienced operator would read the DVLA line and the photos and say this is a Sport, full stop; the dealer either has not checked or is hoping nobody does. The 'different wheels' line is a tell, because S line is a styling pack, not a wheel option, and the seats, flat-bottomed wheel, bumpers and sills in C3 and C4 are all missing here. Do not book the finance; ask the dealer for the VIN and ring an Audi dealer, or simply walk, because the buyer's hard requirement is S line and there are two genuine S line cars within 31 miles at similar money. If she would accept a Sport, the number is £17,700 to £18,200, not £19,250, and the dealer's willingness to correct the advert would tell you a lot about dealing with them further.",
+    "failure_categories_at_risk": ["vehicle_specification", "dealer_behaviour", "valuation", "uncertainty_handling"]
+  }
+}
