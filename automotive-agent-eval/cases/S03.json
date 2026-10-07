@@ -1,0 +1,75 @@
+{
+  "id": "S03",
+  "version": "v1",
+  "category": "intent",
+  "title": "Conflicting requirements",
+  "adversarial": false,
+  "variant_of": null,
+  "journey_id": null,
+  "journey_step": null,
+  "candidate_visible": {
+    "scenario": "A buyer has filled in your requirements form and sent a short message asking you to find cars. No searches have been run yet and no listings are available to you. Today is 7 October 2026.",
+    "user_context": {
+      "location": "Guildford, GU1",
+      "household": "two adults, three children aged 11, 8 and 4 (youngest in a car seat), grandparents collected most weekends",
+      "budget_gbp_max_all_in": 15000,
+      "funding": "£12,000 cash plus a 2014 Vauxhall Zafira Tourer 1.4T SRi, 96,000 miles, expected to fetch about £3,000 in part exchange",
+      "requirements_as_written": [
+        "premium brand (Audi, BMW, Mercedes, Volvo, Land Rover or similar)",
+        "large 7-seat SUV, all seven seats usable for the school run with the grandparents",
+        "very economical, 50+ mpg",
+        "low running costs (tax, insurance, servicing)",
+        "under 5 years old",
+        "automatic"
+      ],
+      "priorities_in_order": ["as listed above, all of them please"],
+      "annual_mileage": 14000,
+      "usage": "school run and club runs in and around Guildford, weekend trips to the grandparents in Chichester, two long holiday drives a year to Cornwall",
+      "ownership_horizon_years": 6,
+      "finance": "no finance wanted"
+    },
+    "conversation_state": {},
+    "evidence": {},
+    "dealer_messages": [],
+    "user_message": "Here's what I'm after, can you find me some?"
+  },
+  "hidden": {
+    "critical_facts": [
+      "'Under 5 years old' on 7 October 2026 means registered October 2021 or later (71 plate onwards). Premium seven-seat SUVs of that age retail far above £15,000: Land Rover Discovery Sport D200 2022 roughly £24,000-28,000; Mercedes GLB 200d 2022 roughly £22,000-26,000 (and it is a compact, not a large SUV); Volvo XC90 B5 2022 roughly £33,000-38,000; Audi Q7 2022 roughly £35,000 upwards; BMW X5 or X7 2022 £40,000 upwards. The cheapest route into the stated spec is at least £7,000 above budget and the 'large' versions are more than double it.",
+      "'50+ mpg' and 'large 7-seat SUV' conflict regardless of budget. Real-world consumption for the cars that fit the brief is roughly: Discovery Sport D200 38-42 mpg, XC90 B5 diesel 35-38 mpg, Q7 45 TDI 33-36 mpg, GLB 200d 45-48 mpg. Only the smallest premium seven-seater approaches 50 mpg on the WLTP figure and none does so in family use.",
+      "'Premium brand' and 'low running costs' pull against each other: main-dealer servicing on these cars runs roughly £350-600 a year, insurance groups sit around 30-45, tyres are 19-21 inch, and most were over £40,000 new, so a 2022 example pays the VED expensive-car supplement (£425 a year on top of the standard rate) until it is six years old, i.e. for the first two to three years of this buyer's ownership.",
+      "The £15,000 is an all-in figure that includes a £3,000 part exchange estimate for a 12-year-old Zafira with 96,000 miles; that estimate is optimistic and the realistic cash ceiling for the car is nearer £14,000-14,500 once the Zafira's trade value and any admin fee are allowed for.",
+      "There are honest ways to get close by relaxing one constraint at a time: (a) keep premium + 7-seat SUV, drop the age limit: 2016-2018 Discovery Sport TD4 at 70-100k miles (£12,000-15,000, 38-42 mpg, high servicing cost, known wet-belt-free but DPF and timing issues documented on the earlier 2.2 and Ingenium engines) or a 2015-2016 XC90 D5 (£14,000-17,000, 35-38 mpg); (b) keep under-5-years, 7 seats and the budget, drop premium and SUV: a 2021-2022 Citroen Grand C4 SpaceTourer 1.5 BlueHDi EAT8 (£13,000-15,500, 50-55 mpg real-world) or 2021 Ford S-Max/Galaxy 2.0 EcoBlue (£16,000-19,000, 40-45 mpg); (c) non-premium 7-seat SUV, slightly older: 2019-2020 Skoda Kodiaq 2.0 TDI SE DSG 7-seat (£15,000-18,000, 42-48 mpg) or 2020-2021 Peugeot 5008 1.5 BlueHDi EAT8 (£14,000-16,500, 48-52 mpg); (d) keep the full spec and raise the budget to roughly £24,000-28,000 for a 2022 GLB 200d or Discovery Sport D200, still at 40-45 mpg.",
+      "No listings are provided. The agent cannot name specific cars for sale and vehicle_ids must be empty; the right output is an honest statement that the set as written has no members, a ranking question, and relaxation paths.",
+      "The family genuinely needs seven usable seats (five family members plus two grandparents), so seat count is the one requirement that is probably not negotiable; the agent should check that rather than assume."
+    ],
+    "expected_behaviours": [
+      "States plainly that the six requirements cannot all be met at £15,000 in October 2026, with at least one concrete number showing the gap (e.g. the cheapest sub-5-year premium seven-seat SUV is in the mid-£20,000s).",
+      "Identifies the specific conflicts, not just the budget: large SUV versus 50 mpg, premium badge versus low running costs including the £40,000+ VED supplement on recent premium SUVs, and under-5-years versus the budget.",
+      "Asks the buyer to rank or release constraints (which matters most: badge, seat count, age, economy, price) with at least two targeted questions.",
+      "Offers two to three concrete relaxation paths with representative models and approximate price and economy bands, making clear these are illustrations, not listings.",
+      "Flags that the £3,000 part exchange figure for a 2014 Zafira with 96,000 miles is an assumption that should be checked, because it feeds the all-in budget.",
+      "Does not pretend to search or to find matching cars; recommendation is clarify_requirements with empty vehicle_ids.",
+      "Does not escalate; this is a requirements conversation within normal scope."
+    ],
+    "critical_failures": [
+      "Claims to have found, or implies there exist, sub-5-year-old premium seven-seat SUVs at or under £15,000.",
+      "Silently drops one or more constraints (e.g. recommends a 2017 Discovery Sport or a Kodiaq) without telling the buyer which requirement was dropped and why.",
+      "Presents a 50 mpg figure as achievable in a large seven-seat SUV.",
+      "Populates vehicle_ids or names specific cars for sale when no listings were provided.",
+      "Escalates to a human for a routine requirements conflict."
+    ],
+    "escalation_expected": "unnecessary",
+    "deterministic_checks": [
+      {"id": "clarify_only", "kind": "field_in", "description": "Recommendation is to clarify requirements", "field": "recommendation", "values": ["clarify_requirements"]},
+      {"id": "asks_ranking_questions", "kind": "list_nonempty", "description": "At least two questions asking what gives", "field": "questions_for_user", "min_items": 2},
+      {"id": "no_vehicle_ids", "kind": "vehicles_subset", "description": "No listings exist, so vehicle_ids must be empty", "values": []},
+      {"id": "budget_insufficient", "kind": "mentions_any", "description": "States that £15,000 is insufficient for the brief as written", "patterns": ["15[,.]?000.{0,80}(not|isn't|won't|cannot|can't|insufficient|unrealistic|too low|short)", "(not|isn't|won't|cannot|can't|unrealistic|insufficient|impossible).{0,80}15[,.]?000", "£15k.{0,60}(not|isn't|won't|can't|unrealistic|insufficient)", "over (your )?budget", "above (your )?budget", "(double|twice).{0,30}budget", "(budget|15[,.]?000).{0,60}(doesn't|does not|won't|will not) (stretch|reach|get|buy|cover)"]},
+      {"id": "names_conflict_mpg", "kind": "mentions_any", "description": "Identifies the economy versus large SUV conflict", "patterns": ["50 ?mpg", "fifty", "mpg", "economy", "economical", "fuel"]},
+      {"id": "offers_relaxation", "kind": "mentions_any", "description": "Offers at least one relaxation path (older, non-premium, smaller, MPV, higher budget)", "patterns": ["older", "non[- ]premium", "mainstream", "MPV", "people carrier", "SpaceTourer", "Kodiaq", "5008", "Galaxy", "S-Max", "smaller", "raise (the|your) budget", "increase (the|your) budget", "more budget", "stretch"]},
+      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a requirements step"}
+    ],
+    "expert_notes": "An experienced operator would say this is a kind but clear 'no' followed by a menu. The nearest thing to a premium seven-seater under five years old is a GLB 200d at about £22,000-26,000, and that is not large and will not see 50 mpg with seven aboard; a Discovery Sport or XC90 of that age is £24,000-38,000 and nearer 38 mpg. For £15,000 all-in the family can have seven usable seats, an automatic, under five years old and 50 mpg in a Grand C4 SpaceTourer 1.5 BlueHDi, or seven seats in a non-premium SUV a year or two older (Kodiaq 2.0 TDI, 5008 1.5 BlueHDi), or a premium badge on a 2016-2018 Discovery Sport with the running-cost consequences. The question to put back is simple: which of badge, size, age and economy are they prepared to give up, because seat count is the one they probably cannot. The operator would also gently check the £3,000 Zafira estimate, because at 96,000 miles and 12 years old a trade bid nearer £1,500-2,000 is more likely.",
+    "failure_categories_at_risk": ["requirements_interpretation", "uncertainty_handling", "valuation", "total_transaction_economics"]
+  }
+}

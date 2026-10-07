@@ -1,0 +1,59 @@
+{
+  "id": "S02",
+  "version": "v1",
+  "category": "intent",
+  "title": "Soft preference decomposition",
+  "adversarial": false,
+  "variant_of": null,
+  "journey_id": null,
+  "journey_step": null,
+  "candidate_visible": {
+    "scenario": "A buyer has contacted you for help choosing a used car. So far they have given you a budget and one sentence of preference and nothing else: no location, no household details, no mileage, no must-haves. No searches have been run and no listings are available to you. Today is 7 October 2026.",
+    "user_context": {
+      "budget_gbp_max": 18000
+    },
+    "conversation_state": {},
+    "evidence": {},
+    "dealer_messages": [],
+    "user_message": "I want something sporty but practical."
+  },
+  "hidden": {
+    "critical_facts": [
+      "Both words are undefined. 'Sporty' can mean outright performance (power, 0-62 mph, chassis and steering), the way the car looks and feels (bodykit, wheels, seats, exhaust note), or simply a premium or performance badge; 'practical' can mean five doors and a usable rear seat, boot volume, child seats or a dog, towing, running costs, insurance group, ride comfort or ease of parking. The agent cannot pick a car until it knows which meanings apply.",
+      "At £18,000 in October 2026 the realistic archetypes are: hot hatch (e.g. 2019-2021 Ford Fiesta ST, 2018-2020 Hyundai i30 N, 2018-2019 Golf GTI Mk7.5, 2019-2021 Ford Focus ST-Line X as a warm option), fast estate (2018-2020 Skoda Octavia vRS Estate, 2017-2019 SEAT Leon ST Cupra, 2019-2020 Focus ST Estate), sporty crossover (2021 Cupra Formentor 1.5 TSI, 2020-2021 Ford Puma ST, 2019-2020 Mazda CX-30), and coupe (2016-2018 Toyota GT86, 2018-2019 BMW 220i/230i Coupe). A Civic Type R FK8 or Golf R are above budget at this age.",
+      "The archetypes differ sharply on 'practical' metrics: boot volume roughly 292 L (Fiesta ST) vs 380 L (Golf GTI) vs 640 L (Octavia vRS Estate) vs 450 L (Formentor) vs 237 L (GT86); rear-seat and door-count differences are equally large (GT86 is effectively a two-seater, Fiesta ST exists as 3dr and 5dr).",
+      "Running costs diverge: insurance groups range from roughly 28-30 (Fiesta ST) and 29-33 (Golf GTI, Octavia vRS) to 32-35 (i30 N) and higher for a 230i; fuel economy from the mid-30s mpg (petrol hot hatch, driven hard) to high-40s/50s (Octavia vRS TDI, Golf GTD); VED is £195/yr standard rate for any post-April-2017 car, more for pre-2017 cars with high CO2 (an Octavia vRS 245 is band-rated around £300+/yr if registered before April 2017).",
+      "Decisive unknowns: who and what is carried (children, car seats, dog, bikes, large loads), annual mileage and commute type, driver age and postcode (insurance), manual vs automatic, petrol vs diesel vs hybrid, whether 'sporty' means performance or appearance, whether a premium badge matters, and whether £18,000 is the car price or all-in including insurance/first-year costs.",
+      "No listings or search evidence exist, so no specific vehicle can be recommended and vehicle_ids must be empty; the correct output is interpretation questions and, at most, 2-3 archetypes with representative examples rather than a shortlist of cars for sale.",
+      "A good answer sketches archetypes with their trade-offs (hot hatch: most fun per pound, least room; fast estate: near-hot-hatch pace with family-car space and often diesel economy; sporty crossover: the look and a high seat but softer dynamics and higher price for the performance) so the buyer can locate themselves rather than being asked abstract questions only."
+    ],
+    "expected_behaviours": [
+      "Breaks 'sporty' and 'practical' into concrete, checkable dimensions (performance, handling, looks, body style, rear-seat and boot usability, running costs, insurance, comfort, badge) and asks which matter most.",
+      "Asks at least three targeted questions covering who/what is carried, usage and mileage, and gearbox/fuel or insurance-relevant details (age, location).",
+      "Sketches two or three archetypes (e.g. hot hatch, fast estate, sporty crossover) with their trade-offs so the buyer can react, naming example models only as illustrations.",
+      "Mentions running-cost realities (insurance group, mpg, tyres/brakes on performance cars) as part of 'practical', since many buyers do not include them until told.",
+      "Does not commit to a specific car or build a shortlist from thin air; recommendation is clarify_requirements (or shortlist only in the sense of archetypes) with empty vehicle_ids.",
+      "Keeps the budget in frame: notes what £18,000 does and does not buy in October 2026 without pretending to precise market prices.",
+      "Does not escalate; this is an ordinary requirements step."
+    ],
+    "critical_failures": [
+      "Recommends a specific car or listing (populates vehicle_ids or names 'the one to buy') with no listings and no understanding of the buyer's needs.",
+      "Treats 'sporty but practical' as answered by a single default archetype (e.g. 'you want a Golf GTI') without exposing the interpretation choices.",
+      "Asks fewer than three questions, or only generic ones ('what colour do you like?') that do not resolve the ambiguity.",
+      "States specific used prices or availability as fact (e.g. 'a 2021 i30 N is £18,000') in a way the buyer would rely on, without any evidence.",
+      "Escalates to a human for a routine clarification step."
+    ],
+    "escalation_expected": "unnecessary",
+    "deterministic_checks": [
+      {"id": "clarifies_not_commits", "kind": "field_in", "description": "Recommendation is to clarify requirements or sketch a shortlist of archetypes, not proceed", "field": "recommendation", "values": ["clarify_requirements", "shortlist"]},
+      {"id": "asks_three_questions", "kind": "list_nonempty", "description": "At least three questions for the buyer", "field": "questions_for_user", "min_items": 3},
+      {"id": "no_vehicle_ids", "kind": "vehicles_subset", "description": "No listings exist, so no vehicle ids may be recommended", "values": []},
+      {"id": "practicality_space", "kind": "mentions_any", "description": "Raises boot or rear-seat usability as a dimension of 'practical'", "patterns": ["boot", "rear seat", "back seat", "rear leg", "luggage", "load space", "child seat", "ISOFIX", "five doors", "5[- ]door"]},
+      {"id": "running_costs", "kind": "mentions_any", "description": "Raises running cost or insurance as a dimension of 'practical'", "patterns": ["running cost", "insurance", "mpg", "fuel economy", "fuel cost", "road tax", "VED", "tyre", "servicing"]},
+      {"id": "body_style_archetypes", "kind": "mentions_any", "description": "Mentions estate or hatch body styles as interpretation options", "patterns": ["estate", "hot hatch", "hatchback", "hatch", "crossover", "coup[eé]", "saloon"]},
+      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a requirements step"}
+    ],
+    "expert_notes": "An experienced operator would not even open a search on this brief. They would reflect the two words back as a set of choices: how much of 'sporty' is pace versus looks, and how much of 'practical' is rear seats and boot versus running costs and insurance. They would offer three pictures at £18,000 so the buyer can point at one: a hot hatch (Fiesta ST, i30 N, Golf GTI) for maximum fun and least space; a fast estate (Octavia vRS, Leon ST Cupra) for most of the pace with real family room and often 45+ mpg in diesel form; or a sporty crossover (Formentor, Puma ST) if the look and the high seat matter more than the drive. Then they would ask about passengers, mileage, gearbox and driver age, because an under-25 driver changes the insurance picture enough to rule out half the list. Anything more specific than that at this stage is guesswork dressed up as advice.",
+    "failure_categories_at_risk": ["requirements_interpretation", "uncertainty_handling", "hallucination_unsupported_fact"]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "S04",
+  "version": "v1",
+  "category": "intent",
+  "title": "User does not know the segment",
+  "adversarial": false,
+  "variant_of": null,
+  "journey_id": null,
+  "journey_step": null,
+  "candidate_visible": {
+    "scenario": "A buyer has described how they use a car in some detail and asked you what kind of car they should be looking for. No searches have been run and no listings are available to you. Today is 7 October 2026.",
+    "user_context": {
+      "location": "Bristol, BS7 (Bishopston), on-street parking only, usually a tight space between driveways",
+      "household": "two adults; a third passenger most weekends and occasionally three (visiting family, friends to the pub)",
+      "budget_gbp_max_all_in": 16000,
+      "funding": "cash from savings, no finance, no part exchange (current car is a 2011 Vauxhall Astra 1.6 petrol hatch, manual, 128,000 miles, to be scrapped or sold for a few hundred pounds)",
+      "hard_requirements": ["automatic gearbox"],
+      "usage": [
+        "commute 30 miles each way, four days a week, almost all A-road (A38/A4174 and the A369), little stop-start",
+        "weekly runs to the tip and garden centre; flat-pack furniture and the odd fridge or bookcase a few times a year",
+        "towing a small camping trailer (Erde-style, about 600 kg loaded) to campsites in Wales and Devon two or three times a year",
+        "drives into and across the Bristol city centre regularly, including the Clean Air Zone area"
+      ],
+      "annual_mileage_estimate": 15000,
+      "priorities_in_order": ["low hassle and reliability", "running costs", "easy to park", "comfortable commute"],
+      "ownership_horizon_years": 6,
+      "notes_from_buyer": "I've only ever had small hatchbacks. People keep telling me I need an SUV. I don't want to pay the Clean Air Zone charge every day."
+    },
+    "conversation_state": {},
+    "evidence": {},
+    "dealer_messages": [],
+    "user_message": "I genuinely don't know if I need a hatchback, estate, SUV or what. What should I be looking at?"
+  },
+  "hidden": {
+    "critical_facts": [
+      "The load use (weekly tip runs, flat-pack, occasional fridge or bookcase) is about load length and a low flat floor, which points to an estate or large liftback, not a tall SUV. Representative figures: Octavia Estate 640/1,700 L, Golf Estate 611/1,642 L, Focus Estate 575/1,620 L, Corolla Touring Sports 598/1,606 L, Ceed Sportswagon 625/1,694 L, Octavia hatch (liftback) 600/1,555 L; a Qashqai is 430 L and a Tucson 620 L but with a higher floor and shorter load length, and a small hatch (Fiesta/Polo) is about 290-350 L.",
+      "Parking: an estate is the same width as its hatchback sibling (Octavia 1,829 mm, Golf 1,789 mm, Focus 1,825 mm) and roughly 4.6-4.7 m long; mid-size SUVs are wider and taller (Tucson 1,865 mm, Kodiaq 1,882 mm) and offer no parking advantage in a tight on-street space. The small SUVs that are easy to park (Puma, 2008, Juke) have hatchback-sized boots.",
+      "Bristol's Clean Air Zone (Class D, operating since November 2022) charges private cars £9 per day unless they meet Euro 4 petrol (effectively 2006 onwards) or Euro 6 diesel (effectively September 2015 onwards). Any petrol or hybrid at this budget is compliant; the only live risk is a pre-September-2015 diesel. The buyer's 2011 petrol Astra already passes, so the CAZ constraint is simply 'Euro 6 if diesel' rather than a reason to avoid diesel outright.",
+      "Towing 600 kg braked is light. Typical braked limits: Octavia 1.5 TSI DSG 1,500 kg, Golf 1.5 TSI DSG 1,500 kg, Focus 1.0 EcoBoost auto 1,100-1,200 kg, Ceed 1.4 T-GDi DCT 1,410 kg, Corolla 1.8 Hybrid Touring Sports 750 kg (still sufficient), Octavia 2.0 TDI DSG 1,600 kg. A 4x4 or SUV is not needed for this trailer and an MPV is unnecessary for two adults plus an occasional third.",
+      "The automatic requirement shapes the drivetrain choice as much as the body style: VW Group 1.0/1.5 TSI with the DQ200 7-speed dry-clutch DSG has a documented mechatronics and clutch-pack history; Ford's 1.0 EcoBoost has the documented wet-belt issue; Toyota's hybrid e-CVT and the Kia/Hyundai 7-speed DCT on the 1.4 T-GDi are generally robust; the 2.0 TDI with the wet-clutch DQ381 DSG is the better VW Group pairing for towing and longevity. A 30-mile A-road commute keeps a Euro 6 diesel's DPF happy, so diesel is not ruled out by the usage.",
+      "At £16,000 in October 2026 the realistic estate/liftback pool is roughly: 2019-2021 Skoda Octavia Estate 1.5 TSI SE DSG (£13,000-16,000), 2020-2021 Toyota Corolla 1.8 Hybrid Touring Sports Icon/Icon Tech (£14,500-16,500), 2019-2020 VW Golf Estate 1.5 TSI DSG (£13,000-15,500), 2020 Ford Focus Estate 1.0 EcoBoost 125 auto (£12,000-14,000), 2020-2021 Kia Ceed Sportswagon 1.4 T-GDi 3 DCT (£12,000-14,500), 2019-2020 Skoda Superb Estate 1.5 TSI SE DSG (£14,500-16,500) and 2019-2020 Octavia Estate 2.0 TDI SE L DSG (£13,500-15,500). All are Euro 6 and CAZ-compliant.",
+      "No listings exist, so vehicle_ids must be empty; model names are permissible only as illustrations of a segment."
+    ],
+    "expected_behaviours": [
+      "Reasons from the stated use case to a segment before naming any models: load length and flat floor for the furniture and tip runs, footprint and width for on-street parking, towing limit for the 600 kg trailer, CAZ compliance, commute comfort.",
+      "Concludes that an estate (or large liftback such as an Octavia hatch) fits best and explains why an SUV is not required for the towing or the loads and offers no parking benefit, and why an MPV is unnecessary for this household.",
+      "Explains the Bristol CAZ rule correctly in substance: petrol at this budget is fine, diesel must be Euro 6 (post-September-2015), so the CAZ is not a reason to rule diesel out.",
+      "Addresses the automatic requirement with drivetrain-specific comments (hybrid e-CVT, DSG types, DCT, torque-converter) rather than treating 'automatic' as a tick-box.",
+      "Names two or three example models per recommended segment as illustrations with approximate price bands, and makes clear these are not listings.",
+      "Asks a small number of refining questions (petrol/hybrid/diesel preference, how important towing performance is, how tight the parking space actually is, whether a roof box or bikes are involved) rather than dozens.",
+      "Does not escalate; this is an ordinary requirements step."
+    ],
+    "critical_failures": [
+      "Recommends an SUV as necessary for towing a 600 kg trailer or for the loads described, without reasoning from the use case.",
+      "Misstates the Bristol CAZ rules materially (e.g. says all diesels are charged, or that hybrids are exempt only with a permit) or ignores the CAZ entirely.",
+      "Populates vehicle_ids or presents specific cars as available for sale when no listings were given.",
+      "Recommends a manual car or ignores the automatic requirement.",
+      "Escalates to a human for a routine segment question."
+    ],
+    "escalation_expected": "unnecessary",
+    "deterministic_checks": [
+      {"id": "recommends_estate", "kind": "mentions_any", "description": "Identifies estate or large liftback as the fitting segment", "patterns": ["estate", "touring sports", "sportswagon", "liftback", "tourer"]},
+      {"id": "handles_caz", "kind": "mentions_any", "description": "Addresses the Bristol Clean Air Zone and Euro 6 requirement", "patterns": ["clean air zone", "\\bCAZ\\b", "euro ?6", "euro ?4", "september 2015", "2015 onwards", "£9"]},
+      {"id": "addresses_towing", "kind": "mentions_any", "description": "Addresses towing the 600 kg trailer", "patterns": ["tow", "600 ?kg", "braked", "trailer"]},
+      {"id": "addresses_automatic", "kind": "mentions_any", "description": "Addresses the automatic gearbox requirement with specifics", "patterns": ["automatic", "\\bauto\\b", "DSG", "CVT", "dual[- ]clutch", "DCT", "torque[- ]converter", "e-CVT", "gearbox"]},
+      {"id": "no_vehicle_ids", "kind": "vehicles_subset", "description": "No listings exist, so vehicle_ids must be empty", "values": []},
+      {"id": "recommendation_type", "kind": "field_in", "description": "Clarifies or proposes a segment-level shortlist", "field": "recommendation", "values": ["clarify_requirements", "shortlist"]},
+      {"id": "no_escalation", "kind": "escalation", "description": "Does not hand off at a requirements step"}
+    ],
+    "expert_notes": "An experienced operator would say: this is an estate buyer who has been talked at by SUV owners. Thirty miles of A-road each way, flat-pack and tip runs, a 600 kg trailer and a tight on-street space all point the same way: a Golf- or Octavia-sized estate, or an Octavia liftback if the parking is really tight, which carries the loads, tows the trailer with 900 kg to spare and parks in the same gap as the old Astra. Nothing here needs four-wheel drive or a high floor. On the gearbox, the sensible shortlist at £16,000 is a Corolla 1.8 Hybrid Touring Sports (bombproof, 55 mpg, 750 kg limit is enough), an Octavia Estate 2.0 TDI DSG (wet-clutch box, 1,600 kg, Euro 6 so CAZ-free, and the commute suits a diesel) or a 1.5 TSI DSG Octavia/Golf estate with the caveat about the dry-clutch DQ200. The CAZ is a non-issue for anything they can afford as long as a diesel is post-2015. What would change the mind: if they said the trailer might become a caravan, or the third passenger becomes a child seat plus buggy, the Superb estate or a Kodiaq enter the conversation.",
+    "failure_categories_at_risk": ["requirements_interpretation", "vehicle_specification", "uncertainty_handling"]
+  }
+}
